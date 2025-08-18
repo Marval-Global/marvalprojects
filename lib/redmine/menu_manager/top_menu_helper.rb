@@ -254,7 +254,7 @@ module Redmine::MenuManager::TopMenuHelper
   def module_top_menu_item_groups
     items = more_top_menu_items
     item_groups = []
-
+    
     # add untitled group, if no heading is present
     unless items.first.heading?
       item_groups = [{ title: nil, items: [] }]
@@ -285,6 +285,8 @@ module Redmine::MenuManager::TopMenuHelper
     @split_top_menu_into_main_or_more_menus ||= begin
       items = Hash.new { |h, k| h[k] = [] }
       first_level_menu_items_for(:top_menu) do |item|
+        # Rails.logger.debug "Menu Item@@@@@@@@@@@@@@=======>: #{item.name} - Context: #{item.context}"
+        next if item.name == :team_planners
         if item.name == :help
           items[:help] = item
         else

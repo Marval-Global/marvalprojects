@@ -162,7 +162,7 @@ de:
                     6. *Aufgaben im Projekt erledigen*: &rightarrow; Gehe zu [Arbeitspakete &rightarrow; Tasks]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Hier finden Sie unsere [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Bitte kontaktieren Sie uns gerne bei offenen Fragen haben wenn Sie Unterstützung benötigen: [Support[at]openproject.com](mailto:support@openproject.com).
+                    Bitte kontaktieren Sie uns gerne bei offenen Fragen haben wenn Sie Unterstützung benötigen: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Arbeitspakete
@@ -333,7 +333,7 @@ de:
                     7. *Aktivieren Sie zusätzliche Module*: &rightarrow; Wechseln Sie zu [Projektkonfiguration &rightarrow; Module]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
                     Zusätzlich finden Sie hier unser [Nutzungshandbuch](https://www.openproject.org/de/docs/nutzungshandbuch/).
-                    Lassen Sie uns gerne wissen, wenn Sie Fragen haben oder Unterstützung benötigen. Kontaktieren Sie uns: [support[at]openproject.com](mailto:support@openproject.com).
+                    Lassen Sie uns gerne wissen, wenn Sie Fragen haben oder Unterstützung benötigen. Kontaktieren Sie uns: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Arbeitspakete

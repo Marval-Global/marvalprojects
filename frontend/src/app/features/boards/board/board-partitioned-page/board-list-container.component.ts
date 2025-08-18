@@ -123,11 +123,16 @@ readonly I18n:I18nService,
       .id(id)
       .requireAndStream()
       .pipe(
-        tap((board) => this.setupQueryUpdatedMonitoring(board)),
+        // tap((board) => this.setupQueryUpdatedMonitoring(board)),
+        tap((board) => {
+       this.setupQueryUpdatedMonitoring(board);
+        })
       );
 
     this.board$.subscribe((board) => {
-      this.available = this.Banner.allowsTo('board_view') || board.isFree;
+     // this.available = this.Banner.allowsTo('board_view') || board.isFree;
+     this.available = true;
+      // console.log("Available====>",this.available)
     });
 
     this.Boards.currentBoard$.next(id);

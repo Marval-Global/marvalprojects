@@ -162,7 +162,7 @@ zh-CN:
                     6. *完成您项目中的任务*： &rightarrow; 转到工作包 &rightarrow; [任务]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks) 。
 
                     可以在这里找到我们的 [用户指南](https://www.openproject.org/docs/user-guide/) 。
-                    遇到任何问题或需要支持，请联系我们：[support@openproject.com](mailto:support@openproject.com)。
+                    遇到任何问题或需要支持，请联系我们：[support@marvalglobal.com](mailto:support@marvalglobal.com)。
 
               item_5:
                 options:
@@ -333,7 +333,7 @@ zh-CN:
                     6. *创建迭代Wiki*：&rightarrow; 在[待办]({{opSetting:base_url}}/projects/your-scrum-project/backlogs)中打开迭代右侧下拉菜单中的Wiki。您可以根据需要编辑[Wiki模板]({{opSetting:base_url}}/projects/your-scrum-project/wiki/)。
                     7. *激活其他模块*：&rightarrow; 在项目设置 &rightarrow; [模块]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules)中进行操作。
 
-                    您可以在我们的[用户指南](https://www.openproject.org/docs/user-guide/)中找到更多信息。如果您有任何问题或需要支持，请随时与我们联系：[support[at]openproject.com](mailto:support@openproject.com)。
+                    您可以在我们的[用户指南](https://www.openproject.org/docs/user-guide/)中找到更多信息。如果您有任何问题或需要支持，请随时与我们联系：[support[at]marvalprojects.com](mailto:support@marvalglobal.com)。
               item_5:
                 options:
                   name: 工作包

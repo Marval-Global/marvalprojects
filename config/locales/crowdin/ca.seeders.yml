@@ -162,7 +162,7 @@ ca:
                     6. *Completa les teves tasques en el teu projecte*: &rightarrow; Ves a [Paquets de treball &rightarrow; Tasques]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Aquí pots trobar les nostres [Guies d'usuari](https://www.openproject.org/docs/user-guide/).
-                    En cas de qualsevol dubte o requerir suport posa't en contacte amb nosaltres. Contacta amb nosaltres via: [support[at]openproject.com](mailto:support@openproject.com).
+                    En cas de qualsevol dubte o requerir suport posa't en contacte amb nosaltres. Contacta amb nosaltres via: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Paquets de treball
@@ -318,7 +318,7 @@ ca:
                 options:
                   name: Primers passos
                   text: |
-                    We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                    We are glad you joined! We suggest to try a few things to get started in MarvalProjects.
 
                     _Try the following steps:_
 
@@ -331,7 +331,7 @@ ca:
                     7. *Activate further modules*: &rightarrow; Go to [Project settings &rightarrow; Modules]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support[at]openproject.com](mailto:support@openproject.com).
+                    Please let us know if you have any questions or need support. Contact us: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Paquets de treball
@@ -493,7 +493,7 @@ ca:
       welcome:
         title: Benvingut a OpenProject!
         text: |
-          OpenProject is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
+          MarvalProjects is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
 
           Core features and use cases:
 

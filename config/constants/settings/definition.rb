@@ -287,7 +287,7 @@ module Settings
       consent_info: {
         default: {
           en: "## Consent\n\nYou need to agree to the [privacy and security policy]" +
-            "(https://www.openproject.org/data-privacy-and-security/) of this OpenProject instance."
+            "(https://www.openproject.org/data-privacy-and-security/) of this MarvalProjects instance."
         }
       },
       # Indicates whether or not users need to consent to something such as privacy policy.

@@ -162,7 +162,7 @@ it:
                     6. *Completa i tuoi incarichi nel progetto*: &rightarrow; Vai ai [Pacchetti di lavoro &rightarrow; Incarichi]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Qui troverai le nostre [Guide per l'Utente](https://www.openproject.org/docs/user-guide/).
-                    Sei pregato di contattarci se hai domande o necessiti di supporto. Contattaci a: [support[at]openproject.com](mailto:support@openproject.com).
+                    Sei pregato di contattarci se hai domande o necessiti di supporto. Contattaci a: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Macro-attività
@@ -333,7 +333,7 @@ it:
                     7. *Attiva ulteriori moduli*: &rightarrow; Vai su [Impostazioni progetto &rightarrow; Moduli]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
                     Qui troverai le nostre [Guide per l'utente](https://www.openproject.org/docs/user-guide/).
-                    Facci sapere se hai domande o se hai bisogno di supporto. Contattaci su: [support[at]openproject.com](mailto:support@openproject.com).
+                    Facci sapere se hai domande o se hai bisogno di supporto. Contattaci su: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Macro-attività

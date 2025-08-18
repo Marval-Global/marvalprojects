@@ -162,7 +162,7 @@ pt-BR:
                     6. *Conclua suas tarefas no projeto*: &rightarrow; Vá para [Pacotes de trabalho &rightarrow; Tarefas]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Aqui você encontra nossos Guias do usuário.
-                    Se tiver alguma dúvida ou precisar de ajuda, entre em contato conosco: [support[at]openproject.com](mailto:support@openproject.com).
+                    Se tiver alguma dúvida ou precisar de ajuda, entre em contato conosco: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Pacotes de trabalho
@@ -332,7 +332,7 @@ pt-BR:
 
                     Aqui você encontrará nossos [Guias do Usuário] (https://www.openproject.org/docs/user-guide/).
 
-                    Avise-nos se tiver alguma dúvida ou precisar de suporte. Entre em contato conosco: [support[at]openproject.com](mailto:support@openproject.com).
+                    Avise-nos se tiver alguma dúvida ou precisar de suporte. Entre em contato conosco: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Pacotes de trabalho

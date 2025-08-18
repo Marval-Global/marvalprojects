@@ -162,7 +162,7 @@ ro:
                     6. *Finalizează sarcinile în proiect*: &rightarrow; Mergeți la [Pachete de lucru &rightarrow; Sarcini]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Aici găsiți [Ghidurile de utilizatori](https://www.openproject.org/docs/user-guide/).
-                    Vă rugăm să ne informați dacă aveți întrebări sau aveți nevoie de sprijin. Contactaţi-ne: [suport[at]openproject.com](mailto:support@openproject.com).
+                    Vă rugăm să ne informați dacă aveți întrebări sau aveți nevoie de sprijin. Contactaţi-ne: [suport[at]openproject.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Pachete de lucru
@@ -320,7 +320,7 @@ ro:
                 options:
                   name: Noţiuni de bază
                   text: |
-                    We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                    We are glad you joined! We suggest to try a few things to get started in MarvalProjects.
 
                     _Try the following steps:_
 
@@ -333,7 +333,7 @@ ro:
                     7. *Activate further modules*: &rightarrow; Go to [Project settings &rightarrow; Modules]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support[at]openproject.com](mailto:support@openproject.com).
+                    Please let us know if you have any questions or need support. Contact us: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Pachete de lucru
@@ -495,9 +495,9 @@ ro:
         item_6:
           name: Defect
       welcome:
-        title: Welcome to OpenProject!
+        title: Welcome to MarvalProjects
         text: |
-          OpenProject is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
+          MarvalProjects is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
 
           Core features and use cases:
 

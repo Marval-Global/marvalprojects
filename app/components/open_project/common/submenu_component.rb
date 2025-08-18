@@ -40,17 +40,49 @@ module OpenProject
 
       def render?
         @sidebar_menu_items.present?
+        # Rails.logger.debug { "Sidebar menu items============>'#{@sidebar_menu_items.inspect}' " }
       end
 
+      # Filters out "Shared with me" and "Shared with users" from all menu group children first
+      def filtered_sidebar_menu_items
+        excluded_titles = ["Shared with me", "Shared with users"]
+
+        @sidebar_menu_items.map do |group|
+          if group.respond_to?(:children)
+            filtered_children = group.children.reject do |item|
+              item.respond_to?(:title) && excluded_titles.include?(item.title)
+            end
+
+            OpenProject::Menu::MenuGroup.new(group.header, filtered_children)
+          else
+            group
+          end
+        end
+      end
+
+      # Returns menu items with no header, after filtering
       def top_level_sidebar_menu_items
-        @sidebar_menu_items
-          .filter { |menu_item| menu_item.header.nil? }
+        filtered_sidebar_menu_items.filter { |menu_item| menu_item.header.nil? }
       end
 
+      # Returns menu items with header and children, after filtering
       def nested_sidebar_menu_items
-        @sidebar_menu_items
-          .filter { |menu_item| menu_item.header.present? && menu_item.children.any? }
+        filtered_sidebar_menu_items.filter do |menu_item|
+          menu_item.header.present? && menu_item.children.any?
+        end
       end
+
+      # Previous code with Premium menu items showing
+      # def top_level_sidebar_menu_items
+      #   @sidebar_menu_items
+      #     .filter { |menu_item| menu_item.header.nil? }
+      # end
+  
+    
+      # def nested_sidebar_menu_items
+      #   @sidebar_menu_items
+      #    .filter { |menu_item| menu_item.header.present? && menu_item.children.any? }
+      # end
     end
   end
 end

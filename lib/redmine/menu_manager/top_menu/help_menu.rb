@@ -90,10 +90,10 @@ module Redmine::MenuManager::TopMenu::HelpMenu
                   class: "op-menu--headline",
                   title: I18n.t("top_menu.help_and_support")
     end
-    unless EnterpriseToken.hide_banners? && EnterpriseToken.active?
-      result << static_link_item(:upsell,
-                                 href_suffix: "/?utm_source=unknown&utm_medium=op-instance&utm_campaign=ee-upsell-help-menu")
-    end
+    # unless EnterpriseToken.hide_banners? && EnterpriseToken.active?
+    #   result << static_link_item(:upsell,
+    #                              href_suffix: "/?utm_source=unknown&utm_medium=op-instance&utm_campaign=ee-upsell-help-menu")
+    # end
     result << static_link_item(:user_guides)
     result << content_tag(:li, class: "op-menu--item") do
       link_to I18n.t("label_videos"),
@@ -104,12 +104,12 @@ module Redmine::MenuManager::TopMenu::HelpMenu
     end
     result << static_link_item(:shortcuts)
     result << static_link_item(:forums)
-    enterprise_support_link_key = if EnterpriseToken.active?
-                                    :enterprise_support
-                                  else
-                                    :enterprise_support_as_community
-                                  end
-    result << static_link_item(enterprise_support_link_key)
+    # enterprise_support_link_key = if EnterpriseToken.active?
+    #                                 :enterprise_support
+    #                               else
+    #                                 :enterprise_support_as_community
+    #                               end
+    # result << static_link_item(enterprise_support_link_key)
     result << content_tag(:hr, "", class: "op-menu--separator")
   end
 
@@ -127,15 +127,15 @@ module Redmine::MenuManager::TopMenu::HelpMenu
 
     result << static_link_item(:data_privacy)
     result << static_link_item(:digital_accessibility)
-    result << static_link_item(
-      :website,
-      href_suffix: "/?utm_source=unknown&utm_medium=op-instance&utm_campaign=website-help-menu"
-    )
+    # result << static_link_item(
+    #   :website,
+    #   href_suffix: "/?utm_source=unknown&utm_medium=op-instance&utm_campaign=website-help-menu"
+    # )
     result << static_link_item(
       :newsletter,
       href_suffix: "/?utm_source=unknown&utm_medium=op-instance&utm_campaign=newsletter-help-menu"
     )
-    result << static_link_item(:blog)
+    # result << static_link_item(:blog)
     result << static_link_item(:release_notes)
     result << static_link_item(:report_bug)
     result << static_link_item(:roadmap)

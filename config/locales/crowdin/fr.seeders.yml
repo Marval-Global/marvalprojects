@@ -162,7 +162,7 @@ fr:
                     6. *Complétez vos tâches dans le projet* : &rightarrow; Accédez à [Lots de travaux &rightarrow; Tâches]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Vous trouverez ici nos [Guides de l'utilisateur] (https://www.openproject.org/docs/user-guide/).
-                    Si vous avez des questions ou si avez besoin d'aide, n'hésitez pas à nous contacter : [support[at]openproject.com](mailto:support@openproject.com).
+                    Si vous avez des questions ou si avez besoin d'aide, n'hésitez pas à nous contacter : [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Lots de travaux
@@ -332,7 +332,7 @@ fr:
                     7. *Activer d'autres modules* : &rightarrow ; Allez dans les [Paramètres du projet &rightarrow ; Modules]({{opSetting:base_url}}/projet/votre-scrum-projet/paramètres/modules).
 
                     Vous y trouverez nos [guides de l'utilisateur](https://www.openproject.org/docs/user-guide/).
-                    N'hésitez pas à nous contacter si vous avez des questions ou si vous avez besoin d'aide. N'hésitez pas à nous contacter : [support[at]openproject.com(mailto:support@openproject.com).
+                    N'hésitez pas à nous contacter si vous avez des questions ou si vous avez besoin d'aide. N'hésitez pas à nous contacter : [support[at]openproject.com(mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Lots de travaux

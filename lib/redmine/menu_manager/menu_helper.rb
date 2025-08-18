@@ -58,11 +58,21 @@ module Redmine::MenuManager::MenuHelper
   def render_menu(menu, project = nil)
     links = []
     @menu = menu
-    menu_items = first_level_menu_items_for(menu, project) do |node|
-      links << render_menu_node(node, project)
+   menu_items = first_level_menu_items_for(menu, project) do |node|
+     Rails.logger.debug { "Looking up '#{node.name}' " }
+    #  if node.name(team_planners)
+     next if node.name == :team_planners
+     next if node.name == :custom_style
+     next if node.name == :enterprise
+     next if node.name == :team_planner_view
+     links << render_menu_node(node, project)
     end
 
+   
+    #Rails.logger.debug { "Menu============>'#{menu}' " }
     first_level = any_item_selected?(select_leafs(menu_items)) || !current_menu_item_part_of_menu?(menu, project)
+    #Rails.logger.debug { "Looking up ============>'#{first_level}' " }
+    
     classes = first_level ? "open" : "closed"
 
     if links.present?
@@ -175,18 +185,25 @@ module Redmine::MenuManager::MenuHelper
                   test_selector: "main-menu-toggler--#{node.name}"
                 }) do
       render(Primer::Beta::Octicon.new("arrow-right", size: :small))
-    end
-  end
+   end
+ end
 
   def render_visible_children_list(node, project)
     items = node
       .children
       .map { |child| render_menu_node(child, project) if visible_node?(@menu, child) }
-
+    # Rails.logger.debug { "Visible children items========>>>: #{items}" }
     if items.present?
-      capture do
-        concat render_children_menu_header(node, project)
-        concat content_tag(:ul, safe_join(items, "\n"), class: "main-menu--children")
+    # filtered_items = items.reject { |item| item.include?('data-name="placeholder_users"') }
+    excluded_names = ['custom_actions', 'placeholder_users', 'plugin_openid_connect', 'plugin_saml', 'plugin_ldap_groups', 'scim_clients']
+
+    filtered_items = items.reject do |item|
+    excluded_names.any? { |name| item.include?("data-name=\"#{name}\"") }
+  end
+
+    capture do
+      concat render_children_menu_header(node, project)
+      concat content_tag(:ul, safe_join(filtered_items, "\n"), class: "main-menu--children")
       end
     end
   end

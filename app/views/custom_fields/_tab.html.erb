@@ -26,10 +26,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 See COPYRIGHT and LICENSE files for more details.
 
 ++#%>
-
+<!--
 <% if @tab == "WorkPackageCustomField" %>
-  <%= render(EnterpriseEdition::BannerComponent.new(:custom_field_hierarchies)) %>
+  <%#= render(EnterpriseEdition::BannerComponent.new(:custom_field_hierarchies)) %>
 <% end %>
+ -->
 
 <% if @custom_fields_by_type[tab[:name]].blank? %>
   <%= no_results_box(display_action: false) %>

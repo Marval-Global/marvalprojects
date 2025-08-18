@@ -124,4 +124,4 @@ Rails.application.configure do
   config.generators.apply_rubocop_autocorrect_after_generate!
 end
 
-ActiveRecord::Base.logger = ActiveSupport::Logger.new($stdout) unless String(ENV.fetch("SILENCE_SQL_LOGS", nil)).to_bool
+ActiveRecord::Base.logger = nil #ActiveSupport::Logger.new($stdout) unless String(ENV.fetch("SILENCE_SQL_LOGS", nil)).to_bool

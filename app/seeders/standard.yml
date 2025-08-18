@@ -188,7 +188,7 @@ projects:
           options:
             t_name: 'Getting started'
             t_text: |
-              We are glad you joined! We suggest to try a few things to get started in OpenProject.
+              We are glad you joined! We suggest to try a few things to get started in MarvalProjects.
 
               Discover the most important features with our [Guided Tour]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true).
 
@@ -202,7 +202,7 @@ projects:
               6. *Complete your tasks in the project*: &rightarrow; Go to [Work packages &rightarrow; Tasks]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
               Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-              Please let us know if you have any questions or need support. Contact us: [support[at]openproject.com](mailto:support@openproject.com).
+              Please let us know if you have any questions or need support. Contact us: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
         - identifier: 'project_status'
           start_row: 2
           end_row: 3
@@ -550,7 +550,7 @@ projects:
           options:
             t_name: 'Getting started'
             t_text: |
-              We are glad you joined! We suggest to try a few things to get started in OpenProject.
+              We are glad you joined! We suggest to try a few things to get started in MarvalProjects.
 
               _Try the following steps:_
 
@@ -563,7 +563,7 @@ projects:
               7. *Activate further modules*: &rightarrow; Go to [Project settings &rightarrow; Modules]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
               Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-              Please let us know if you have any questions or need support. Contact us: [support[at]openproject.com](mailto:support@openproject.com).
+              Please let us know if you have any questions or need support. Contact us: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
         - identifier: 'project_status'
           start_row: 2
           end_row: 3
@@ -1018,9 +1018,9 @@ workflows:
       - :default_status_closed
 
 welcome:
-  t_title: "Welcome to OpenProject!"
+  t_title: "Welcome to MarvalProjects!"
   t_text: |
-    OpenProject is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
+    MarvalProjects is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
 
     Core features and use cases:
 

@@ -162,7 +162,7 @@ lt:
                     6. *Vykdykite jūsų užduotis projekte*: &rightarrow; Eikite į [Darbo paketai &rightarrow; Užduotys]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Čia rasite mūsų [Naudotojų vadovus](https://www.openproject.org/docs/user-guide/).
-                    Praneškite mums, jei turite kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support[at]openproject.com](mailto:support@openproject.com).
+                    Praneškite mums, jei turite kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Darbų paketai
@@ -333,7 +333,7 @@ lt:
                     7. *Aktyvuokite kitus modulius*: &rightarrow; Eikite į [Projekto nustatymai &rightarrow; Moduliai]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
                     Čia rasite mūsų [Naudotojų vadovus](https://www.openproject.org/docs/user-guide/).
-                    Praneškite mums jei turite bet kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support[at]openproject.com](mailto:support@openproject.com).
+                    Praneškite mums jei turite bet kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Darbų paketai

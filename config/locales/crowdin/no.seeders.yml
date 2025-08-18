@@ -162,7 +162,7 @@
                     6. *Fullfør oppgavene i prosjektet: &rightarrow; Gå til [Arbeidspakker &rightarrow; Tasks]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Her finner du våre brukerveiledninger](https://www.openproject.org/docs/user-guide/).
-                    Vennligst gi oss beskjed om du har spørsmål eller trenger støtte. Kontakt oss: [support[at]openproject.com](mailto:support@openproject.com).
+                    Vennligst gi oss beskjed om du har spørsmål eller trenger støtte. Kontakt oss: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Arbeidspakker
@@ -330,7 +330,7 @@
                     7. *Aktiver ytterligere moduler*: &rightarrow; Gå til [Prosjektinnstillinger &rightarrow; Moduler]({{opSetting:base_url}}/prosjekter/your-scrum-project/settings/moduler).
 
                     Her finner du våre [Manualer](https://www. penproject.org/docs/user-guide/).
-                    Gi oss beskjed om du har spørsmål eller trenger support. Kontakt oss: [support[at]openproject.com](mailto:support@openproject.com).
+                    Gi oss beskjed om du har spørsmål eller trenger support. Kontakt oss: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Arbeidspakker

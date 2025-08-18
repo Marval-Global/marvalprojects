@@ -2574,7 +2574,7 @@ tr:
         disabled_text: "RSS belirteçleri yönetici tarafından etkinleştirilmemiştir. Bu özelliği kullanmak için lütfen yöneticinize başvurun."
       storages:
         title: "Dosya depoları"
-        text_hint: "File Storage tokens connect this OpenProject instance with an external File Storage."
+        text_hint: "File Storage tokens connect this MarvalProjects instance with an external File Storage."
         empty_text_hint: "Hesabınıza bağlı herhangi bir depolama erişimi yoktur."
         revoke_token: "Do you really want to remove this token? You will need to login again on %{storage}"
         removed: "Dosya Depolama belirteci başarıyla kaldırıldı"

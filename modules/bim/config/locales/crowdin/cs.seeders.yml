@@ -120,7 +120,7 @@ cs:
                 options:
                   name: Začínáme
                   text: |
-                    We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                    We are glad you joined! We suggest to try a few things to get started in MarvalProjects.
 
                     But before you jump right into it, you should know that this exemplary project is split up into two different projects:
 
@@ -138,7 +138,7 @@ cs:
                     7.  _Agile working? Check out our brand new boards:_ → Go to [Boards]({{opSetting:base_url}}/projects/demo-construction-project/boards)
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@openproject.com).
+                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Členové
@@ -179,7 +179,7 @@ cs:
                 options:
                   name: Začínáme
                   text: |
-                    We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                    We are glad you joined! We suggest to try a few things to get started in MarvalProjects.
 
                     Here you will find the classical roles, some workflows and work packages for your construction project.
 
@@ -193,7 +193,7 @@ cs:
                     6.  _Working agile? Create a new board:_ → Go to [Boards]({{opSetting:base_url}}/projects/demo-planning-constructing-project/boards)
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@openproject.com).
+                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Členové
@@ -441,7 +441,7 @@ cs:
                     9.  _Pracujete agilně? Vytvořte si novou nástěnku:_ → Přejděte na [Nástěnky]({{opSetting:base_url}}/projects/demo-bim-project/boards)
 
                     Zde najdete naše [Uživatelské příručky](https://www.openproject.org/docs/user-guide/).
-                    Dejte nám prosím vědět, pokud máte nějaké dotazy nebo potřebujete podporu. Kontaktujte nás: [support\[at\]openproject.com](mailto:support@openproject.com).
+                    Dejte nám prosím vědět, pokud máte nějaké dotazy nebo potřebujete podporu. Kontaktujte nás: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Členové
@@ -700,7 +700,7 @@ cs:
                 options:
                   name: Začínáme
                   text: |
-                    We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                    We are glad you joined! We suggest to try a few things to get started in MarvalProjects.
 
                     This demo project shows BCF management functionalities.
 
@@ -716,7 +716,7 @@ cs:
                     8.  _You love the agile approach? Create a board:_ → Go to [Boards]({{opSetting:base_url}}/projects/demo-bcf-management-project/boards).
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@openproject.com).
+                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Členové

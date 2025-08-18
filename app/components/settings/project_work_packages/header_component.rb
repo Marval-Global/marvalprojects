@@ -93,11 +93,11 @@ module Settings
           }
         end
 
-        tabs << {
-          name: "internal_comments",
-          path: project_settings_work_packages_internal_comments_path,
-          label: internal_comments_title
-        }
+        # tabs << {
+        #   name: "internal_comments",
+        #   path: project_settings_work_packages_internal_comments_path,
+        #   label: internal_comments_title
+        # }
 
         tabs
       end

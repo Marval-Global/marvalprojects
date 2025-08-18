@@ -162,7 +162,7 @@ pl:
                     6. *Ukończ swoje zadania w projekcie*: &rightarrow; Przejdź do strony [Pakiety robocze &rightarrow; Zadania]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Tutaj znajdziesz nasze [przewodniki](https://www.openproject.org/docs/user-guide/).
-                    Daj nam znać, jeśli masz pytania lub potrzebujesz pomocy. Skontaktuj się z nami: [support[at]openproject.com](mailto:support@openproject.com).
+                    Daj nam znać, jeśli masz pytania lub potrzebujesz pomocy. Skontaktuj się z nami: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Pakiety robocze
@@ -333,7 +333,7 @@ pl:
                     7. *Aktywuj kolejne moduły*: &rightarrow; Przejdź do obszaru [Ustawienia projektu &rightarrow; Moduły]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
                     Tutaj znajdziesz nasze [instrukcje obsługi](https://www.openproject.org/docs/user-guide/).
-                    Daj nam znać, jeśli masz jakieś pytania lub potrzebujesz pomocy. Skontaktuj się z nami: [support[at]openproject.com](mailto:support@openproject.com).
+                    Daj nam znać, jeśli masz jakieś pytania lub potrzebujesz pomocy. Skontaktuj się z nami: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Pakiety robocze

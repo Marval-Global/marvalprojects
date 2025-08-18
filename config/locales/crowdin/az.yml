@@ -2556,7 +2556,7 @@ az:
       simple_revoke_confirmation: "Are you sure you want to revoke this token?"
       api:
         title: "API"
-        text_hint: "API tokens allow third-party applications to communicate with this OpenProject instance via REST APIs."
+        text_hint: "API tokens allow third-party applications to communicate with this MarvalProjects instance via REST APIs."
         static_token_name: "API token"
         disabled_text: "API tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       ical:
@@ -2566,16 +2566,16 @@ az:
         empty_text_hint: "To add an iCalendar token, subscribe to a new or existing calendar from within the Calendar module of a project. You must have the necessary permissions."
       oauth:
         title: "OAuth"
-        text_hint: "OAuth tokens allow third-party applications to connect with this OpenProject instance."
+        text_hint: "OAuth tokens allow third-party applications to connect with this MarvalProjects instance."
         empty_text_hint: "There is no third-party application access configured and active for you. Please contact your administrator to activate this feature."
       rss:
         title: "RSS"
-        text_hint: "RSS tokens allow users to keep up with the latest changes in this OpenProject instance via an external RSS reader."
+        text_hint: "RSS tokens allow users to keep up with the latest changes in this MarvalProjects instance via an external RSS reader."
         static_token_name: "RSS token"
         disabled_text: "RSS tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       storages:
         title: "File storages"
-        text_hint: "File Storage tokens connect this OpenProject instance with an external File Storage."
+        text_hint: "File Storage tokens connect this MarvalProjects instance with an external File Storage."
         empty_text_hint: "There is no storage access linked to your account."
         revoke_token: "Do you really want to remove this token? You will need to login again on %{storage}"
         removed: "File Storage token successfully removed"
@@ -3842,7 +3842,7 @@ az:
   setting_apiv3_cors_enabled: "Enable CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) allowed origins"
   setting_apiv3_cors_origins_text_html: >
-    If CORS is enabled, these are the origins that are allowed to access OpenProject API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
+    If CORS is enabled, these are the origins that are allowed to access MarvalProjects API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
   setting_apiv3_write_readonly_attributes: "Write access to read-only attributes"
   setting_apiv3_write_readonly_attributes_instructions_html: >
     If enabled, the API will allow administrators to write static read-only attributes during creation, such as createdAt and author. <br/> <strong>Warning:</strong> This setting has a use-case for e.g., importing data, but allows administrators to impersonate the creation of items as other users. All creation requests are being logged however with the true author. </br> For more information on attributes and supported resources, please see the %{api_documentation_link}.
@@ -4053,7 +4053,7 @@ az:
         Select the date of January that is contained in the first week of the year. This value together with first day of the week determines the total number of weeks in a year. For more information, please see our <a href="%{link}" target="_blank">documentation</a> on this topic.
     experimental:
       save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your OpenProject installation and losing all of its data.
-      warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on OpenProject installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
+      warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on MarvalProjects installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
       feature_flags: Feature flags
     general: "General"
     highlighting:
@@ -4064,7 +4064,7 @@ az:
         type: "Entire row by Type"
         priority: "Entire row by Priority"
     icalendar:
-      enable_subscriptions_text_html: Allows users with the necessary permissions to subscribe to OpenProject calendars and access work package information via an external calendar client. <strong>Note:</strong> Please read about <a href="%{link}" target="_blank">iCalendar subscriptions</a> to understand potential security risks before enabling this.
+      enable_subscriptions_text_html: Allows users with the necessary permissions to subscribe to MarvalProjects calendars and access work package information via an external calendar client. <strong>Note:</strong> Please read about <a href="%{link}" target="_blank">iCalendar subscriptions</a> to understand potential security risks before enabling this.
     language_name_being_default: "%{language_name} (default)"
     notifications:
       events_explanation: "Governs for which event an email is sent out. Work packages are excluded from this list as the notifications for them can be configured specifically for every user."
@@ -4218,7 +4218,7 @@ az:
   text_no_notes: "There are no comments available for this work package."
   text_notice_too_many_values_are_inperformant: "Note: Displaying more than 100 items per page can increase the page load time."
   text_notice_security_badge_displayed_html: >
-    Note: if enabled, this will display a badge with your installation status in the <a href="%{information_panel_path}">%{information_panel_label}</a> administration panel, and on the home page. It is displayed to administrators only. <br/> The badge will check your current OpenProject version against the official OpenProject release database to alert you of any updates or known vulnerabilities. For more information on what the check provides, what data is needed to provide available updates, and how to disable this check, please visit <a href="%{more_info_url}">the configuration documentation</a>.
+    Note: if enabled, this will display a badge with your installation status in the <a href="%{information_panel_path}">%{information_panel_label}</a> administration panel, and on the home page. It is displayed to administrators only. <br/> The badge will check your current MarvalProjects version against the official MarvalProjects release database to alert you of any updates or known vulnerabilities. For more information on what the check provides, what data is needed to provide available updates, and how to disable this check, please visit <a href="%{more_info_url}">the configuration documentation</a>.
   text_own_membership_delete_confirmation: "You are about to remove some or all of your permissions and may no longer be able to edit this project after that.\nAre you sure you want to continue?"
   text_permanent_delete_confirmation_checkbox_label: "I understand that this deletion cannot be reversed"
   text_plugin_assets_writable: "Plugin assets directory writable"

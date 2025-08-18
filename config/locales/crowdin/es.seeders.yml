@@ -162,7 +162,7 @@ es:
                     6. *Completar sus tareas en el proyecto*: &rightarrow; Vaya a [Paquetes de trabajo &rightarrow; Tareas]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Aquí encontrará nuestras [Guías del usuario](https://www.openproject.org/docs/user-guide/).
-                    Háganos saber si tiene alguna pregunta o necesita ayuda. Póngase en contacto con nosotros: [support[at]openproject.com](mailto:support@openproject.com).
+                    Háganos saber si tiene alguna pregunta o necesita ayuda. Póngase en contacto con nosotros: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Paquetes de trabajo
@@ -331,7 +331,7 @@ es:
                     7. *Activar más módulos*: &rightarrow; Ir a [Configuración del proyecto &rightarrow; Módulos]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
                     Aquí encontrarás nuestras [Guías de usuario](https://www. penproject.org/docs/user-guide/).
-                    Por favor, háganos saber si tienes alguna pregunta o necesitas ayuda. Contáctanos: [support[at]openproject.com](mailto:support@openproject.com).
+                    Por favor, háganos saber si tienes alguna pregunta o necesitas ayuda. Contáctanos: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Paquetes de trabajo

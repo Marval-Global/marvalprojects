@@ -32,9 +32,8 @@ See COPYRIGHT and LICENSE files for more details.
 <%=
   render(CostSettings::ShowPageHeaderComponent.new)
 %>
-
-<%=
-  render(
+<!--
+<%#= render(
     ::EnterpriseEdition::BannerComponent.new(
       :time_entry_time_restrictions,
       variant: :medium,
@@ -43,6 +42,7 @@ See COPYRIGHT and LICENSE files for more details.
     )
   )
 %>
+ -->
 
 <%=
   settings_primer_form_with(scope: :settings, action: :update, method: :patch) do |time_form|

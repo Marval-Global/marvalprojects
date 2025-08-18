@@ -54,10 +54,10 @@ OpenProject::Static::Homescreen.manage :blocks do |blocks|
       partial: "news",
       if: Proc.new { !@news.empty? }
     },
-    {
-      partial: "community",
-      if: Proc.new { OpenProject::Configuration.show_community_links? }
-    },
+    # {
+    #   partial: "community",
+    #   if: Proc.new { OpenProject::Configuration.show_community_links? }
+    # },
     {
       partial: "administration",
       if: Proc.new { User.current.admin? }

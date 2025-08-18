@@ -2552,7 +2552,7 @@ nl:
       simple_revoke_confirmation: "Weet u zeker dat u deze token wilt intrekken?"
       api:
         title: "API"
-        text_hint: "API tokens allow third-party applications to communicate with this OpenProject instance via REST APIs."
+        text_hint: "API tokens allow third-party applications to communicate with this MarvalProjects instance via REST APIs."
         static_token_name: "API-sleutel"
         disabled_text: "API tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       ical:
@@ -2562,16 +2562,16 @@ nl:
         empty_text_hint: "To add an iCalendar token, subscribe to a new or existing calendar from within the Calendar module of a project. You must have the necessary permissions."
       oauth:
         title: "OAuth"
-        text_hint: "OAuth tokens allow third-party applications to connect with this OpenProject instance."
+        text_hint: "OAuth tokens allow third-party applications to connect with this MarvalProjects instance."
         empty_text_hint: "There is no third-party application access configured and active for you. Please contact your administrator to activate this feature."
       rss:
         title: "RSS"
-        text_hint: "RSS tokens allow users to keep up with the latest changes in this OpenProject instance via an external RSS reader."
+        text_hint: "RSS tokens allow users to keep up with the latest changes in this MarvalProjects instance via an external RSS reader."
         static_token_name: "RSS token"
         disabled_text: "RSS tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       storages:
         title: "File storages"
-        text_hint: "File Storage tokens connect this OpenProject instance with an external File Storage."
+        text_hint: "File Storage tokens connect this MarvalProjects instance with an external File Storage."
         empty_text_hint: "Er is geen opslagtoegang gekoppeld aan uw account."
         revoke_token: "Do you really want to remove this token? You will need to login again on %{storage}"
         removed: "File Storage token successfully removed"
@@ -4048,7 +4048,7 @@ nl:
         Select the date of January that is contained in the first week of the year. This value together with first day of the week determines the total number of weeks in a year. For more information, please see our <a href="%{link}" target="_blank">documentation</a> on this topic.
     experimental:
       save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your OpenProject installation and losing all of its data.
-      warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on OpenProject installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
+      warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on MarvalProjects installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
       feature_flags: Functievlaggen
     general: "Algemeen"
     highlighting:
@@ -4059,7 +4059,7 @@ nl:
         type: "Hele rij per Type"
         priority: "Hele rij door prioriteit"
     icalendar:
-      enable_subscriptions_text_html: Allows users with the necessary permissions to subscribe to OpenProject calendars and access work package information via an external calendar client. <strong>Note:</strong> Please read about <a href="%{link}" target="_blank">iCalendar subscriptions</a> to understand potential security risks before enabling this.
+      enable_subscriptions_text_html: Allows users with the necessary permissions to subscribe to MarvalProjects calendars and access work package information via an external calendar client. <strong>Note:</strong> Please read about <a href="%{link}" target="_blank">iCalendar subscriptions</a> to understand potential security risks before enabling this.
     language_name_being_default: "%{language_name} (default)"
     notifications:
       events_explanation: "Bepaalt voor welke gebeurtenis een e-mail wordt verzonden. Werkpakketten worden uitgesloten van deze lijst omdat de meldingen ervoor kunnen worden geconfigureerd voor elke gebruiker."

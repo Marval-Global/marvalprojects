@@ -162,7 +162,7 @@ zh-TW:
                     6.*完成專案中的任務*： &rightarrow; 到 [Work packages &rightarrow; Tasks]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     您可在此找到我們的 [使用者指南](https://www.openproject.org/docs/user-guide/)。
-                    如果您有任何問題或需要支援，請告知我們。聯絡我們：[support[at]openproject.com](mailto:support@openproject.com).
+                    如果您有任何問題或需要支援，請告知我們。聯絡我們：[support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: 工作套件
@@ -340,7 +340,7 @@ zh-TW:
                     7.*啟動更多模組*： &rightarrow; 進入 [專案設定 &rightarrow; 模組]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules).
 
                     在這裡您可以找到我們的 [使用者指南](https://www.openproject.org/docs/user-guide/)。
-                    如果您有任何問題或需要支援，請告訴我們。聯絡我們：[support[at]openproject.com](mailto:support@openproject.com).
+                    如果您有任何問題或需要支援，請告訴我們。聯絡我們：[support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: 工作套件

@@ -162,7 +162,7 @@ tr:
                     6. *Projedeki görevlerinizi tamamlayın*: &rightarrow; İş paketleri &rightarrow; Görevler]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks) bölümüne gidin.
 
                     Burada [Kullanıcı Rehberlerimizi](https://www.openproject.org/docs/user-guide/) bulacaksınız.
-                    Herhangi bir sorunuz varsa veya desteğe ihtiyacınız varsa lütfen bize bildirin. Bize ulaşın: [support[at]openproject.com](mailto:support@openproject.com).
+                    Herhangi bir sorunuz varsa veya desteğe ihtiyacınız varsa lütfen bize bildirin. Bize ulaşın: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: İş paketleri
@@ -333,7 +333,7 @@ tr:
                     7. *Diğer modülleri etkinleştirin*: &rightarrow; Proje ayarları &rightarrow; Modüller]({{opSetting:base_url}}/projects/your-scrum-project/settings/modules) bölümüne gidin.
 
                     Burada [Kullanıcı Kılavuzlarımızı] (https://www.openproject.org/docs/user-guide/) bulacaksınız.
-                    Herhangi bir sorunuz varsa veya desteğe ihtiyacınız varsa lütfen bize bildirin. Bize ulaşın: [support[at]openproject.com](mailto:support@openproject.com).
+                    Herhangi bir sorunuz varsa veya desteğe ihtiyacınız varsa lütfen bize bildirin. Bize ulaşın: [support[at]marvalprojects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: İş paketleri
