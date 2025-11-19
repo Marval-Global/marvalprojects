@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: marvalprojects-letsencrypt
+spec:
+  acme:
+    server: {{ .Values.ingress.letsEncryptUrl }}
+    privateKeySecretRef:
+      name: letsencrypt-key
+    solvers:
+      - http01:
+          ingress:
+            class: nginx
