@@ -1,4 +1,4 @@
-dockerconfig: #{docker:config}
+dockerconfig: #{global:docker:config}
 global:
   imagePullSecrets: 
     - marvalprojects-acr-pull-secret
@@ -42,7 +42,7 @@ image:
   registry: "ukcomarvalnextgen.azurecr.io"
   repository: "marvalproject"
   imagePullPolicy: "Always"
-  tag: ""
+  tag: "1.0.0.32215"
 
 memcached: 
   bundled: true
@@ -74,7 +74,7 @@ cron:
     IMAP_HOST: "#{cron:environment:IMAP_HOST}"
     IMAP_USERNAME: "#{cron:environment:IMAP_USERNAME}"
     IMAP_PASSWORD: "#{cron:environment:IMAP_PASSWORD}"
-    IMAP_PORT: 993
+    IMAP_PORT: #{cron:environment:IMAP_PORT}"
 
 openproject:
   admin_user:
@@ -84,7 +84,7 @@ openproject:
     mail: "#{openproject:admin_user:mail}"
 
 s3:
-  enabled: false
+  enabled: true
   auth:
     accessKeyId: #{s3:auth:accessKeyId}
     secretAccessKey: #{s3:auth:secretAccessKey}
