@@ -62,6 +62,13 @@ web:
   nodeSelector:
     applications: "linuxapps"
 
+appInit:
+  resources:
+    limits:
+      memory: "2Gi"
+    requests:
+      memory: "512Mi"
+
 worker:
   nodeSelector:
     applications: "linuxapps"
@@ -106,3 +113,22 @@ postgresql:
     database: "#{postgresql:auth:database}"
     password: "#{postgresql:auth:password}"
     postgresPassword: "#{postgresql:auth:postgresPassword}"
+
+affinity:
+  podAntiAffinity:
+    # Use 'preferredDuringSchedulingIgnoredDuringExecution' for a "soft" rule
+    # The scheduler will try its best to spread pods, but will still schedule if it can't find a perfect node.
+    preferredDuringSchedulingIgnoredDuringExecution:
+    - weight: 100
+      podAffinityTerm:
+        labelSelector:
+          matchExpressions:
+          # Match all pods that share the main application label (e.g., app: marvalproject)
+          # You will need to verify the exact label key/value used by your pods.
+          - key: "app.kubernetes.io/instance"
+            operator: In
+            values:
+            - "marvalproject"
+        # This is the key that tells Kubernetes how to define "same place".
+        # kubernetes.io/hostname means "on a different node".
+        topologyKey: "kubernetes.io/hostname"
