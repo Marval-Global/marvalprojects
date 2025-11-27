@@ -6,6 +6,9 @@ global:
 nodeSelector:
   applications: "linuxapps"
 
+persistence:
+  enabled: false
+
 ingress:
   enabled: true
   letsEncryptUrl: https://acme-v02.api.letsencrypt.org/directory
