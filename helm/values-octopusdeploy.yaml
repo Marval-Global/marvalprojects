@@ -89,6 +89,7 @@ cron:
     IMAP_PORT: #{cron:environment:IMAP_PORT}"
 
 openproject:
+  railsRelativeUrlRoot: /projects
   admin_user:
     password: "#{openproject:admin_user:password}"
     password_reset: "#{openproject:admin_user:password_reset}"
