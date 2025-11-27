@@ -3,6 +3,9 @@ global:
   imagePullSecrets: 
     - marvalprojects-acr-pull-secret
 
+nodeSelector:
+  applications: "linuxapps"
+
 ingress:
   enabled: true
   letsEncryptUrl: https://acme-v02.api.letsencrypt.org/directory
@@ -32,7 +35,7 @@ ingress:
       proxy_cache_methods GET HEAD;        
       add_header X-Cache-Status $upstream_cache_status;
   host: "#{global:ingress:hostname}.#{global:ingress:domain}"
-  path: /
+  path: /Projects
   pathType: "Prefix"
   tls:    
     enabled: true
@@ -49,21 +52,20 @@ memcached:
   image:
     repository: bitnamilegacy/memcached
     tag: 1.6.24-debian-12-r0
-
-nodeSelector:
-  agentpool: "linux101"
+  nodeSelector:
+    applications: "linuxapps"
 
 web:
   nodeSelector:
-    agentpool: "linux101"
+    applications: "linuxapps"
 
 worker:
   nodeSelector:
-    agentpool: "linux101"
+    applications: "linuxapps"
  
 seeder:
   nodeSelector:
-    agentpool: "linux101"
+    applications: "linuxapps"
 
 strategy:  
   type: "Recreate"
