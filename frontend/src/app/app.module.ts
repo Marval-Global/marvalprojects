@@ -29,7 +29,7 @@
 import { ApplicationRef, DoBootstrap, Injector, NgModule, inject, provideAppInitializer } from '@angular/core';
 import { A11yModule } from '@angular/cdk/a11y';
 import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   OpContextMenuTrigger,
 } from 'core-app/shared/components/op-context-menu/handlers/op-context-menu-trigger.directive';
@@ -314,6 +314,7 @@ export function initializeServices(injector:Injector) {
     OpenprojectMembersModule,
 
     // Angular Forms
+    FormsModule,
     ReactiveFormsModule,
 
     // Augmenting Module
