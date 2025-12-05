@@ -151,7 +151,7 @@ class ToV710AggregatedMigrations < ActiveRecord::Migration[5.1]
   end
 
   def raise_on_incomplete_7_1_migrations
-    raise_on_incomplete_migrations(aggregated_versions_7_1, "v7.4.0", "MarvalProjects")
+    raise_on_incomplete_migrations(aggregated_versions_7_1, "v7.4.0", "OpenProject")
   end
 
   def raise_on_incomplete_migrations(aggregated_versions, version_number, app_name)

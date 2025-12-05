@@ -8,9 +8,9 @@ module Interceptors
 
     def default_headers
       {
-        "X-Mailer" => "MarvalProjects",
-        "X-MarvalProjects-Host" => Setting.host_name,
-        "X-MarvalProjects-Site" => Setting.app_title,
+        "X-Mailer" => "OpenProject",
+        "X-OpenProject-Host" => Setting.host_name,
+        "X-OpenProject-Site" => Setting.app_title,
         "Precedence" => "bulk",
         "Auto-Submitted" => "auto-generated"
       }

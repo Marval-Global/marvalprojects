@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name        = "dashboards"
   s.version     = "1.0.0"
-  s.authors     = ["MarvalProjects"]
-  s.summary     = "MarvalProjects Dashboards"
+  s.authors     = ["OpenProject"]
+  s.summary     = "OpenProject Dashboards"
 
   s.files = Dir["{app,config,db,lib}/**/*"]
 
