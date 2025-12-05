@@ -9,6 +9,9 @@ nodeSelector:
 persistence:
   enabled: false
 
+environment: 
+  OPENPROJECT_APP_TITLE=MarvalProjects
+
 ingress:
   enabled: true
   letsEncryptUrl: https://acme-v02.api.letsencrypt.org/directory
