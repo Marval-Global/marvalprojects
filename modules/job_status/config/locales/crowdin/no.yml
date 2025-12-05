@@ -1,7 +1,7 @@
 "no":
   label_job_status_plural: "Job statuses"
   plugin_openproject_job_status:
-    name: "OpenProject jobbstatus"
+    name: "MarvalProjects jobbstatus"
     description: "Oppføring og status for bakgrunnsjobber."
   job_status_dialog:
     download_starts: 'Nedlastingen skal starte automatisk.'

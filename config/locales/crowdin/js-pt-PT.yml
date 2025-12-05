@@ -52,7 +52,7 @@ pt-PT:
         Uma nova cópia de segurança substituirá qualquer outra feita anteriormente. Só pode ser solicitado um número limitado de cópias de segurança por dia.
       last_backup: Última cópia de segurança
       last_backup_from: Última cópia de segurança de
-      title: fazer cópia de segurança do OpenProject
+      title: fazer cópia de segurança do MarvalProjects
       options: Opções
       include_attachments: Incluir anexos
       download_backup: Transferir cópia de segurança
@@ -510,7 +510,7 @@ pt-PT:
         next: "Próxima"
         got_it: "Entendi"
       steps:
-        help_menu: "O menu Ajuda (?) fornece <b>recursos adicionais de ajuda</b>. Aqui pode encontrar um guia do utilizador, vídeos de ajuda úteis e muito mais. <br> Aproveite o seu trabalho com o OpenProject!"
+        help_menu: "O menu Ajuda (?) fornece <b>recursos adicionais de ajuda</b>. Aqui pode encontrar um guia do utilizador, vídeos de ajuda úteis e muito mais. <br> Aproveite o seu trabalho com o MarvalProjects!"
         members: "Convide novos <b>membros</b> para participarem no seu projeto."
         quick_add_button: "Clique no ícone mais (+) no menu de navegação para <b>criar um novo projeto</b> ou <b>convidar colegas</b>."
         sidebar_arrow: "Use a seta de retorno no canto superior esquerdo para voltar ao <b>menu principal</b> do projeto."

@@ -1,7 +1,7 @@
 #English strings go here for Rails i18n
 ko:
   plugin_openproject_recaptcha:
-    name: "OpenProject ReCaptcha"
+    name: "MarvalProjects ReCaptcha"
     description: "이 모듈은 로그인 시 recaptcha 확인을 제공합니다."
   recaptcha:
     label_recaptcha: "reCAPTCHA"

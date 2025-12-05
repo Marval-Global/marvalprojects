@@ -1,7 +1,7 @@
 #English strings go here
 fr:
   plugin_openproject_boards:
-    name: "Tableaux OpenProject"
+    name: "Tableaux MarvalProjects"
     description: "Fournit des vues du tableau."
   permission_show_board_views: "Afficher les tableaux"
   permission_manage_board_views: "Gérer les tableaux"

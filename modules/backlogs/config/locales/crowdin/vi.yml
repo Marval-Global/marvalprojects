@@ -21,8 +21,8 @@
 #++
 vi:
   plugin_openproject_backlogs:
-    name: "OpenProject Backlogs"
-    description: "Mô-đun này bổ sung các tính năng cho phép các nhóm agile làm việc với OpenProject trong các dự án Scrum."
+    name: "MarvalProjects Backlogs"
+    description: "Mô-đun này bổ sung các tính năng cho phép các nhóm agile làm việc với MarvalProjects trong các dự án Scrum."
   activerecord:
     attributes:
       work_package:

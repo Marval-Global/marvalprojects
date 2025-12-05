@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 "no":
   plugin_openproject_meeting:
-    name: "OpenProject Møte"
+    name: "MarvalProjects Møte"
     description: >-
-      Denne modulen legger til funksjoner som støtter prosjektmøter i OpenProject. Det er planlagt at møteplasser skal velge ut gjester fra det samme prosjektet for å delta på møtet. En dagsorden kan opprettes og sendes til de inviterte. Etter møtet kan deltakerne velges ut og referater kan opprettes basert på dagsorden. Til slutt kan referatene sendes til alle deltakere og inviterte.
+      Denne modulen legger til funksjoner som støtter prosjektmøter i MarvalProjects. Det er planlagt at møteplasser skal velge ut gjester fra det samme prosjektet for å delta på møtet. En dagsorden kan opprettes og sendes til de inviterte. Etter møtet kan deltakerne velges ut og referater kan opprettes basert på dagsorden. Til slutt kan referatene sendes til alle deltakere og inviterte.
   activerecord:
     attributes:
       meeting:

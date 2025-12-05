@@ -1,6 +1,6 @@
 ja:
   plugin_openproject_xls_export:
-    name: "OpenProject XLSエクスポート"
+    name: "MarvalProjects XLSエクスポート"
     description: "課題リストを Excel スプレッドシート(.xls)としてエクスポートします。"
   export_to_excel: "XLS をエクスポート"
   print_with_description: "説明付きの印刷プレビュー"

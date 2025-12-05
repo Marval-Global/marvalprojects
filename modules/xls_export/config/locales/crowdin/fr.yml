@@ -1,6 +1,6 @@
 fr:
   plugin_openproject_xls_export:
-    name: "Export XLS OpenProject"
+    name: "Export XLS MarvalProjects"
     description: "Exporter les listes de tickets sous la forme de feuilles de calcul Excel (.xls)."
   export_to_excel: "Exporter XLS"
   print_with_description: "Imprimer l'aperçu avec une description"

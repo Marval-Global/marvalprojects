@@ -56,10 +56,10 @@ vi:
           attributes:
             host:
               authorization_header_missing: không được cấu hình đầy đủ. Phiên bản Nextcloud không nhận được tiêu đề "Authorization", điều này cần thiết cho xác thực Bearer token của các yêu cầu API. Vui lòng kiểm tra lại cấu hình máy chủ HTTP của bạn.
-              cannot_be_connected_to: không thể truy cập được. Vui lòng đảm bảo máy chủ có thể truy cập được và ứng dụng tích hợp OpenProject đã được cài đặt.
+              cannot_be_connected_to: không thể truy cập được. Vui lòng đảm bảo máy chủ có thể truy cập được và ứng dụng tích hợp MarvalProjects đã được cài đặt.
               minimal_nextcloud_version_unmet: không đáp ứng yêu cầu phiên bản tối thiểu (phải là Nextcloud 23 trở lên)
               not_nextcloud_server: không phải là máy chủ Nextcloud
-              op_application_not_installed: có vẻ như chưa cài đặt ứng dụng "Tích hợp OpenProject". Vui lòng cài đặt ứng dụng này trước và sau đó thử lại.
+              op_application_not_installed: có vẻ như chưa cài đặt ứng dụng "Tích hợp MarvalProjects". Vui lòng cài đặt ứng dụng này trước và sau đó thử lại.
             password:
               invalid_password: không hợp lệ.
               unknown_error: không thể xác thực. Vui lòng kiểm tra kết nối lưu trữ của bạn và thử lại.
@@ -120,15 +120,15 @@ vi:
         rename_project_folder: 'Đổi tên thư mục dự án được quản lý:'
     errors:
       messages:
-        error: Đã xảy ra lỗi không mong muốn. Vui lòng kiểm tra nhật ký OpenProject để biết thêm thông tin hoặc liên hệ với quản trị viên
-        unauthorized: OpenProject could not authenticate with the Storage Provider. Please ensure that you have access to it.
+        error: Đã xảy ra lỗi không mong muốn. Vui lòng kiểm tra nhật ký MarvalProjects để biết thêm thông tin hoặc liên hệ với quản trị viên
+        unauthorized: MarvalProjects could not authenticate with the Storage Provider. Please ensure that you have access to it.
       models:
         copy_project_folders_service:
           conflict: Thư mục %{destination_path} đã tồn tại. Đang tạm dừng quá trình để tránh ghi đè.
-          error: Đã xảy ra lỗi không mong muốn. Vui lòng kiểm tra nhật ký OpenProject để biết thêm thông tin hoặc liên hệ với quản trị viên
-          forbidden: OpenProject không thể truy cập thư mục nguồn. Vui lòng kiểm tra cấu hình quyền của bạn trên Nhà cung cấp lưu trữ
+          error: Đã xảy ra lỗi không mong muốn. Vui lòng kiểm tra nhật ký MarvalProjects để biết thêm thông tin hoặc liên hệ với quản trị viên
+          forbidden: MarvalProjects không thể truy cập thư mục nguồn. Vui lòng kiểm tra cấu hình quyền của bạn trên Nhà cung cấp lưu trữ
           not_found: Không tìm thấy vị trí mẫu nguồn %{source_path}.
-          unauthorized: OpenProject không thể xác thực với Nhà cung cấp lưu trữ. Vui lòng kiểm tra cấu hình lưu trữ của bạn
+          unauthorized: MarvalProjects không thể xác thực với Nhà cung cấp lưu trữ. Vui lòng kiểm tra cấu hình lưu trữ của bạn
         nextcloud_sync_service:
           attributes:
             add_user_to_group:
@@ -149,16 +149,16 @@ vi:
               conflict: 'Không thể xóa người dùng %{user} khỏi nhóm %{group} vì lý do sau: %{reason}'
               failed_to_remove: 'Không thể xóa người dùng %{user} khỏi nhóm %{group} vì lý do sau: %{reason}'
             rename_project_folder:
-              conflict: OpenProject could not rename the project folder to %{current_path} as a folder with the same name already exists
-              forbidden: Người dùng OpenProject không có quyền truy cập vào thư mục %{current_path}.
+              conflict: MarvalProjects could not rename the project folder to %{current_path} as a folder with the same name already exists
+              forbidden: Người dùng MarvalProjects không có quyền truy cập vào thư mục %{current_path}.
               not_found: "Không tìm thấy %{current_path}."
             set_folders_permissions:
               permission_not_set: không thể thiết lập quyền trên %{path}.
-          error: An unexpected error occurred. Please ensure that your Nextcloud instance is reachable and check OpenProject worker logs for more information
+          error: An unexpected error occurred. Please ensure that your Nextcloud instance is reachable and check MarvalProjects worker logs for more information
           group_does_not_exist: "%{group} không tồn tại. Kiểm tra cấu hình phiên bản Nextcloud của bạn."
-          insufficient_privileges: OpenProject không có đủ quyền để thêm %{user} vào %{group}. Kiểm tra cài đặt nhóm của bạn trong Nextcloud.
+          insufficient_privileges: MarvalProjects không có đủ quyền để thêm %{user} vào %{group}. Kiểm tra cài đặt nhóm của bạn trong Nextcloud.
           not_allowed: Nextcloud chặn yêu cầu.
-          unauthorized: OpenProject could not sync with Nextcloud. Please check your storage and Nextcloud configuration.
+          unauthorized: MarvalProjects could not sync with Nextcloud. Please check your storage and Nextcloud configuration.
           user_does_not_exist: "%{user} không tồn tại trong Nextcloud."
         one_drive_sync_service:
           attributes:
@@ -168,16 +168,16 @@ vi:
             hide_inactive_folders:
               permission_not_set: không thể thiết lập quyền trên %{path}.
             remote_folders:
-              request_error: OpenProject không thể truy cập ổ đĩa %{drive_id} của bạn. Vui lòng kiểm tra xem cấu hình lưu trữ của bạn có đúng không.
+              request_error: MarvalProjects không thể truy cập ổ đĩa %{drive_id} của bạn. Vui lòng kiểm tra xem cấu hình lưu trữ của bạn có đúng không.
             rename_project_folder:
-              conflict: OpenProject không thể đổi tên thư mục %{current_path} thành %{project_folder_name} vì đã có một thư mục có cùng tên
-              forbidden: OpenProject không có quyền truy cập vào %{current_path} để đổi tên nó.
+              conflict: MarvalProjects không thể đổi tên thư mục %{current_path} thành %{project_folder_name} vì đã có một thư mục có cùng tên
+              forbidden: MarvalProjects không có quyền truy cập vào %{current_path} để đổi tên nó.
               not_found: "Không tìm thấy %{current_path}."
             set_folders_permissions:
               permission_not_set: không thể thiết lập quyền trên %{path}.
-          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check OpenProject worker logs for more information
-          not_allowed: OpenProject không được phép truy cập ổ đĩa OneDrive của bạn. Vui lòng kiểm tra các quyền được thiết lập trên Ứng dụng Azure.
-          unauthorized: OpenProject could not sync with OneDrive. Please check your storage and Azure Application configuration.
+          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check MarvalProjects worker logs for more information
+          not_allowed: MarvalProjects không được phép truy cập ổ đĩa OneDrive của bạn. Vui lòng kiểm tra các quyền được thiết lập trên Ứng dụng Azure.
+          unauthorized: MarvalProjects could not sync with OneDrive. Please check your storage and Azure Application configuration.
           user_does_not_exist: "%{user} không tồn tại trong Nextcloud."
         upload_link_service:
           not_found: The destination folder %{folder} could not be found on %{storage_name}.
@@ -187,17 +187,17 @@ vi:
       done_complete_setup: Hoàn tất, hoàn tất cấu hình
       done_continue: Hoàn tất, tiếp tục
       open_storage: Mở lưu trữ tập tin
-      replace_oauth_application: Thay thế OAuth OpenProject
+      replace_oauth_application: Thay thế OAuth MarvalProjects
       replace_oauth_client: Thay thế OAuth %{provider_type}
       save_and_continue: Lưu và tiếp tục
       select_folder: Chọn thư mục
     configuration_checks:
       oauth_client_incomplete:
-        nextcloud: Cho phép OpenProject truy cập dữ liệu Nextcloud bằng OAuth.
-        one_drive: Allow OpenProject to access Azure data using OAuth to connect OneDrive.
+        nextcloud: Cho phép MarvalProjects truy cập dữ liệu Nextcloud bằng OAuth.
+        one_drive: Allow MarvalProjects to access Azure data using OAuth to connect OneDrive.
       redirect_uri_incomplete:
         one_drive: Hoàn tất cấu hình với URI chuyển hướng chính xác.
-    confirm_replace_oauth_application: Hành động này sẽ đặt lại các thông tin xác thực OAuth hiện tại. Sau khi xác nhận, bạn sẽ phải nhập lại thông tin xác thực tại nhà cung cấp lưu trữ và tất cả người dùng từ xa sẽ phải xác thực lại với OpenProject. Bạn có chắc chắn muốn tiếp tục không?
+    confirm_replace_oauth_application: Hành động này sẽ đặt lại các thông tin xác thực OAuth hiện tại. Sau khi xác nhận, bạn sẽ phải nhập lại thông tin xác thực tại nhà cung cấp lưu trữ và tất cả người dùng từ xa sẽ phải xác thực lại với MarvalProjects. Bạn có chắc chắn muốn tiếp tục không?
     confirm_replace_oauth_client: Hành động này sẽ đặt lại các thông tin xác thực OAuth hiện tại. Sau khi xác nhận, bạn sẽ phải nhập thông tin mới từ nhà cung cấp lưu trữ và tất cả người dùng sẽ phải xác thực lại với %{provider_type}. Bạn có chắc chắn muốn tiếp tục không?
     delete_warning:
       input_delete_confirmation: Nhập tên lưu trữ tệp %{file_storage} để xác nhận xóa.
@@ -212,7 +212,7 @@ vi:
     dependencies:
       nextcloud:
         group_folders_app: Group Folders
-        integration_app: Tích hợp OpenProject
+        integration_app: Tích hợp MarvalProjects
     enabled_in_projects:
       setup_incomplete_description: Bộ lưu trữ này có thiết lập chưa hoàn chỉnh. Vui lòng hoàn tất thiết lập trước khi bật nó trong nhiều dự án.
       setup_incomplete_header: Thiết lập lưu trữ chưa hoàn tất
@@ -220,7 +220,7 @@ vi:
     file_storage_view:
       access_management:
         automatic_management: Quản lý và thư mục tự động
-        automatic_management_description: Để OpenProject tạo thư mục cho từng dự án tự động và quản lý quyền truy cập của người dùng. Điều này được khuyến nghị vì nó đảm bảo rằng mỗi thành viên trong nhóm luôn có quyền truy cập đúng.
+        automatic_management_description: Để MarvalProjects tạo thư mục cho từng dự án tự động và quản lý quyền truy cập của người dùng. Điều này được khuyến nghị vì nó đảm bảo rằng mỗi thành viên trong nhóm luôn có quyền truy cập đúng.
         description: Chọn loại quản lý quyền truy cập của người dùng và tạo thư mục. Chúng tôi khuyến nghị sử dụng quản lý tự động để có cấu trúc tổ chức hơn và đảm bảo quyền truy cập cho tất cả người dùng liên quan.
         manual_management: Quản lý và thư mục thủ công
         manual_management_description: Tạo và quản lý thư mục cho từng dự án thủ công. Bạn sẽ cần phải đảm bảo rằng các người dùng liên quan có quyền truy cập.
@@ -231,7 +231,7 @@ vi:
       general_information: Thông tin chung
       oauth_configuration: OAuth configuration
       one_drive_oauth: Azure OAuth
-      openproject_oauth: OpenProject OAuth
+      openproject_oauth: MarvalProjects OAuth
       project_folders: Thư mục dự án
       redirect_uri: URI chuyển hướng
       storage_audience_blank: No audience has been configured.
@@ -292,7 +292,7 @@ vi:
         nc_host_not_found: Không tìm thấy máy chủ Nextcloud tại url máy chủ được cấu hình. Vui lòng kiểm tra cấu hình.
         nc_oauth_request_not_found: The endpoint to fetch the currently connected user was not found. Please check the server logs for further information.
         nc_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
-        nc_oauth_token_missing: OpenProject cannot test the user level communication with Nextcloud as the user did not yet link their Nextcloud account.
+        nc_oauth_token_missing: MarvalProjects cannot test the user level communication with Nextcloud as the user did not yet link their Nextcloud account.
         nc_unexpected_content: Unexpected content found in the managed group folder.
         nc_userless_access_denied: The configured app password is invalid.
         not_configured: Kết nối không thể được xác thực. Vui lòng hoàn tất cấu hình trước.
@@ -302,7 +302,7 @@ vi:
         od_drive_id_not_found: ID ổ đĩa cấu hình không tìm thấy. Vui lòng kiểm tra cấu hình.
         od_oauth_request_not_found: The endpoint to fetch the currently connected user was not found. Please check the server logs for further information.
         od_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
-        od_oauth_token_missing: OpenProject cannot test the user level communication with OneDrive as the user did not yet link their Microsoft account.
+        od_oauth_token_missing: MarvalProjects cannot test the user level communication with OneDrive as the user did not yet link their Microsoft account.
         od_tenant_id_wrong: ID thư mục (người thuê) cấu hình không hợp lệ. Vui lòng kiểm tra cấu hình.
         od_test_folder_exists: The folder %{folder_name} needed for testing already exists. Please delete it and try again.
         od_unexpected_content: Nội dung không mong đợi được tìm thấy trong ổ đĩa.
@@ -344,7 +344,7 @@ vi:
       project_folder_bulk: Thư mục dự án là thư mục mặc định để tải tệp lên cho tất cả các dự án đã chọn. Bạn có thể sửa đổi thư mục này riêng lẻ trong từng cài đặt dự án. Tuy nhiên, người dùng vẫn có thể tải tệp lên các vị trí khác.
     instructions:
       all_available_storages_already_added: Tất cả các lưu trữ có sẵn đã được thêm vào dự án.
-      authentication_method: The way that requests between OpenProject and the Storage are authenticated.
+      authentication_method: The way that requests between MarvalProjects and the Storage are authenticated.
       automatic_folder: Điều này sẽ tự động tạo một thư mục gốc cho dự án này và quản lý quyền truy cập cho từng thành viên của dự án.
       empty_project_folder_validation: Việc chọn một thư mục là bắt buộc để tiếp tục.
       existing_manual_folder: Bạn có thể chỉ định một thư mục hiện có làm thư mục gốc cho dự án này. Tuy nhiên, quyền truy cập không được quản lý tự động, quản trị viên cần đảm bảo rằng các người dùng liên quan có quyền truy cập. Thư mục đã chọn có thể được sử dụng bởi nhiều dự án.
@@ -353,8 +353,8 @@ vi:
       name: Đặt tên cho lưu trữ của bạn để người dùng có thể phân biệt giữa nhiều lưu trữ.
       new_storage: Đọc tài liệu của chúng tôi về <a target='_blank' href='%{provider_link}'>cài đặt tích hợp lưu trữ tệp %{provider_name}</a> để biết thêm thông tin.
       nextcloud:
-        application_link_text: ứng dụng “Tích hợp OpenProject”
-        integration: Quản trị Nextcloud / OpenProject
+        application_link_text: ứng dụng “Tích hợp MarvalProjects”
+        integration: Quản trị Nextcloud / MarvalProjects
         oauth_configuration: Sao chép các giá trị này từ %{application_link_text}.
         provider_configuration: Vui lòng đảm bảo bạn có quyền quản trị trong phiên bản Nextcloud của bạn và ứng dụng %{application_link_text} đã được cài đặt trước khi thực hiện cấu hình.
         storage_audience: The client ID that the Nextcloud instance uses to communicate with the identity provider.
@@ -364,7 +364,7 @@ vi:
       no_storage_set_up: Chưa có lưu trữ tệp nào được thiết lập.
       not_logged_into_storage: Để chọn thư mục dự án, vui lòng đăng nhập trước
       oauth_application_details: Giá trị bí mật khách hàng sẽ không còn khả dụng sau khi bạn đóng cửa sổ này. Vui lòng sao chép các giá trị này vào %{oauth_application_details_link}.
-      oauth_application_details_link_text: Cài đặt Tích hợp OpenProject Nextcloud
+      oauth_application_details_link_text: Cài đặt Tích hợp MarvalProjects Nextcloud
       one_drive:
         application_link_text: cổng thông tin Azure
         copy_redirect_uri: Sao chép URI chuyển hướng
@@ -383,7 +383,7 @@ vi:
       setting_up_storages: Để thiết lập lưu trữ tệp, vui lòng truy cập
       setting_up_storages_non_admin: Administrators can set up file storages in Administration / File storages.
       type: 'Vui lòng đảm bảo bạn có quyền quản trị trong phiên bản Nextcloud của bạn và đã cài đặt ứng dụng sau đây trước khi thực hiện cấu hình:'
-      type_link_text: "“Tích hợp OpenProject”"
+      type_link_text: "“Tích hợp MarvalProjects”"
     label_active: Đang hoạt động
     label_add_new_storage: Thêm lưu trữ mới
     label_automatic_folder: Thư mục mới với quyền quản lý tự động
@@ -407,8 +407,8 @@ vi:
     label_no_selected_folder: Không có thư mục được chọn
     label_no_specific_folder: Không có thư mục cụ thể
     label_oauth_client_id: ID Khách hàng OAuth
-    label_openproject_oauth_application_id: ID Khách hàng OAuth OpenProject
-    label_openproject_oauth_application_secret: Bí mật khách hàng OAuth OpenProject
+    label_openproject_oauth_application_id: ID Khách hàng OAuth MarvalProjects
+    label_openproject_oauth_application_secret: Bí mật khách hàng OAuth MarvalProjects
     label_project_folder: Thư mục dự án
     label_provider: Nhà cung cấp
     label_redirect_uri: URI chuyển hướng
@@ -448,7 +448,7 @@ vi:
         title: Cấu hình tích hợp đã hoàn tất
       timeout:
         link_text: health status of the file storage setup
-        subtitle: OpenProject could not provide you access to the project folder within the expected period of time. Please, try once again.<br><br> If that problem persists please contact your OpenProject administrator to check %{storages_health_link}.
+        subtitle: MarvalProjects could not provide you access to the project folder within the expected period of time. Please, try once again.<br><br> If that problem persists please contact your MarvalProjects administrator to check %{storages_health_link}.
       waiting:
         subtitle: Một chút thời gian, điều này có thể mất một chút thời gian...
         title: Chúng tôi đang thiết lập quyền của bạn trên thư mục dự án.
@@ -458,8 +458,8 @@ vi:
         subtitle: Thêm một lưu trữ tệp bên ngoài để tải lên, liên kết và quản lý tệp trong các gói công việc.
       managed_project_folders:
         subtitle: |-
-          Để OpenProject tạo các thư mục theo dự án tự động. Điều này được khuyến nghị vì nó đảm bảo rằng mọi thành viên trong nhóm luôn có quyền truy cập chính xác.
-        subtitle_short: Để OpenProject tạo các thư mục theo dự án tự động.
+          Để MarvalProjects tạo các thư mục theo dự án tự động. Điều này được khuyến nghị vì nó đảm bảo rằng mọi thành viên trong nhóm luôn có quyền truy cập chính xác.
+        subtitle_short: Để MarvalProjects tạo các thư mục theo dự án tự động.
         title: Thư mục dự án được quản lý tự động
       project_settings:
         delete: Xóa lưu trữ tệp
@@ -493,10 +493,10 @@ vi:
     storage_audience:
       documentation_intro: Please read our documentation for details on the following options and configuration of the identity provider.
       idp:
-        helptext: OpenProject will use the access token received by the identity provider during log in to authenticate requests to the storage. It will not try to obtain another token.
+        helptext: MarvalProjects will use the access token received by the identity provider during log in to authenticate requests to the storage. It will not try to obtain another token.
         label: Use access token obtained during user log in
       manual:
-        helptext: OpenProject will exchange a token with the identity provider for the given audience.
+        helptext: MarvalProjects will exchange a token with the identity provider for the given audience.
         label: Manually specify audience for which to exchange access token
     storage_list_blank_slate:
       description: Thêm một lưu trữ để thấy chúng ở đây.
@@ -504,6 +504,6 @@ vi:
     successful_storage_connection: Storage connected successfully! Remember to activate the storage in the Projects tab for each desired project to use it.
     upsell:
       description: |-
-        Integrate your OneDrive as a file storage with OpenProject. Upload files and link them directly to
+        Integrate your OneDrive as a file storage with MarvalProjects. Upload files and link them directly to
         work packages in a project.
       title: OneDrive integration

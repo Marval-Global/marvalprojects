@@ -21,7 +21,7 @@
 #++
 hu:
   plugin_openproject_documents:
-    name: "OpenProject Dokumentumok"
+    name: "MarvalProjects Dokumentumok"
     description: "Egy OpenProjekt plugin projekten belüli dokumentumok létrehozásához."
   activerecord:
     models:

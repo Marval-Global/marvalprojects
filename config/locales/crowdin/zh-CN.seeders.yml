@@ -148,7 +148,7 @@ zh-CN:
                 options:
                   name: 入门指南
                   text: |
-                    欢迎您的加入！让我们通过以下几个步骤来开始使用 OpenProject 吧。
+                    欢迎您的加入！让我们通过以下几个步骤来开始使用 MarvalProjects 吧。
 
                     通过 [导览]({{opSetting:base_url}}/projects/demo-project/work_packes?start_onboarding_tour=true) 来探索最重要的功能。
 
@@ -321,7 +321,7 @@ zh-CN:
                 options:
                   name: 入门指南
                   text: |
-                    我们很高兴您加入！建议您尝试以下几个步骤来开始使用OpenProject。
+                    我们很高兴您加入！建议您尝试以下几个步骤来开始使用MarvalProjects。
 
                     请按照以下步骤进行操作：
 
@@ -495,9 +495,9 @@ zh-CN:
         item_6:
           name: 缺陷
       welcome:
-        title: 欢迎使用 OpenProject！
+        title: 欢迎使用 MarvalProjects！
         text: |
-          OpenProject是领先的开源项目管理软件。它支持经典、敏捷和混合型项目管理，并由您完全掌握自己的数据。
+          MarvalProjects是领先的开源项目管理软件。它支持经典、敏捷和混合型项目管理，并由您完全掌握自己的数据。
 
           核心功能和用例：
 

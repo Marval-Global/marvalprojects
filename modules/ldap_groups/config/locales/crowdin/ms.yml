@@ -3,9 +3,9 @@ ms:
     upsell:
       ldap_groups:
         title: 'Sinkronisasi kumpulan LDAP'
-        description: 'Synchronize LDAP groups with OpenProject groups to manage users, change their permissions and facilitate user management across groups.'
+        description: 'Synchronize LDAP groups with MarvalProjects groups to manage users, change their permissions and facilitate user management across groups.'
   plugin_openproject_ldap_groups:
-    name: "Kumpulan LDAP OpenProject"
+    name: "Kumpulan LDAP MarvalProjects"
     description: "Penyelarasan keahlian kumpulan LDAP"
   activerecord:
     attributes:
@@ -34,7 +34,7 @@ ms:
     label_synchronize: 'Selaraskan'
     settings:
       name_attribute: 'Atribut nama kumpulan LDAP'
-      name_attribute_text: 'Atribut LDAP yang digunakan untuk menamakan kumpulan OpenProject apabila dicipta oleh penyaring'
+      name_attribute_text: 'Atribut LDAP yang digunakan untuk menamakan kumpulan MarvalProjects apabila dicipta oleh penyaring'
     synchronized_filters:
       add_new: 'Tambah saringan LDAP yang diselaraskan'
       singular: 'Penyaring sinkronisasi Kumpulan LDAP'
@@ -46,11 +46,11 @@ ms:
       destroy:
         title: 'Buang saringan yang diselaraskan %{name}'
         confirmation: "Jika anda teruskan, saringan yang diselaraskan %{name} dan semua kumpulan %{groups_count} yang dicipta melaluinya akan dikeluarkan."
-        removed_groups: "Amaran: Ini akan mengeluarkan kumpulan berikut daripada OpenProject dan mengeluarkannya daripada semua projek!"
+        removed_groups: "Amaran: Ini akan mengeluarkan kumpulan berikut daripada MarvalProjects dan mengeluarkannya daripada semua projek!"
         verification: "Masukkan nama penyaring %{name} untuk mengesahkan pembuangan."
       form:
-        group_name_attribute_text: 'Masukkan atribut kumpulan LDAP yang digunakan untuk tetapkan nama kumpulan OpenProject.'
-        filter_string_text: 'Masukkan penyaring LDAP RFC4515 yang kembalikan kumpulan dalam LDAP anda untuk diselaraskan dengan OpenProject.'
+        group_name_attribute_text: 'Masukkan atribut kumpulan LDAP yang digunakan untuk tetapkan nama kumpulan MarvalProjects.'
+        filter_string_text: 'Masukkan penyaring LDAP RFC4515 yang kembalikan kumpulan dalam LDAP anda untuk diselaraskan dengan MarvalProjects.'
         base_dn_text: >
           Masukkan pangkalan carian DN untuk gunakan penyaring ini. Ia perlulah berada di bawah pangkalan DN daripada sambungan LDAP yang dipilih. Tinggalkan pilihan ini kosong untuk gunakan semula sambungan pangkalan DN
     synchronized_groups:
@@ -58,11 +58,11 @@ ms:
       destroy:
         title: 'Keluarkan kumpulan yang diselaraskan %{name}'
         confirmation: "Jika anda teruskan, kumpulan yang diselaraskan %{name} dan semua %{users_count} pengguna yang diselaraskan melaluinya akan dikeluarkan."
-        info: "Perhatian: Kumpulan OpenProject sendiri dan ahli-ahli yang ditambah di luar sinkronisasi LDAP tidak akan dikeluarkan."
+        info: "Perhatian: Kumpulan MarvalProjects sendiri dan ahli-ahli yang ditambah di luar sinkronisasi LDAP tidak akan dikeluarkan."
         verification: "Masukkan nama kumpulan %{name} untuk mengesahkan pembuangan."
       help_text_html: |
-        Modul ini membenarkan anda untuk menyediakan sinkronisasi antara LDAP dan kumpulan-kumpulan OpenProject.
-        Ia bergantung kepada keperluan kumpulan LDAP untuk menggunakan <em>kumpulanNama / ahliKepada</em><br/> set atribut untuk bekerjasama dengan OpenProject.
+        Modul ini membenarkan anda untuk menyediakan sinkronisasi antara LDAP dan kumpulan-kumpulan MarvalProjects.
+        Ia bergantung kepada keperluan kumpulan LDAP untuk menggunakan <em>kumpulanNama / ahliKepada</em><br/> set atribut untuk bekerjasama dengan MarvalProjects.
         <br/>
         Kumpulan diselaraskan setiap jam melalui tugasan cron.
         <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Sila lihat dokumentasi kami berkenaan topik ini</a>.
@@ -73,8 +73,8 @@ ms:
       form:
         auth_source_text: 'Pilih sambungan LDAP yang harus digunakan.'
         sync_users_text: >
-          Jika anda mengaktifkan pilihan ini, pengguna yang ditemui akan dicipta secara automatik di OpenProject. Tanpanya, hanya akaun yang sedia ada dalam OpenProject akan ditambah ke dalam kumpulan.
+          Jika anda mengaktifkan pilihan ini, pengguna yang ditemui akan dicipta secara automatik di MarvalProjects. Tanpanya, hanya akaun yang sedia ada dalam MarvalProjects akan ditambah ke dalam kumpulan.
         dn_text: 'Masukkan DN penuh kumpulan dalam LDAP'
-        group_text: 'Pilih kumpulan OpenProject sedia ada yang ahli-ahli kumpulan LDAP akan diselaraskan dengannya'
+        group_text: 'Pilih kumpulan MarvalProjects sedia ada yang ahli-ahli kumpulan LDAP akan diselaraskan dengannya'
       upsell:
         description: 'Manfaatkan kumpulan LDAP yang diselaraskan untuk mengurus pengguna-pengguna, menukar kebenaran mereka dan memudahkan pengurusan pengguna di kalangan kumpulan.'

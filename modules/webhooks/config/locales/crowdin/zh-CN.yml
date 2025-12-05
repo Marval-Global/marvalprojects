@@ -1,7 +1,7 @@
 zh-CN:
   plugin_openproject_webhooks:
-    name: "OpenProject Webhooks"
-    description: "提供插件 API 以支持OpenProject Webhooks，以实现更好的第三方集成。"
+    name: "MarvalProjects Webhooks"
+    description: "提供插件 API 以支持MarvalProjects Webhooks，以实现更好的第三方集成。"
   activerecord:
     attributes:
       webhooks/webhook:
@@ -35,7 +35,7 @@ zh-CN:
         internal_comment: "内部评论"
       explanation:
         text: >
-          在发生诸如创建工作包或更新项目之类的事件时，OpenProject 将向配置的 Web 端点发送一个 POST 请求。通常，会在 %{link}过后发送事件。
+          在发生诸如创建工作包或更新项目之类的事件时，MarvalProjects 将向配置的 Web 端点发送一个 POST 请求。通常，会在 %{link}过后发送事件。
         link: 配置的聚合期
       status:
         enabled: 'Webhook 已启用'
@@ -66,4 +66,4 @@ zh-CN:
           title: '选定项目'
         secret:
           description: >
-            如果设置，OpenProject 将使用此密钥值对 Webhook 有效载荷进行签名。
+            如果设置，MarvalProjects 将使用此密钥值对 Webhook 有效载荷进行签名。

@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 vi:
   plugin_openproject_two_factor_authentication:
-    name: "Xác thực hai yếu tố OpenProject"
+    name: "Xác thực hai yếu tố MarvalProjects"
     description: >-
-      Plugin OpenProject này xác thực người dùng của bạn bằng cách sử dụng xác thực hai yếu tố thông qua mật khẩu một lần theo tiêu chuẩn TOTP (Google Authenticator) hoặc gửi đến điện thoại di động của người dùng qua SMS hoặc cuộc gọi thoại.
+      Plugin MarvalProjects này xác thực người dùng của bạn bằng cách sử dụng xác thực hai yếu tố thông qua mật khẩu một lần theo tiêu chuẩn TOTP (Google Authenticator) hoặc gửi đến điện thoại di động của người dùng qua SMS hoặc cuộc gọi thoại.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ vi:
       only_sms_allowed: "Chỉ có chuyển tin SMS có thể được thiết lập cho các người dùng khác."
     upsell:
       title: "Xác thực hai yếu tố"
-      description: "Tăng cường bảo mật cho phiên bản OpenProject của bạn bằng cách cung cấp (hoặc áp dụng) xác thực hai yếu tố cho tất cả các thành viên dự án."
+      description: "Tăng cường bảo mật cho phiên bản MarvalProjects của bạn bằng cách cung cấp (hoặc áp dụng) xác thực hai yếu tố cho tất cả các thành viên dự án."
     backup_codes:
       none_found: Không có mã dự phòng nào cho tài khoản này.
       singular: Mã sao lưu

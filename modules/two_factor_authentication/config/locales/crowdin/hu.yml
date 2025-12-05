@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 hu:
   plugin_openproject_two_factor_authentication:
-    name: "OpenProject Two-factor authentication"
+    name: "MarvalProjects Two-factor authentication"
     description: >-
-      This OpenProject plugin authenticates your users using two-factor authentication by means of one-time password through the TOTP standard (Google Authenticator) or sent to the user's cell phone via SMS or voice call.
+      This MarvalProjects plugin authenticates your users using two-factor authentication by means of one-time password through the TOTP standard (Google Authenticator) or sent to the user's cell phone via SMS or voice call.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ hu:
       only_sms_allowed: "Only SMS delivery can be set up for other users."
     upsell:
       title: "Kétlépcsős hitelesítés"
-      description: "Erősítse meg OpenProject-példányának biztonságát kétlépcsős hitelesítés felajánlásával (vagy kényszerítésével) minden projekttag számára."
+      description: "Erősítse meg MarvalProjects-példányának biztonságát kétlépcsős hitelesítés felajánlásával (vagy kényszerítésével) minden projekttag számára."
     backup_codes:
       none_found: "Ehhez a fiókhoz nincsenek biztonsági kódok.\n"
       singular: Visszaállítási kulcs

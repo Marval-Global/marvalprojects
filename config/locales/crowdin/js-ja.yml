@@ -53,7 +53,7 @@ ja:
         新しいバックアップは以前のバックアップを上書きします。1日にリクエストできるバックアップの数には限りがあります。
       last_backup: 前回バックアップ
       last_backup_from: 前回バックアップ日
-      title: OpenProject のバックアップ
+      title: MarvalProjects のバックアップ
       options: オプション
       include_attachments: 添付ファイルを含める
       download_backup: バックアップのダウンロード
@@ -511,7 +511,7 @@ ja:
         next: "次へ"
         got_it: "了承"
       steps:
-        help_menu: "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!"
+        help_menu: "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with MarvalProjects!"
         members: "Invite new <b>members</b> to join your project."
         quick_add_button: "Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>."
         sidebar_arrow: "Use the return arrow in the top left corner to return to the project’s <b>main menu</b>."

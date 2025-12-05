@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 ko:
   plugin_openproject_meeting:
-    name: "OpenProject 미팅"
+    name: "MarvalProjects 미팅"
     description: >-
-      이 모듈은 OpenProject에 프로젝트 미팅을 지원하는 기능을 추가합니다. 미팅에 참여하도록 초대되는 사람을 동일한 프로젝트에서 선택하여 미팅을 예약할 수 있습니다. 의제를 생성하고 초대된 사람에게 보낼 수 있습니다. 미팅 후 참석자를 선택하고 의제에 따라 의사록을 작성할 수 있습니다. 마지막으로 모든 참석자와 초대된 사람에게 의사록을 보낼 수 있습니다.
+      이 모듈은 MarvalProjects에 프로젝트 미팅을 지원하는 기능을 추가합니다. 미팅에 참여하도록 초대되는 사람을 동일한 프로젝트에서 선택하여 미팅을 예약할 수 있습니다. 의제를 생성하고 초대된 사람에게 보낼 수 있습니다. 미팅 후 참석자를 선택하고 의제에 따라 의사록을 작성할 수 있습니다. 마지막으로 모든 참석자와 초대된 사람에게 의사록을 보낼 수 있습니다.
   activerecord:
     attributes:
       meeting:

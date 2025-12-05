@@ -1,7 +1,7 @@
 es:
   label_job_status_plural: "Estados de trabajo"
   plugin_openproject_job_status:
-    name: "Estado del trabajo de OpenProject"
+    name: "Estado del trabajo de MarvalProjects"
     description: "Listado y estado de los trabajos en segundo plano."
   job_status_dialog:
     download_starts: 'La descarga debería iniciarse automáticamente.'

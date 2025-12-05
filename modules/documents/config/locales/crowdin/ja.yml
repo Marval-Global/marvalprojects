@@ -21,8 +21,8 @@
 #++
 ja:
   plugin_openproject_documents:
-    name: "OpenProjectドキュメント"
-    description: "プロジェクト内のドキュメントの作成を可能にするOpenProjectプラグイン。"
+    name: "MarvalProjectsドキュメント"
+    description: "プロジェクト内のドキュメントの作成を可能にするMarvalProjectsプラグイン。"
   activerecord:
     models:
       document: "ドキュメント"

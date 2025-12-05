@@ -148,7 +148,7 @@ vi:
                 options:
                   name: Bắt đầu
                   text: |
-                    Chúng tôi rất vui vì bạn đã tham gia! Chúng tôi khuyên bạn nên thử một vài điều để bắt đầu với OpenProject.
+                    Chúng tôi rất vui vì bạn đã tham gia! Chúng tôi khuyên bạn nên thử một vài điều để bắt đầu với MarvalProjects.
 
                     Khám phá các tính năng quan trọng nhất với [Tour hướng dẫn]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true).
 
@@ -320,7 +320,7 @@ vi:
                 options:
                   name: Bắt đầu
                   text: |
-                    Chúng tôi rất vui vì bạn đã tham gia! Chúng tôi khuyên bạn nên thử một vài điều để bắt đầu với OpenProject.
+                    Chúng tôi rất vui vì bạn đã tham gia! Chúng tôi khuyên bạn nên thử một vài điều để bắt đầu với MarvalProjects.
 
                     _Hãy thử các bước sau:_
 
@@ -495,9 +495,9 @@ vi:
         item_6:
           name: Lỗi
       welcome:
-        title: Chào mừng đến với OpenProject!
+        title: Chào mừng đến với MarvalProjects!
         text: |
-          OpenProject là phần mềm quản lý dự án mã nguồn mở hàng đầu. Nó hỗ trợ quản lý dự án theo cách truyền thống, Agile cũng như kết hợp và cung cấp cho bạn toàn quyền kiểm soát dữ liệu của mình.
+          MarvalProjects là phần mềm quản lý dự án mã nguồn mở hàng đầu. Nó hỗ trợ quản lý dự án theo cách truyền thống, Agile cũng như kết hợp và cung cấp cho bạn toàn quyền kiểm soát dữ liệu của mình.
 
           Các tính năng và trường hợp sử dụng chính:
 

@@ -21,8 +21,8 @@
 #++
 zh-CN:
   plugin_openproject_backlogs:
-    name: "OpenProject 待办清单"
-    description: "该模块为敏捷团队在敏捷项目中使用 OpenProject 添加了功能。"
+    name: "MarvalProjects 待办清单"
+    description: "该模块为敏捷团队在敏捷项目中使用 MarvalProjects 添加了功能。"
   activerecord:
     attributes:
       work_package:

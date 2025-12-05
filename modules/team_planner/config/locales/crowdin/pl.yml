@@ -1,7 +1,7 @@
 #English strings go here
 pl:
   plugin_openproject_team_planner:
-    name: "Planista zespołu OpenProject"
+    name: "Planista zespołu MarvalProjects"
     description: "Dostarcza widoki planisty zespołu."
   permission_view_team_planner: "Wyświetlanie planisty zespołu"
   permission_manage_team_planner: "Zarządzanie planistą zespołu"

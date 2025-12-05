@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 de:
   plugin_openproject_meeting:
-    name: "OpenProject Besprechung"
+    name: "MarvalProjects Besprechung"
     description: >-
-      Besprechungen für OpenProject
+      Besprechungen für MarvalProjects
   activerecord:
     attributes:
       meeting:

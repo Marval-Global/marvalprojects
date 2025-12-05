@@ -1,6 +1,6 @@
 cs:
   plugin_openproject_xls_export:
-    name: "Export OpenProject XLS"
+    name: "Export MarvalProjects XLS"
     description: "Exportovat seznamy problémů jako tabulky Excel (.xls)."
   export_to_excel: "Exportovat XLS"
   print_with_description: "Tisk náhledu s popisem"

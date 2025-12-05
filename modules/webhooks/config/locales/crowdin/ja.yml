@@ -1,7 +1,7 @@
 ja:
   plugin_openproject_webhooks:
-    name: "OpenProject Webhooks"
-    description: "より良いサードパーティの統合のためにOpenProjectのWebhookをサポートするプラグイン API を提供します。"
+    name: "MarvalProjects Webhooks"
+    description: "より良いサードパーティの統合のためにMarvalProjectsのWebhookをサポートするプラグイン API を提供します。"
   activerecord:
     attributes:
       webhooks/webhook:
@@ -66,4 +66,4 @@ ja:
           title: '選択したプロジェクト'
         secret:
           description: >
-            設定されている場合、OpenProjectによってこのシークレットの値がWebhookペイロードに署名するために使用されます。
+            設定されている場合、MarvalProjectsによってこのシークレットの値がWebhookペイロードに署名するために使用されます。

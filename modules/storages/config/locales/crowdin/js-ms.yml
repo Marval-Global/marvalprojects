@@ -73,12 +73,12 @@ ms:
           403: >
             Fail anda (%{fileName}) tidak dapat dimuat naik oleh kerana sekatan sistem. Sila hubungi pentadbir anda untuk maklumat lanjut.
           413: >
-            Fail anda (%{fileName}) lebih besar daripada apa yang OpenProject boleh muat naik ke %{storageType}. Anda boleh memuat naiknya terus ke %{storageType} dahulu, kemudian pautkan fail tersebut.
+            Fail anda (%{fileName}) lebih besar daripada apa yang MarvalProjects boleh muat naik ke %{storageType}. Anda boleh memuat naiknya terus ke %{storageType} dahulu, kemudian pautkan fail tersebut.
           507: >
             Fail anda (%{fileName}) ialah lebih besar dari kuota storan yang dibenarkan. Hubungi pentadbir anda untuk ubah suai kuota ini.
           detail:
             nextcloud: >
-              Sila semak versi aplikasi Nextcloud "Integrasi OpenProject" terkini sudah dipasang dan hubungi pentadbir anda untuk maklumat lanjut.
+              Sila semak versi aplikasi Nextcloud "Integrasi MarvalProjects" terkini sudah dipasang dan hubungi pentadbir anda untuk maklumat lanjut.
         link_uploaded_file_error: >
           Ralat berlaku semasa pautkan fail %{fileName} yang baru sahaja dimuat naik ke pakej kerja %{workPackageId}.
         tooltip:

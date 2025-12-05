@@ -52,7 +52,7 @@
         En ny sikkerhetskopi vil overskrive alle tidligere. Kun et begrenset antall sikkerhetskopier per dag kan startes.
       last_backup: Siste sikkerhetskopi
       last_backup_from: Siste sikkerhetskopi fra
-      title: Sikkerhetskopier OpenProject
+      title: Sikkerhetskopier MarvalProjects
       options: Alternativer
       include_attachments: Inkluder vedlegg
       download_backup: Last ned sikkerhetskopi
@@ -510,7 +510,7 @@
         next: "Neste"
         got_it: "Forstått"
       steps:
-        help_menu: "Hjelpemenyen (?) gir <b>ytterligere hjelpemidler</b>. Her kan du finne en brukerveiledning, hjelpevideoer og mer. <br> Nyt ditt arbeid med OpenProject!"
+        help_menu: "Hjelpemenyen (?) gir <b>ytterligere hjelpemidler</b>. Her kan du finne en brukerveiledning, hjelpevideoer og mer. <br> Nyt ditt arbeid med MarvalProjects!"
         members: "Inviter nye <b>medlemmer</b> til å bli med i prosjektet ditt."
         quick_add_button: "Klikk på plussikonet (+) i toppnavigasjonen til <b>opprette et nytt prosjekt</b> eller for å  <b>inviterer kolleger</b>."
         sidebar_arrow: "Bruk returpilen i øvre venstre hjørne for å gå tilbake til prosjektets <b>hovedmeny</b>."

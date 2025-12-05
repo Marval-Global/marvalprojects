@@ -3,7 +3,7 @@ he:
   plugin_openproject_avatars:
     name: "סמלים אישיים"
     description: >-
-      This plugin allows OpenProject users to upload a picture to be used as an avatar or use registered images from Gravatar.
+      This plugin allows MarvalProjects users to upload a picture to be used as an avatar or use registered images from Gravatar.
   label_avatar: "אווטר"
   label_avatar_plural: "סמלים אישיים"
   label_current_avatar: "תמונה נוכחית"
@@ -27,7 +27,7 @@ he:
       העלה תמונה משלך בגודל של 128 על 128 פיקסלים. קובץ גדול יותר ישונה וייחתך כדי להתאים. תצוגה מקדימה של התמונה שלך תיראה, ברגע שתבחר תמונה.
     text_change_gravatar_html: 'כדי לשנות או להוסיף את Gravatar לכתובת מייל שלך, לחץ על %{gravatar_url}'
     text_your_local_avatar: |
-      OpenProject מאפשר לך להעלות תמונה אישית משלך.
+      MarvalProjects מאפשר לך להעלות תמונה אישית משלך.
     text_local_avatar_over_gravatar: |
       If you set one, this custom avatar is used in precedence over the gravatar above.
     text_your_current_gravatar: |

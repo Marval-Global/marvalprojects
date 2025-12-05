@@ -17,7 +17,7 @@ fa:
         authn_requests_signed: امضای سخت افزاری درخواست احراز هویت
         want_assertions_signed: نیاز به پاسخ های دارای امضا
         want_assertions_encrypted: نیاز به پاسخ رمزنگاری شده
-        certificate: مدرک استفاده شده توسط OpenProject درخواست های احراز هویت سخت افزاری
+        certificate: مدرک استفاده شده توسط MarvalProjects درخواست های احراز هویت سخت افزاری
         private_key: کلید خصوصی مرتبط به احراز هویت های سخت افزاری
         signature_method: الگوریتم امضا
         digest_method: الگوریتم خلاصه سازی در رمزنگاری
@@ -46,8 +46,8 @@ fa:
       label_empty_description: "یک ارائه دهنده اضافه کنید تا آن را در اینجا ببینید."
       label_automatic_configuration: پیکربندی خودکار
       label_metadata: فراداده
-      label_metadata_endpoint: مسیر فراداده OpenProject
-      label_openproject_information: اطلاعات OpenProject
+      label_metadata_endpoint: مسیر فراداده MarvalProjects
+      label_openproject_information: اطلاعات MarvalProjects
       label_configuration_details: "آدرس ها و مدارک سرویس احراز هویت"
       label_configuration_encryption: "امضا ها و رمزنگاری ها"
       label_add_new: سخت‌افزار احراز هویت جدید
@@ -61,16 +61,16 @@ fa:
       requested_attributes: ویژگی های درخواستی
       attribute_mapping: نگاشت ویژگی ها
       attribute_mapping_text: >
-        فیلدهای زیر کنترل می کنند که کدام ویژگی های ارائه شده توسط ارائه دهنده هویت SAML برای ارائه ویژگی های کاربر در OpenProject استفاده می شود
+        فیلدهای زیر کنترل می کنند که کدام ویژگی های ارائه شده توسط ارائه دهنده هویت SAML برای ارائه ویژگی های کاربر در MarvalProjects استفاده می شود
       metadata:
-        dialog: "این نشانی اینترنتی است که فراداده SAML OpenProject در آن موجود است. به صورت اختیاری از آن برای پیکربندی ارائه دهنده هویت خود استفاده کنید:"
+        dialog: "این نشانی اینترنتی است که فراداده SAML MarvalProjects در آن موجود است. به صورت اختیاری از آن برای پیکربندی ارائه دهنده هویت خود استفاده کنید:"
       upsell:
         title: "Single Sign-On (SSO) with SAML"
-        description: OpenProject را به یک ارائه دهنده هویت SAML متصل کنید
+        description: MarvalProjects را به یک ارائه دهنده هویت SAML متصل کنید
       request_attributes:
         title: 'ویژگی های درخواست شده'
         legend: >
-          این ویژگی‌ها به فراداده SAML XML اضافه می‌شوند تا به ارائه‌دهنده شناسایی مشخص کنند که OpenProject به کدام ویژگی‌ها نیاز دارد. ممکن است همچنان نیاز باشد که ارائه دهنده هویت خود را برای ارسال این ویژگی ها به صراحت پیکربندی کنید. لطفاً به اسناد IdP خود مراجعه کنید.
+          این ویژگی‌ها به فراداده SAML XML اضافه می‌شوند تا به ارائه‌دهنده شناسایی مشخص کنند که MarvalProjects به کدام ویژگی‌ها نیاز دارد. ممکن است همچنان نیاز باشد که ارائه دهنده هویت خود را برای ارسال این ویژگی ها به صراحت پیکربندی کنید. لطفاً به اسناد IdP خود مراجعه کنید.
         name: 'کلید ویژگی های درخواستی'
         format: 'قالب ویژگی'
       section_headers:
@@ -84,8 +84,8 @@ fa:
         configuration: "URL های نقطه پایانی را برای ارائه دهنده هویت، گواهی ها و گزینه های SAML دیگر پیکربندی کنید."
         configuration_metadata: "این اطلاعات با استفاده از ابرداده ارائه شده از قبل پر شده است. در بیشتر موارد، آنها نیازی به ویرایش ندارند."
         encryption: "امضاهای ادعا و رمزگذاری را برای درخواست ها و پاسخ های SAML پیکربندی کنید."
-        encryption_form: "ممکن است به صورت اختیاری بخواهید پاسخ ادعا را رمزگذاری کنید، یا درخواست های OpenProject را امضا کنید."
-        mapping: "نگاشت بین پاسخ SAML و ویژگی های کاربر در OpenProject را به صورت دستی تنظیم کنید."
+        encryption_form: "ممکن است به صورت اختیاری بخواهید پاسخ ادعا را رمزگذاری کنید، یا درخواست های MarvalProjects را امضا کنید."
+        mapping: "نگاشت بین پاسخ SAML و ویژگی های کاربر در MarvalProjects را به صورت دستی تنظیم کنید."
         requested_attributes: "مجموعه ای از ویژگی هایی که در درخواست SAML ارسال شده به ارائه دهنده هویت شما درخواست می شود را تعریف کنید."
       seeded_from_env: "این ارائه دهنده از پیکربندی محیط استخراج شده است. قابل ویرایش نیست."
     settings:
@@ -106,7 +106,7 @@ fa:
       limit_self_registration: >
         در صورت فعال بودن، کاربران تنها در صورتی می توانند با استفاده از این ارائه دهنده ثبت نام کنند که تنظیمات ثبت نام خود اجازه می دهد.
       sp_entity_id: >
-        شناسه نهاد ارائه دهنده خدمات (SP). گاهی اوقات به عنوان مخاطب نیز شناخته می شود. این شناسه مشتری منحصر به فرد نمونه OpenProject است.
+        شناسه نهاد ارائه دهنده خدمات (SP). گاهی اوقات به عنوان مخاطب نیز شناخته می شود. این شناسه مشتری منحصر به فرد نمونه MarvalProjects است.
       idp_sso_service_url: >
         آدرس سرور ارائه دهنده احراز هویت.
       idp_slo_service_url: >
@@ -116,9 +116,9 @@ fa:
       name_identifier_format: >
         قالب شناسه نام را برای استفاده برای ادعای SAML تنظیم کنید.
       sp_metadata_endpoint: >
-        این نشانی اینترنتی است که فراداده SAML OpenProject در آن موجود است. به صورت اختیاری از آن برای پیکربندی ارائه دهنده هویت خود استفاده کنید.
+        این نشانی اینترنتی است که فراداده SAML MarvalProjects در آن موجود است. به صورت اختیاری از آن برای پیکربندی ارائه دهنده هویت خود استفاده کنید.
       mapping: >
-        نگاشت بین پاسخ SAML و ویژگی های کاربر را در OpenProject پیکربندی کنید. شما می توانید چندین نام ویژگی را برای جستجو پیکربندی کنید. OpenProject اولین ویژگی موجود را از پاسخ SAML انتخاب می کند.
+        نگاشت بین پاسخ SAML و ویژگی های کاربر را در MarvalProjects پیکربندی کنید. شما می توانید چندین نام ویژگی را برای جستجو پیکربندی کنید. MarvalProjects اولین ویژگی موجود را از پاسخ SAML انتخاب می کند.
       mapping_login: >
         ویژگی های SAML از پاسخ مورد استفاده برای ورود به سیستم.
       mapping_mail: >
@@ -132,17 +132,17 @@ fa:
       request_uid: >
         ویژگی SAML برای درخواست شناسه کاربری داخلی. به طور پیش فرض، name_id برای این فیلد استفاده خواهد شد.
       requested_attributes: >
-        این ویژگی‌ها به درخواست SAML XML اضافه می‌شوند تا با ارائه‌دهنده هویت که ویژگی‌هایی را که OpenProject نیاز دارد، ارتباط برقرار کند.
+        این ویژگی‌ها به درخواست SAML XML اضافه می‌شوند تا با ارائه‌دهنده هویت که ویژگی‌هایی را که MarvalProjects نیاز دارد، ارتباط برقرار کند.
       requested_format: >
         قالب ویژگی درخواستی این برای تعیین فرمت ویژگی در درخواست SAML استفاده می شود. لطفاً برای اطلاعات بیشتر به [مستندات مربوط به پیکربندی ویژگی‌های درخواستی] (docs_url) مراجعه کنید.
       authn_requests_signed: >
-        اگر علامت زده شود، OpenProject SAML AuthnRequest را امضا خواهد کرد. باید گواهی امضا و کلید خصوصی را با استفاده از فیلدهای زیر ارائه دهید.
+        اگر علامت زده شود، MarvalProjects SAML AuthnRequest را امضا خواهد کرد. باید گواهی امضا و کلید خصوصی را با استفاده از فیلدهای زیر ارائه دهید.
       want_assertions_signed: >
-        If checked, OpenProject will required signed responses from the identity provider using its own certificate keypair. OpenProject will verify the signature against the certificate from the basic configuration section.
+        If checked, MarvalProjects will required signed responses from the identity provider using its own certificate keypair. MarvalProjects will verify the signature against the certificate from the basic configuration section.
       want_assertions_encrypted: >
         در صورت فعال بودن، از ارائه‌دهنده هویت بخواهید که پاسخ ادعا را با استفاده از جفت گواهی ارائه شده رمزگذاری کند.
       certificate: >
-        گواهی X509 با قالب PEM را که توسط OpenProject برای امضای درخواست های SAML استفاده می شود، وارد کنید.
+        گواهی X509 با قالب PEM را که توسط MarvalProjects برای امضای درخواست های SAML استفاده می شود، وارد کنید.
       private_key: >
         کلید خصوصی با فرمت PEM X509 را برای گواهی فوق وارد کنید. این باید یک کلید خصوصی RSA باشد.
       signature_method: >

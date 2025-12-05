@@ -1,7 +1,7 @@
 zh-TW:
   plugin_openproject_openid_connect:
-    name: "OpenProject OpenID 連接"
-    description: "新增 OmniAuth OpenID 連線部署提供商至 OpenProject。"
+    name: "MarvalProjects OpenID 連接"
+    description: "新增 OmniAuth OpenID 連線部署提供商至 MarvalProjects。"
   logout_warning: >
     你已被登出，你嘗試送出的內容可能都會遺失。請登入。
   activerecord:
@@ -53,7 +53,7 @@ zh-TW:
     menu_title: OpenID 提供商
     delete_title: "刪除 OpenID Connect 提供者"
     instructions:
-      redirect_url: 這是 OpenID Connect 提供者應使用的重新導向網址，以便在登入成功後導回 OpenProject。
+      redirect_url: 這是 OpenID Connect 提供者應使用的重新導向網址，以便在登入成功後導回 MarvalProjects。
       endpoint_url: OpenID Connect 提供者給予您的端點 URL
       metadata_none: 我沒有這些資訊
       metadata_url: 我有一個發現端點 URL
@@ -93,7 +93,7 @@ zh-TW:
         name: 自訂
       upsell:
         title: "使用 OpenID 連線的單一登入 (SSO)"
-        description: 將 OpenProject 連接到 OpenID connect 身分提供者
+        description: 將 MarvalProjects 連接到 OpenID connect 身分提供者
       label_add_new: 新增 OpenID 提供商
       label_edit: 編輯 OpenID 提供商：%{name}
       label_empty_title: 尚未設定 Saml 提供商。
@@ -105,7 +105,7 @@ zh-TW:
       label_configuration_details: 後設資料
       label_client_details: 客戶端詳細資訊
       label_attribute_mapping: 屬性對應
-      client_details_description: OpenProject 作為 OIDC 用戶端的細節設定
+      client_details_description: MarvalProjects 作為 OIDC 用戶端的細節設定
       no_results_table: 尚未定義任何提供商。
       plural: OpenID 提供商
       singular: OpenID 提供商
@@ -117,7 +117,7 @@ zh-TW:
         configuration_metadata: 資訊已使用提供的發現端點預先填入。在大多數情況下，它們不需要編輯。
         configuration: OpenID Connect 提供者的組態詳細資訊
         display_name: 使用者可見的顯示名稱。
-        attribute_mapping: 設定 OpenProject 與 OpenID Connect 提供者之間的屬性對應。
+        attribute_mapping: 設定 MarvalProjects 與 OpenID Connect 提供者之間的屬性對應。
         claims: 要求 ID 令牌 或 使用者資訊回應額外聲明。
     setting_instructions:
       limit_self_registration: >

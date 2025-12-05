@@ -1,7 +1,7 @@
 #English strings go here
 ar:
   plugin_openproject_calendar:
-    name: "فتح تقويم OpenProject"
+    name: "فتح تقويم MarvalProjects"
     description: "يوفر مشاهدات التقويم."
   label_calendar: "التقويم"
   label_calendar_plural: "التقويمات"

@@ -1,7 +1,7 @@
 #English strings go here
 pt-PT:
   plugin_openproject_team_planner:
-    name: "Planeador de equipas OpenProject"
+    name: "Planeador de equipas MarvalProjects"
     description: "Fornece visualizações do planeador de equipas."
   permission_view_team_planner: "Ver planejador de equipe"
   permission_manage_team_planner: "Gerir planeador de equipa"

@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 ms:
   plugin_openproject_meeting:
-    name: "Mesyuarat OpenProject"
+    name: "Mesyuarat MarvalProjects"
     description: >-
-      Modul ini menambah fungsi-fungsi ke OpenProject untuk menyokong mesyuarat projek. Mesyuarat boleh dijadualkan dengan memilih jemputan dari projek yang sama untuk mengambil bahagian dalam mesyuarat ini. Agenda boleh dicipta dan dihantar ke para jemputan. Selepas mesyuarat, hadirin boleh dipilih dan minit mesyuarat boleh dibuat berdasarkan agenda tersebut. Akhirnya, minit mesyuarat boleh dihantar ke semua hadirin dan jemputan.
+      Modul ini menambah fungsi-fungsi ke MarvalProjects untuk menyokong mesyuarat projek. Mesyuarat boleh dijadualkan dengan memilih jemputan dari projek yang sama untuk mengambil bahagian dalam mesyuarat ini. Agenda boleh dicipta dan dihantar ke para jemputan. Selepas mesyuarat, hadirin boleh dipilih dan minit mesyuarat boleh dibuat berdasarkan agenda tersebut. Akhirnya, minit mesyuarat boleh dihantar ke semua hadirin dan jemputan.
   activerecord:
     attributes:
       meeting:

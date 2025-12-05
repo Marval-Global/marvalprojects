@@ -21,8 +21,8 @@
 #++
 zh-CN:
   plugin_openproject_documents:
-    name: "OpenProject 文档"
-    description: "允许在项目中创建文档的 OpenProject 插件。"
+    name: "MarvalProjects 文档"
+    description: "允许在项目中创建文档的 MarvalProjects 插件。"
   activerecord:
     models:
       document: "文档"

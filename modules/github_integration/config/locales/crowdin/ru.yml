@@ -43,13 +43,13 @@ ru:
   notice_deploy_target_created: Цель установки создана
   notice_deploy_target_destroyed: Цель установки удалена
   plugin_openproject_github_integration:
-    name: "Интеграция с OpenProject GitHub"
-    description: "Интегрирует OpenProject и GitHub для лучшего рабочего процесса"
+    name: "Интеграция с MarvalProjects GitHub"
+    description: "Интегрирует MarvalProjects и GitHub для лучшего рабочего процесса"
   project_module_github: "GitHub"
   permission_show_github_content: "Показать контент GitHub"
-  permission_introspection: Ознакомьтесь с версией ядра OpenProject и сборкой SHA
+  permission_introspection: Ознакомьтесь с версией ядра MarvalProjects и сборкой SHA
   text_deploy_target_type_info: >
-    Пока что мы поддерживаем только сам OpenProject.
+    Пока что мы поддерживаем только сам MarvalProjects.
   text_deploy_target_api_key_info: >
-    OpenProject [API key](docs_url), принадлежащий пользователю, имеющему глобальное разрешение на самоанализ.
+    MarvalProjects [API key](docs_url), принадлежащий пользователю, имеющему глобальное разрешение на самоанализ.
   text_pull_request_deployed_to: "%{pr_link} развернут в %{deploy_target_link}"

@@ -21,8 +21,8 @@
 #++
 cs:
   plugin_openproject_backlogs:
-    name: "OpenProject Backlogy"
-    description: "Tento modul přidává funkce umožňující agilním týmům pracovat s OpenProject v Scrum projektech."
+    name: "MarvalProjects Backlogy"
+    description: "Tento modul přidává funkce umožňující agilním týmům pracovat s MarvalProjects v Scrum projektech."
   activerecord:
     attributes:
       work_package:

@@ -52,7 +52,7 @@ sl:
         Nova varnostna kopija bo povozila prejšnjo. Samo omejeno število var. kopij lahko v enem dnevu zahtevate.
       last_backup: Zadnja varnostna kopija
       last_backup_from: Zadnja varnostna kopija od
-      title: Varnostno kopiranje OpenProject-a
+      title: Varnostno kopiranje MarvalProjects-a
       options: Možnosti
       include_attachments: Vključite priloge
       download_backup: Prenos varnostne kopije
@@ -509,7 +509,7 @@ sl:
         next: "Naprej"
         got_it: "Razumem"
       steps:
-        help_menu: "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!"
+        help_menu: "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with MarvalProjects!"
         members: "Invite new <b>members</b> to join your project."
         quick_add_button: "Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>."
         sidebar_arrow: "Use the return arrow in the top left corner to return to the project’s <b>main menu</b>."

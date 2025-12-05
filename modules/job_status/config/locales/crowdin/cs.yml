@@ -1,7 +1,7 @@
 cs:
   label_job_status_plural: "statusy Jobu"
   plugin_openproject_job_status:
-    name: "Stav úlohy OpenProject"
+    name: "Stav úlohy MarvalProjects"
     description: "Seznam a stav úkolů na pozadí."
   job_status_dialog:
     download_starts: 'Stahování by mělo začít automaticky.'

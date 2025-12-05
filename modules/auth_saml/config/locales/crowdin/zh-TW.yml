@@ -17,8 +17,8 @@ zh-TW:
         authn_requests_signed: 簽署 SAML AuthnRequests
         want_assertions_signed: 要求簽署回覆
         want_assertions_encrypted: 要求加密回應
-        certificate: OpenProject 用於 SAML 請求的憑證
-        private_key: OpenProject SAML 請求的對應私密金鑰
+        certificate: MarvalProjects 用於 SAML 請求的憑證
+        private_key: MarvalProjects SAML 請求的對應私密金鑰
         signature_method: 簽章演算法
         digest_method: 摘要演算法
         format: "格式"
@@ -36,7 +36,7 @@ zh-TW:
     info:
       title: "SAML 通訊協定組態參數"
       description: >
-        使用這些參數設定您與 OpenProject 的身分提供者連線。
+        使用這些參數設定您與 MarvalProjects 的身分提供者連線。
     metadata_parser:
       success: "已成功使用身分提供者元資料更新配置設定。"
       invalid_url: "提供的元資料 URL 無效。提供 HTTP(s) URL。"
@@ -46,8 +46,8 @@ zh-TW:
       label_empty_description: "增加可供查詢之提供商"
       label_automatic_configuration: 自動設定
       label_metadata: 後設資料
-      label_metadata_endpoint: OpenProject 後設資料端點
-      label_openproject_information: OpenProject 資訊
+      label_metadata_endpoint: MarvalProjects 後設資料端點
+      label_openproject_information: MarvalProjects 資訊
       label_configuration_details: "身分提供商端點與憑證"
       label_configuration_encryption: "簽名與加密"
       label_add_new: 新增 SAML 身分提供商
@@ -61,16 +61,16 @@ zh-TW:
       requested_attributes: 要求的屬性
       attribute_mapping: 屬性對應
       attribute_mapping_text: >
-        下列欄位控制 SAML 身分提供者所提供的哪些屬性會被用來在 OpenProject 中提供使用者屬性
+        下列欄位控制 SAML 身分提供者所提供的哪些屬性會被用來在 MarvalProjects 中提供使用者屬性
       metadata:
-        dialog: "這是 OpenProject SAML 元資料可用的 URL。可選擇使用它來設定您的身分提供者："
+        dialog: "這是 MarvalProjects SAML 元資料可用的 URL。可選擇使用它來設定您的身分提供者："
       upsell:
         title: "使用 SAML 的單一登入 (SSO)"
-        description: 將 OpenProject 連接到 SAML 身分提供者
+        description: 將 MarvalProjects 連接到 SAML 身分提供者
       request_attributes:
         title: '要求的屬性'
         legend: >
-          這些屬性會新增至 SAML XML 元資料，以向識別供應商表示 OpenProject 需要哪些屬性。您可能仍需明確設定您的身分提供者以傳送這些屬性。請參閱您 IDP 的說明文件。
+          這些屬性會新增至 SAML XML 元資料，以向識別供應商表示 MarvalProjects 需要哪些屬性。您可能仍需明確設定您的身分提供者以傳送這些屬性。請參閱您 IDP 的說明文件。
         name: '要求的屬性名稱'
         format: '屬性格式'
       section_headers:
@@ -84,8 +84,8 @@ zh-TW:
         configuration: "設定身分提供者、憑證和其他 SAML 選項的端點 URL。"
         configuration_metadata: "這些資訊已使用提供的元資料預先填入。在大多數情況下，它們不需要編輯。"
         encryption: "設定 SAML 請求與回應的斷言簽章與加密。"
-        encryption_form: "您可以選擇要對斷言回應加密，或對 OpenProject 的要求進行簽名。"
-        mapping: "在 OpenProject 中手動調整 SAML 回應與使用者屬性之間的對應。"
+        encryption_form: "您可以選擇要對斷言回應加密，或對 MarvalProjects 的要求進行簽名。"
+        mapping: "在 MarvalProjects 中手動調整 SAML 回應與使用者屬性之間的對應。"
         requested_attributes: "定義發送給您的身分提供者的 SAML 請求中要請求的屬性集。"
       seeded_from_env: "此提供者是從環境組態中種下的。無法編輯。"
     settings:
@@ -106,7 +106,7 @@ zh-TW:
       limit_self_registration: >
         如果啟用，使用者只能在自我註冊設定允許的情況下使用此提供者註冊。
       sp_entity_id: >
-        服務提供者 (SP) 的實體 ID。有時也稱為 Audience。這是 OpenProject 實例的唯一用戶端識別碼。
+        服務提供者 (SP) 的實體 ID。有時也稱為 Audience。這是 MarvalProjects 實例的唯一用戶端識別碼。
       idp_sso_service_url: >
         身分提供商登入端點的 URL。
       idp_slo_service_url: >
@@ -116,9 +116,9 @@ zh-TW:
       name_identifier_format: >
         設定 SAML 斷言要使用的名稱標識符格式。
       sp_metadata_endpoint: >
-        這是 OpenProject SAML 元資料可用的 URL。可選擇使用它來設定您的身分提供者：
+        這是 MarvalProjects SAML 元資料可用的 URL。可選擇使用它來設定您的身分提供者：
       mapping: >
-        在 OpenProject 中設定 SAML 回應與使用者屬性之間的對應。您可以設定要尋找的多個屬性名稱。OpenProject 會從 SAML 回應中選擇第一個可用的屬性。
+        在 MarvalProjects 中設定 SAML 回應與使用者屬性之間的對應。您可以設定要尋找的多個屬性名稱。MarvalProjects 會從 SAML 回應中選擇第一個可用的屬性。
       mapping_login: >
         用於登入的回應中的 SAML 屬性。
       mapping_mail: >
@@ -132,17 +132,17 @@ zh-TW:
       request_uid: >
         請求內部使用者 ID 的 SAML 屬性。預設此欄位使用 name_id。
       requested_attributes: >
-        這些屬性會新增至 SAML 請求 XML，以傳達 OpenProject 需要哪些屬性給身分提供者。
+        這些屬性會新增至 SAML 請求 XML，以傳達 MarvalProjects 需要哪些屬性給身分提供者。
       requested_format: >
         請求屬性的格式。用來指定 SAML 請求中的屬性格式。詳情請參閱 [設定請求屬性的說明文件](docs_url)。
       authn_requests_signed: >
-        如果啟用，OpenProject 將簽署 SAML AuthnRequest。您必須使用以下欄位提供簽名憑證和私鑰。
+        如果啟用，MarvalProjects 將簽署 SAML AuthnRequest。您必須使用以下欄位提供簽名憑證和私鑰。
       want_assertions_signed: >
-        如果勾選，OpenProject 將要求身分提供者使用自己的憑證金鑰對簽署回應。OpenProject 將根據基本組態部分的憑證驗證簽章。
+        如果勾選，MarvalProjects 將要求身分提供者使用自己的憑證金鑰對簽署回應。MarvalProjects 將根據基本組態部分的憑證驗證簽章。
       want_assertions_encrypted: >
         如果啟用，會要求身分提供商使用您提供的證書，對斷言回應加密。
       certificate: >
-        輸入 OpenProject 用於簽署 SAML 請求的 X509 PEM 格式證書。
+        輸入 MarvalProjects 用於簽署 SAML 請求的 X509 PEM 格式證書。
       private_key: >
         輸入上述證書的 X509 PEM 格式私密金鑰。這必須是 RSA 私密金鑰。
       signature_method: >

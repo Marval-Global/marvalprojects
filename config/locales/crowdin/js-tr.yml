@@ -52,7 +52,7 @@ tr:
         Yeni bir yedekleme, herhangi bir öncekini geçersiz kılacaktır. Günde yalnızca sınırlı sayıda yedekleme talep edilebilir.
       last_backup: Son yedekleme
       last_backup_from: Adlı kişiden son yedekleme
-      title: OpenProject Yedekleme
+      title: MarvalProjects Yedekleme
       options: Ayarlar
       include_attachments: Ekleri dahil et
       download_backup: Yedeği indir
@@ -510,7 +510,7 @@ tr:
         next: "Sonraki"
         got_it: "Anladım"
       steps:
-        help_menu: "Yardım (?) menüsü <b>ek yardım kaynakları</b> sağlar. Burada bir kullanım kılavuzu, yararlı nasıl yapılır videoları ve daha fazlasını bulabilirsiniz. <br> OpenProject ile işinizin tadını çıkarın!"
+        help_menu: "Yardım (?) menüsü <b>ek yardım kaynakları</b> sağlar. Burada bir kullanım kılavuzu, yararlı nasıl yapılır videoları ve daha fazlasını bulabilirsiniz. <br> MarvalProjects ile işinizin tadını çıkarın!"
         members: "Projenize katılmak için yeni <b>üyeler</b> davet edin."
         quick_add_button: "<b>Yeni bir proje oluşturmak</b> veya <b>iş arkadaşlarınızı davet etmek</b> için başlık bölümündeki artı (+) simgesini tıklayın."
         sidebar_arrow: "Projenin <b>ana menüsüne</b> dönmek için sol üst köşedeki dönüş okunu kullanın."

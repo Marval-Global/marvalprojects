@@ -1,6 +1,6 @@
 es:
   plugin_openproject_xls_export:
-    name: "Exportar XLS de OpenProject"
+    name: "Exportar XLS de MarvalProjects"
     description: "Exportar listas de incidencias como hojas de cálculo de Excel (.xls)."
   export_to_excel: "Exportar a XLS"
   print_with_description: "Vista previa de impresión con descripción"

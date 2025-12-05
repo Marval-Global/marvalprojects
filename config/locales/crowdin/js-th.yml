@@ -52,7 +52,7 @@ th:
         ข้อมูลสำรองใหม่จะแทนที่ข้อมูลสำรองก่อนหน้า สามารถขอสำรองข้อมูลได้จำนวนจำกัดต่อวันเท่านั้น
       last_backup: สำรองข้อมูลล่าสุด
       last_backup_from: ข้อมูลสำรองล่าสุดจาก
-      title: สำรองข้อมูล OpenProject
+      title: สำรองข้อมูล MarvalProjects
       options: ตัวเลือก
       include_attachments: รวมไฟล์แนบ
       download_backup: ดาวน์โหลดข้อมูลการสำรอง
@@ -510,7 +510,7 @@ th:
         next: "ถัดไป"
         got_it: "Got it"
       steps:
-        help_menu: "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!"
+        help_menu: "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with MarvalProjects!"
         members: "Invite new <b>members</b> to join your project."
         quick_add_button: "Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>."
         sidebar_arrow: "Use the return arrow in the top left corner to return to the project’s <b>main menu</b>."

@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 zh-CN:
   plugin_openproject_meeting:
-    name: "OpenProject 会议"
+    name: "MarvalProjects 会议"
     description: >-
-      该模块为 OpenProject 添加了发起项目会议的功能。可以从同一项目中选择受邀者参加会议并进行安排。可以创建议程并发送给受邀者。会议结束后，可以选择与会者并根据议程创建会议纪要。最后，可以将会议纪要发送给所有与会者和受邀者。
+      该模块为 MarvalProjects 添加了发起项目会议的功能。可以从同一项目中选择受邀者参加会议并进行安排。可以创建议程并发送给受邀者。会议结束后，可以选择与会者并根据议程创建会议纪要。最后，可以将会议纪要发送给所有与会者和受邀者。
   activerecord:
     attributes:
       meeting:

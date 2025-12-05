@@ -1,7 +1,7 @@
 vi:
   plugin_openproject_webhooks:
-    name: "OpenProject Webhooks"
-    description: "Cung cấp API plug-in để hỗ trợ các webhook của OpenProject cho tích hợp bên thứ ba tốt hơn."
+    name: "MarvalProjects Webhooks"
+    description: "Cung cấp API plug-in để hỗ trợ các webhook của MarvalProjects cho tích hợp bên thứ ba tốt hơn."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -35,7 +35,7 @@ vi:
         internal_comment: "Internal comment"
       explanation:
         text: >
-          Khi xảy ra một sự kiện như tạo gói công việc hoặc cập nhật dự án, OpenProject sẽ gửi một yêu cầu POST đến các điểm cuối web đã cấu hình. Thông thường, sự kiện được gửi sau khi %{link} đã trôi qua.
+          Khi xảy ra một sự kiện như tạo gói công việc hoặc cập nhật dự án, MarvalProjects sẽ gửi một yêu cầu POST đến các điểm cuối web đã cấu hình. Thông thường, sự kiện được gửi sau khi %{link} đã trôi qua.
         link: khoảng thời gian tổng hợp đã cấu hình
       status:
         enabled: 'Webhook đã được kích hoạt'
@@ -66,4 +66,4 @@ vi:
           title: 'Các dự án đã chọn'
         secret:
           description: >
-            Nếu được đặt, giá trị bí mật này sẽ được OpenProject sử dụng để ký dữ liệu webhook.
+            Nếu được đặt, giá trị bí mật này sẽ được MarvalProjects sử dụng để ký dữ liệu webhook.

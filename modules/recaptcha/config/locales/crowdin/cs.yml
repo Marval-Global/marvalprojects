@@ -1,7 +1,7 @@
 #English strings go here for Rails i18n
 cs:
   plugin_openproject_recaptcha:
-    name: "OpenProject ReCaptcha"
+    name: "MarvalProjects ReCaptcha"
     description: "Tento modul umožňuje kontrolu reaptcha během přihlášení."
   recaptcha:
     label_recaptcha: "reCAPTCHA"

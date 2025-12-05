@@ -52,7 +52,7 @@ fa:
         A new backup will override any previous one. Only a limited number of backups per day can be requested.
       last_backup: آخرین پشتیبانی گیری
       last_backup_from: آخرین پشتیبانی گیری از
-      title: Backup OpenProject
+      title: Backup MarvalProjects
       options: گزینه‌ها
       include_attachments: Include attachments
       download_backup: دانلود نسخه پشتیبان گیری

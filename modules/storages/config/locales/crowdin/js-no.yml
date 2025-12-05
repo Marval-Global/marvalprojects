@@ -75,12 +75,12 @@
           403: >
             Din fil (%{fileName}) kunne ikke lastes opp på grunn av systembegrensninger. Vennligst kontakt systemansvarlig for mer informasjon.
           413: >
-            Din fil (%{fileName}) er større enn hva OpenProject kan laste opp til %{storageType}. Du kan laste opp direkte til %{storageType} først og deretter linke filen.
+            Din fil (%{fileName}) er større enn hva MarvalProjects kan laste opp til %{storageType}. Du kan laste opp direkte til %{storageType} først og deretter linke filen.
           507: >
             Filen din (%{fileName}) er større enn lagringskvoten. Kontakt administratoren din for å endre denne kvoten.
           detail:
             nextcloud: >
-              Vennligst sjekk at den nyeste versjonen av Nextcloud appen "OpenProject Integration" er installert og kontakt systemansvarlig for mer informasjon.
+              Vennligst sjekk at den nyeste versjonen av Nextcloud appen "MarvalProjects Integration" er installert og kontakt systemansvarlig for mer informasjon.
         link_uploaded_file_error: >
           Det oppstod en feil med kobling av den nylig opplastede filen%{fileName}' til arbeidspakken %{workPackageId}.
         tooltip:

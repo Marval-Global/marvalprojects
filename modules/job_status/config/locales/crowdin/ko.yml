@@ -1,7 +1,7 @@
 ko:
   label_job_status_plural: "작업 상태"
   plugin_openproject_job_status:
-    name: "OpenProject 작업 상태"
+    name: "MarvalProjects 작업 상태"
     description: "백그라운드 작업 목록 및 상태."
   job_status_dialog:
     download_starts: '자동으로 다운로드가 시작됩니다.'

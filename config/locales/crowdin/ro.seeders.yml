@@ -148,7 +148,7 @@ ro:
                 options:
                   name: Începe
                   text: |
-                    Ne bucurăm că v-ați alăturat! Vă sugerăm să încercați câteva lucruri pentru a începe în OpenProject.
+                    Ne bucurăm că v-ați alăturat! Vă sugerăm să încercați câteva lucruri pentru a începe în MarvalProjects.
 
                     Descoperă cele mai importante caracteristici cu [Turneul Ghidat]({{opSetting:base_url}}/proiecte/demo-proiect/work_packes/?start_onboarding_tour=true).
 
@@ -162,7 +162,7 @@ ro:
                     6. *Finalizează sarcinile în proiect*: &rightarrow; Mergeți la [Pachete de lucru &rightarrow; Sarcini]({{opSetting:base_url}}/projects/demo-project/work_packages/details/##wp.id:set_date_and_location_of_conference/overview?query_id=##query.id:demo_project__query__tasks).
 
                     Aici găsiți [Ghidurile de utilizatori](https://www.openproject.org/docs/user-guide/).
-                    Vă rugăm să ne informați dacă aveți întrebări sau aveți nevoie de sprijin. Contactaţi-ne: [suport[at]openproject.com](mailto:support@marvalglobal.com).
+                    Vă rugăm să ne informați dacă aveți întrebări sau aveți nevoie de sprijin. Contactaţi-ne: [suport[at]MarvalProjects.com](mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Pachete de lucru

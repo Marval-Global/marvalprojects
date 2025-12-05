@@ -1,7 +1,7 @@
 fr:
   label_job_status_plural: "Statuts de tâches"
   plugin_openproject_job_status:
-    name: "Statut de tâches OpenProject"
+    name: "Statut de tâches MarvalProjects"
     description: "Liste et état des tâches d'arrière-plan."
   job_status_dialog:
     download_starts: 'Le téléchargement devrait démarrer automatiquement.'

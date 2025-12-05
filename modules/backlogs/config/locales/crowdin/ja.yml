@@ -21,8 +21,8 @@
 #++
 ja:
   plugin_openproject_backlogs:
-    name: "OpenProjectのバックログ"
-    description: "このモジュールには、アジャイルチームがスクラムプロジェクトでOpenProjectを使用できるようにする機能が追加されています。"
+    name: "MarvalProjectsのバックログ"
+    description: "このモジュールには、アジャイルチームがスクラムプロジェクトでMarvalProjectsを使用できるようにする機能が追加されています。"
   activerecord:
     attributes:
       work_package:

@@ -1,8 +1,8 @@
 #English strings go here for Rails i18n
 cs:
   plugin_openproject_bim:
-    name: "OpenProject BIM a BCF funkce"
-    description: "Tento OpenProject plugin zavádí funkci BIM a BCF."
+    name: "MarvalProjects BIM a BCF funkce"
+    description: "Tento MarvalProjects plugin zavádí funkci BIM a BCF."
   bim:
     label_bim: 'BIM'
   bcf:
@@ -75,7 +75,7 @@ cs:
   oauth:
     scopes:
       bcf_v2_1: "Plný přístup k BCF v2.1 API"
-      bcf_v2_1_text: "Aplikace získá plný přístup ke čtení a zápisu do OpenProject API, aby mohla provádět akce vaším jménem."
+      bcf_v2_1_text: "Aplikace získá plný přístup ke čtení a zápisu do MarvalProjects API, aby mohla provádět akce vaším jménem."
   activerecord:
     models:
       bim/ifc_models/ifc_model: "Model IFC"

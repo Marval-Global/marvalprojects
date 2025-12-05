@@ -43,13 +43,13 @@ ms:
   notice_deploy_target_created: Sasaran penyerahan dicipta
   notice_deploy_target_destroyed: Sasaran penyerahan dipadam
   plugin_openproject_github_integration:
-    name: "Integrasi GitHub OpenProject"
-    description: "Mengintegrasikan OpenProject dan GitHub untuk aliran kerja yang lebih baik"
+    name: "Integrasi GitHub MarvalProjects"
+    description: "Mengintegrasikan MarvalProjects dan GitHub untuk aliran kerja yang lebih baik"
   project_module_github: "GitHub"
   permission_show_github_content: "Paparkan kandungan GitHub"
-  permission_introspection: Baca versi teras OpenProject yang aktif dan bangunkan SHA
+  permission_introspection: Baca versi teras MarvalProjects yang aktif dan bangunkan SHA
   text_deploy_target_type_info: >
-    Setakat ini kami hanya menyokong OpenProject sahaja.
+    Setakat ini kami hanya menyokong MarvalProjects sahaja.
   text_deploy_target_api_key_info: >
-    [API key](docs_url) OpenProject yang dimiliki oleh pengguna yang mempunyai kebenaran intipan global.
+    [API key](docs_url) MarvalProjects yang dimiliki oleh pengguna yang mempunyai kebenaran intipan global.
   text_pull_request_deployed_to: "%{pr_link} dikerahkn ke %{deploy_target_link}"

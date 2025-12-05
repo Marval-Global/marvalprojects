@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 cs:
   plugin_openproject_meeting:
-    name: "OpenProject Schůzka"
+    name: "MarvalProjects Schůzka"
     description: >-
-      Tento modul přidává funkce pro podporu projektových schůzek na OpenProject. Schůze mohou být naplánovány na výběr pozvaných z téhož projektu, kteří se zasedání zúčastní. Program může být vytvořen a odeslán pozváním. Po zasedání mohou být vybráni účastníci a na základě programu mohou být vytvořeny zápisy. Konečně, zápis může být odeslán všem účastníkům a pozváním.
+      Tento modul přidává funkce pro podporu projektových schůzek na MarvalProjects. Schůze mohou být naplánovány na výběr pozvaných z téhož projektu, kteří se zasedání zúčastní. Program může být vytvořen a odeslán pozváním. Po zasedání mohou být vybráni účastníci a na základě programu mohou být vytvořeny zápisy. Konečně, zápis může být odeslán všem účastníkům a pozváním.
   activerecord:
     attributes:
       meeting:

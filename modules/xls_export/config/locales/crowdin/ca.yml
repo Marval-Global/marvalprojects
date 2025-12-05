@@ -1,6 +1,6 @@
 ca:
   plugin_openproject_xls_export:
-    name: "OpenProject XLS Export"
+    name: "MarvalProjects XLS Export"
     description: "Export issue lists as Excel spreadsheets (.xls)."
   export_to_excel: "Exporta a XLS"
   print_with_description: "Previsualització d'impressió amb descripció"

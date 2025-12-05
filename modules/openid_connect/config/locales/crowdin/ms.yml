@@ -1,7 +1,7 @@
 ms:
   plugin_openproject_openid_connect:
-    name: "Sambungkan OpenID OpenProject"
-    description: "Tambah penyedia strategi OmniAuth OpenID Connect ke OpenProject."
+    name: "Sambungkan OpenID MarvalProjects"
+    description: "Tambah penyedia strategi OmniAuth OpenID Connect ke MarvalProjects."
   logout_warning: >
     Anda telah log keluar. Sebarang bentuk kandungan yang anda hantar mungkin hilang. Sila [log masuk].
   activerecord:
@@ -53,7 +53,7 @@ ms:
     menu_title: Penyedia OpenID
     delete_title: "Padam pembekal OpenID Connect"
     instructions:
-      redirect_url: Ini ialah URL ubah hala yang harus digunakan oleh pembekal OpenID Connect untuk mengubah hala semula ke OpenProject selepas log masuk berjaya.
+      redirect_url: Ini ialah URL ubah hala yang harus digunakan oleh pembekal OpenID Connect untuk mengubah hala semula ke MarvalProjects selepas log masuk berjaya.
       endpoint_url: URL titik akhir yang diberikan kepada anda oleh pembekal OpenID Connect
       metadata_none: Saya tidak mempunyai maklumat ini
       metadata_url: Saya mempunyai URL titik akhir penemuan
@@ -93,7 +93,7 @@ ms:
         name: Adat
       upsell:
         title: "Single Sign-On (SSO) with OpenID connect"
-        description: Sambungkan OpenProject kepada pembekal identiti sambungan OpenID
+        description: Sambungkan MarvalProjects kepada pembekal identiti sambungan OpenID
       label_add_new: Tambah penyedia OpenID baharu
       label_edit: Edit penyedia OpenID %{name}
       label_empty_title: Tiada pembekal OpenID dikonfigurasikan lagi.
@@ -105,7 +105,7 @@ ms:
       label_configuration_details: Metadata
       label_client_details: Butiran pelanggan
       label_attribute_mapping: Pemetaan atribut
-      client_details_description: Butiran konfigurasi OpenProject sebagai pelanggan OIDC
+      client_details_description: Butiran konfigurasi MarvalProjects sebagai pelanggan OIDC
       no_results_table: Belum ada penyedia yang ditetapkan lagi.
       plural: Penyedia OpenID
       singular: Penyedia OpenID
@@ -117,7 +117,7 @@ ms:
         configuration_metadata: Maklumat telah diisi terlebih dahulu menggunakan titik akhir penemuan yang dibekalkan. Dalam kebanyakan kes, mereka tidak memerlukan penyuntingan.
         configuration: Butiran konfigurasi pembekal OpenID Connect
         display_name: Nama paparan boleh dilihat oleh pengguna.
-        attribute_mapping: Konfigurasikan pemetaan atribut antara OpenProject dan pembekal OpenID Connect.
+        attribute_mapping: Konfigurasikan pemetaan atribut antara MarvalProjects dan pembekal OpenID Connect.
         claims: Minta tuntutan tambahan untuk token ID atau respons maklumat pengguna.
     setting_instructions:
       limit_self_registration: >

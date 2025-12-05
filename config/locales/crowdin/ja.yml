@@ -131,13 +131,13 @@ ja:
       edit:
         label_delete_scim_client: "Delete SCIM client"
       form:
-        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in OpenProject."
-        authentication_method_description_html: "This is how the SCIM client authenticates at OpenProject. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
+        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in MarvalProjects."
+        authentication_method_description_html: "This is how the SCIM client authenticates at MarvalProjects. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
         description_html: 'Please refer to our <a href="%{docs_url}">documentation on configuring SCIM clients</a> for more information on these configuration options.'
         jwt_sub_description_html: 'For example, for Keycloak, this is the UUID of the service account  associated with the SCIM client. Consult <a href="%{docs_url}">our documentation</a> to learn how to find  the subject claim for your use case.'
         name_description: "Choose a name that will help other admins better understand why this client was configured."
       index:
-        description: "SCIM clients configured here are able to interact with OpenProject SCIM server API to provision, update, and deprovision user accounts and groups."
+        description: "SCIM clients configured here are able to interact with MarvalProjects SCIM server API to provision, update, and deprovision user accounts and groups."
         label_create_button: "Add SCIM client"
       new:
         title: "New SCIM client"
@@ -145,14 +145,14 @@ ja:
         confirm_button: "Revoke"
         title: "Revoke static token"
         heading: "Are you sure you want to revoke this token?"
-        description: "The SCIM client that uses this token will no longer be able to access OpenProject's SCIM server API."
+        description: "The SCIM client that uses this token will no longer be able to access MarvalProjects's SCIM server API."
       table_component:
         blank_slate:
           title: "No SCIM clients configured yet"
           description: "Add clients to see them here"
         user_count: "Users"
       token_list_component:
-        description: "The tokens you generate here can be passed by a SCIM client to access the OpenProject SCIM API."
+        description: "The tokens you generate here can be passed by a SCIM client to access the MarvalProjects SCIM API."
         heading: "Tokens"
         label_add_token: "Token"
         label_aria_add_token: "Add token"
@@ -204,36 +204,36 @@ ja:
       name: LDAP接続の任意の名称
       host: LDAPのホスト名または IP アドレス
       login_map: ユーザー固有のログイン情報を識別するために使用されるLDAPの属性キーです。通常は、`uid` または `samAccountName` になります。
-      generic_map: OpenProject`%{attribute}`属性にマップされているLDAPの属性キーです。
-      admin_map_html: "オプション: LDAPの属性キー。 <strong>存在する場合</strong> はOpenProjectユーザーを管理者としてマークします。疑わしい場合は空のままにします。"
+      generic_map: MarvalProjects`%{attribute}`属性にマップされているLDAPの属性キーです。
+      admin_map_html: "オプション: LDAPの属性キー。 <strong>存在する場合</strong> はMarvalProjectsユーザーを管理者としてマークします。疑わしい場合は空のままにします。"
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br>
-        Example: uid=openproject,ou=system,dc=example,dc=com
+        Example: uid=MarvalProjects,ou=system,dc=example,dc=com
       system_user_password: システムユーザーの Bind パスワードを入力してください
       base_dn: |
-        OpenProjectがユーザーとグループを探すように、サブツリーのベースDNをLDAPに入力します。
-        OpenProject は、このサブツリー内の指定されたユーザー名のみをフィルタリングします。
+        MarvalProjectsがユーザーとグループを探すように、サブツリーのベースDNをLDAPに入力します。
+        MarvalProjects は、このサブツリー内の指定されたユーザー名のみをフィルタリングします。
         例: ou=users,dc=example,dc=com
       filter_string: |
         LDAPでフィルタされたユーザーに対して返された結果に適用するオプションのRFC4515フィルタを追加します。
-        これは、OpenProjectによって検出された認証とグループ同期のためのユーザーのセットを制限するために使用することができます。
+        これは、MarvalProjectsによって検出された認証とグループ同期のためのユーザーのセットを制限するために使用することができます。
       filter_string_concat: |
 
-        OpenProjectはレコードを識別するために、ユーザーが提供するログイン属性を常にフィルタリングします。ここにフィルタを指定すると、
+        MarvalProjectsはレコードを識別するために、ユーザーが提供するログイン属性を常にフィルタリングします。ここにフィルタを指定すると、
         ANDで連結されます。デフォルトではキャッチオール（objectClass = *）がフィルタとして使用されます。
       onthefly_register: |
-        チェックを入れると、OpenProjectは初回認証時に自動的にLDAPエントリーに新規ユーザー登録します。LDAPの既存ユーザーのみ許可する場合はチェックを外してください。
+        チェックを入れると、MarvalProjectsは初回認証時に自動的にLDAPエントリーに新規ユーザー登録します。LDAPの既存ユーザーのみ許可する場合はチェックを外してください。
     connection_encryption: "接続の暗号化"
     encryption_details: "LDAPS / STARTLSオプション"
     system_account: "システムアカウント"
     system_account_legend: |
-      OpenProject は、LDAP ツリー内のユーザーとグループを検索するために、システムアカウントを介して読み取り専用アクセスを必要とします。
+      MarvalProjects は、LDAP ツリー内のユーザーとグループを検索するために、システムアカウントを介して読み取り専用アクセスを必要とします。
       次のセクションで、システムユーザのバインド資格情報を指定してください。
     ldap_details: "LDAPに関する詳細"
     user_settings: "属性のマッピング"
     user_settings_legend: |
-      以下のフィールドは、LDAPエントリからOpenProjectのユーザーの作成方法とアトリビュートマッピングに関連しています。
+      以下のフィールドは、LDAPエントリからMarvalProjectsのユーザーの作成方法とアトリビュートマッピングに関連しています。
     tls_mode:
       plain: "なし"
       simple_tls: "LDAP"
@@ -1232,7 +1232,7 @@ ja:
         confirmation: "は%{attribute} と一致しません。"
         could_not_be_copied: "%{dependency} を（完全に）コピーできませんでした。"
         does_not_exist: "は存在しません。"
-        error_enterprise_only: "%{action} はOpenProject Enterpriseエディションでのみ利用可能です。"
+        error_enterprise_only: "%{action} はMarvalProjects Enterpriseエディションでのみ利用可能です。"
         error_unauthorized: "アクセスできません。"
         error_readonly: "書けませんでした。"
         error_conflict: "別のユーザーが同時にデータを更新しています。"
@@ -1797,7 +1797,7 @@ ja:
       heading_reset: "バックアップトークンをリセットする"
       heading_create: "バックアップトークンを作成する"
       implications: >
-        バックアップを有効にすると、必要な権限とこのバックアップトークンを持つすべてのユーザーが、この OpenProject にインストールされたすべてのデータを含むバックアップをダウンロードできるようになります。これには、他のすべてのユーザーのデータも含まれます。
+        バックアップを有効にすると、必要な権限とこのバックアップトークンを持つすべてのユーザーが、この MarvalProjects にインストールされたすべてのデータを含むバックアップをダウンロードできるようになります。これには、他のすべてのユーザーのデータも含まれます。
       info: >
         バックアップを作成するためには、バックアップトークンを生成する必要があります。バックアップを要求するたびに、このトークンを指定する必要があります。バックアップトークンを削除すると、このユーザーのバックアップを無効にすることができます。
       verification: >
@@ -2110,7 +2110,7 @@ ja:
         Already have a token? Add it using the button below to upgrade to the booked Enterprise plan.
       hide_banner: "Hide this banner"
       homescreen_description: >
-        Enterprise plans extend the Community edition of OpenProject you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
+        Enterprise plans extend the Community edition of MarvalProjects you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
       homescreen_subline: By upgrading, you will also be supporting an open source project.
       baseline_comparison:
         description: Highlight changes made to this list since any point in the past.
@@ -2123,7 +2123,7 @@ ja:
         premium_features: "Enterprise add-ons"
         premium_features_text: "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields."
         professional_support: "Professional support"
-        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
+        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running MarvalProjects in business-critical environments."
       work_package_subject_generation:
         description: "Create automatically generated subjects using referenced attributes and text."
       customize_life_cycle:
@@ -2151,7 +2151,7 @@ ja:
       define_custom_style:
         title: "Custom color theme and logo"
         more_info: "Note: the used logo will be publicly accessible."
-        description: Customize your OpenProject installation with your own logo and colors.
+        description: Customize your MarvalProjects installation with your own logo and colors.
       custom_actions:
         title: "カスタムアクション"
         description: "カスタムアクションは、ステータスに基づいて特定のワークパッケージで利用できる、事前に定義されたアクションです。"
@@ -2160,13 +2160,13 @@ ja:
         description: "Enable seamless and secure authentication for your Nextcloud storage with Single Sign-On. Simplify access management and enhance user convenience."
       scim_api:
         title: "SCIM clients"
-        description: "Automate user management in OpenProject by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
+        description: "Automate user management in MarvalProjects by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
       virus_scanning:
-        description: "Ensure uploaded files in OpenProject are scanned for viruses before being accessible by other users."
+        description: "Ensure uploaded files in MarvalProjects are scanned for viruses before being accessible by other users."
       placeholder_users:
         title: プレースホルダー ユーザー
         description: >
-          プレースホルダー・ユーザーは、プロジェクトに参加していないユーザーにワーク・パッケージを割り当てる方法です。例えば、まだ名前も決まっていない、利用可能でもないリソースのタスクを追跡する必要がある場合や、その人にOpenProjectへのアクセス権を与えたくないが、その人に割り当てられたタスクを追跡したい場合などです。
+          プレースホルダー・ユーザーは、プロジェクトに参加していないユーザーにワーク・パッケージを割り当てる方法です。例えば、まだ名前も決まっていない、利用可能でもないリソースのタスクを追跡する必要がある場合や、その人にMarvalProjectsへのアクセス権を与えたくないが、その人に割り当てられたタスクを追跡したい場合などです。
       internal_comments:
         title: Internal comments
         description: "Internal comments allow an internal team to communicate amongst themselves privately. These are only visible to certain project roles and will never be visible publicly."
@@ -2187,9 +2187,9 @@ ja:
       request_again: "Request again"
       resend_action: "Resend confirmation email"
       welcome_title: "Quick feature overview"
-      welcome_description: "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition."
+      welcome_description: "Get a quick overview of project management and team collaboration with MarvalProjects Enterprise edition."
       confirmation_info: >
-        We sent you an email on %{date} to %{email} with all the information to start the free trial of OpenProject Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
+        We sent you an email on %{date} to %{email} with all the information to start the free trial of MarvalProjects Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
       confirmation_subline: >
         Please, check your inbox and follow the steps to start your 14-day free trial.
       domain_caption: The token will be valid for your currently configured host name.
@@ -2219,7 +2219,7 @@ ja:
   error_check_user_and_role: "ユーザーとロールを選択してください。"
   error_code: "エラー %{code}"
   error_color_could_not_be_saved: "色を保存できませんでした。"
-  error_cookie_missing: "OpenProject のcookieが見つかりません。cookieが有効であることを確認してください。そうしないとこのアプリケーションは正しく動作しません。"
+  error_cookie_missing: "MarvalProjects のcookieが見つかりません。cookieが有効であることを確認してください。そうしないとこのアプリケーションは正しく動作しません。"
   error_custom_option_not_found: "オプションが存在しません。"
   error_enterprise_plan_needed: "You need the %{plan} enterprise plan to perform this action."
   error_enterprise_activation_user_limit: "あなたのアカウントを有効にすることができませんでした（ユーザー制限に達しました）。アクセスするには管理者に連絡してください。"
@@ -2236,7 +2236,7 @@ ja:
   error_work_package_not_found_in_project: "ワークパッケージが見つからないか、このプロジェクトに属していません。"
   error_work_package_id_not_found: "The work package was not found."
   error_must_be_project_member: "プロジェクトのメンバーである必要があります。"
-  error_migrations_are_pending: "OpenProject のインストールはデータベースの移行が保留中です。前回のアップグレード時に移行の実行を行っていない可能性があります。アップグレードガイドを確認して、適切にインストールをアップグレードしてください。"
+  error_migrations_are_pending: "MarvalProjects のインストールはデータベースの移行が保留中です。前回のアップグレード時に移行の実行を行っていない可能性があります。アップグレードガイドを確認して、適切にインストールをアップグレードしてください。"
   error_migrations_visit_upgrade_guides: "アップグレードガイドのドキュメントをご覧ください"
   error_no_default_work_package_status: '｀ワークパッケージ目の既定のステータスが定義されていません。 設定をご確認してください（管理→作業項目ステータス）。'
   error_no_type_in_project: "このプロジェクトには関連付けられているワークパッケージの種類がありません。プロジェクトの設定をご確認してください。"
@@ -2423,7 +2423,7 @@ ja:
       no_visible_projects: "このインスタンスに表示されているプロジェクトはありません。"
       users: "このインスタンスの最新の登録ユーザー。"
     blocks:
-      community: "OpenProject コミュニティ"
+      community: "MarvalProjects コミュニティ"
       upsell:
         title: "エンタープライズ版にアップグレード"
     links:
@@ -2434,7 +2434,7 @@ ja:
       impressum: "法的情報"
       glossary: "用語集"
       shortcuts: "ショートカット"
-      blog: "OpenProject ブログ"
+      blog: "MarvalProjects ブログ"
       forums: "コミュニティ フォーラム"
       newsletter: "セキュリティアラート / ニュースレター"
   image_conversion:
@@ -2446,7 +2446,7 @@ ja:
       default_attribute_written: "Read-only attributes written"
       progress_mode_changed_to_status_based: "Progress calculation updated"
       status_changed: "Status '%{status_name}'"
-      system_update: "OpenProject system update:"
+      system_update: "MarvalProjects system update:"
       work_package_duplicate_closed: "Duplicate work package updated:"
       total_percent_complete_mode_changed_to_work_weighted_average: "Calculation of % Complete totals now weighted by Work."
       total_percent_complete_mode_changed_to_simple_average: "Calculation of % Complete totals now based on a simple average of only % Complete values."
@@ -2516,7 +2516,7 @@ ja:
         disabled_text: "API tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       ical:
         title: "iCalendar"
-        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to OpenProject calendars</a> and view up-to-date work package information from external clients.'
+        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to MarvalProjects calendars</a> and view up-to-date work package information from external clients.'
         disabled_text: "iCalendar subscriptions are not enabled by the administrator. Please contact your administrator to use this feature."
         empty_text_hint: "To add an iCalendar token, subscribe to a new or existing calendar from within the Calendar module of a project. You must have the necessary permissions."
       oauth:
@@ -2702,7 +2702,7 @@ ja:
   label_custom_field_plural: "カスタムフィールド"
   label_custom_field_default_type: "空の種類"
   label_custom_style: "デザイン"
-  label_custom_style_description: "Choose how OpenProject looks to you with themes, select your default colors to use in the app and how exports look like."
+  label_custom_style_description: "Choose how MarvalProjects looks to you with themes, select your default colors to use in the app and how exports look like."
   label_dashboard: "ダッシュボード"
   label_database_version: "PostgreSQL バージョン"
   label_date: "日付"
@@ -2958,7 +2958,7 @@ ja:
   label_open_menu: "メニューを開く"
   label_open_work_packages: "未完了"
   label_open_work_packages_plural: "未完了"
-  label_openproject_website: "OpenProjectのWebサイト"
+  label_openproject_website: "MarvalProjectsのWebサイト"
   label_optional_description: "説明"
   label_options: "オプション"
   label_other: "その他"
@@ -3346,8 +3346,8 @@ ja:
   mail_body_backup_token_reset_user_info: バックアップトークンがリセットされました。
   mail_body_backup_token_info: 以前のトークンは無効になりました。
   mail_body_backup_waiting_period: 新しいトークンは %{hours} 時間後に有効になります。
-  mail_body_backup_token_warning: これがあなたでなかった場合、すぐに OpenProject にログインして、再度リセットしてください。
-  mail_body_incoming_email_error: The email you sent to OpenProject could not be processed.
+  mail_body_backup_token_warning: これがあなたでなかった場合、すぐに MarvalProjects にログインして、再度リセットしてください。
+  mail_body_incoming_email_error: The email you sent to MarvalProjects could not be processed.
   mail_body_incoming_email_error_in_reply_to: "At %{received_at} %{from_email} wrote"
   mail_body_incoming_email_error_logs: "Logs"
   mail_body_lost_password: "パスワードを変更するには、以下のリンクをクリックしてください:"
@@ -3360,10 +3360,10 @@ ja:
   mail_body_register_user: "%{name}さん"
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in MarvalProjects as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "あなたのOpenProjectチーム"
+  mail_body_register_closing: "あなたのMarvalProjectsチーム"
   mail_body_register_ending: "連絡をお待ちしています！よろしくお願いいたします。"
   mail_body_reminder: "担当している %{count}件 のワークパッケージが %{days} 日内に期限を迎えます："
   mail_body_group_reminder: 'グループ "%{group}" に割り当てられた %{count} 件のワークパッケージが %{days} 日内に期限を迎えます'
@@ -3372,7 +3372,7 @@ ja:
   mail_subject_account_activation_request: "%{value} アカウントの承認要求"
   mail_subject_backup_ready: "バックアップの準備ができました"
   mail_subject_backup_token_reset: "バックアップトークンのリセット"
-  mail_subject_incoming_email_error: "An email you sent to OpenProject could not be processed"
+  mail_subject_incoming_email_error: "An email you sent to MarvalProjects could not be processed"
   mail_subject_lost_password: "%{value} パスワード再発行"
   mail_subject_register: "%{value} アカウント登録の確認"
   mail_subject_wiki_content_added: "Wikiページ'%{id}'が追加されました"
@@ -3401,14 +3401,14 @@ ja:
   mail_user_activation_limit_reached:
     subject: ユーザーのアクティブ化の上限に達しました。
     message: |
-      新しいユーザー（%{email}）が管理しているOpenProjectの環境（%{host})）上にアカウントを作成しようとしました。
+      新しいユーザー（%{email}）が管理しているMarvalProjectsの環境（%{host})）上にアカウントを作成しようとしました。
       ユーザーの制限に達しているため、ユーザーは自分のアカウントをアクティブ化できません。
     steps:
       label: "ユーザーがサインインできるようにするには、次のいずれかを行います: "
       a: "お支払いプランをアップグレードします。 ([ここ](upgrade_url))" #here turned into a link
       b: "既存のユーザーをロックまたは削除する ([ここ](users_url))" #here turned into a link
   more_actions: "他の機能"
-  noscript_description: "OpenProjectを使用するためにJavaScriptを有効にする必要があります！"
+  noscript_description: "MarvalProjectsを使用するためにJavaScriptを有効にする必要があります！"
   noscript_heading: "JavaScriptは無効されています。"
   noscript_learn_more: "もっと詳しく"
   notice_accessibility_mode: アクセシビリティモードを [アカウント設定](url) で有効にすることができます。
@@ -3484,7 +3484,7 @@ ja:
   notice_wont_delete_auth_source: The LDAP connection cannot be deleted as long as there are still users using it.
   notice_project_cannot_update_custom_fields: "プロジェクトの有効なカスタムフィールドを更新できません。プロジェクトは無効です: %{errors}"
   notice_attachment_migration_wiki_page: >
-    このページは、OpenProject の更新時に自動的に生成されました。%{container_type} "%{container_name}" と関連付けられていたすべての添付ファイルが含まれています。
+    このページは、MarvalProjects の更新時に自動的に生成されました。%{container_type} "%{container_name}" と関連付けられていたすべての添付ファイルが含まれています。
   #Default format for numbers
   number:
     format:
@@ -3506,7 +3506,7 @@ ja:
           tb: "TB"
   onboarding:
     heading_getting_started: "概要を取得"
-    text_getting_started_description: "Get a quick overview of project management and team collaboration with OpenProject. You can restart this video from the help menu."
+    text_getting_started_description: "Get a quick overview of project management and team collaboration with MarvalProjects. You can restart this video from the help menu."
     welcome: "Welcome to %{app_title}"
     select_language: "言語を選択してください"
   permission_add_work_package_comments: "コメントの追加"
@@ -3589,7 +3589,7 @@ ja:
   permission_manage_types: "ワークパッケージのタイプを選択"
   permission_manage_own_reminders: "Create own reminders"
   permission_view_project: "View projects"
-  permission_view_changesets: "OpenProject にリポジトリのリビジョンを表示"
+  permission_view_changesets: "MarvalProjects にリポジトリのリビジョンを表示"
   permission_view_internal_comments: "内部コメントの閲覧"
   permission_view_commit_author_statistics: "コミット作成者の統計情報の閲覧"
   permission_view_dashboards: "View dashboards"
@@ -3700,7 +3700,7 @@ ja:
     destroy:
       confirmation: "続行した場合、管理リポジトリは削除されます。"
       info: "リポジトリの削除は復元できない操作です。"
-      info_not_managed: "注: これは、このリポジトリの内容を削除しません。OpenProject によって管理されていません。"
+      info_not_managed: "注: これは、このリポジトリの内容を削除しません。MarvalProjects によって管理されていません。"
       managed_path_note: "次のディレクトリが消去されます: %{path}"
       repository_verification: "リポジトリの削除を確認するため、プロジェクトの識別子 %{identifier} を入力してください。"
       subtitle: "プロジェクト %{project_name} の %{repository_type} を削除してもよろしいですか？"
@@ -3714,8 +3714,8 @@ ja:
       empty_repository: "リポジトリは存在しますが、空です。まだリビジョンを含んでいません。"
       exists_on_filesystem: "リポジトリのディレクトリは、既にファイルシステムに存在します。"
       filesystem_access_failed: "ファイルシステム上のリポジトリへのアクセス中にエラーが発生しました: %{message}"
-      not_manageable: "OpenProject によって、このリポジトリ ベンダーを管理できません。"
-      path_permission_failed: "次のパスを作成しようとしてエラーが発生しました: %{path}。OpenProject がそのフォルダーに書き込むことができることを確認してください。"
+      not_manageable: "MarvalProjects によって、このリポジトリ ベンダーを管理できません。"
+      path_permission_failed: "次のパスを作成しようとしてエラーが発生しました: %{path}。MarvalProjects がそのフォルダーに書き込むことができることを確認してください。"
       unauthorized: "リポジトリにアクセスする承認がないか、認証情報が有効ではありません。"
       unavailable: "リポジトリが利用できません。"
       exception_title: "リポジトリにアクセスできません: %{message}"
@@ -3732,9 +3732,9 @@ ja:
         path_encoding: "Git パス エンコーディングを上書き (デフォルト: UTF-8)"
       local_title: "既存のローカル Git リポジトリのリンク"
       local_url: "ローカル URL"
-      local_introduction: "既存のローカル Git リポジトリがある場合は、アプリケーション内からアクセスするために、OpenProject  とリンクできます。"
-      managed_introduction: "OpenProject が、自動的にローカル Git リポジトリを作成して統合します。"
-      managed_title: "Git リポジトリを OpenProject に統合しました"
+      local_introduction: "既存のローカル Git リポジトリがある場合は、アプリケーション内からアクセスするために、MarvalProjects  とリンクできます。"
+      managed_introduction: "MarvalProjects が、自動的にローカル Git リポジトリを作成して統合します。"
+      managed_title: "Git リポジトリを MarvalProjects に統合しました"
       managed_url: "管理用 URL"
       path: "Git リポジトリのパス"
       path_encoding: "パスのエンコード"
@@ -3751,24 +3751,24 @@ ja:
     scm_types:
       local: "既存のローカルリポジトリのリンク"
       existing: "既存のリポジトリのリンク"
-      managed: "OpenProject に新しいリポジトリを作成"
+      managed: "MarvalProjects に新しいリポジトリを作成"
     storage:
       not_available: "このリポジトリのディスク ストレージ消費量は利用できません。"
       update_timeout: "最後のリポジトリに必要なディスク容量の情報を N 分間保持します。\nリポジトリの必要なディスク容量を計算するにはコストがかかるため、パフォーマンスへの影響を減らすにはこの値を増やしてください。"
-      oauth_application_details: "The client secret value will not be accessible again after you close this window. Please copy these values into the Nextcloud OpenProject Integration settings:"
+      oauth_application_details: "The client secret value will not be accessible again after you close this window. Please copy these values into the Nextcloud MarvalProjects Integration settings:"
       oauth_application_details_link_text: "Go to settings page"
       setup_documentation_details: "If you need help configuring a new file storage please check the documentation: "
       setup_documentation_details_link_text: "File storages setup"
       show_warning_details: "このファイルストレージを使用するには、各プロジェクトのプロジェクト設定でモジュールと特定のストレージを有効にする必要があります。"
     subversion:
       existing_title: "既存の Subversion リポジトリ"
-      existing_introduction: "既存のローカル Subversion リポジトリがある場合は、アプリケーション内からアクセスするために、OpenProject とリンクできます。"
+      existing_introduction: "既存のローカル Subversion リポジトリがある場合は、アプリケーション内からアクセスするために、MarvalProjects とリンクできます。"
       existing_url: "既存のURL"
       instructions:
         managed_url: "これは、管理 (ローカル) Subversion リポジトリの URL です。"
         url: "リポジトリの URL を入力してください。これはローカル リポジトリ (%{local_proto} で始まる)、またはリモート リポジトリを対象にすることができます。\n次の URL スキームがサポートされています:"
-      managed_title: "Subversion リポジトリを OpenProject に統合しました"
-      managed_introduction: "OpenProject が、自動的にローカル Subversion リポジトリを作成して統合します。"
+      managed_title: "Subversion リポジトリを MarvalProjects に統合しました"
+      managed_introduction: "MarvalProjects が、自動的にローカル Subversion リポジトリを作成して統合します。"
       managed_url: "管理 URL"
       password: "リポジトリのパスワード"
       username: "リポジトリのユーザ名"
@@ -3795,7 +3795,7 @@ ja:
   setting_apiv3_cors_enabled: "CORSを有効にする"
   setting_apiv3_cors_origins: "API V3のオリジン間リソース共有 (CORS) が許可されています"
   setting_apiv3_cors_origins_text_html: >
-    CORS が有効になっている場合、これらは OpenProject API へのアクセスが許可されている起源です。 <br/> 期待される値を指定する方法については、 <a href="%{origin_link}" target="_blank">Origin ヘッダー</a> のドキュメントを確認してください。
+    CORS が有効になっている場合、これらは MarvalProjects API へのアクセスが許可されている起源です。 <br/> 期待される値を指定する方法については、 <a href="%{origin_link}" target="_blank">Origin ヘッダー</a> のドキュメントを確認してください。
   setting_apiv3_write_readonly_attributes: "Write access to read-only attributes"
   setting_apiv3_write_readonly_attributes_instructions_html: >
     If enabled, the API will allow administrators to write static read-only attributes during creation, such as createdAt and author. <br/> <strong>Warning:</strong> This setting has a use-case for e.g., importing data, but allows administrators to impersonate the creation of items as other users. All creation requests are being logged however with the true author. </br> For more information on attributes and supported resources, please see the %{api_documentation_link}.
@@ -3997,7 +3997,7 @@ ja:
         clamav_socket_html: Enter the socket to the clamd daemon, e.g., %{example}
         clamav_host_html: Enter the hostname and port to the clamd daemon separated by colon. e.g., %{example}
         description_html: >
-          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as OpenProject and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
+          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as MarvalProjects and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
     brute_force_prevention: "自動的にユーザをロック"
     date_format:
       first_date_of_week_and_year_set: >
@@ -4005,7 +4005,7 @@ ja:
       first_week_of_year_text_html: >
         年の最初の週に含まれる1月の日付を選択します。 この値は週の最初の日と一緒に年の週の合計数を決定します。 詳細については、このトピックに関する <a href="%{link}" target="_blank">ドキュメント</a> をご覧ください。
     experimental:
-      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your OpenProject installation and losing all of its data.
+      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your MarvalProjects installation and losing all of its data.
       warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on MarvalProjects installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
       feature_flags: Feature flags
     general: "概要"
@@ -4017,7 +4017,7 @@ ja:
         type: "タイプごとの行全体"
         priority: "優先度別に行全体"
     icalendar:
-      enable_subscriptions_text_html: 必要な権限を持つユーザーが、OpenProject のカレンダーを購読し、外部のカレンダークライアントを介してワークパッケージ情報にアクセスできるようにします。<strong>注意:</strong>この機能を有効にする前に、<a href="%{link}" target="_blank">iCalendar サブスクリプションについてを</a>読み、潜在的なセキュリティリスクを理解してください。
+      enable_subscriptions_text_html: 必要な権限を持つユーザーが、MarvalProjects のカレンダーを購読し、外部のカレンダークライアントを介してワークパッケージ情報にアクセスできるようにします。<strong>注意:</strong>この機能を有効にする前に、<a href="%{link}" target="_blank">iCalendar サブスクリプションについてを</a>読み、潜在的なセキュリティリスクを理解してください。
     language_name_being_default: "%{language_name} (default)"
     notifications:
       events_explanation: "Governs for which event an email is sent out. Work packages are excluded from this list as the notifications for them can be configured specifically for every user."
@@ -4089,7 +4089,7 @@ ja:
       sentence_connector: "及び"
       skip_last_comma: "偽"
   text_accessibility_hint: "アクセシビリティ モードは目の不自由な人、視覚障害者、視力が悪いユーザーのためにデザインされています。後者向けには、フォーカスされた要素が特に強調表示されます。バックログ モジュールはこのモードで使用できないことにご注意ください。"
-  text_access_token_hint: "アクセストークンで、外部アプリケーションが OpenProject のリソースへのアクセスを許可することができます。"
+  text_access_token_hint: "アクセストークンで、外部アプリケーションが MarvalProjects のリソースへのアクセスを許可することができます。"
   text_analyze: "さらに分析: %{subject}"
   text_are_you_sure: "よろしいですか？"
   text_are_you_sure_continue: "Are you sure you want to continue?"
@@ -4171,7 +4171,7 @@ ja:
   text_no_notes: "このワークパッケージに有効なコメントはありません."
   text_notice_too_many_values_are_inperformant: "注: 1ページあたり100以上の項目を表示すると読み込み時間が増加することがあります。"
   text_notice_security_badge_displayed_html: >
-    602/5000 注：有効にすると、<a href="%{information_panel_path}">%{information_panel_label}</a>管理パネルとホームページに、インストールステータスのバッジが表示されます。 管理者のみに表示されます。 <br/>バッジは、最新のOpenProjectバージョンを公式のOpenProjectリリースデータベースと照合して、アップデートや既知の脆弱性について警告します。 チェックの内容、利用可能なアップデートを提供するために必要なデータ、およびこのチェックを無効にする方法の詳細については、<a href="%{more_info_url}">設定ドキュメント</a>をご覧ください。
+    602/5000 注：有効にすると、<a href="%{information_panel_path}">%{information_panel_label}</a>管理パネルとホームページに、インストールステータスのバッジが表示されます。 管理者のみに表示されます。 <br/>バッジは、最新のMarvalProjectsバージョンを公式のMarvalProjectsリリースデータベースと照合して、アップデートや既知の脆弱性について警告します。 チェックの内容、利用可能なアップデートを提供するために必要なデータ、およびこのチェックを無効にする方法の詳細については、<a href="%{more_info_url}">設定ドキュメント</a>をご覧ください。
   text_own_membership_delete_confirmation: "一部またはすべての権限を自分自身から剥奪しようとしているため、このプロジェクトを編集できなくなる可能性があります。\n本当に続けますか？"
   text_permanent_delete_confirmation_checkbox_label: "I understand that this deletion cannot be reversed"
   text_plugin_assets_writable: "プラグインの「assets」ディレクトリが書き込み可能"
@@ -4180,7 +4180,7 @@ ja:
   text_reassign: "ワークパッケージへの再割り当て:"
   text_regexp_info: "例) ^[A-Z0-9]+$"
   text_regexp_multiline: '正規表現は、複数行モードで適用されます。例えば、^---\s+'
-  text_repository_usernames_mapping: "リポジトリのログから検出されたユーザ名をどのOpenProjectユーザに関連づけるかを選択してください。\nログ上のユーザ名またはメールアドレスがOpenProjectのユーザと一致する場合は自動的に関連づけます。"
+  text_repository_usernames_mapping: "リポジトリのログから検出されたユーザ名をどのMarvalProjectsユーザに関連づけるかを選択してください。\nログ上のユーザ名またはメールアドレスがMarvalProjectsのユーザと一致する場合は自動的に関連づけます。"
   text_status_changed_by_changeset: "変更履歴%{value}で適用されました。"
   text_table_difference_description: "この表には、単一の %{entries} が表示されています。 まず、表の対応するチェックボックスを選択して、両者の項目の違いを見ることができます。 表の下のボタンをクリックすると、違いが表示されます。"
   text_time_logged_by_changeset: "変更履歴 %{value} で適用されました。"
@@ -4255,7 +4255,7 @@ ja:
     authentication_provider: "認証プロバイダー"
     identity_url_text: "The internal unique identifier provided by the authentication provider."
     authentication_settings_disabled_due_to_external_authentication: >
-      外部認証プロバイダー経由でこのユーザを認証しますので、OpenProjectではパスワードの変更ができません。
+      外部認証プロバイダー経由でこのユーザを認証しますので、MarvalProjectsではパスワードの変更ができません。
     authorization_rejected: "ログインすることはできません。"
     assign_random_password: "ランダムパスワードを設定 (メールでユーザに送信されます)"
     blocked: "一時的ロック"
@@ -4286,7 +4286,7 @@ ja:
   warning: 注意
   warning_attachments_not_saved: "%{count} 件のファイルを保存できませんでした。"
   warning_imminent_user_limit: >
-    現在のプランでサポートされているユーザーよりも多くのユーザーを招待しました。 招待されたユーザーは、OpenProject環境に参加できない場合があります。 招待者と登録ユーザーが参加できるようにするには、<a href="%{upgrade_url}">プランをアップグレード</a>するか、既存のユーザーをブロックしてください。
+    現在のプランでサポートされているユーザーよりも多くのユーザーを招待しました。 招待されたユーザーは、MarvalProjects環境に参加できない場合があります。 招待者と登録ユーザーが参加できるようにするには、<a href="%{upgrade_url}">プランをアップグレード</a>するか、既存のユーザーをブロックしてください。
   warning_registration_token_expired: |
     アクティベーションメールの有効期限が切れています。%{email} に新しいメールを送りました。メール内のリンクをクリックして、アカウントを有効にしてください。
   warning_user_limit_reached: >
@@ -4294,7 +4294,7 @@ ja:
   warning_user_limit_reached_admin: >
     Adding additional users will exceed the current limit. Please <a href="%{upgrade_url}">upgrade your plan</a> to be able to ensure external users are able to access this instance.
   warning_user_limit_reached_instructions: >
-    ユーザー制限(%{current}/%{max} アクティブユーザー)に達しました。 sales@openproject.com に連絡してEnterprise Editionプランをアップグレードし、ユーザーを追加してください。
+    ユーザー制限(%{current}/%{max} アクティブユーザー)に達しました。 sales@MarvalProjects.com に連絡してEnterprise Editionプランをアップグレードし、ユーザーを追加してください。
   warning_protocol_mismatch_html: >
 
   warning_bar:
@@ -4561,7 +4561,7 @@ ja:
         confidential: "クライアントシークレットを機密にできる場所でアプリケーションが使用されるかどうかを確認します。 ネイティブモバイルアプリとシングルページアプリは機密とはみなされません。"
         scopes: "アプリケーションにアクセスを許可するスコープをチェックします。チェックされていない場合、api_v3になる。"
         client_credential_user_id: "クライアントがこのアプリケーションを使用するときに偽装するためのオプションのユーザーIDです。 パブリックアクセスのみを許可するには空のままにします"
-        register_intro: "OpenProject用のOAuth APIクライアントアプリケーションを開発している場合は、このフォームを使用してすべてのユーザーが使用できるように登録できます。"
+        register_intro: "MarvalProjects用のOAuth APIクライアントアプリケーションを開発している場合は、このフォームを使用してすべてのユーザーが使用できるように登録できます。"
         default_scopes: ""
     header:
       builtin_applications: Built-in OAuth applications
@@ -4569,17 +4569,17 @@ ja:
     empty_application_lists: No OAuth applications have been registered.
     client_id: "クライアントID"
     client_secret_notice: >
-      クライアントシークレットを表示できる唯一の瞬間です。書き留めて安全に保管してください。 これはパスワードとして扱われるべきであり、後でOpenProjectによって検索することはできません。
+      クライアントシークレットを表示できる唯一の瞬間です。書き留めて安全に保管してください。 これはパスワードとして扱われるべきであり、後でMarvalProjectsによって検索することはできません。
     authorization_dialog:
       authorize: "承認"
       cancel: "承認を取り消して拒否します。"
       prompt_html: "<strong>%{application_name}</strong>に自分のアカウント<em>%{login}</em>を使用する権限を与えますか？"
       title: "%{application_name}を承認します"
       wants_to_access_html: >
-        このアプリケーションはあなたのOpenProjectアカウントへのアクセスを要求します。 <br/> <strong>次の権限が要求されています：</strong>
+        このアプリケーションはあなたのMarvalProjectsアカウントへのアクセスを要求します。 <br/> <strong>次の権限が要求されています：</strong>
     scopes:
       api_v3: "Full API v3アクセス"
-      api_v3_text: "アプリケーションはアクションを実行するためのOpenProject API v3へのフルアクセスが許可されます。"
+      api_v3_text: "アプリケーションはアクションを実行するためのMarvalProjects API v3へのフルアクセスが許可されます。"
     grants:
       created_date: "に承認済み"
       scopes: "権限"
@@ -4594,7 +4594,7 @@ ja:
     client_credentials_impersonation_set_to: "クライアントの資格情報をユーザーに設定"
     client_credentials_impersonation_warning: "注意：このアプリケーションで「クライアント認証情報」フローを使用しているクライアントは、このユーザーの権限を持ちます。"
     client_credentials_impersonation_html: >
-      デフォルトでは、OpenProjectは %{authorization_code_flow_link} を介してOAuth 2.0認証を提供します。 オプションで %{client_credentials_flow_link} を有効にすることもできますが、その代わりにユーザーに代わってリクエストが実行されるようにする必要があります。
+      デフォルトでは、MarvalProjectsは %{authorization_code_flow_link} を介してOAuth 2.0認証を提供します。 オプションで %{client_credentials_flow_link} を有効にすることもできますが、その代わりにユーザーに代わってリクエストが実行されるようにする必要があります。
     authorization_error: "認証エラーが発生しました。"
     revoke_my_application_confirmation: "本当にこのアプリケーションを削除しますか？ これにより %{token_count} が無効になります。"
     my_registered_applications: "登録済みのOAuthアプリケーション"
@@ -4623,20 +4623,20 @@ ja:
         Internal error: Called refresh_token without a previously existing token.
       refresh_token_updated_failed: "Error during update of OAuthClientToken"
       oauth_client_not_found_explanation: >
-        This error appears after you have updated the client_id and client_secret in OpenProject, but haven't updated the 'Return URI' field in the OAuth2 provider.
+        This error appears after you have updated the client_id and client_secret in MarvalProjects, but haven't updated the 'Return URI' field in the OAuth2 provider.
       oauth_code_not_present: "OAuth2 'code' not found in 'callback' endpoint (redirect_uri)."
       oauth_code_not_present_explanation: >
         This error appears if you have selected the wrong response_type in the OAuth2 provider. Response_type should be 'code' or similar.
       oauth_state_not_present: "OAuth2 'state' not found in 'callback' endpoint (redirect_uri)."
       oauth_state_not_present_explanation: >
-        The 'state' is used to indicate to OpenProject where to continue after a successful OAuth2 authorization. A missing 'state' is an internal error that may appear during setup. Please contact your system administrator.
+        The 'state' is used to indicate to MarvalProjects where to continue after a successful OAuth2 authorization. A missing 'state' is an internal error that may appear during setup. Please contact your system administrator.
       rack_oauth2:
         client_secret_invalid: "Client secret is invalid (client_secret_invalid)"
         invalid_request: >
           OAuth2 Authorization Server responded with 'invalid_request'. This error appears if you try to authorize multiple times or in case of technical issues.
         invalid_response: "OAuth2 Authorization Server provided an invalid response (invalid_response)"
         invalid_grant: "The OAuth2 Authorization Server asks you to reauthorize (invalid_grant)."
-        invalid_client: "The OAuth2 Authorization Server doesn't recognize OpenProject (invalid_client)."
+        invalid_client: "The OAuth2 Authorization Server doesn't recognize MarvalProjects (invalid_client)."
         unauthorized_client: "The OAuth2 Authorization Server rejects the grant type (unauthorized_client)"
         unsupported_grant_type: "The OAuth2 Authorization Server asks you to reauthorize (unsupported_grant_type)."
         invalid_scope: "You are not allowed to access the requested resource (invalid_scope)."
@@ -4649,10 +4649,10 @@ ja:
   you: あなた
   link: link
   plugin_openproject_auth_plugins:
-    name: "OpenProject Auth プラグイン"
-    description: "Integration of OmniAuth strategy providers for authentication in OpenProject."
+    name: "MarvalProjects Auth プラグイン"
+    description: "Integration of OmniAuth strategy providers for authentication in MarvalProjects."
   plugin_openproject_auth_saml:
     name: "OmniAuth SAML / シングルサインオン"
-    description: "OmniAuthSAMLプロバイダをOpenProjectに追加"
+    description: "OmniAuthSAMLプロバイダをMarvalProjectsに追加"
   enterprise_plans:
     legacy_enterprise: "Enterprise Plan"

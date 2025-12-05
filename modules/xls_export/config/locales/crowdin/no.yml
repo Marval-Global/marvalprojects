@@ -1,6 +1,6 @@
 "no":
   plugin_openproject_xls_export:
-    name: "OpenProject XLS eksport"
+    name: "MarvalProjects XLS eksport"
     description: "Eksporter sakslister som Excel-regneark (.xls)."
   export_to_excel: "Eksporter XLS"
   print_with_description: "Skriv ut forhåndsvisning med beskrivelse"

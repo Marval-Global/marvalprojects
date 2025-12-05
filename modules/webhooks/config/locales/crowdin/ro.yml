@@ -1,7 +1,7 @@
 ro:
   plugin_openproject_webhooks:
-    name: "Webhook-uri OpenProject"
-    description: "Oferă un plug-in API pentru a sprijini OpenProject webhooks pentru o mai bună integrare a terților."
+    name: "Webhook-uri MarvalProjects"
+    description: "Oferă un plug-in API pentru a sprijini MarvalProjects webhooks pentru o mai bună integrare a terților."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -35,7 +35,7 @@ ro:
         internal_comment: "Comentariu intern"
       explanation:
         text: >
-          La apariția unui eveniment, cum ar fi crearea unui pachet de lucru sau o actualizare a unui proiect, OpenProject va trimite o cerere POST către punctele finale web configurate. De multe ori, evenimentul este trimis după ce a trecut %{link}.
+          La apariția unui eveniment, cum ar fi crearea unui pachet de lucru sau o actualizare a unui proiect, MarvalProjects va trimite o cerere POST către punctele finale web configurate. De multe ori, evenimentul este trimis după ce a trecut %{link}.
         link: perioada de agregare configurată
       status:
         enabled: 'Webhook este activat'
@@ -66,4 +66,4 @@ ro:
           title: 'Proiecte selectate'
         secret:
           description: >
-            Dacă este setată, această valoare secretă este utilizată de OpenProject pentru a semna încărcătura utilă a webhook-ului.
+            Dacă este setată, această valoare secretă este utilizată de MarvalProjects pentru a semna încărcătura utilă a webhook-ului.

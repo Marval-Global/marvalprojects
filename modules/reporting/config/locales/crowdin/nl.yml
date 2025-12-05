@@ -21,8 +21,8 @@
 #++
 nl:
   plugin_openproject_reporting:
-    name: "OpenProject Rapportage"
-    description: "This plugin allows creating custom cost reports with filtering and grouping created by the OpenProject Time and costs plugin."
+    name: "MarvalProjects Rapportage"
+    description: "This plugin allows creating custom cost reports with filtering and grouping created by the MarvalProjects Time and costs plugin."
   button_save_report_as: "Rapport opslaan als..."
   comments: "Commentaar"
   cost_reports_title: "Tijd en kosten"

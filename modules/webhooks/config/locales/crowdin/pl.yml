@@ -1,7 +1,7 @@
 pl:
   plugin_openproject_webhooks:
-    name: "Webhooki OpenProject"
-    description: "Udostępnia interfejs API wtyczek do obsługi webhooków OpenProject w celu lepszej integracji z rozwiązaniami innych firm."
+    name: "Webhooki MarvalProjects"
+    description: "Udostępnia interfejs API wtyczek do obsługi webhooków MarvalProjects w celu lepszej integracji z rozwiązaniami innych firm."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -35,7 +35,7 @@ pl:
         internal_comment: "Komentarz wewnętrzny"
       explanation:
         text: >
-          Po wystąpieniu zdarzenia takiego jak utworzenie pakietu roboczego lub aktualizacja projektu OpenProject wyśle żądanie POST do skonfigurowanych punktów końcowych sieci. Zdarzenie jest często wysyłane po upływie %{link}.
+          Po wystąpieniu zdarzenia takiego jak utworzenie pakietu roboczego lub aktualizacja projektu MarvalProjects wyśle żądanie POST do skonfigurowanych punktów końcowych sieci. Zdarzenie jest często wysyłane po upływie %{link}.
         link: skonfigurowany okres agregacji
       status:
         enabled: 'Webhook jest włączony'
@@ -66,4 +66,4 @@ pl:
           title: 'Wybrane projekty'
         secret:
           description: >
-            W razie ustawienia ta wartość tajnego klucza jest używana przez OpenProject do podpisywania zawartości webhooka.
+            W razie ustawienia ta wartość tajnego klucza jest używana przez MarvalProjects do podpisywania zawartości webhooka.

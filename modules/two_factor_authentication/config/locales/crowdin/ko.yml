@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 ko:
   plugin_openproject_two_factor_authentication:
-    name: "OpenProject 2단계 인증"
+    name: "MarvalProjects 2단계 인증"
     description: >-
-      이 OpenProject 플러그인은 TOTP 표준(Google Authenticator)을 통한 일회용 암호를 사용하거나 SMS 또는 음성 통화를 통해 사용자의 휴대폰으로 전송되는 2단계 인증으로 사용자를 인증합니다.
+      이 MarvalProjects 플러그인은 TOTP 표준(Google Authenticator)을 통한 일회용 암호를 사용하거나 SMS 또는 음성 통화를 통해 사용자의 휴대폰으로 전송되는 2단계 인증으로 사용자를 인증합니다.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ ko:
       only_sms_allowed: "다른 사용자의 경우 SNS 배달만 설정할 수 있습니다."
     upsell:
       title: "2단계 인증"
-      description: "모든 프로젝트 멤버에게 2단계 인증을 제공(또는 적용)하여 OpenProject 인스턴스의 보안을 강화하세요."
+      description: "모든 프로젝트 멤버에게 2단계 인증을 제공(또는 적용)하여 MarvalProjects 인스턴스의 보안을 강화하세요."
     backup_codes:
       none_found: 이 계정에 대한 백업 코드가 존재하지 않습니다.
       singular: 백업 코드

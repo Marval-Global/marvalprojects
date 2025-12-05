@@ -1,7 +1,7 @@
 #English strings go here for Rails i18n
 fa:
   plugin_openproject_recaptcha:
-    name: "ریکپچا OpenProject"
+    name: "ریکپچا MarvalProjects"
     description: "این ماژول برای بررسی‌های reCAPTCHA در هنگام ورود به سیستم فراهم می‌کند."
   recaptcha:
     label_recaptcha: "reCAPTCHA"

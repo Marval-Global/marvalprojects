@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 lt:
   plugin_openproject_two_factor_authentication:
-    name: "OpenProject dviejų faktorių autentifikacija"
+    name: "MarvalProjects dviejų faktorių autentifikacija"
     description: >-
-      OpenProject priedas autentifikuoja jūsų naudotojus naudojant dviejų faktorių autentifikaciją naudojant vieno karto slaptažodį per TOTP standartą (Google Autentifikatorius) arba išsiųstą į naudotojo telefoną per SMS arba balso žinutę.
+      MarvalProjects priedas autentifikuoja jūsų naudotojus naudojant dviejų faktorių autentifikaciją naudojant vieno karto slaptažodį per TOTP standartą (Google Autentifikatorius) arba išsiųstą į naudotojo telefoną per SMS arba balso žinutę.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ lt:
       only_sms_allowed: "Kitiems naudotojams galima nustatyti tik SMS pristatymą."
     upsell:
       title: "Dviejų veiksnių autentifikavimas"
-      description: "Sustiprinkite savo OpenProject sistemos saugumą pasiūlydami (ar reikalaudami) dviejų faktorių autentifikacijos visiems projekto nariams."
+      description: "Sustiprinkite savo MarvalProjects sistemos saugumą pasiūlydami (ar reikalaudami) dviejų faktorių autentifikacijos visiems projekto nariams."
     backup_codes:
       none_found: Ši paskyra neturi atsarginių kodų.
       singular: Atsarginis kodas

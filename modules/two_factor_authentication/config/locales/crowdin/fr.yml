@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 fr:
   plugin_openproject_two_factor_authentication:
-    name: "Authentification à deux facteurs OpenProject"
+    name: "Authentification à deux facteurs MarvalProjects"
     description: >-
-      Ce plugin OpenProject permet une authentification à deux facteurs via un mot de passe à usage unique envoyé via le standard TOTP (Google Authenticator) ou envoyé sur le téléphone portable de l'utilisateur par SMS ou appel vocal.
+      Ce plugin MarvalProjects permet une authentification à deux facteurs via un mot de passe à usage unique envoyé via le standard TOTP (Google Authenticator) ou envoyé sur le téléphone portable de l'utilisateur par SMS ou appel vocal.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -83,7 +83,7 @@ fr:
       only_sms_allowed: "Seul l'envoi de SMS peut être configuré pour d'autres utilisateurs."
     upsell:
       title: "Authentification à deux facteurs"
-      description: "Renforcez la sécurité de votre instance OpenProject en offrant (ou en forçant) une authentification à deux facteurs à tous les membres du projet."
+      description: "Renforcez la sécurité de votre instance MarvalProjects en offrant (ou en forçant) une authentification à deux facteurs à tous les membres du projet."
     backup_codes:
       none_found: Aucun code de sauvegarde n’existe pour ce compte.
       singular: Code de sauvegarde

@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 fa:
   plugin_openproject_two_factor_authentication:
-    name: "تأیید هویت دو مرحله‌ای OpenProject "
+    name: "تأیید هویت دو مرحله‌ای MarvalProjects "
     description: >-
-      این افزونه OpenProject احراز هویت کاربران شما را با استفاده از احراز هویت دو مرحله ای با استفاده از رمز عبور یک بار مصرف از طریق استاندارد TOTP (Google Authenticator) یا ارسال به تلفن همراه کاربر از طریق پیام کوتاه یا تماس صوتی انجام می دهد.
+      این افزونه MarvalProjects احراز هویت کاربران شما را با استفاده از احراز هویت دو مرحله ای با استفاده از رمز عبور یک بار مصرف از طریق استاندارد TOTP (Google Authenticator) یا ارسال به تلفن همراه کاربر از طریق پیام کوتاه یا تماس صوتی انجام می دهد.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ fa:
       only_sms_allowed: "Only SMS delivery can be set up for other users."
     upsell:
       title: "Two-factor authentication"
-      description: "Strenghten the security of your OpenProject instance by offering (or enforcing) two-factor authentification to all project members."
+      description: "Strenghten the security of your MarvalProjects instance by offering (or enforcing) two-factor authentification to all project members."
     backup_codes:
       none_found: No backup codes exist for this account.
       singular: Backup code

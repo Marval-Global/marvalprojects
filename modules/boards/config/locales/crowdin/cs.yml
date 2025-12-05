@@ -1,7 +1,7 @@
 #English strings go here
 cs:
   plugin_openproject_boards:
-    name: "OpenProject Tabule"
+    name: "MarvalProjects Tabule"
     description: "Poskytuje zobrazení Tabulí"
   permission_show_board_views: "Zobrazit tabule"
   permission_manage_board_views: "Správa tabulí"

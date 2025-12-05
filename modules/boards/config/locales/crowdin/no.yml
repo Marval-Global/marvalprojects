@@ -1,7 +1,7 @@
 #English strings go here
 "no":
   plugin_openproject_boards:
-    name: "OpenProject tavler"
+    name: "MarvalProjects tavler"
     description: "Tilbyr tavle-visninger"
   permission_show_board_views: "Vis tavler"
   permission_manage_board_views: "Administrer tavler"

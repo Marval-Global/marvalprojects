@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 zh-CN:
   plugin_openproject_two_factor_authentication:
-    name: "OpenProject 双因子认证"
+    name: "MarvalProjects 双因子认证"
     description: >-
-      该 OpenProject 插件基于 TOTP 标准通过使用一次性密码（如 Google Authenticator）或通过短信或语音呼叫发送到用户的手机，对用户进行双因子认证。
+      该 MarvalProjects 插件基于 TOTP 标准通过使用一次性密码（如 Google Authenticator）或通过短信或语音呼叫发送到用户的手机，对用户进行双因子认证。
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ zh-CN:
       only_sms_allowed: "只能为其他用户设置短信发送。"
     upsell:
       title: "双因子认证"
-      description: "通过向所有项目成员提供（或强制执行）双因子认证来增强 OpenProject 实例的安全性。"
+      description: "通过向所有项目成员提供（或强制执行）双因子认证来增强 MarvalProjects 实例的安全性。"
     backup_codes:
       none_found: 此帐户不存在备份代码。
       singular: 备份代码

@@ -1,7 +1,7 @@
 #English strings go here
 zh-CN:
   plugin_openproject_boards:
-    name: "OpenProject 看板"
+    name: "MarvalProjects 看板"
     description: "提供看板视图。"
   permission_show_board_views: "视图面板"
   permission_manage_board_views: "管理面板"

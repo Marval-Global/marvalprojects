@@ -21,8 +21,8 @@
 #++
 tr:
   plugin_openproject_reporting:
-    name: "OpenProject Raporlama"
-    description: "Bu eklenti, OpenProject Zaman ve maliyetler eklentisi tarafından oluşturulan filtreleme ve gruplama ile özel maliyet raporları oluşturmaya izin verir."
+    name: "MarvalProjects Raporlama"
+    description: "Bu eklenti, MarvalProjects Zaman ve maliyetler eklentisi tarafından oluşturulan filtreleme ve gruplama ile özel maliyet raporları oluşturmaya izin verir."
   button_save_report_as: "Raporu farklı kaydet..."
   comments: "Yorum"
   cost_reports_title: "Zaman ve maliyetler"

@@ -17,8 +17,8 @@ pt-PT:
         authn_requests_signed: Assinar SAML AuthnRequests
         want_assertions_signed: Exigir respostas assinadas
         want_assertions_encrypted: Exigir respostas encriptadas
-        certificate: Certificado utilizado pelo OpenProject para pedidos SAML
-        private_key: Chave privada correspondente para pedidos SAML do OpenProject
+        certificate: Certificado utilizado pelo MarvalProjects para pedidos SAML
+        private_key: Chave privada correspondente para pedidos SAML do MarvalProjects
         signature_method: Algoritmo de assinatura
         digest_method: Algoritmo de resumo
         format: "Formato"
@@ -36,7 +36,7 @@ pt-PT:
     info:
       title: "Parâmetros de configuração do protocolo SAML"
       description: >
-        Utilize estes parâmetros para configurar a ligação do seu fornecedor de identidade ao OpenProject.
+        Utilize estes parâmetros para configurar a ligação do seu fornecedor de identidade ao MarvalProjects.
     metadata_parser:
       success: "Atualizou a configuração utilizando os metadados do fornecedor de identidade com êxito."
       invalid_url: "O URL de metadados fornecido é inválido. Forneça um URL HTTP(s)."
@@ -46,8 +46,8 @@ pt-PT:
       label_empty_description: "Adicione um fornecedor para vê-lo aqui."
       label_automatic_configuration: Configuração automática
       label_metadata: Metadados
-      label_metadata_endpoint: Ponto final de metadados do OpenProject
-      label_openproject_information: Informações sobre o OpenProject
+      label_metadata_endpoint: Ponto final de metadados do MarvalProjects
+      label_openproject_information: Informações sobre o MarvalProjects
       label_configuration_details: "Pontos finais e certificados do fornecedor de identidade"
       label_configuration_encryption: "Assinaturas e encriptação"
       label_add_new: Novo fornecedor de identidade SAML
@@ -61,16 +61,16 @@ pt-PT:
       requested_attributes: Atributos solicitados
       attribute_mapping: Mapeamento de atributos
       attribute_mapping_text: >
-        Os seguintes campos controlam os atributos fornecidos pelo fornecedor de identidade SAML que são utilizados para fornecer atributos de utilizador no OpenProject
+        Os seguintes campos controlam os atributos fornecidos pelo fornecedor de identidade SAML que são utilizados para fornecer atributos de utilizador no MarvalProjects
       metadata:
-        dialog: "Este é o URL onde os metadados SAML do OpenProject estão disponíveis. Opcionalmente, utilize-o para configurar o seu fornecedor de identidade:"
+        dialog: "Este é o URL onde os metadados SAML do MarvalProjects estão disponíveis. Opcionalmente, utilize-o para configurar o seu fornecedor de identidade:"
       upsell:
         title: "Início de sessão único (SSO) com SAML"
-        description: Associar o OpenProject a um fornecedor de identidade SAML
+        description: Associar o MarvalProjects a um fornecedor de identidade SAML
       request_attributes:
         title: 'Atributos solicitados'
         legend: >
-          Estes atributos são adicionados aos metadados SAML XML para indicar ao fornecedor de identidade quais são os atributos exigidos pelo OpenProject. Poderá ainda ter de configurar explicitamente o seu fornecedor de identidade para enviar estes atributos. Consulte a documentação do seu IdP.
+          Estes atributos são adicionados aos metadados SAML XML para indicar ao fornecedor de identidade quais são os atributos exigidos pelo MarvalProjects. Poderá ainda ter de configurar explicitamente o seu fornecedor de identidade para enviar estes atributos. Consulte a documentação do seu IdP.
         name: 'Chave de atributo solicitada'
         format: 'Formato do atributo'
       section_headers:
@@ -84,8 +84,8 @@ pt-PT:
         configuration: "Configure os URL do ponto final para o fornecedor de identidade, certificados e outras opções SAML."
         configuration_metadata: "Estas informações foram pré-preenchidas utilizando os metadados fornecidos. Na maioria dos casos, não necessitam de edição."
         encryption: "Configure assinaturas de afirmação e encriptação para pedidos e respostas SAML."
-        encryption_form: "Opcionalmente, pode querer encriptar a resposta da asserção ou ter pedidos do OpenProject assinados."
-        mapping: "Ajuste manualmente o mapeamento entre a resposta SAML e os atributos do utilizador no OpenProject."
+        encryption_form: "Opcionalmente, pode querer encriptar a resposta da asserção ou ter pedidos do MarvalProjects assinados."
+        mapping: "Ajuste manualmente o mapeamento entre a resposta SAML e os atributos do utilizador no MarvalProjects."
         requested_attributes: "Defina o conjunto de atributos a solicitar no pedido SAML enviado para o seu fornecedor de identidade."
       seeded_from_env: "Este fornecedor foi semeado a partir da configuração do ambiente. Não pode ser editado."
     settings:
@@ -106,7 +106,7 @@ pt-PT:
       limit_self_registration: >
         Se estiver ativado, os utilizadores apenas podem registar-se utilizando este fornecedor se a definição de auto-registo o permitir.
       sp_entity_id: >
-        O ID da entidade do fornecedor de serviços (SP). Por vezes também referido como Audiência. Este é o identificador de cliente único da instância do OpenProject.
+        O ID da entidade do fornecedor de serviços (SP). Por vezes também referido como Audiência. Este é o identificador de cliente único da instância do MarvalProjects.
       idp_sso_service_url: >
         O URL do ponto final de início de sessão do fornecedor de identidade.
       idp_slo_service_url: >
@@ -116,9 +116,9 @@ pt-PT:
       name_identifier_format: >
         Defina o formato do identificador de nome a ser utilizado para a afirmação SAML.
       sp_metadata_endpoint: >
-        Este é o URL onde os metadados SAML do OpenProject estão disponíveis. Opcionalmente, utilize-o para configurar o seu fornecedor de identidade.
+        Este é o URL onde os metadados SAML do MarvalProjects estão disponíveis. Opcionalmente, utilize-o para configurar o seu fornecedor de identidade.
       mapping: >
-        Configure o mapeamento entre a resposta SAML e os atributos do utilizador no OpenProject. Pode configurar vários nomes de atributos para procurar. O OpenProject irá escolher o primeiro atributo disponível na resposta SAML.
+        Configure o mapeamento entre a resposta SAML e os atributos do utilizador no MarvalProjects. Pode configurar vários nomes de atributos para procurar. O MarvalProjects irá escolher o primeiro atributo disponível na resposta SAML.
       mapping_login: >
         Atributos SAML da resposta utilizados para o início de sessão.
       mapping_mail: >
@@ -133,17 +133,17 @@ pt-PT:
       request_uid: >
         Atributo SAML a solicitar para o ID de utilizador interno. Por predefinição, será utilizado o name_id para este campo.
       requested_attributes: >
-        Estes atributos são adicionados ao XML do pedido SAML para comunicar ao fornecedor de identidade quais os atributos exigidos pelo OpenProject.
+        Estes atributos são adicionados ao XML do pedido SAML para comunicar ao fornecedor de identidade quais os atributos exigidos pelo MarvalProjects.
       requested_format: >
         O formato do atributo solicitado. Isto é utilizado para especificar o formato do atributo no pedido SAML. Consulte [documentação sobre a configuração de atributos solicitados](docs_url) para obter mais informações.
       authn_requests_signed: >
-        Se estiver selecionado, o OpenProject irá assinar o SAML AuthnRequest. Terá de fornecer um certificado de assinatura e uma chave privada utilizando os campos abaixo.
+        Se estiver selecionado, o MarvalProjects irá assinar o SAML AuthnRequest. Terá de fornecer um certificado de assinatura e uma chave privada utilizando os campos abaixo.
       want_assertions_signed: >
-        Se estiver selecionado, o OpenProject irá exigir respostas assinadas do fornecedor de identidade utilizando o seu próprio par de chaves de certificado. O OpenProject irá verificar a assinatura em relação ao certificado da secção de configuração básica.
+        Se estiver selecionado, o MarvalProjects irá exigir respostas assinadas do fornecedor de identidade utilizando o seu próprio par de chaves de certificado. O MarvalProjects irá verificar a assinatura em relação ao certificado da secção de configuração básica.
       want_assertions_encrypted: >
         Se estiver ativado, exija que o fornecedor de identidade encripte a resposta de afirmação utilizando o par de certificados que forneceu.
       certificate: >
-        Insira o certificado X509 PEM formatado usado pelo OpenProject para assinar solicitações SAML.
+        Insira o certificado X509 PEM formatado usado pelo MarvalProjects para assinar solicitações SAML.
       private_key: >
         Introduza a chave privada X509 PEM formatada para o certificado acima. Esta tem de ser uma chave privada RSA.
       signature_method: >

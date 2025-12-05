@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 tr:
   plugin_openproject_meeting:
-    name: "OpenProject Toplantı"
+    name: "MarvalProjects Toplantı"
     description: >-
-      Bu modül OpenProject'e proje toplantılarını destekleyen fonksiyonlar ekler. Toplantılar, aynı projeden toplantıya katılacak davetliler seçilerek planlanabilir. Bir gündem oluşturulabilir ve davetlilere gönderilebilir. Toplantıdan sonra katılımcılar seçilebilir ve gündeme göre tutanaklar oluşturulabilir. Son olarak, tutanaklar tüm katılımcılara ve davetlilere gönderilebilir.
+      Bu modül MarvalProjects'e proje toplantılarını destekleyen fonksiyonlar ekler. Toplantılar, aynı projeden toplantıya katılacak davetliler seçilerek planlanabilir. Bir gündem oluşturulabilir ve davetlilere gönderilebilir. Toplantıdan sonra katılımcılar seçilebilir ve gündeme göre tutanaklar oluşturulabilir. Son olarak, tutanaklar tüm katılımcılara ve davetlilere gönderilebilir.
   activerecord:
     attributes:
       meeting:

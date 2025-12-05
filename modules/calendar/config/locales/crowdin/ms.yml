@@ -1,7 +1,7 @@
 #English strings go here
 ms:
   plugin_openproject_calendar:
-    name: "Kalendar OpenProject"
+    name: "Kalendar MarvalProjects"
     description: "Menyediakan paparan kalendar."
   label_calendar: "Kalendar"
   label_calendar_plural: "Kalendar"

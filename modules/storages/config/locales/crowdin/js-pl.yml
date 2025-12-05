@@ -79,12 +79,12 @@ pl:
           403: >
             Nie można przesłać pliku (%{fileName}) ze względu na ograniczenia systemu. Aby uzyskać więcej informacji, skontaktuj się z administratorem.
           413: >
-            Plik (%{fileName}) ma rozmiar większy niż ten, który OpenProject może przesłać do %{storageType}. Możesz najpierw przesłać go bezpośrednio do %{storageType} , a następnie powiązać plik.
+            Plik (%{fileName}) ma rozmiar większy niż ten, który MarvalProjects może przesłać do %{storageType}. Możesz najpierw przesłać go bezpośrednio do %{storageType} , a następnie powiązać plik.
           507: >
             Plik (%{fileName}) jest większy niż dozwolony limit przechowywania. Aby zmodyfikować ten limit, skontaktuj się z administratorem.
           detail:
             nextcloud: >
-              Sprawdź, czy zainstalowana jest najnowsza wersja aplikacji Nextcloud „OpenProject Integration” i skontaktuj się z administratorem, aby uzyskać więcej informacji.
+              Sprawdź, czy zainstalowana jest najnowsza wersja aplikacji Nextcloud „MarvalProjects Integration” i skontaktuj się z administratorem, aby uzyskać więcej informacji.
         link_uploaded_file_error: >
           Wystąpił błąd podczas łączenia niedawno przesłanego pliku '%{fileName}' z pakietem roboczym %{workPackageId}.
         tooltip:

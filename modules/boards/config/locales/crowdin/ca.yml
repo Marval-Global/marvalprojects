@@ -1,7 +1,7 @@
 #English strings go here
 ca:
   plugin_openproject_boards:
-    name: "OpenProject Boards"
+    name: "MarvalProjects Boards"
     description: "Provides board views."
   permission_show_board_views: "Veure els taulells"
   permission_manage_board_views: "Administra els taulells"

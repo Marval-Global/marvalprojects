@@ -3,7 +3,7 @@ sk:
   plugin_openproject_avatars:
     name: "Avatary"
     description: >-
-      This plugin allows OpenProject users to upload a picture to be used as an avatar or use registered images from Gravatar.
+      This plugin allows MarvalProjects users to upload a picture to be used as an avatar or use registered images from Gravatar.
   label_avatar: "Avatar"
   label_avatar_plural: "Avatary"
   label_current_avatar: "Aktuálny avatar"
@@ -28,11 +28,11 @@ sk:
       Pred odoslaním sa zobrazí náhľad vášho avatara, akonáhle si vyberiete obrázok.
     text_change_gravatar_html: 'Ak chcete zmeniť alebo pridať Gravatar pre svoju poštovú adresu, prejdite na stránku %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject vám umožňuje nahrať vlastného avatara.
+      MarvalProjects vám umožňuje nahrať vlastného avatara.
     text_local_avatar_over_gravatar: |
       Ak ho nastavíte, tento vlastný avatar sa použije prednostne pred vyššie uvedeným gravatarom.
     text_your_current_gravatar: |
-      OpenProject používa vášho gravatara, ak ste si ho zaregistrovali, alebo predvolený obrázok alebo ikonu, ak existuje.
+      MarvalProjects používa vášho gravatara, ak ste si ho zaregistrovali, alebo predvolený obrázok alebo ikonu, ak existuje.
       Aktuálny gravatar je nasledovný:
     settings:
       enable_gravatars: 'Povoliť Gravatar'

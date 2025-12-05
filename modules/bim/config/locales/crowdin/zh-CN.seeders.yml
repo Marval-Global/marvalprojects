@@ -71,7 +71,7 @@ zh-CN:
         item_7:
           name: 结构工程师
       welcome:
-        title: 欢迎使用 OpenProject BIM版本！
+        title: 欢迎使用 MarvalProjects BIM版本！
         text: |
           请通过查看演示项目来获取一些开始示例。
 
@@ -120,7 +120,7 @@ zh-CN:
                 options:
                   name: 入门指南
                   text: |
-                    很高兴您能加入！我们建议尝试几件事情来开始使用 OpenProject。
+                    很高兴您能加入！我们建议尝试几件事情来开始使用 MarvalProjects。
 
                     但在开始之前，您应该知道这个示范项目分为两个不同的项目：
 
@@ -179,7 +179,7 @@ zh-CN:
                 options:
                   name: 入门指南
                   text: |
-                    很高兴您能加入！我们建议尝试几件事情来开始使用 OpenProject。
+                    很高兴您能加入！我们建议尝试几件事情来开始使用 MarvalProjects。
 
                     在这里，您可以找到施工项目的经典角色、一些工作流和工作包。
 
@@ -455,7 +455,7 @@ zh-CN:
                 options:
                   name: 入门指南
                   text: |
-                    很高兴您能加入！我们建议尝试几件事情来开始使用 OpenProject。
+                    很高兴您能加入！我们建议尝试几件事情来开始使用 MarvalProjects。
 
                     此演示项目提供 BIM 专有的角色、工作流和工作包。
 
@@ -731,7 +731,7 @@ zh-CN:
                 options:
                   name: 入门指南
                   text: |
-                    很高兴您能加入！我们建议尝试几件事情来开始使用 OpenProject。
+                    很高兴您能加入！我们建议尝试几件事情来开始使用 MarvalProjects。
 
                     此演示项目展示了 BCF 的管理功能。
 

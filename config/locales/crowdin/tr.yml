@@ -131,13 +131,13 @@ tr:
       edit:
         label_delete_scim_client: "Delete SCIM client"
       form:
-        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in OpenProject."
-        authentication_method_description_html: "This is how the SCIM client authenticates at OpenProject. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
+        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in MarvalProjects."
+        authentication_method_description_html: "This is how the SCIM client authenticates at MarvalProjects. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
         description_html: 'Please refer to our <a href="%{docs_url}">documentation on configuring SCIM clients</a> for more information on these configuration options.'
         jwt_sub_description_html: 'For example, for Keycloak, this is the UUID of the service account  associated with the SCIM client. Consult <a href="%{docs_url}">our documentation</a> to learn how to find  the subject claim for your use case.'
         name_description: "Choose a name that will help other admins better understand why this client was configured."
       index:
-        description: "SCIM clients configured here are able to interact with OpenProject SCIM server API to provision, update, and deprovision user accounts and groups."
+        description: "SCIM clients configured here are able to interact with MarvalProjects SCIM server API to provision, update, and deprovision user accounts and groups."
         label_create_button: "Add SCIM client"
       new:
         title: "New SCIM client"
@@ -145,14 +145,14 @@ tr:
         confirm_button: "Revoke"
         title: "Revoke static token"
         heading: "Are you sure you want to revoke this token?"
-        description: "The SCIM client that uses this token will no longer be able to access OpenProject's SCIM server API."
+        description: "The SCIM client that uses this token will no longer be able to access MarvalProjects's SCIM server API."
       table_component:
         blank_slate:
           title: "No SCIM clients configured yet"
           description: "Add clients to see them here"
         user_count: "Users"
       token_list_component:
-        description: "The tokens you generate here can be passed by a SCIM client to access the OpenProject SCIM API."
+        description: "The tokens you generate here can be passed by a SCIM client to access the MarvalProjects SCIM API."
         heading: "Tokens"
         label_add_token: "Token"
         label_aria_add_token: "Add token"
@@ -204,38 +204,38 @@ tr:
       name: LDAP bağlantısının keyfi adı
       host: LDAP ana bilgisayar adı veya IP adresi
       login_map: LDAP’deki benzersiz kullanıcı girişini tanımlamak için kullanılan özellik anahtarı. Genelde bu, 'uid' veya 'samAccountName' olacaktır.
-      generic_map: LDAP'de, OpenProject `%{attribute}` niteliğiyle eşlenen özellik anahtarı
-      admin_map_html: "İsteğe bağlı: LDAP'daki, <strong> varsa </strong> OpenProject kullanıcısına bir yönetici işaretleyen özellik anahtarı. Şüphe duyduğunuzda boş bırakın."
+      generic_map: LDAP'de, MarvalProjects `%{attribute}` niteliğiyle eşlenen özellik anahtarı
+      admin_map_html: "İsteğe bağlı: LDAP'daki, <strong> varsa </strong> MarvalProjects kullanıcısına bir yönetici işaretleyen özellik anahtarı. Şüphe duyduğunuzda boş bırakın."
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br>
-        Example: uid=openproject,ou=system,dc=example,dc=com
+        Example: uid=MarvalProjects,ou=system,dc=example,dc=com
       system_user_password: Sistem kullanıcısının cilt şifresini girin
       base_dn: |
-        LDAP'da, OpenProject'in kullanıcıları ve grupları aramasını istediğiniz alt ağacın Temel DN'sini girin.
-        OpenProject yalnızca bu alt ağaçta belirtilen kullanıcı adlarını filtreleyecektir.
+        LDAP'da, MarvalProjects'in kullanıcıları ve grupları aramasını istediğiniz alt ağacın Temel DN'sini girin.
+        MarvalProjects yalnızca bu alt ağaçta belirtilen kullanıcı adlarını filtreleyecektir.
         Örnek: ou = kullanıcılar, dc = örnek, dc = com
       filter_string: |
         LDAP'de filtrelenen kullanıcılar için döndürülen sonuçlara uygulamak üzere isteğe bağlı bir RFC4515 filtresi ekleyin.
-        Bu, OpenProject tarafından kimlik doğrulama ve grup senkronizasyonu için bulunan kullanıcı kümesini kısıtlamak için kullanılabilir.
+        Bu, MarvalProjects tarafından kimlik doğrulama ve grup senkronizasyonu için bulunan kullanıcı kümesini kısıtlamak için kullanılabilir.
       filter_string_concat: |
-        OpenProject her zaman kullanıcının kaydı tanımlaması için sağlanan oturum açma özniteliğine filtre uygular. Burada bir filtre sağlarsanız,
+        MarvalProjects her zaman kullanıcının kaydı tanımlaması için sağlanan oturum açma özniteliğine filtre uygular. Burada bir filtre sağlarsanız,
         bir AND ile birleştirilecektir. Varsayılan olarak filtre olarak bir tümünü yakala (objectClass = *) kullanılır.
       onthefly_register: |
-        Bu kutuyu işaretlerseniz, OpenProject otomatik olarak LDAP girişlerinden yeni kullanıcılar oluşturur
-        OpenProject ile ilk kimlik doğrulaması yaptıklarında.
-        Yalnızca OpenProject’deki mevcut hesapların LDAP üzerinden kimlik doğrulaması yapmasına izin vermek için işaretlenmemiş bırakın!
+        Bu kutuyu işaretlerseniz, MarvalProjects otomatik olarak LDAP girişlerinden yeni kullanıcılar oluşturur
+        MarvalProjects ile ilk kimlik doğrulaması yaptıklarında.
+        Yalnızca MarvalProjects’deki mevcut hesapların LDAP üzerinden kimlik doğrulaması yapmasına izin vermek için işaretlenmemiş bırakın!
     connection_encryption: "Bağlantı şifreleme"
     encryption_details: "LDAPS / STARTTLS seçenekleri"
     system_account: "Sistem hesabı"
     system_account_legend: |
-      OpenProject, LDAP ağacınızdaki kullanıcıları ve grupları aramak için bir sistem hesabı üzerinden salt okunur erişim gerektirir.
+      MarvalProjects, LDAP ağacınızdaki kullanıcıları ve grupları aramak için bir sistem hesabı üzerinden salt okunur erişim gerektirir.
       Lütfen aşağıdaki bölümde bu sistem kullanıcısı için bağlama bilgilerini belirtin.
     ldap_details: "LDAP ayrıntıları"
     user_settings: "Öznitelik eşlemesi"
     user_settings_legend: |
-      Aşağıdaki alanlar LDAP girişlerinden kullanıcıların OpenProject'te nasıl oluşturulduğuyla ilgilidir ve
-      OpenProject kullanıcısının niteliklerini tanımlamak için hangi LDAP niteliklerinin kullanıldığı (özellik eşlemesi).
+      Aşağıdaki alanlar LDAP girişlerinden kullanıcıların MarvalProjects'te nasıl oluşturulduğuyla ilgilidir ve
+      MarvalProjects kullanıcısının niteliklerini tanımlamak için hangi LDAP niteliklerinin kullanıldığı (özellik eşlemesi).
     tls_mode:
       plain: "hiçbiri"
       simple_tls: "LDAPS"
@@ -1241,7 +1241,7 @@ tr:
         confirmation: "%{attribute} eşleşmiyor."
         could_not_be_copied: "%{dependency} (tam olarak) kopyalanamadı."
         does_not_exist: "mevcut değil."
-        error_enterprise_only: "%{action} yalnızca OpenProject Enterprise sürümünde mevcuttur"
+        error_enterprise_only: "%{action} yalnızca MarvalProjects Enterprise sürümünde mevcuttur"
         error_unauthorized: "erişilemez."
         error_readonly: "yazılmaya çalışıldı fakat yazılabilir değil."
         error_conflict: "Bu arada, bilgi en az bir başka kullanıcı tarafından güncellendi."
@@ -1820,7 +1820,7 @@ tr:
       heading_reset: "Yedekleme jetonunu sıfırlayın"
       heading_create: "Yedek jeton oluşturun"
       implications: >
-        Yedeklemeleri etkinleştirmek, gerekli izinlere ve bu yedekleme jetonuna sahip herhangi bir kullanıcının bu OpenProject kurulumunun tüm verilerini içeren bir yedeği indirmesine izin verecektir. Bu, diğer tüm kullanıcıların verilerini içerir.
+        Yedeklemeleri etkinleştirmek, gerekli izinlere ve bu yedekleme jetonuna sahip herhangi bir kullanıcının bu MarvalProjects kurulumunun tüm verilerini içeren bir yedeği indirmesine izin verecektir. Bu, diğer tüm kullanıcıların verilerini içerir.
       info: >
         Yedek oluşturabilmek için bir yedekleme belirteci oluşturmanız gerekecektir. Her yedekleme talebinde bulunduğunuzda, bu belirteci sağlamanız gerekecektir. Bu kullanıcı için yedeklemeleri devre dışı bırakmak için yedekleme jetonunu silebilirsiniz.
       verification: >
@@ -2153,7 +2153,7 @@ tr:
         Already have a token? Add it using the button below to upgrade to the booked Enterprise plan.
       hide_banner: "Hide this banner"
       homescreen_description: >
-        Kurumsal planlar şu anda kullanmakta olduğunuz OpenProject'in Topluluk sürümünü genişletir. Eklentiler, ek özellikler ve her büyüklükteki kuruluşun birlikte harika işler başarmasını sağlayan profesyonel destek içerirler.
+        Kurumsal planlar şu anda kullanmakta olduğunuz MarvalProjects'in Topluluk sürümünü genişletir. Eklentiler, ek özellikler ve her büyüklükteki kuruluşun birlikte harika işler başarmasını sağlayan profesyonel destek içerirler.
       homescreen_subline: Yükseltme yaparak açık kaynaklı bir projeyi de desteklemiş olacaksınız.
       baseline_comparison:
         description: Geçmişte herhangi bir noktadan bu yana bu listede yapılan değişiklikleri vurgulayın.
@@ -2166,7 +2166,7 @@ tr:
         premium_features: "Enterprise add-ons"
         premium_features_text: "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields."
         professional_support: "Professional support"
-        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
+        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running MarvalProjects in business-critical environments."
       work_package_subject_generation:
         description: "Referens öznitelikleri ve metni kullanarak otomatik konular oluşturun."
       customize_life_cycle:
@@ -2194,7 +2194,7 @@ tr:
       define_custom_style:
         title: "Özel renk teması ve logo"
         more_info: "Not: Kullanılan logo herkese açık olacaktır."
-        description: OpenProject kurulumunuzu kendi logonuz ve renklerinizle özelleştirin.
+        description: MarvalProjects kurulumunuzu kendi logonuz ve renklerinizle özelleştirin.
       custom_actions:
         title: "Özel eylemler"
         description: "Özel eylemler, duruma, role, türe veya projeye göre belirli iş paketlerinde kullanıma sunabileceğiniz bir dizi önceden tanımlanmış eylemin tek tıkla kısayollarıdır."
@@ -2203,13 +2203,13 @@ tr:
         description: "Enable seamless and secure authentication for your Nextcloud storage with Single Sign-On. Simplify access management and enhance user convenience."
       scim_api:
         title: "SCIM clients"
-        description: "Automate user management in OpenProject by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
+        description: "Automate user management in MarvalProjects by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
       virus_scanning:
-        description: "OpenProject'te yüklenen dosyaların diğer kullanıcılar tarafından erişilmeden önce virüslere karşı tarandığından emin olun."
+        description: "MarvalProjects'te yüklenen dosyaların diğer kullanıcılar tarafından erişilmeden önce virüslere karşı tarandığından emin olun."
       placeholder_users:
         title: Yer tutucu kullanıcı
         description: >
-          Yer tutucu kullanıcılar, projenizin parçası olmayan kullanıcılara iş paketleri atamanın bir yoludur. Bir dizi senaryoda yararlı olabilirler; örneğin, henüz adlandırılmamış veya mevcut olmayan bir kaynak için görevleri izlemeniz gerekiyorsa veya o kişiye OpenProject'e erişim izni vermek istemiyorsanız ancak yine de kendilerine atanan görevleri izlemek istiyorsanız.
+          Yer tutucu kullanıcılar, projenizin parçası olmayan kullanıcılara iş paketleri atamanın bir yoludur. Bir dizi senaryoda yararlı olabilirler; örneğin, henüz adlandırılmamış veya mevcut olmayan bir kaynak için görevleri izlemeniz gerekiyorsa veya o kişiye MarvalProjects'e erişim izni vermek istemiyorsanız ancak yine de kendilerine atanan görevleri izlemek istiyorsanız.
       internal_comments:
         title: Internal comments
         description: "Internal comments allow an internal team to communicate amongst themselves privately. These are only visible to certain project roles and will never be visible publicly."
@@ -2231,9 +2231,9 @@ tr:
       request_again: "Request again"
       resend_action: "Resend confirmation email"
       welcome_title: "Quick feature overview"
-      welcome_description: "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition."
+      welcome_description: "Get a quick overview of project management and team collaboration with MarvalProjects Enterprise edition."
       confirmation_info: >
-        We sent you an email on %{date} to %{email} with all the information to start the free trial of OpenProject Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
+        We sent you an email on %{date} to %{email} with all the information to start the free trial of MarvalProjects Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
       confirmation_subline: >
         Please, check your inbox and follow the steps to start your 14-day free trial.
       domain_caption: The token will be valid for your currently configured host name.
@@ -2263,7 +2263,7 @@ tr:
   error_check_user_and_role: "Lütfen bir kullanıcı ve bir rol seçin."
   error_code: "Hata  %{code}"
   error_color_could_not_be_saved: "Renk kaydedilemedi"
-  error_cookie_missing: "OpenProject çerezi yok. Lütfen uygulamanın düzgün çalışabilmesi için, tarayıcınızda çerezlere izin verildiğine emin olun."
+  error_cookie_missing: "MarvalProjects çerezi yok. Lütfen uygulamanın düzgün çalışabilmesi için, tarayıcınızda çerezlere izin verildiğine emin olun."
   error_custom_option_not_found: "Seçenek yok."
   error_enterprise_plan_needed: "You need the %{plan} enterprise plan to perform this action."
   error_enterprise_activation_user_limit: "Hesabınız etkinleştirilemedi (kullanıcı limitine ulaşıldı). Erişim sağlamak için lütfen yöneticinize başvurun."
@@ -2280,7 +2280,7 @@ tr:
   error_work_package_not_found_in_project: "Iş paketi bulunamadı veya bu projeye ait değil"
   error_work_package_id_not_found: "İş paketi bulunamadı."
   error_must_be_project_member: "projesi üyesi olmalıdır"
-  error_migrations_are_pending: "OpenProject kurulumunuzda bekleyen veritabanı geçişleri var. Son yükseltme işleminizde geçiş işlemlerini gerçekleştirme ihtimalinizi büyük olasılıkla kaçırdınız. Lütfen kurulumunuzu uygun şekilde yükseltmek için yükseltme kılavuzunu kontrol edin."
+  error_migrations_are_pending: "MarvalProjects kurulumunuzda bekleyen veritabanı geçişleri var. Son yükseltme işleminizde geçiş işlemlerini gerçekleştirme ihtimalinizi büyük olasılıkla kaçırdınız. Lütfen kurulumunuzu uygun şekilde yükseltmek için yükseltme kılavuzunu kontrol edin."
   error_migrations_visit_upgrade_guides: "Lütfen yükseltme kılavuzu belgelerimizi ziyaret edin"
   error_no_default_work_package_status: 'Varsayılan iş paketi durumu tanımlanmadı. Lütfen yapılandırmanızı kontrol edin ("Yönetim -> İş paketi durumu " na gidin).'
   error_no_type_in_project: "Bu proje ile ilişkili bir tür yok. Lütfen Proje ayarlarını kontrol edin."
@@ -2467,7 +2467,7 @@ tr:
       no_visible_projects: "Bu durumda görünür bir proje yok."
       users: "Bu bölümdeki kaydolan en son kullanıcılar."
     blocks:
-      community: "OpenProject topluluğu"
+      community: "MarvalProjects topluluğu"
       upsell:
         title: "Enterprise sürümüne yükseltin"
     links:
@@ -2478,7 +2478,7 @@ tr:
       impressum: "Yasal uyarı"
       glossary: "Terimler sözlüğü"
       shortcuts: "Kısayollar"
-      blog: "OpenProject blog"
+      blog: "MarvalProjects blog"
       forums: "Topluluk forumu"
       newsletter: "Güvenlik uyarıları / Haber bülteni"
   image_conversion:
@@ -2490,7 +2490,7 @@ tr:
       default_attribute_written: "Salt okunur öznitelikler yazıldı"
       progress_mode_changed_to_status_based: "İlerleme hesaplaması güncellendi"
       status_changed: "Durum '%{status_name}'"
-      system_update: "OpenProject sistem güncellemesi:"
+      system_update: "MarvalProjects sistem güncellemesi:"
       work_package_duplicate_closed: "Mükerrer iş paketi güncellendi:"
       total_percent_complete_mode_changed_to_work_weighted_average: "Tamamlanan % toplamlarının hesaplanması artık İşe göre ağırlıklandırılıyor."
       total_percent_complete_mode_changed_to_simple_average: "Calculation of % Complete totals now based on a simple average of only % Complete values."
@@ -2555,21 +2555,21 @@ tr:
       simple_revoke_confirmation: "Bu belirteci iptal etmek istediğinizden emin misiniz?"
       api:
         title: "API"
-        text_hint: "API belirteçleri, üçüncü taraf uygulamaların REST API'leri aracılığıyla bu OpenProject kurulumunuzla iletişim kurmasına olanak tanır."
+        text_hint: "API belirteçleri, üçüncü taraf uygulamaların REST API'leri aracılığıyla bu MarvalProjects kurulumunuzla iletişim kurmasına olanak tanır."
         static_token_name: "API anahtarı"
         disabled_text: "API belirteçleri yönetici tarafından etkinleştirilmemiştir. Bu özelliği kullanmak için lütfen yöneticinize başvurun."
       ical:
         title: "iCalendar"
-        text_hint: 'iCalendar belirteçleri, kullanıcıların <a href="%{path}" target="_blank">OpenProject takvimlerine abone</a> olmalarını ve harici istemcilerden gelen güncel iş paketi bilgilerini görüntülemelerini sağlar.'
+        text_hint: 'iCalendar belirteçleri, kullanıcıların <a href="%{path}" target="_blank">MarvalProjects takvimlerine abone</a> olmalarını ve harici istemcilerden gelen güncel iş paketi bilgilerini görüntülemelerini sağlar.'
         disabled_text: "iCalendar abonelikleri yönetici tarafından etkinleştirilmemiştir. Bu özelliği kullanmak için lütfen yöneticinize başvurun."
         empty_text_hint: "To add an iCalendar token, subscribe to a new or existing calendar from within the Calendar module of a project. You must have the necessary permissions."
       oauth:
         title: "OAuth"
-        text_hint: "OAuth belirteçleri, üçüncü taraf uygulamaların bu OpenProject sistemine bağlanmasına izin verir."
+        text_hint: "OAuth belirteçleri, üçüncü taraf uygulamaların bu MarvalProjects sistemine bağlanmasına izin verir."
         empty_text_hint: "Sizin için yapılandırılmış ve etkin bir üçüncü taraf uygulama erişimi yok. Bu özelliği etkinleştirmek için lütfen yöneticinize başvurun."
       rss:
         title: "RSS"
-        text_hint: "RSS belirteçleri, kullanıcıların harici bir RSS okuyucu aracılığıyla bu OpenProject sistemindeki en son değişiklikleri takip etmelerini sağlar."
+        text_hint: "RSS belirteçleri, kullanıcıların harici bir RSS okuyucu aracılığıyla bu MarvalProjects sistemindeki en son değişiklikleri takip etmelerini sağlar."
         static_token_name: "RSS belirteci"
         disabled_text: "RSS belirteçleri yönetici tarafından etkinleştirilmemiştir. Bu özelliği kullanmak için lütfen yöneticinize başvurun."
       storages:
@@ -2746,7 +2746,7 @@ tr:
   label_custom_field_plural: "Özel alanlar"
   label_custom_field_default_type: "Boş tür"
   label_custom_style: "Tasarım"
-  label_custom_style_description: "Temalarla OpenProject görünümünü belirleyin, uygulamada kullanmak için varsayılan renklerinizi ve dışa aktarımların nasıl görüneceğini seçin."
+  label_custom_style_description: "Temalarla MarvalProjects görünümünü belirleyin, uygulamada kullanmak için varsayılan renklerinizi ve dışa aktarımların nasıl görüneceğini seçin."
   label_dashboard: "Gösterge paneli"
   label_database_version: "PostgreSQL sürümü"
   label_date: "Tarih"
@@ -3002,7 +3002,7 @@ tr:
   label_open_menu: "Menüyü Aç"
   label_open_work_packages: "açık"
   label_open_work_packages_plural: "açık"
-  label_openproject_website: "OpenProject web sitesi"
+  label_openproject_website: "MarvalProjects web sitesi"
   label_optional_description: "Açıklama"
   label_options: "Ayarlar"
   label_other: "Diğer"
@@ -3391,8 +3391,8 @@ tr:
   mail_body_backup_token_reset_user_info: Yedek jetonunuz sıfırlandı.
   mail_body_backup_token_info: Önceki jeton artık geçerli değil.
   mail_body_backup_waiting_period: Yeni jeton %{hours} saat içinde etkinleştirilecek.
-  mail_body_backup_token_warning: Bu siz değildiyseniz, hemen OpenProject'te oturum açın ve yeniden sıfırlayın.
-  mail_body_incoming_email_error: OpenProject'e gönderdiğiniz e-posta işlenemedi.
+  mail_body_backup_token_warning: Bu siz değildiyseniz, hemen MarvalProjects'te oturum açın ve yeniden sıfırlayın.
+  mail_body_incoming_email_error: MarvalProjects'e gönderdiğiniz e-posta işlenemedi.
   mail_body_incoming_email_error_in_reply_to: "%{received_at} adresinde %{from_email} yazdı"
   mail_body_incoming_email_error_logs: "Günlükler"
   mail_body_lost_password: "Parolanızı değiştirmek için aşağıdaki bağlantıyı tıklayın:"
@@ -3404,10 +3404,10 @@ tr:
   mail_body_register_header_title: "Proje üyesi davet e-postası"
   mail_body_register_user: "Sevgili %{name},"
   mail_body_register_links_html: |
-    OpenProject'teki ilk adımlarınızı olabildiğince kolaylaştırmak için bir web semineri (%{webinar_link}) ve "Başlangıç" videoları (%{get_started_link}) sağladığımız youtube kanalımıza (%{youtube_link}) göz atmaktan lütfen çekinmeyin.
+    MarvalProjects'teki ilk adımlarınızı olabildiğince kolaylaştırmak için bir web semineri (%{webinar_link}) ve "Başlangıç" videoları (%{get_started_link}) sağladığımız youtube kanalımıza (%{youtube_link}) göz atmaktan lütfen çekinmeyin.
     <br />
     Başka sorunuz varsa belgelerimize (%{documentation_link}) bakın veya yöneticinizle iletişime geçin.
-  mail_body_register_closing: "OpenProject ekibiniz"
+  mail_body_register_closing: "MarvalProjects ekibiniz"
   mail_body_register_ending: "Bağlı kalın! Saygılarımla,"
   mail_body_reminder: "Size tahsis edilen(ler) %{count} iş paketinin bir sonraki %{days} gün içinde ödemesi gerekiyor:"
   mail_body_group_reminder: '"%{group}" grubuna atanan %{count} çalışma paketi / paketleri sonraki %{days}  gününden kaynaklanmaktadır:'
@@ -3416,7 +3416,7 @@ tr:
   mail_subject_account_activation_request: "%{value} hesap etkinleştirme isteği"
   mail_subject_backup_ready: "Yedeklemeniz hazır"
   mail_subject_backup_token_reset: "Yedek anahtarı sıfırlandı"
-  mail_subject_incoming_email_error: "OpenProject'e gönderdiğiniz bir e-posta işlenemedi"
+  mail_subject_incoming_email_error: "MarvalProjects'e gönderdiğiniz bir e-posta işlenemedi"
   mail_subject_lost_password: "Sizin %{value} parola"
   mail_subject_register: "İşletme %{value} hesap etkinleştirme"
   mail_subject_wiki_content_added: "'%{id}' viki sayfası eklendi"
@@ -3445,14 +3445,14 @@ tr:
   mail_user_activation_limit_reached:
     subject: Kullanıcı etkinleştirme sınırına ulaşıldı
     message: |
-      Yeni bir kullanıcı (%{email}) yönettiğiniz bir OpenProject ortamında bir hesap oluşturmaya çalıştı (%{host}).
+      Yeni bir kullanıcı (%{email}) yönettiğiniz bir MarvalProjects ortamında bir hesap oluşturmaya çalıştı (%{host}).
       Kullanıcı sınırına ulaşıldığından beri kullanıcı hesaplarını etkinleştiremiyor.
     steps:
       label: "Kullanıcının oturum açmasına izin vermek için şunlardan birini yapabilirsiniz:"
       a: "Ödeme planınızı yükseltin ([here](upgrade_url))" #here turned into a link
       b: "Mevcut bir kullanıcıyı kilitle veya sil ([buradan](users_url))" #here turned into a link
   more_actions: "Daha fazla işlev"
-  noscript_description: "OpenProject'i kullanmak için JavaScript'i etkinleştirmeniz gerekiyor!"
+  noscript_description: "MarvalProjects'i kullanmak için JavaScript'i etkinleştirmeniz gerekiyor!"
   noscript_heading: "JavaScript kapalı"
   noscript_learn_more: "Daha fazla bilgi edin"
   notice_accessibility_mode: Erişilebilirlik modu, [hesap settings](url). altından etkinleştirilebilir.
@@ -3527,7 +3527,7 @@ tr:
   notice_wont_delete_auth_source: The LDAP connection cannot be deleted as long as there are still users using it.
   notice_project_cannot_update_custom_fields: "Projenin kullanılabilir özel alanları güncelleştirilemiyor. Proje geçersiz: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Bu sayfa OpenProject güncelleme sırasında otomatik olarak yaratılır. Daha önce %{container_type} "%{container_name}" ile ilişkili tüm ekleri içerir.
+    Bu sayfa MarvalProjects güncelleme sırasında otomatik olarak yaratılır. Daha önce %{container_type} "%{container_name}" ile ilişkili tüm ekleri içerir.
   #Default format for numbers
   number:
     format:
@@ -3550,7 +3550,7 @@ tr:
           tb: "TB"
   onboarding:
     heading_getting_started: "Genel görünümü al"
-    text_getting_started_description: "OpenProject ile proje yönetimi ve ekip çalışması konusunda genel bir fikir edinin. Bu videoyu yardım menüsünden yeniden başlatabilirsiniz."
+    text_getting_started_description: "MarvalProjects ile proje yönetimi ve ekip çalışması konusunda genel bir fikir edinin. Bu videoyu yardım menüsünden yeniden başlatabilirsiniz."
     welcome: "%{app_title}'e hoş geldiniz"
     select_language: "Lütfen dilinizi seçin"
   permission_add_work_package_comments: "Yorum ekle"
@@ -3633,7 +3633,7 @@ tr:
   permission_manage_types: "İş paketi türlerini seçmek"
   permission_manage_own_reminders: "Kendi hatırlatıcısını oluşturma"
   permission_view_project: "Projeleri görüntüleme"
-  permission_view_changesets: "OpenProject'de depo revizyonlarını görüntüle"
+  permission_view_changesets: "MarvalProjects'de depo revizyonlarını görüntüle"
   permission_view_internal_comments: "View internal comments"
   permission_view_commit_author_statistics: "Yazar istatistiklerini inceleyin"
   permission_view_dashboards: "Gösterge panellerini gösterme"
@@ -3744,7 +3744,7 @@ tr:
     destroy:
       confirmation: "Devam ederseniz, yönetilen depoyu kalıcı olarak silecektir."
       info: "Deponun silinmesi geri döndürülemez bir işlemdir."
-      info_not_managed: "Not: Bu, OpenProject tarafından yönetilmediğinden, bu deponun içeriğini Silmeyecektir."
+      info_not_managed: "Not: Bu, MarvalProjects tarafından yönetilmediğinden, bu deponun içeriğini Silmeyecektir."
       managed_path_note: "Aşağıdaki dizin silinir:% {path} %{path}"
       repository_verification: "Deponun silinmesini doğrulamak için projenin tanımlayıcı% {identifier} 'yi girin. %{identifier}"
       subtitle: "% {Project_name} projesinin% {repository_type} dosyasını gerçekten silmek istiyor musunuz? %{repository_type} %{project_name}"
@@ -3758,8 +3758,8 @@ tr:
       empty_repository: "Depo var, ancak boş. Henüz düzeltme içermiyor."
       exists_on_filesystem: "Depo dizini zaten dosya sisteminde var."
       filesystem_access_failed: "Dosya sistemindeki havuza erişirken bir hata oluştu:% {message} %{message}"
-      not_manageable: "Bu depo satıcısı OpenProject tarafından yönetilemez."
-      path_permission_failed: "Aşağıdaki yolu oluşturmaya çalışırken bir hata oluştu:% {path}. Lütfen OpenProject'in bu klasöre yazabileceğinden emin olun. %{path}."
+      not_manageable: "Bu depo satıcısı MarvalProjects tarafından yönetilemez."
+      path_permission_failed: "Aşağıdaki yolu oluşturmaya çalışırken bir hata oluştu:% {path}. Lütfen MarvalProjects'in bu klasöre yazabileceğinden emin olun. %{path}."
       unauthorized: "Depolama alanına erişim yetkiniz yok ya da kimlik bilgileri geçersiz."
       unavailable: "Depo kullanılamaz."
       exception_title: "Depoya erişilemiyor:% {message} %{message}"
@@ -3776,9 +3776,9 @@ tr:
         path_encoding: "Git yol kodlamasını geçersiz kıl (Varsayılan: UTF-8)"
       local_title: "Mevcut yerel Git deponuzu bağlayın"
       local_url: "Yerel adres"
-      local_introduction: "Mevcut bir yerel Git deponuz varsa, uygulamadan erişmek için onu OpenProject ile bağlayabilirsiniz."
-      managed_introduction: "OpenProject yerel bir Git deposunu otomatik olarak oluşturup entegre edin."
-      managed_title: "Git deposu OpenProject'e entegredir"
+      local_introduction: "Mevcut bir yerel Git deponuz varsa, uygulamadan erişmek için onu MarvalProjects ile bağlayabilirsiniz."
+      managed_introduction: "MarvalProjects yerel bir Git deposunu otomatik olarak oluşturup entegre edin."
+      managed_title: "Git deposu MarvalProjects'e entegredir"
       managed_url: "Yönetilen URL"
       path: "Git deposunun yolu"
       path_encoding: "Yol kodlaması"
@@ -3795,24 +3795,24 @@ tr:
     scm_types:
       local: "Varolan yerel depoyu bağla"
       existing: "Varolan depoyu bağla"
-      managed: "OpenProject'de yeni depo oluşturun"
+      managed: "MarvalProjects'de yeni depo oluşturun"
     storage:
       not_available: "Bu depo için disk depolama tüketimi yok."
       update_timeout: "Bir depo için N dakika boyunca gereken son disk alanı bilgilerini saklayın.\nDeponun gerekli disk alanını saymak maliyetli olabileceğinden performans etkisini azaltmak için bu değeri yükseltin."
-      oauth_application_details: "Bu pencereyi kapattıktan sonra istemci gizli anahtarı değerine tekrar erişilemez. Lütfen bu değerleri Nextcloud OpenProject Entegrasyon ayarlarına kopyalayın:"
+      oauth_application_details: "Bu pencereyi kapattıktan sonra istemci gizli anahtarı değerine tekrar erişilemez. Lütfen bu değerleri Nextcloud MarvalProjects Entegrasyon ayarlarına kopyalayın:"
       oauth_application_details_link_text: "Ayarlar sayfasına git"
       setup_documentation_details: "Yeni bir dosya deposunu yapılandırmak için yardıma ihtiyacınız varsa, lütfen belgelere bakın:"
       setup_documentation_details_link_text: "File storages setup"
       show_warning_details: "Bu dosya deposunu kullanmak için, istenen her projenin proje ayarlarında modülü ve belirli depolamayı etkinleştirmeyi unutmayın."
     subversion:
       existing_title: "Mevcut Subversion deposu"
-      existing_introduction: "Varolan bir Subversion havuzunuz varsa, uygulamanın içinden erişmek için onu OpenProject ile bağlayabilirsiniz."
+      existing_introduction: "Varolan bir Subversion havuzunuz varsa, uygulamanın içinden erişmek için onu MarvalProjects ile bağlayabilirsiniz."
       existing_url: "Varolan Adres"
       instructions:
         managed_url: "Bu, yönetilen (yerel) Subversion havuzunun URL'si."
         url: "Depo URL'sini girin. Bu, yerel bir depoyu (% {local_proto} ile başlayan) veya uzak bir depoyu hedefleyebilir.\nAşağıdaki URL şemaları desteklenmektedir: %{local_proto}"
-      managed_title: "OpenProject'e entegre edilen Subversion deposu"
-      managed_introduction: "OpenProject yerel bir Subversion havuzunu otomatik olarak oluşturup entegre edin."
+      managed_title: "MarvalProjects'e entegre edilen Subversion deposu"
+      managed_introduction: "MarvalProjects yerel bir Subversion havuzunu otomatik olarak oluşturup entegre edin."
       managed_url: "Yönetilen URL"
       password: "Depo Parolası"
       username: "Depo kullanıcı adı"
@@ -3839,7 +3839,7 @@ tr:
   setting_apiv3_cors_enabled: "CORS'u etkinleştir"
   setting_apiv3_cors_origins: "API V3 Kaynaklar Arası Kaynak Paylaşımı (CORS) izin verilen kaynaklar"
   setting_apiv3_cors_origins_text_html: >
-    CORS etkinleştirilirse, bunlar OpenProject API'ye erişmesine izin verilen kaynaklardır. <br/> Beklenen değerlerin nasıl belirtileceğini öğrenmek için lütfen  <a href="%{origin_link}" target="_blank">Kaynak başlığındaki Belgeleri </a> kontrol edin.
+    CORS etkinleştirilirse, bunlar MarvalProjects API'ye erişmesine izin verilen kaynaklardır. <br/> Beklenen değerlerin nasıl belirtileceğini öğrenmek için lütfen  <a href="%{origin_link}" target="_blank">Kaynak başlığındaki Belgeleri </a> kontrol edin.
   setting_apiv3_write_readonly_attributes: "Salt okunur özniteliklere yazma erişimi"
   setting_apiv3_write_readonly_attributes_instructions_html: >
     If enabled, the API will allow administrators to write static read-only attributes during creation, such as createdAt and author. <br/> <strong>Warning:</strong> This setting has a use-case for e.g., importing data, but allows administrators to impersonate the creation of items as other users. All creation requests are being logged however with the true author. </br> For more information on attributes and supported resources, please see the %{api_documentation_link}.
@@ -4041,7 +4041,7 @@ tr:
         clamav_socket_html: Enter the socket to the clamd daemon, e.g., %{example}
         clamav_host_html: Enter the hostname and port to the clamd daemon separated by colon. e.g., %{example}
         description_html: >
-          Antivirüs tarayıcı entegrasyonunun çalışması gereken modu seçin. <br/> <ul> <li><strong>%{disabled_option}</strong>: Yüklenen dosyalar virüslere karşı taranmaz.</li> <li><strong>%{socket_option}</strong>: ClamAV'ı OpenProject ile aynı sunucuya kurdunuz ve tarama servisi clamd arka planda çalışıyor</li> <li><strong>%{host_option}</strong>: Dosyaları harici bir virüs tarama servisine aktarıyorsunuz.</li> </ul>
+          Antivirüs tarayıcı entegrasyonunun çalışması gereken modu seçin. <br/> <ul> <li><strong>%{disabled_option}</strong>: Yüklenen dosyalar virüslere karşı taranmaz.</li> <li><strong>%{socket_option}</strong>: ClamAV'ı MarvalProjects ile aynı sunucuya kurdunuz ve tarama servisi clamd arka planda çalışıyor</li> <li><strong>%{host_option}</strong>: Dosyaları harici bir virüs tarama servisine aktarıyorsunuz.</li> </ul>
     brute_force_prevention: "Otomatik kullanıcı engelleme"
     date_format:
       first_date_of_week_and_year_set: >
@@ -4049,8 +4049,8 @@ tr:
       first_week_of_year_text_html: >
         Yılın ilk haftasında yer alan Ocak ayının tarihini seçin. Bu değer haftanın ilk günü ile birlikte bir yıldaki toplam hafta sayısını belirler. Daha fazla bilgi için lütfen bu konudaki <a href="%{link}" target="_blank">belgelerimize</a> bakın.
     experimental:
-      save_confirmation: Dikkat! Veri kaybı riski! Deneysel özellikleri sadece OpenProject kurulumunuzu bozmak ve tüm verilerini kaybetmeyi önemsemiyorsanız etkinleştirin.
-      warning_toast: Özellik bayrakları, halen geliştirilme aşamasında olan özellikleri etkinleştiren ayarlardır. Sadece test amaçlı kullanılmalıdırlar. Önemli veriler içeren OpenProject kurulumlarında asla etkinleştirilmemelidirler. Bu özellikler büyük olasılıkla verilerinizi bozacaktır. Bunları kendi sorumluluğunuzda kullanın.
+      save_confirmation: Dikkat! Veri kaybı riski! Deneysel özellikleri sadece MarvalProjects kurulumunuzu bozmak ve tüm verilerini kaybetmeyi önemsemiyorsanız etkinleştirin.
+      warning_toast: Özellik bayrakları, halen geliştirilme aşamasında olan özellikleri etkinleştiren ayarlardır. Sadece test amaçlı kullanılmalıdırlar. Önemli veriler içeren MarvalProjects kurulumlarında asla etkinleştirilmemelidirler. Bu özellikler büyük olasılıkla verilerinizi bozacaktır. Bunları kendi sorumluluğunuzda kullanın.
       feature_flags: Özellik bayrakları
     general: "Genel"
     highlighting:
@@ -4061,7 +4061,7 @@ tr:
         type: "Türe göre tüm satır"
         priority: "Önceliğe göre tüm satır"
     icalendar:
-      enable_subscriptions_text_html: Gerekli izinlere sahip kullanıcıların OpenProject takvimlerine abone olmalarını ve harici bir takvim istemcisi aracılığıyla iş paketi bilgilerine erişmelerini sağlar. <strong>Not:</strong> Bunu etkinleştirmeden önce olası güvenlik risklerini anlamak için lütfen <a href="%{link}" target="_blank">iCalendar abonelikleri</a> hakkında bilgi edinin.
+      enable_subscriptions_text_html: Gerekli izinlere sahip kullanıcıların MarvalProjects takvimlerine abone olmalarını ve harici bir takvim istemcisi aracılığıyla iş paketi bilgilerine erişmelerini sağlar. <strong>Not:</strong> Bunu etkinleştirmeden önce olası güvenlik risklerini anlamak için lütfen <a href="%{link}" target="_blank">iCalendar abonelikleri</a> hakkında bilgi edinin.
     language_name_being_default: "%{language_name} (varsayılan)"
     notifications:
       events_explanation: "Bir e-postanın hangi olay için gönderileceğini yönetir. İş paketleri, bildirimleri her kullanıcı için özel olarak yapılandırılabileceğinden bu listenin dışında tutulur."
@@ -4133,7 +4133,7 @@ tr:
       sentence_connector: "ve"
       skip_last_comma: "yanlış"
   text_accessibility_hint: "Erişilebilirlik modu, kör, engelli ve ya ciddi görme güçlüğü çeken kullanıcılar için tasarlandı. Bu modda yazı odaklı bileşenler özellikle vurgulanır. Backlogs modülünde bu özelliği henüz kullanamayacağınızı da belirtelim."
-  text_access_token_hint: "Erişim belirteçleri, OpenProject içindeki kaynaklara harici uygulamalar erişimi vermenizi sağlar."
+  text_access_token_hint: "Erişim belirteçleri, MarvalProjects içindeki kaynaklara harici uygulamalar erişimi vermenizi sağlar."
   text_analyze: "Daha fazla analiz: %{subject}"
   text_are_you_sure: "Emin misiniz?"
   text_are_you_sure_continue: "Devam etmek istediğinize emin misiniz?"
@@ -4215,7 +4215,7 @@ tr:
   text_no_notes: "Bu çalışma paketi için bir yorum bulunmuyor."
   text_notice_too_many_values_are_inperformant: "Not: Her sayfada 100'den fazla öğe gösterildiğinde, sayfa yükleme süresi artabilir."
   text_notice_security_badge_displayed_html: >
-    Not: Etkinleştirildiğinde, bu, <a href="%{information_panel_path}">%{information_panel_label}</a> yönetim panelinde ve giriş sayfasında yükleme durumunuzla birlikte bir rozet görüntüler. Sadece yöneticilere gösterilir. <br/> Rozet, mevcut OpenProject sürümünüzü resmi OpenProject sürüm veritabanına karşı kontrol eder ve sizi herhangi bir güncelleme veya bilinen güvenlik açığı hakkında uyarır. Çekin sağladığı, mevcut güncellemeleri sağlamak için hangi verilerin gerekli olduğu ve bu kontrolün nasıl devre dışı bırakılacağı hakkında daha fazla bilgi için lütfen <a href="%{more_info_url}">yapılandırma belgelerini</a> ziyaret edin.
+    Not: Etkinleştirildiğinde, bu, <a href="%{information_panel_path}">%{information_panel_label}</a> yönetim panelinde ve giriş sayfasında yükleme durumunuzla birlikte bir rozet görüntüler. Sadece yöneticilere gösterilir. <br/> Rozet, mevcut MarvalProjects sürümünüzü resmi MarvalProjects sürüm veritabanına karşı kontrol eder ve sizi herhangi bir güncelleme veya bilinen güvenlik açığı hakkında uyarır. Çekin sağladığı, mevcut güncellemeleri sağlamak için hangi verilerin gerekli olduğu ve bu kontrolün nasıl devre dışı bırakılacağı hakkında daha fazla bilgi için lütfen <a href="%{more_info_url}">yapılandırma belgelerini</a> ziyaret edin.
   text_own_membership_delete_confirmation: "İzinlerinizden bazılarını veya tümünü kaldırmak üzeresiniz ve bundan sonra bu projeyi düzenleyemeyebilirsiniz. Devam etmek istediğine emin misin?"
   text_permanent_delete_confirmation_checkbox_label: "Bu silme işleminin geri alınamayacağını anlıyorum"
   text_plugin_assets_writable: "Plugin assets dizini yazılabilir"
@@ -4224,7 +4224,7 @@ tr:
   text_reassign: "İş paketine yeniden atama:"
   text_regexp_info: "ör ^[A-Z0-9]+$"
   text_regexp_multiline: 'Regex (düzenli ifade) birden çok satırlı modda uygulanır. Örneğin, ^---\s+'
-  text_repository_usernames_mapping: "Depo günlüklerinde bulunan her kullanıcı adına eşlenen OpenProject kullanıcısını seçin veya güncelleyin. Aynı OpenProject ve depo kullanıcı adına veya e-postasına sahip kullanıcılar otomatik olarak eşleştirilir."
+  text_repository_usernames_mapping: "Depo günlüklerinde bulunan her kullanıcı adına eşlenen MarvalProjects kullanıcısını seçin veya güncelleyin. Aynı MarvalProjects ve depo kullanıcı adına veya e-postasına sahip kullanıcılar otomatik olarak eşleştirilir."
   text_status_changed_by_changeset: "Uygulanan Değişiklik listesi %{value}."
   text_table_difference_description: "Bu tabloda tek %{entries} girdisi gösteriliyor. İki girdi arasındaki farkı görmek için, tablodaki ilgili alanların üzerindeki seçim kutularını işaretlemelisiniz. Seçiminizden sonra tablonun altındakı tuşa tıklayarak farkları görebilirsiniz."
   text_time_logged_by_changeset: "Uygulanan Değişiklik listesi %{value}."
@@ -4299,7 +4299,7 @@ tr:
     authentication_provider: "Kimlik doğrulama sağlayıcısı"
     identity_url_text: "The internal unique identifier provided by the authentication provider."
     authentication_settings_disabled_due_to_external_authentication: >
-      Bu kullanıcı harici bir kimlik doğrulama sağlayıcısı aracılığıyla kimlik doğrulaması yapar, böylece OpenProject'de değiştirilecek parola yoktur.
+      Bu kullanıcı harici bir kimlik doğrulama sağlayıcısı aracılığıyla kimlik doğrulaması yapar, böylece MarvalProjects'de değiştirilecek parola yoktur.
     authorization_rejected: "Oturum açma izniniz yok."
     assign_random_password: "Rastgele parola atayın (kullanıcıya e-posta ile gönderilir)"
     blocked: "geçici olarak kilitlendi"
@@ -4331,7 +4331,7 @@ tr:
   warning: Uyarı
   warning_attachments_not_saved: "%{count} dosya (lar) kaydedilemedi."
   warning_imminent_user_limit: >
-    Mevcut planınız tarafından desteklenenden daha fazla kullanıcı davet ettiniz. Davet edilen kullanıcılar OpenProject ortamınıza katılamayabilir. Lütfen davet edilen ve kayıtlı kullanıcıların katılmasına izin vermek için <a href="%{upgrade_url}"> planınızı yükseltin </a> veya mevcut kullanıcıları engelleyin.
+    Mevcut planınız tarafından desteklenenden daha fazla kullanıcı davet ettiniz. Davet edilen kullanıcılar MarvalProjects ortamınıza katılamayabilir. Lütfen davet edilen ve kayıtlı kullanıcıların katılmasına izin vermek için <a href="%{upgrade_url}"> planınızı yükseltin </a> veya mevcut kullanıcıları engelleyin.
   warning_registration_token_expired: |
     Etkinleştirme e-postası süresi doldu. Sana yeni bir %{email} gönderdik. Hesabınızı etkinleştirmek için linki tıklayınız.
   warning_user_limit_reached: >
@@ -4339,7 +4339,7 @@ tr:
   warning_user_limit_reached_admin: >
     Ek kullanıcı eklenmesi mevcut sınırı aşacaktır. Harici kullanıcıların bu kuruluma erişebilmesinden emin olmak için <a href="%{upgrade_url}">planınızı yükseltin</a>.
   warning_user_limit_reached_instructions: >
-    Kullanıcı sınırınıza ulaştınız (%{current}/%{max} aktif kullanıcılar). Enterprise sürüm planınızı yükseltmek ve ek kullanıcılar eklemek için lütfen sales@openproject.com adresine başvurun.
+    Kullanıcı sınırınıza ulaştınız (%{current}/%{max} aktif kullanıcılar). Enterprise sürüm planınızı yükseltmek ve ek kullanıcılar eklemek için lütfen sales@MarvalProjects.com adresine başvurun.
   warning_protocol_mismatch_html: >
 
   warning_bar:
@@ -4606,7 +4606,7 @@ tr:
         confidential: "Uygulamanın, müşteri sırrının gizli tutulabileceği yerlerde kullanılıp kullanılmayacağını kontrol edin. Yerel mobil uygulamalar ve Tek Sayfa Uygulamaları gizli değildir."
         scopes: "Uygulamanın erişmesine izin vermek istediğiniz kapsamları kontrol edin. Kapsam işaretli değilse, api_v3 olduğu kabul edilir."
         client_credential_user_id: "İstemciler bu uygulamayı kullandıklarında kimliğe bürünmek için isteğe bağlı kullanıcı kimliği. Yalnızca genel erişime izin vermek için boş bırakın"
-        register_intro: "OpenProject için bir OAuth API istemci uygulaması geliştiriyorsanız, tüm kullanıcıların kullanması için bu formu kullanarak kayıt olabilirsiniz."
+        register_intro: "MarvalProjects için bir OAuth API istemci uygulaması geliştiriyorsanız, tüm kullanıcıların kullanması için bu formu kullanarak kayıt olabilirsiniz."
         default_scopes: ""
     header:
       builtin_applications: Yerleşik OAuth uygulamaları
@@ -4614,7 +4614,7 @@ tr:
     empty_application_lists: Hiçbir OAuth uygulaması kaydedilmemiştir.
     client_id: "İstemci ID"
     client_secret_notice: >
-      Müşterinin sırrını basabileceğimiz tek zaman bu, lütfen not edin ve güvende tutun. Parola olarak değerlendirilmeli ve daha sonra OpenProject tarafından alınamaz.
+      Müşterinin sırrını basabileceğimiz tek zaman bu, lütfen not edin ve güvende tutun. Parola olarak değerlendirilmeli ve daha sonra MarvalProjects tarafından alınamaz.
     authorization_dialog:
       authorize: "Yetkilendir"
       cancel: "İptal et ve izni reddet."
@@ -4624,7 +4624,7 @@ tr:
         Bu uygulama OpenProject hesabınıza erişim istiyor. <br/> <strong> Aşağıdaki izinleri istedi: </strong>
     scopes:
       api_v3: "Tam API v3 erişimi"
-      api_v3_text: "Uygulama, sizin adınıza işlem yapmak için OpenProject API v3'e tam okuma ve yazma erişimi alacaktır."
+      api_v3_text: "Uygulama, sizin adınıza işlem yapmak için MarvalProjects API v3'e tam okuma ve yazma erişimi alacaktır."
     grants:
       created_date: "Tarihinde onaylandı"
       scopes: "İzinler"
@@ -4640,7 +4640,7 @@ tr:
     client_credentials_impersonation_set_to: "İstemci kimlik bilgileri kullanıcısı olarak ayarlandı"
     client_credentials_impersonation_warning: "Not: Bu uygulamadaki 'Müşteri kimlik bilgileri' akışını kullanan müşteriler bu kullanıcının haklarına sahip olacak"
     client_credentials_impersonation_html: >
-      Varsayılan olarak, OpenProject,%{authorization_code_flow_link}. yoluyla OAuth 2.0 yetkilendirmesi sağlar. İsteğe bağlı olarak%{client_credentials_flow_link} özelliğini etkinleştirebilirsiniz, ancak kendi adına istekleri gerçekleştirilecek bir kullanıcı sağlamanız gerekir.
+      Varsayılan olarak, MarvalProjects,%{authorization_code_flow_link}. yoluyla OAuth 2.0 yetkilendirmesi sağlar. İsteğe bağlı olarak%{client_credentials_flow_link} özelliğini etkinleştirebilirsiniz, ancak kendi adına istekleri gerçekleştirilecek bir kullanıcı sağlamanız gerekir.
     authorization_error: "Bir yetkilendirme hatası oluştu."
     revoke_my_application_confirmation: "Bu uygulamayı gerçekten kaldırmak istiyor musunuz? Bu, %{token_count} aktif olanını iptal edecektir."
     my_registered_applications: "OAuth uygulamalarını kayıtedin"
@@ -4669,20 +4669,20 @@ tr:
         Dahili hata: Daha önce var olan bir belirteç olmadan fresh_token olarak adlandırıldı.
       refresh_token_updated_failed: "OAuthClientToken güncellemesi sırasında hata"
       oauth_client_not_found_explanation: >
-        Bu hata, OpenProject'te client_id ve client_secret'i güncelledikten sonra, ancak OAuth2 sağlayıcısındaki 'Dönüş URI'sı' alanını güncellemedikten sonra görünür.
+        Bu hata, MarvalProjects'te client_id ve client_secret'i güncelledikten sonra, ancak OAuth2 sağlayıcısındaki 'Dönüş URI'sı' alanını güncellemedikten sonra görünür.
       oauth_code_not_present: "OAuth2 \"kodu\", \"geri arama\" bitiş noktasında (redirect_uri) bulunamadı."
       oauth_code_not_present_explanation: >
         OAuth2 sağlayıcısında yanlış yanıt_türü seçtiyseniz bu hata görünür. Yanıt_türü 'kod' veya benzeri olmalıdır.
       oauth_state_not_present: "OAuth2 \"durumu\", \"geri arama\" bitiş noktasında (redirect_uri) bulunamadı."
       oauth_state_not_present_explanation: >
-        'Durum', OpenProject'e başarılı bir OAuth2 yetkilendirmesinden sonra nereye devam edileceğini belirtmek için kullanılır. Eksik bir "durum", kurulum sırasında görünebilen dahili bir hatadır. Lütfen sistem yöneticinize başvurun.
+        'Durum', MarvalProjects'e başarılı bir OAuth2 yetkilendirmesinden sonra nereye devam edileceğini belirtmek için kullanılır. Eksik bir "durum", kurulum sırasında görünebilen dahili bir hatadır. Lütfen sistem yöneticinize başvurun.
       rack_oauth2:
         client_secret_invalid: "İstemci sırrı geçersiz (client_secret_invalid)"
         invalid_request: >
           OAuth2 Yetkilendirme Sunucusu 'invalid_request' ile yanıt verdi. Bu hata, birden çok kez yetkilendirmeye çalıştığınızda veya teknik sorunlarda ortaya çıkar.
         invalid_response: "OAuth2 Yetkilendirme Sunucusu geçersiz bir yanıt sağladı (invalid_response)"
         invalid_grant: "OAuth2 Yetkilendirme Sunucusu, yeniden yetkilendirme yapmanızı istiyor (invalid_grant). "
-        invalid_client: "OAuth2 Yetkilendirme Sunucusu, OpenProject'i (invalid_client) tanımıyor."
+        invalid_client: "OAuth2 Yetkilendirme Sunucusu, MarvalProjects'i (invalid_client) tanımıyor."
         unauthorized_client: "OAuth2 Yetkilendirme Sunucusu, izin türünü (unauthorized_client) reddediyor"
         unsupported_grant_type: "OAuth2 Yetkilendirme Sunucusu, yeniden yetkilendirme yapmanızı istiyor (unsupported_grant_type)."
         invalid_scope: "İstenen kaynağa (invalid_scope) erişmenize izin verilmiyor."
@@ -4695,10 +4695,10 @@ tr:
   you: sen
   link: bağlantı
   plugin_openproject_auth_plugins:
-    name: "OpenProject Auth Eklentileri"
-    description: "Integration of OmniAuth strategy providers for authentication in OpenProject."
+    name: "MarvalProjects Auth Eklentileri"
+    description: "Integration of OmniAuth strategy providers for authentication in MarvalProjects."
   plugin_openproject_auth_saml:
     name: "OmniAuth SAML / Tek Oturum Açma"
-    description: "OmniAuth SAML sağlayıcısını OpenProject'e ekler"
+    description: "OmniAuth SAML sağlayıcısını MarvalProjects'e ekler"
   enterprise_plans:
     legacy_enterprise: "Kurumsal Plan"

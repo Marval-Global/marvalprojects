@@ -1,7 +1,7 @@
 #English strings go here
 hu:
   plugin_openproject_team_planner:
-    name: "OpenProject Csapat tervező"
+    name: "MarvalProjects Csapat tervező"
     description: "Csapat tervező nézeteket biztosít."
   permission_view_team_planner: "Csoport tervező megtekintése"
   permission_manage_team_planner: "Csoport tervező kezelése"

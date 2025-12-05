@@ -1,7 +1,7 @@
 ro:
   label_job_status_plural: "Job statuses"
   plugin_openproject_job_status:
-    name: "Stare lucrări OpenProject"
+    name: "Stare lucrări MarvalProjects"
     description: "Listare și stare lucrări de fundal."
   job_status_dialog:
     download_starts: 'Descărcarea ar trebui să înceapă automat.'

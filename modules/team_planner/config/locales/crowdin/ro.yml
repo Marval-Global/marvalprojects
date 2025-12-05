@@ -1,7 +1,7 @@
 #English strings go here
 ro:
   plugin_openproject_team_planner:
-    name: "Planificare echipă OpenProject"
+    name: "Planificare echipă MarvalProjects"
     description: "Oferă vederi planificator echipă."
   permission_view_team_planner: "Vezi planificatorul echipei"
   permission_manage_team_planner: "Gestionează planificatorul de echipe"

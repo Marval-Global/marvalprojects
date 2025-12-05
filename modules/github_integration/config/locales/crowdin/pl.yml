@@ -43,13 +43,13 @@ pl:
   notice_deploy_target_created: Utworzono cel wdrożenia
   notice_deploy_target_destroyed: Usunięto cel wdrożenia
   plugin_openproject_github_integration:
-    name: "Integracja OpenProject z GitHub"
-    description: "Integruje OpenProject i GitHub dla lepszego przepływu pracy"
+    name: "Integracja MarvalProjects z GitHub"
+    description: "Integruje MarvalProjects i GitHub dla lepszego przepływu pracy"
   project_module_github: "GitHub"
   permission_show_github_content: "Pokaż treść GitHub"
-  permission_introspection: Odczytaj wersję bazową uruchomionego wystąpienia OpenProject i SHA kompilacji
+  permission_introspection: Odczytaj wersję bazową uruchomionego wystąpienia MarvalProjects i SHA kompilacji
   text_deploy_target_type_info: >
-    Jak dotąd wspieramy tylko sam OpenProject.
+    Jak dotąd wspieramy tylko sam MarvalProjects.
   text_deploy_target_api_key_info: >
-    OpenProject [API key](docs_url) należący do użytkownika mającego globalne uprawnienie do introspekcji.
+    MarvalProjects [API key](docs_url) należący do użytkownika mającego globalne uprawnienie do introspekcji.
   text_pull_request_deployed_to: "%{pr_link} wdrożono w %{deploy_target_link}"

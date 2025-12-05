@@ -3,9 +3,9 @@
     upsell:
       ldap_groups:
         title: 'Synkronisering for LDAP-gruppe'
-        description: 'Synchronize LDAP groups with OpenProject groups to manage users, change their permissions and facilitate user management across groups.'
+        description: 'Synchronize LDAP groups with MarvalProjects groups to manage users, change their permissions and facilitate user management across groups.'
   plugin_openproject_ldap_groups:
-    name: "OpenProject LDAP-grupper"
+    name: "MarvalProjects LDAP-grupper"
     description: "Synkronisering av LDAP gruppe medlemskap."
   activerecord:
     attributes:
@@ -34,7 +34,7 @@
     label_synchronize: 'Synkroniser'
     settings:
       name_attribute: 'LDAP-gruppens navneattributt'
-      name_attribute_text: 'LDAP-attributten brukt til navngiving av OpenProject-gruppen når den er opprettet av et filter'
+      name_attribute_text: 'LDAP-attributten brukt til navngiving av MarvalProjects-gruppen når den er opprettet av et filter'
     synchronized_filters:
       add_new: 'Legg til synkronisert LDAP-filter'
       singular: 'Synkroniseringsfilter for LDAP-gruppe'
@@ -46,11 +46,11 @@
       destroy:
         title: 'Fjern synkronisert filter %{name}'
         confirmation: "Hvis du fortsetter, fjernes det synkroniserte filteret %{name} og alle gruppene %{groups_count} opprettet gjennom det."
-        removed_groups: "Advarsel: Dette fjerner følgende grupper fra OpenProject og fjerner dem fra alle prosjekter!"
+        removed_groups: "Advarsel: Dette fjerner følgende grupper fra MarvalProjects og fjerner dem fra alle prosjekter!"
         verification: "Skriv inn filternavnet %{name} for å bekrefte slettingen."
       form:
-        group_name_attribute_text: 'Skriv inn attributten til LDAP-gruppen som brukes til å sette gruppenavn i OpenProject.'
-        filter_string_text: 'Skriv inn RFC4515 LDAP-filteret som returnerer grupper i din LDAP for å synkronisere med OpenProject.'
+        group_name_attribute_text: 'Skriv inn attributten til LDAP-gruppen som brukes til å sette gruppenavn i MarvalProjects.'
+        filter_string_text: 'Skriv inn RFC4515 LDAP-filteret som returnerer grupper i din LDAP for å synkronisere med MarvalProjects.'
         base_dn_text: >
           Skriv inn standard DN for å bruke i dette filteret. Det må være under base DN for den valgte LDAP-tilkoblingen. La dette valget være tomt for gjenbruk av base DN for tilkoblingen
     synchronized_groups:
@@ -58,11 +58,11 @@
       destroy:
         title: 'Fjern synkronisert gruppe %{name}'
         confirmation: "Hvis du fortsetter, fjernes den synkroniserte gruppen %{name} og alle %{users_count} brukere som er synkronisert gjennom den."
-        info: "Merk: Selve OpenProject-gruppen og medlemmer lagt til utenfor denne LDAP-synkroniseringen vil ikke bli fjernet."
+        info: "Merk: Selve MarvalProjects-gruppen og medlemmer lagt til utenfor denne LDAP-synkroniseringen vil ikke bli fjernet."
         verification: "Skriv inn gruppens navn %{name} for å bekrefte slettingen."
       help_text_html: |
-        Denne modulen lar deg sette opp en synkronisering mellom LDAP og OpenProject-grupper.
-        Det avhenger av at LDAP-grupper bruker <em>groupOfNames/memberOf</em>-attributten for å fungere med OpenProject.
+        Denne modulen lar deg sette opp en synkronisering mellom LDAP og MarvalProjects-grupper.
+        Det avhenger av at LDAP-grupper bruker <em>groupOfNames/memberOf</em>-attributten for å fungere med MarvalProjects.
         <br/>
         Grupper synkroniseres hver time gjennom en cron-jobb.
         <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Vennligst se vår dokumentasjon på dette emnet</a>.
@@ -73,8 +73,8 @@
       form:
         auth_source_text: 'Velg hvilken LDAP-tilkobling som skal brukes.'
         sync_users_text: >
-          Hvis du aktiverer dette valget, vil relevante brukere automatisk bli opprettet i OpenProject. Uten dette vil bare eksisterende kontoer i OpenProject bli lagt til i grupper.
+          Hvis du aktiverer dette valget, vil relevante brukere automatisk bli opprettet i MarvalProjects. Uten dette vil bare eksisterende kontoer i MarvalProjects bli lagt til i grupper.
         dn_text: 'Skriv inn hele DN for gruppen i LDAP'
-        group_text: 'Velg en eksisterende OpenProject gruppe som medlemmene i LDAP-gruppen skal synkroniseres med'
+        group_text: 'Velg en eksisterende MarvalProjects gruppe som medlemmene i LDAP-gruppen skal synkroniseres med'
       upsell:
         description: 'Benytt deg av synkroniserte LDAP-grupper for å administrere brukere, endre deres rettigheter og lette brukeradministrasjon på tvers av grupper.'

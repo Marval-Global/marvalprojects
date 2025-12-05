@@ -1,7 +1,7 @@
 ru:
   plugin_openproject_openid_connect:
-    name: "OpenProject OpenID Подключение"
-    description: "Добавлена стратегия OmniAuth OpenID Connect для OpenProject."
+    name: "MarvalProjects OpenID Подключение"
+    description: "Добавлена стратегия OmniAuth OpenID Connect для MarvalProjects."
   logout_warning: >
     Вы вышли из системы. Содержимое любой формы, которую вы можете отправить, может быть потеряно. Пожалуйста [войдите в систему].
   activerecord:
@@ -53,7 +53,7 @@ ru:
     menu_title: Провайдеры OpenID
     delete_title: "Удалить провайдера OpenID Connect"
     instructions:
-      redirect_url: Это URL, который провайдер OpenID Connect должен использовать для перенаправления обратно на OpenProject после успешного входа в систему.
+      redirect_url: Это URL, который провайдер OpenID Connect должен использовать для перенаправления обратно на MarvalProjects после успешного входа в систему.
       endpoint_url: URL-адрес конечной точки, указанный поставщиком OpenID Connect
       metadata_none: У меня нет этой информации
       metadata_url: У меня есть URL конечной точки обнаружения
@@ -93,7 +93,7 @@ ru:
         name: Пользовательский
       upsell:
         title: "Технология единого входа (SSO) с использованием OpenID connect"
-        description: Подключить OpenProject к провайдеру идентификации OpenID connect
+        description: Подключить MarvalProjects к провайдеру идентификации OpenID connect
       label_add_new: Добавить нового провайдера OpenID
       label_edit: Редактировать провайдера OpenID %{name}
       label_empty_title: Провайдеры OpenID еще не настроены.
@@ -105,7 +105,7 @@ ru:
       label_configuration_details: Метаданные
       label_client_details: Информация о клиенте
       label_attribute_mapping: Привязки атрибутов
-      client_details_description: Информация о настройке OpenProject в качестве клиента OIDC
+      client_details_description: Информация о настройке MarvalProjects в качестве клиента OIDC
       no_results_table: Ни один провайдер еще не был определен.
       plural: Провайдеры OpenID
       singular: Провайдер OpenID
@@ -117,7 +117,7 @@ ru:
         configuration_metadata: Эта информация была предварительно заполнена с использованием URL обнаружения. В большинстве случаев она не требует редактирования.
         configuration: Подробности конфигурации провайдера OpenID Connect
         display_name: Отображаемое имя, видимое пользователям.
-        attribute_mapping: Настройте сопоставление атрибутов между OpenProject и провайдером OpenID Connect.
+        attribute_mapping: Настройте сопоставление атрибутов между MarvalProjects и провайдером OpenID Connect.
         claims: Запросите дополнительные требования к ID-токену или ответу userinfo.
     setting_instructions:
       limit_self_registration: >

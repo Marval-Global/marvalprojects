@@ -1,7 +1,7 @@
 uk:
   plugin_openproject_openid_connect:
-    name: "OpenProject OpenID Connect"
-    description: "Додає постачальників стратегії OmniAuth OpenID Connect в OpenProject."
+    name: "MarvalProjects OpenID Connect"
+    description: "Додає постачальників стратегії OmniAuth OpenID Connect в MarvalProjects."
   logout_warning: >
     Ви вийшли з системи. Вміст будь-якої форми, яку ви надішлете, може бути втрачено. Спробуйте, [увійти].
   activerecord:
@@ -53,7 +53,7 @@ uk:
     menu_title: Постачальники OpenID
     delete_title: "Видалити постачальника послуг OpenID Connect"
     instructions:
-      redirect_url: Це URL-адреса переспрямування, яку постачальник послуг OpenID Connect має використовувати для переспрямування в OpenProject після успішного входу в систему.
+      redirect_url: Це URL-адреса переспрямування, яку постачальник послуг OpenID Connect має використовувати для переспрямування в MarvalProjects після успішного входу в систему.
       endpoint_url: URL-адреса кінцевої точки, надана вам постачальником послуг OpenID Connect
       metadata_none: Я не володію такою інформацією
       metadata_url: У мене є URL-адреса кінцевої точки виявлення
@@ -93,7 +93,7 @@ uk:
         name: Власний
       upsell:
         title: "Єдиний вхід (SSO) з OpenID Connect"
-        description: Підключіть OpenProject до постачальника ідентифікаційних даних OpenID
+        description: Підключіть MarvalProjects до постачальника ідентифікаційних даних OpenID
       label_add_new: Додати нового постачальника OpenID
       label_edit: Редагувати OpenID провайдера %{name}
       label_empty_title: Поки не налаштовано жодного постачальника послуг OpenID.
@@ -105,7 +105,7 @@ uk:
       label_configuration_details: Метадані
       label_client_details: Відомості про клієнта
       label_attribute_mapping: Зіставлення атрибутів
-      client_details_description: Деталі конфігурації OpenProject як клієнта OIDC
+      client_details_description: Деталі конфігурації MarvalProjects як клієнта OIDC
       no_results_table: Ще не додано жодного постачальника.
       plural: Постачальники OpenID
       singular: OpenID постачальник
@@ -117,7 +117,7 @@ uk:
         configuration_metadata: Цю інформацію попередньо заповнено з використанням наданої кінцевої точки виявлення. Здебільшого вона не потребує редагування.
         configuration: Деталі конфігурації постачальника послуг OpenID Connect
         display_name: Коротке імʼя, яке бачать користувачі.
-        attribute_mapping: Налаштуйте зіставлення атрибутів між OpenProject і постачальником послуг OpenID Connect.
+        attribute_mapping: Налаштуйте зіставлення атрибутів між MarvalProjects і постачальником послуг OpenID Connect.
         claims: Надсилайте додаткові запити відповіді щодо маркера ID або даних користувача.
     setting_instructions:
       limit_self_registration: >

@@ -1,7 +1,7 @@
 hu:
   label_job_status_plural: "Feladat státuszok"
   plugin_openproject_job_status:
-    name: "OpenProject Job status"
+    name: "MarvalProjects Job status"
     description: "Listing and status of background jobs."
   job_status_dialog:
     download_starts: 'A letöltésnek automatikusan el kellene indulnia'

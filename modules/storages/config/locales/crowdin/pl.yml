@@ -56,10 +56,10 @@ pl:
           attributes:
             host:
               authorization_header_missing: nie jest w pełni skonfigurowany. Instancja Nextcloud nie otrzymuje nagłówka "Autoryzacja", który jest niezbędny do autoryzacji żądań API na podstawie tokena Bearer. Sprawdź konfigurację serwera HTTP.
-              cannot_be_connected_to: nie można osiągnąć. Upewnij się, że host jest osiągalny i zainstalowana jest aplikacja integracji OpenProject.
+              cannot_be_connected_to: nie można osiągnąć. Upewnij się, że host jest osiągalny i zainstalowana jest aplikacja integracji MarvalProjects.
               minimal_nextcloud_version_unmet: nie spełnia wymagań wersji minimalnej (konieczna Nextcloud 23 lub wyższa)
               not_nextcloud_server: nie jest serwerem Nextcloud
-              op_application_not_installed: wydaje się, że aplikacja "OpenProject integration" nie jest zainstalowana. Zainstaluj ją najpierw i spróbuj ponownie.
+              op_application_not_installed: wydaje się, że aplikacja "MarvalProjects integration" nie jest zainstalowana. Zainstaluj ją najpierw i spróbuj ponownie.
             password:
               invalid_password: jest nieprawidłowe
               unknown_error: '— nie można sprawdzić poprawności. Sprawdź połączenie z magazynem i spróbuj ponownie.'
@@ -120,15 +120,15 @@ pl:
         rename_project_folder: 'Zmień nazwę zarządzanego folderu projektu:'
     errors:
       messages:
-        error: Wystąpił nieoczekiwany błąd. Sprawdź dzienniki OpenProject, aby uzyskać więcej informacji lub skontaktuj się z administratorem
-        unauthorized: OpenProject nie mógł uwierzytelnić się z dostawcą magazynu. Upewnij się, że masz do niego dostęp.
+        error: Wystąpił nieoczekiwany błąd. Sprawdź dzienniki MarvalProjects, aby uzyskać więcej informacji lub skontaktuj się z administratorem
+        unauthorized: MarvalProjects nie mógł uwierzytelnić się z dostawcą magazynu. Upewnij się, że masz do niego dostęp.
       models:
         copy_project_folders_service:
           conflict: Folder %{destination_path} już istnieje. Przerywanie procesu, aby uniknąć zastąpień.
-          error: Wystąpił nieoczekiwany błąd. Sprawdź dzienniki OpenProject, aby uzyskać więcej informacji lub skontaktuj się z administratorem
-          forbidden: Program OpenProject nie mógł uzyskać dostępu do folderu źródłowego. Sprawdź konfigurację uprawnień do dostawcy magazynu
+          error: Wystąpił nieoczekiwany błąd. Sprawdź dzienniki MarvalProjects, aby uzyskać więcej informacji lub skontaktuj się z administratorem
+          forbidden: Program MarvalProjects nie mógł uzyskać dostępu do folderu źródłowego. Sprawdź konfigurację uprawnień do dostawcy magazynu
           not_found: Nie znaleziono lokalizacji szablonu źródłowego %{source_path}.
-          unauthorized: Program OpenProject nie mógł uwierzytelnić się u dostawcy magazynu. Sprawdź konfigurację magazynu
+          unauthorized: Program MarvalProjects nie mógł uwierzytelnić się u dostawcy magazynu. Sprawdź konfigurację magazynu
         nextcloud_sync_service:
           attributes:
             add_user_to_group:
@@ -149,16 +149,16 @@ pl:
               conflict: 'Użytkownika %{user} nie można było usunąć z grupy %{group} z następującego powodu: %{reason}'
               failed_to_remove: 'Użytkownika %{user} nie można było usunąć z grupy %{group} z następującego powodu: %{reason}'
             rename_project_folder:
-              conflict: OpenProject could not rename the project folder to %{current_path} as a folder with the same name already exists
-              forbidden: Użytkownik OpenProject nie ma dostępu do folderu %{current_path}.
+              conflict: MarvalProjects could not rename the project folder to %{current_path} as a folder with the same name already exists
+              forbidden: Użytkownik MarvalProjects nie ma dostępu do folderu %{current_path}.
               not_found: "Nie znaleziono lokalizacji %{current_path}."
             set_folders_permissions:
               permission_not_set: nie można ustawić uprawnień do lokalizacji %{path}.
-          error: Wystąpił nieoczekiwany błąd. Upewnij się, że Twoje wystąpienie Nextcloud jest osiągalne i sprawdź dzienniki pracowników OpenProject, aby uzyskać więcej informacji
+          error: Wystąpił nieoczekiwany błąd. Upewnij się, że Twoje wystąpienie Nextcloud jest osiągalne i sprawdź dzienniki pracowników MarvalProjects, aby uzyskać więcej informacji
           group_does_not_exist: "%{group} nie istnieje. Sprawdź konfigurację wystąpienia Nextcloud."
-          insufficient_privileges: OpenProject nie ma wystarczających uprawnień, aby dodać użytkownika %{user} do grupy %{group}. Sprawdź ustawienia grupy w Nextcloud.
+          insufficient_privileges: MarvalProjects nie ma wystarczających uprawnień, aby dodać użytkownika %{user} do grupy %{group}. Sprawdź ustawienia grupy w Nextcloud.
           not_allowed: Nextcloud blokuje żądanie.
-          unauthorized: OpenProject nie może zsynchronizować się z Nextcloud. Sprawdź konfigurację magazynu i Nextcloud.
+          unauthorized: MarvalProjects nie może zsynchronizować się z Nextcloud. Sprawdź konfigurację magazynu i Nextcloud.
           user_does_not_exist: "Użytkownik %{user} nie istnieje w Nextcloud."
         one_drive_sync_service:
           attributes:
@@ -168,16 +168,16 @@ pl:
             hide_inactive_folders:
               permission_not_set: nie można ustawić uprawnień do lokalizacji %{path}.
             remote_folders:
-              request_error: OpenProject nie mógł uzyskać dostępu do Twojego dysku %{drive_id}. Sprawdź, czy konfiguracja magazynu jest prawidłowa.
+              request_error: MarvalProjects nie mógł uzyskać dostępu do Twojego dysku %{drive_id}. Sprawdź, czy konfiguracja magazynu jest prawidłowa.
             rename_project_folder:
-              conflict: OpenProject nie mógł zmienić nazwy folderu %{current_path} na %{project_folder_name}, ponieważ istnieje już folder o tej samej nazwie.
-              forbidden: OpenProject nie ma dostępu do folderu %{current_path}, aby zmienić jego nazwę.
+              conflict: MarvalProjects nie mógł zmienić nazwy folderu %{current_path} na %{project_folder_name}, ponieważ istnieje już folder o tej samej nazwie.
+              forbidden: MarvalProjects nie ma dostępu do folderu %{current_path}, aby zmienić jego nazwę.
               not_found: "Nie znaleziono lokalizacji %{current_path}."
             set_folders_permissions:
               permission_not_set: nie można ustawić uprawnień do lokalizacji %{path}.
-          error: Wystąpił nieoczekiwany błąd. Upewnij się, że usługa OneDrive jest osiągalna i sprawdź dzienniki pracowników OpenProject, aby uzyskać więcej informacji
-          not_allowed: OpenProject nie mógł uzyskać dostępu do Twojego dysku w usłudze OneDrive. Sprawdź uprawnienia ustawione w aplikacji Azure.
-          unauthorized: OpenProject nie może zsynchronizować się z OneDrive. Sprawdź konfigurację magazynu i aplikacji Azure.
+          error: Wystąpił nieoczekiwany błąd. Upewnij się, że usługa OneDrive jest osiągalna i sprawdź dzienniki pracowników MarvalProjects, aby uzyskać więcej informacji
+          not_allowed: MarvalProjects nie mógł uzyskać dostępu do Twojego dysku w usłudze OneDrive. Sprawdź uprawnienia ustawione w aplikacji Azure.
+          unauthorized: MarvalProjects nie może zsynchronizować się z OneDrive. Sprawdź konfigurację magazynu i aplikacji Azure.
           user_does_not_exist: "Użytkownik %{user} nie istnieje w Nextcloud."
         upload_link_service:
           not_found: Folder docelowy %{folder} nie został znaleziony w magazynie %{storage_name}.
@@ -187,17 +187,17 @@ pl:
       done_complete_setup: Gotowe, konfiguracja ukończona
       done_continue: Gotowe, kontynuuj
       open_storage: Otwórz magazyn plików
-      replace_oauth_application: Zastąp OpenProject OAuth
+      replace_oauth_application: Zastąp MarvalProjects OAuth
       replace_oauth_client: Zastąp %{provider_type} OAuth
       save_and_continue: Zapisz i kontynuuj
       select_folder: Wybierz folder
     configuration_checks:
       oauth_client_incomplete:
-        nextcloud: Zezwalaj OpenProject na dostęp do danych Nextcloud przy użyciu OAuth.
-        one_drive: Zezwalaj OpenProject na dostęp do danych Azure przy użyciu OAuth w celu połączenia z usługą OneDrive.
+        nextcloud: Zezwalaj MarvalProjects na dostęp do danych Nextcloud przy użyciu OAuth.
+        one_drive: Zezwalaj MarvalProjects na dostęp do danych Azure przy użyciu OAuth w celu połączenia z usługą OneDrive.
       redirect_uri_incomplete:
         one_drive: Ukończ konfigurację z poprawnym przekierowaniem identyfikatora URI.
-    confirm_replace_oauth_application: Ta czynność zresetuje bieżące dane uwierzytelniające OAuth. Po potwierdzeniu będą Państwo musieli ponownie wprowadzić dane uwierzytelniające u dostawcy pamięci masowej, a wszyscy zdalni użytkownicy będą musieli ponownie autoryzować się w OpenProject. Czy na pewno chcą Państwo kontynuować?
+    confirm_replace_oauth_application: Ta czynność zresetuje bieżące dane uwierzytelniające OAuth. Po potwierdzeniu będą Państwo musieli ponownie wprowadzić dane uwierzytelniające u dostawcy pamięci masowej, a wszyscy zdalni użytkownicy będą musieli ponownie autoryzować się w MarvalProjects. Czy na pewno chcą Państwo kontynuować?
     confirm_replace_oauth_client: Ta czynność spowoduje zresetowanie bieżących poświadczeń OAuth. Po potwierdzeniu będą Państwo musieli wprowadzić nowe dane uwierzytelniające od dostawcy pamięci masowej, a wszyscy użytkownicy będą musieli ponownie autoryzować się na stronie %{provider_type} . Czy na pewno chcą Państwo kontynuować?
     delete_warning:
       input_delete_confirmation: Aby potwierdzić usunięcie, wprowadź nazwę magazynu plików %{file_storage}.
@@ -212,7 +212,7 @@ pl:
     dependencies:
       nextcloud:
         group_folders_app: Foldery grupy
-        integration_app: Integration OpenProject
+        integration_app: Integration MarvalProjects
     enabled_in_projects:
       setup_incomplete_description: Ten magazyn ma niekompletną konfigurację. Ukończ konfigurację przed włączeniem go w wielu projektach.
       setup_incomplete_header: Niekompletna konfiguracja magazynu
@@ -220,7 +220,7 @@ pl:
     file_storage_view:
       access_management:
         automatic_management: Automatycznie zarządzany dostęp i foldery
-        automatic_management_description: Zezwól OpenProject automatycznie tworzyć foldery dla każdego projektu i zarządzać dostępem użytkowników. Jest to zalecane, ponieważ zapewnia, że każdy członek zespołu ma zawsze prawidłowe uprawnienia dostępu.
+        automatic_management_description: Zezwól MarvalProjects automatycznie tworzyć foldery dla każdego projektu i zarządzać dostępem użytkowników. Jest to zalecane, ponieważ zapewnia, że każdy członek zespołu ma zawsze prawidłowe uprawnienia dostępu.
         description: Wybierz typ zarządzania dostępem użytkowników i tworzeniem folderów. Zalecamy skorzystanie z opcji Automatycznie zarządzany dostęp, pozwalającej uzyskać bardziej uporządkowaną strukturę i zagwarantować dostęp wszystkim odpowiednim użytkownikom.
         manual_management: Ręcznie zarządzany dostęp i foldery
         manual_management_description: Samodzielnie ręcznie twórz foldery każdego projektu i zarządzaj nimi. Trzeba będzie ręcznie zapewnić dostęp odpowiednim użytkownikom.
@@ -231,7 +231,7 @@ pl:
       general_information: Informacje ogólne
       oauth_configuration: Konfiguracja OAuth
       one_drive_oauth: Azure OAuth
-      openproject_oauth: OpenProject OAuth
+      openproject_oauth: MarvalProjects OAuth
       project_folders: Foldery projektu
       redirect_uri: Przekieruj URI
       storage_audience_blank: Nie skonfigurowano żadnych odbiorców.
@@ -298,7 +298,7 @@ pl:
         nc_host_not_found: Nie znaleziono serwera Nextcloud pod skonfigurowanym adresem URL hosta. Sprawdź konfigurację.
         nc_oauth_request_not_found: Nie znaleziono punktu końcowego, z którego można pobrać informacje o aktualnie połączonym użytkowniku. Aby uzyskać więcej informacji, sprawdź dzienniki serwera.
         nc_oauth_request_unauthorized: Bieżący użytkownik nie ma uprawnień dostępu do zdalnego magazynu plików. Aby uzyskać więcej informacji, sprawdź dzienniki serwera.
-        nc_oauth_token_missing: Aplikacja OpenProject nie może przetestować komunikacji z usługą Nextcloud na poziomie użytkownika, ponieważ użytkownik nie powiązał jeszcze swojego konta Nextcloud.
+        nc_oauth_token_missing: Aplikacja MarvalProjects nie może przetestować komunikacji z usługą Nextcloud na poziomie użytkownika, ponieważ użytkownik nie powiązał jeszcze swojego konta Nextcloud.
         nc_unexpected_content: W folderze zarządzanej grupy znaleziono nieoczekiwaną zawartość.
         nc_userless_access_denied: Skonfigurowane hasło aplikacji jest nieprawidłowe.
         not_configured: Nie można zweryfikować połączenia. Najpierw zakończ konfigurację.
@@ -308,7 +308,7 @@ pl:
         od_drive_id_not_found: Nie można znaleźć skonfigurowanego Drive ID. Sprawdź konfigurację.
         od_oauth_request_not_found: Nie znaleziono punktu końcowego, z którego można pobrać informacje o aktualnie połączonym użytkowniku. Aby uzyskać więcej informacji, sprawdź dzienniki serwera.
         od_oauth_request_unauthorized: Bieżący użytkownik nie ma uprawnień dostępu do zdalnego magazynu plików. Aby uzyskać więcej informacji, sprawdź dzienniki serwera.
-        od_oauth_token_missing: Aplikacja OpenProject nie może przetestować komunikacji z usługą OneDrive na poziomie użytkownika, ponieważ użytkownik nie powiązał jeszcze swojego konta Microsoft.
+        od_oauth_token_missing: Aplikacja MarvalProjects nie może przetestować komunikacji z usługą OneDrive na poziomie użytkownika, ponieważ użytkownik nie powiązał jeszcze swojego konta Microsoft.
         od_tenant_id_wrong: Skonfigurowany katalog (dzierżawca) jest nieprawidłowy. Sprawdź konfigurację.
         od_test_folder_exists: Wymagany do testowania folder %{folder_name} już istnieje. Usuń go i spróbuj ponownie.
         od_unexpected_content: Na dysku znaleziono nieoczekiwaną zawartość.
@@ -350,7 +350,7 @@ pl:
       project_folder_bulk: Folder projektu jest domyślnym folderem do przesyłania plików dla wszystkich wybranych projektów. Możesz to zmienić indywidualnie w ustawieniach poszczególnych projektów. Użytkownicy mogą jednak przesyłać pliki do innych lokalizacji.
     instructions:
       all_available_storages_already_added: Wszystkie dostępne magazyny zostały już dodane do projektu.
-      authentication_method: Sposób, w jaki są uwierzytelniane żądania między OpenProject a magazynem.
+      authentication_method: Sposób, w jaki są uwierzytelniane żądania między MarvalProjects a magazynem.
       automatic_folder: Spowoduje to automatyczne utworzenie katalogu głównego dla tego projektu i zarządzanie uprawnieniami dostępu każdego członka projektu.
       empty_project_folder_validation: Wybranie folderu jest obowiązkowe w celu kontynuacji.
       existing_manual_folder: Możesz wyznaczyć istniejący folder jako folder główny tego projektu. Uprawnienia nie są jednak zarządzane automatycznie, administrator musi ręcznie upewnić się, że odpowiedni użytkownicy mają dostęp. Wybrany folder może być używany przez wiele projektów.
@@ -359,8 +359,8 @@ pl:
       name: Nazwij swój magazyn pamięci, aby użytkownicy mogli je rozróżniać, jeśli występuje ich wiele.
       new_storage: Aby uzyskać więcej informacji, przeczytaj naszą dokumentację na temat <a target='_blank' href='%{provider_link}'>konfigurowania integracji magazynu plików %{provider_name}</a>.
       nextcloud:
-        application_link_text: aplikacji „Integration OpenProject”
-        integration: Administracja Nextcloud / OpenProject
+        application_link_text: aplikacji „Integration MarvalProjects”
+        integration: Administracja Nextcloud / MarvalProjects
         oauth_configuration: Skopiuj te wartości z %{application_link_text}.
         provider_configuration: Przed wykonaniem konfiguracji upewnij się, że masz uprawnienia administracyjne w swoim wystąpieniu Nextcloud oraz zainstalowaną aplikację %{application_link_text}.
         storage_audience: Identyfikator klienta, który wykorzystuje wystąpienie Nextcloud do komunikowania się z dostawcą tożsamości.
@@ -370,7 +370,7 @@ pl:
       no_storage_set_up: Nie ma jeszcze skonfigurowanych magazynów plików.
       not_logged_into_storage: Aby wybrać folder projektu, najpierw się zaloguj
       oauth_application_details: Wartość tajnego klucza klienta nie będzie ponownie dostępna po zamknięciu tego okna. Skopiuj te wartości do %{oauth_application_details_link}.
-      oauth_application_details_link_text: Ustawienia Nextcloud OpenProject Integration
+      oauth_application_details_link_text: Ustawienia Nextcloud MarvalProjects Integration
       one_drive:
         application_link_text: Portal Azure
         copy_redirect_uri: Skopiuj identyfikator URI przekierowania
@@ -389,7 +389,7 @@ pl:
       setting_up_storages: Aby skonfigurować magazyny plików, odwiedź
       setting_up_storages_non_admin: Administratorzy mogą skonfigurować magazyny plików w obszarze Administracja / Magazyny plików.
       type: 'Upewnij się, że masz uprawnienia administracyjne w swojej instancji Nextcloud oraz zainstalowaną następującą aplikację, przed wykonaniem konfiguracji:'
-      type_link_text: "“Integration OpenProject”"
+      type_link_text: "“Integration MarvalProjects”"
     label_active: Aktywny
     label_add_new_storage: Dodaj nowy magazyn
     label_automatic_folder: Nowy folder z automatycznie zarządzanymi uprawnieniami
@@ -413,8 +413,8 @@ pl:
     label_no_selected_folder: Nie wybrano folderu
     label_no_specific_folder: Brak konkretnego folderu
     label_oauth_client_id: ID klienta OAuth
-    label_openproject_oauth_application_id: Identyfikator klienta OAuth OpenProject
-    label_openproject_oauth_application_secret: Tajny klucz klienta OAuth OpenProject
+    label_openproject_oauth_application_id: Identyfikator klienta OAuth MarvalProjects
+    label_openproject_oauth_application_secret: Tajny klucz klienta OAuth MarvalProjects
     label_project_folder: Folder projektu
     label_provider: Dostawca
     label_redirect_uri: Przekieruj URI
@@ -454,7 +454,7 @@ pl:
         title: Ukończono konfigurację integracji
       timeout:
         link_text: stan konfiguracji magazynu plików
-        subtitle: OpenProject nie mógł Ci zapewnić dostępu do folderu projektu w oczekiwanym czasie. Spróbuj ponownie.<br><br> Jeśli problem nie ustąpi, skontaktuj się z administratorem OpenProject w celu sprawdzenia %{storages_health_link}.
+        subtitle: MarvalProjects nie mógł Ci zapewnić dostępu do folderu projektu w oczekiwanym czasie. Spróbuj ponownie.<br><br> Jeśli problem nie ustąpi, skontaktuj się z administratorem MarvalProjects w celu sprawdzenia %{storages_health_link}.
       waiting:
         subtitle: Chwileczkę, to może zająć trochę czasu...
         title: Konfigurujemy Twoje uprawnienia do folderu projektu.
@@ -464,8 +464,8 @@ pl:
         subtitle: Dodaj zewnętrzny magazyn plików w celu przesyłania plików, ich powiązywania i zarządzania nimi w pakietach roboczych.
       managed_project_folders:
         subtitle: |-
-          Pozwól OpenProject automatycznie tworzyć foldery dla każdego projektu. Jest to zalecane, ponieważ zapewnia, że każdy członek zespołu zawsze ma prawidłowe uprawnienia dostępu.
-        subtitle_short: Pozwól OpenProject automatycznie tworzyć foldery dla każdego projektu.
+          Pozwól MarvalProjects automatycznie tworzyć foldery dla każdego projektu. Jest to zalecane, ponieważ zapewnia, że każdy członek zespołu zawsze ma prawidłowe uprawnienia dostępu.
+        subtitle_short: Pozwól MarvalProjects automatycznie tworzyć foldery dla każdego projektu.
         title: Automatycznie zarządzane foldery projektu
       project_settings:
         delete: Usuń magazyn plików
@@ -499,10 +499,10 @@ pl:
     storage_audience:
       documentation_intro: Zapoznaj się z naszą dokumentacją, aby uzyskać szczegółowe informacje na temat poniższych opcji i konfiguracji dostawcy tożsamości.
       idp:
-        helptext: OpenProject użyje tokena dostępu otrzymanego przez dostawcę tożsamości podczas logowania w celu uwierzytelnienia żądań do magazynu. Nie spowoduje to próby otrzymania kolejnego tokena.
+        helptext: MarvalProjects użyje tokena dostępu otrzymanego przez dostawcę tożsamości podczas logowania w celu uwierzytelnienia żądań do magazynu. Nie spowoduje to próby otrzymania kolejnego tokena.
         label: Użyj tokena dostępu uzyskanego podczas logowania użytkownika
       manual:
-        helptext: OpenProject wymieni token z dostawcą tożsamości danej grupy odbiorców.
+        helptext: MarvalProjects wymieni token z dostawcą tożsamości danej grupy odbiorców.
         label: Ręcznie określ odbiorców, których token dostępu chcesz wymienić
     storage_list_blank_slate:
       description: Dodaj magazyn, aby zobaczyć go tutaj.
@@ -510,5 +510,5 @@ pl:
     successful_storage_connection: Magazyn został podłączony! Pamiętaj, aby aktywować magazyn na karcie Projekty każdego żądanego projektu, aby móc go użyć.
     upsell:
       description: |-
-        Zintegruj swoją usługę OneDrive z OpenProject jako magazyn plików. Prześlij pliki i powiąż je bezpośrednio z pakietami roboczymi w projekcie.
+        Zintegruj swoją usługę OneDrive z MarvalProjects jako magazyn plików. Prześlij pliki i powiąż je bezpośrednio z pakietami roboczymi w projekcie.
       title: Integracja z OneDrive

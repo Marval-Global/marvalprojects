@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 vi:
   plugin_openproject_meeting:
-    name: "Cuộc họp OpenProject"
+    name: "Cuộc họp MarvalProjects"
     description: >-
-      Mô-đun này thêm các chức năng hỗ trợ cuộc họp dự án vào OpenProject. Cuộc họp có thể được lên lịch bằng cách chọn những người được mời từ cùng một dự án để tham gia cuộc họp. Một chương trình nghị sự có thể được tạo và gửi cho những người được mời. Sau cuộc họp, người tham dự có thể được chọn và biên bản có thể được tạo dựa trên chương trình nghị sự. Cuối cùng, biên bản có thể được gửi đến tất cả người tham dự và những người được mời.
+      Mô-đun này thêm các chức năng hỗ trợ cuộc họp dự án vào MarvalProjects. Cuộc họp có thể được lên lịch bằng cách chọn những người được mời từ cùng một dự án để tham gia cuộc họp. Một chương trình nghị sự có thể được tạo và gửi cho những người được mời. Sau cuộc họp, người tham dự có thể được chọn và biên bản có thể được tạo dựa trên chương trình nghị sự. Cuối cùng, biên bản có thể được gửi đến tất cả người tham dự và những người được mời.
   activerecord:
     attributes:
       meeting:

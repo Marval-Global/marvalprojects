@@ -1,7 +1,7 @@
 fa:
   plugin_openproject_webhooks:
     name: "وب‌هوک اپن‌پروژه"
-    description: "یک API پلاگین برای پشتیبانی از وب هوک های OpenProject برای ادغام بهتر شخص ثالث ارائه می دهد."
+    description: "یک API پلاگین برای پشتیبانی از وب هوک های MarvalProjects برای ادغام بهتر شخص ثالث ارائه می دهد."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -66,4 +66,4 @@ fa:
           title: 'Selected projects'
         secret:
           description: >
-            If set, this secret value is used by OpenProject to sign the webhook payload.
+            If set, this secret value is used by MarvalProjects to sign the webhook payload.

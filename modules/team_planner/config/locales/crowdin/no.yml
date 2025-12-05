@@ -1,7 +1,7 @@
 #English strings go here
 "no":
   plugin_openproject_team_planner:
-    name: "OpenProject Team Planlegger"
+    name: "MarvalProjects Team Planlegger"
     description: "Tilbyr teamplanlegger visninger."
   permission_view_team_planner: "Vis teamplanlegger"
   permission_manage_team_planner: "Administrer teamplanlegger"

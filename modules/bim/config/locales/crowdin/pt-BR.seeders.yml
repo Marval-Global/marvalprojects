@@ -71,7 +71,7 @@ pt-BR:
         item_7:
           name: Engenheiros estruturais
       welcome:
-        title: Boas-vindas à edição BIM do OpenProject!
+        title: Boas-vindas à edição BIM do MarvalProjects!
         text: |
           Confira os projetos de demonstração para começar com alguns exemplos.
 
@@ -120,7 +120,7 @@ pt-BR:
                 options:
                   name: Guia de introdução
                   text: |
-                    Estamos felizes por ter você conosco! Sugerimos que você tente algumas coisas para começar no OpenProject.
+                    Estamos felizes por ter você conosco! Sugerimos que você tente algumas coisas para começar no MarvalProjects.
 
                     Mas antes de ir direto ao assunto, você deve saber que este projeto exemplar é dividido em dois projetos diferentes:
 
@@ -138,7 +138,7 @@ pt-BR:
                     7. _Trabalho ágil? Confira nossos novos quadros:_ → Vá para [Quadros]({{opSetting:base_url}}/projects/demo-construction-project/boards)
 
                     Aqui você encontrará nossos [Guias do usuário](https://www.openproject.org/docs/user-guide/).
-                    Informe-nos se tiver alguma dúvida ou se precisar de suporte. Contate-nos: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
+                    Informe-nos se tiver alguma dúvida ou se precisar de suporte. Contate-nos: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Membros
@@ -179,7 +179,7 @@ pt-BR:
                 options:
                   name: Guia de introdução
                   text: |
-                    Estamos felizes por ter você conosco! Sugerimos que você tente algumas coisas para começar no OpenProject.
+                    Estamos felizes por ter você conosco! Sugerimos que você tente algumas coisas para começar no MarvalProjects.
 
                     Aqui você encontrará as funções clássicas, alguns fluxos de trabalho e pacotes de trabalho para o seu projeto de construção.
 
@@ -193,7 +193,7 @@ pt-BR:
                     6. _Trabalho ágil? Crie um novo quadro:_ → Vá para [Quadros]({{opSetting:base_url}}/projects/demo-planning-constructing-project/boards)
 
                     Aqui você encontrará nossos [Guias do usuário](https://www.openproject.org/docs/user-guide/).
-                    Informe-nos se tiver alguma dúvida ou se precisar de suporte. Contate-nos: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
+                    Informe-nos se tiver alguma dúvida ou se precisar de suporte. Contate-nos: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Membros
@@ -433,7 +433,7 @@ pt-BR:
                 options:
                   name: Guia de introdução
                   text: |
-                    Estamos felizes por você esta conosco! Sugerimos que você tente algumas coisas para começar no OpenProject.
+                    Estamos felizes por você esta conosco! Sugerimos que você tente algumas coisas para começar no MarvalProjects.
 
                     Este projeto de demonstração oferece funções, fluxos de trabalho e pacotes de trabalho especializados para BIM.
 
@@ -450,7 +450,7 @@ pt-BR:
                     9. _Trabalho ágil? Crie um novo quadro:_ → Vá para [Quadros]({{opSetting:base_url}}/projects/demo-bim-project/boards)
 
                     Aqui você encontrará nossos [Guias do usuário](https://www.openproject.org/docs/user-guide/).
-                    Informe-nos se tiver alguma dúvida ou se precisar de suporte. Contate-nos: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
+                    Informe-nos se tiver alguma dúvida ou se precisar de suporte. Contate-nos: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Membros
@@ -709,7 +709,7 @@ pt-BR:
                 options:
                   name: Guia de introdução
                   text: |
-                    Estamos felizes por ter você conosco! Sugerimos que você tente algumas coisas para começar no OpenProject.
+                    Estamos felizes por ter você conosco! Sugerimos que você tente algumas coisas para começar no MarvalProjects.
 
                     Este projeto de demonstração mostra as funções do gerenciamento do BCF.
 
@@ -725,7 +725,7 @@ pt-BR:
                     8. _Você adora uma abordagem ágil? Crie um quadro:_ → Vá para [Quadros]({{opSetting:base_url}}/projects/demo-bcf-management-project/boards).
 
                     Aqui você encontrará nossos [Guias do usuário](https://www.openproject.org/docs/user-guide/).
-                    Informe-nos se tiver alguma dúvida ou se precisar de suporte. Contate-nos: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
+                    Informe-nos se tiver alguma dúvida ou se precisar de suporte. Contate-nos: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Membros

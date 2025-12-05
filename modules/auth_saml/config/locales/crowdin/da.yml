@@ -17,8 +17,8 @@ da:
         authn_requests_signed: Signér SAML AuthnRequests
         want_assertions_signed: Kræv signerede svar
         want_assertions_encrypted: Kræv krypterede svar
-        certificate: Certifikat brugt af OpenProject til SAML-anmodninger
-        private_key: Tilsvarende privat nøgle til OpenProject SAML-anmodninger
+        certificate: Certifikat brugt af MarvalProjects til SAML-anmodninger
+        private_key: Tilsvarende privat nøgle til MarvalProjects SAML-anmodninger
         signature_method: Signaturalgoritme
         digest_method: Digest algoritme
         format: "Format"
@@ -36,7 +36,7 @@ da:
     info:
       title: "SAML-protokolopsætnningsparametre"
       description: >
-        Brug disse parametre til at opsætte identitetsudbyderforbindelsen til OpenProject.
+        Brug disse parametre til at opsætte identitetsudbyderforbindelsen til MarvalProjects.
     metadata_parser:
       success: "Opsætningen er opdateret vha. identitetsudbyderens metadata."
       invalid_url: "Den angivne metadata-URL er ugyldig. Angiv en HTTP(S)-URL."
@@ -46,8 +46,8 @@ da:
       label_empty_description: "Tilføj en udbyder for at se denne her."
       label_automatic_configuration: Automatisk opsætning
       label_metadata: Metadata
-      label_metadata_endpoint: OpenProject metadata-endepunkt
-      label_openproject_information: OpenProject-information
+      label_metadata_endpoint: MarvalProjects metadata-endepunkt
+      label_openproject_information: MarvalProjects-information
       label_configuration_details: "Identitetsudbyder endepunkter og certifikater"
       label_configuration_encryption: "Signaturer og Kryptering"
       label_add_new: Ny SAML-identitetsudbyder
@@ -61,16 +61,16 @@ da:
       requested_attributes: Anmodede attributter
       attribute_mapping: Attribut kortlægning
       attribute_mapping_text: >
-        Flg. felter kontrollerer, hvilke af SAML-identitetsudbyderens leverede attributter, som bruges til at angive brugerattributter i OpenProject
+        Flg. felter kontrollerer, hvilke af SAML-identitetsudbyderens leverede attributter, som bruges til at angive brugerattributter i MarvalProjects
       metadata:
-        dialog: "Dette er URL'en, hvor OpenProject SAML-metadataene er tilgængelige. Brug den evt. til opsætning af identitetsudbyderen:"
+        dialog: "Dette er URL'en, hvor MarvalProjects SAML-metadataene er tilgængelige. Brug den evt. til opsætning af identitetsudbyderen:"
       upsell:
         title: "Single Sign-On (SSO) with SAML"
-        description: Forbind OpenProject til en SAML-identitetsudbyder
+        description: Forbind MarvalProjects til en SAML-identitetsudbyder
       request_attributes:
         title: 'Anmodede attributter'
         legend: >
-          Disse attributter føjes til SAML XML-metadata for overfor den identificere udbyder at angive, hvilke attributter OpenProject kræver. Man skal muligvis stadig eksplicit opsætte sin identitetsudbyder for at sende disse attributter. Tjek relevante IdP-dokumentation.
+          Disse attributter føjes til SAML XML-metadata for overfor den identificere udbyder at angive, hvilke attributter MarvalProjects kræver. Man skal muligvis stadig eksplicit opsætte sin identitetsudbyder for at sende disse attributter. Tjek relevante IdP-dokumentation.
         name: 'Anmodet attributnøgle'
         format: 'Attributformat'
       section_headers:
@@ -84,8 +84,8 @@ da:
         configuration: "Opsæt endepunkts-URL'erne for identitetsudbyderen, certifikaterne og yderligere SAML-indstillinger."
         configuration_metadata: "Denne information er forudfyldt med de leverede metadata. I de fleste tilfælde kræver de ikke redigering."
         encryption: "Opsæt udsagnssignaturer og kryptering for SAML-anmodninger og -svar."
-        encryption_form: "Man ønsker muligvis at kryptere udsagnssvaret eller få anmodninger fra OpenProject signeret."
-        mapping: "Justér manuelt kortlægningen mellem SAML-svar og brugerattributter i OpenProject."
+        encryption_form: "Man ønsker muligvis at kryptere udsagnssvaret eller få anmodninger fra MarvalProjects signeret."
+        mapping: "Justér manuelt kortlægningen mellem SAML-svar og brugerattributter i MarvalProjects."
         requested_attributes: "Definér det sæt attributter, der skal anmodes om i SAML-anmodningen sendt til identitetsudbyderen."
       seeded_from_env: "Denne udbyder blev seeded fra miljøopsætningnen. Den kan ikke redigeres."
     settings:
@@ -106,7 +106,7 @@ da:
       limit_self_registration: >
         Hvis aktiveret, kan brugere kun registrere sig vha. denne udbyder, hvis selv-registreringsindstillingen tillader dette.
       sp_entity_id: >
-        Entitets-ID for tjenesteudbyderen (SP). Sommetider også kaldet Audience. Dette er OpenProject-instansens unikke klientidentifikator.
+        Entitets-ID for tjenesteudbyderen (SP). Sommetider også kaldet Audience. Dette er MarvalProjects-instansens unikke klientidentifikator.
       idp_sso_service_url: >
         URL'en til identitetsudbyderens login-endepunkt.
       idp_slo_service_url: >
@@ -116,9 +116,9 @@ da:
       name_identifier_format: >
         Opsæt navneidentifkatorformatet til brug for SAML-udsagnet.
       sp_metadata_endpoint: >
-        Dette er URL'en, hvor OpenProject SAML-metadataene er tilgængelige. Brug den evt. til opsætning af identitetsudbyderen.
+        Dette er URL'en, hvor MarvalProjects SAML-metadataene er tilgængelige. Brug den evt. til opsætning af identitetsudbyderen.
       mapping: >
-        Opsæt kortlægningen mellem SAML-svar og brugerattributter i OpenProject. Der kan opsættes flere attributnavne at kigge efter. OpenProject vælger den første tilgængelige attribut fra SAML-svar.
+        Opsæt kortlægningen mellem SAML-svar og brugerattributter i MarvalProjects. Der kan opsættes flere attributnavne at kigge efter. MarvalProjects vælger den første tilgængelige attribut fra SAML-svar.
       mapping_login: >
         SAML-attributter fra svaret brugt til login.
       mapping_mail: >
@@ -132,17 +132,17 @@ da:
       request_uid: >
         SAML-attribut til anmodning om det interne bruger-ID. Som standard bruges navn_id til dette felt.
       requested_attributes: >
-        Disse attributter føjes til SAML anmodningens-XML'en for kommunikere til identitetsudbyderen, hvilke attributterne OpenProject kræver.
+        Disse attributter føjes til SAML anmodningens-XML'en for kommunikere til identitetsudbyderen, hvilke attributterne MarvalProjects kræver.
       requested_format: >
         Formatet på den ønskede attribut. Dette bruges til at angive formatet på attributten i SAML-anmodningen. Se [dokumentation for opsætning af anmodede attributter](docs_url) for mere information.
       authn_requests_signed: >
-        Hvis markeret, vil OpenProject signere SAML AuthnRequest'en. Et signeringscertifikat og en privat nøgle vil skulle angives i felterne nedenfor.
+        Hvis markeret, vil MarvalProjects signere SAML AuthnRequest'en. Et signeringscertifikat og en privat nøgle vil skulle angives i felterne nedenfor.
       want_assertions_signed: >
-        Hvis markeret, vil OpenProject kræve signerede svar fra identitetsudbyderen vha. dennes eget certifikatnøglepar. OpenProject vil bekræfte signaturen mod certifikatet fra basisopsætningsafsnittet.
+        Hvis markeret, vil MarvalProjects kræve signerede svar fra identitetsudbyderen vha. dennes eget certifikatnøglepar. MarvalProjects vil bekræfte signaturen mod certifikatet fra basisopsætningsafsnittet.
       want_assertions_encrypted: >
         Hvis aktiveret, kræves det, at identitetsudbyderen krypterer udsagnssvaret vha. det certifikatpar, man leverer.
       certificate: >
-        Angiv det X509 PEM-formaterede certifikat brugt af OpenProject til signering af SAML-anmodninger.
+        Angiv det X509 PEM-formaterede certifikat brugt af MarvalProjects til signering af SAML-anmodninger.
       private_key: >
         Angiv den private X509 PEM-formaterede nøgle for ovenstående certifikat. Dette skal være en RSA-privatnøgle.
       signature_method: >

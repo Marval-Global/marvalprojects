@@ -1,7 +1,7 @@
 uk:
   label_job_status_plural: "Статуси робіт"
   plugin_openproject_job_status:
-    name: "Статус завдання OpenProject"
+    name: "Статус завдання MarvalProjects"
     description: "Список і статус фонових завдань."
   job_status_dialog:
     download_starts: 'Завантаження має початись автоматично.'

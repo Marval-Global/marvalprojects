@@ -56,10 +56,10 @@ uk:
           attributes:
             host:
               authorization_header_missing: налаштовано не повністю. Екземпляр Nextcloud не отримує заголовка «Authorization», який необхідний для авторизації запитів API на основі маркерів власника. Перевірте свою конфігурацію сервера HTTP.
-              cannot_be_connected_to: недоступний. Переконайтеся, що до нього можна підключитися й додаток OpenProject Integration установлено.
+              cannot_be_connected_to: недоступний. Переконайтеся, що до нього можна підключитися й додаток MarvalProjects Integration установлено.
               minimal_nextcloud_version_unmet: '– не відповідає мінімальним вимогам до версії (Nextcloud 23 або новішої версії)'
               not_nextcloud_server: '– не є сервером Nextcloud.'
-              op_application_not_installed: схоже, у вас не встановлено додаток OpenProject integration. Спочатку встановіть його, а потім спробуйте знову.
+              op_application_not_installed: схоже, у вас не встановлено додаток MarvalProjects integration. Спочатку встановіть його, а потім спробуйте знову.
             password:
               invalid_password: недійсний.
               unknown_error: не вдалося перевірити. Перевірте підключення до сховища й повторіть спробу.
@@ -120,15 +120,15 @@ uk:
         rename_project_folder: 'Перейменування папки керованого проекту:'
     errors:
       messages:
-        error: Сталася неочікувана помилка. Щоб дізнатися більше, перегляньте журнали OpenProject або зверніться до адміністратора.
-        unauthorized: OpenProject не вдалося автентифікуватись у постачальника сховища. Переконайтеся, що ви маєте до нього доступ.
+        error: Сталася неочікувана помилка. Щоб дізнатися більше, перегляньте журнали MarvalProjects або зверніться до адміністратора.
+        unauthorized: MarvalProjects не вдалося автентифікуватись у постачальника сховища. Переконайтеся, що ви маєте до нього доступ.
       models:
         copy_project_folders_service:
           conflict: Папка %{destination_path} уже існує. Перериваємо процес, щоб уникнути перезапису.
-          error: Сталася неочікувана помилка. Щоб дізнатися більше, перегляньте журнали OpenProject або зверніться до адміністратора.
-          forbidden: OpenProject не вдалось отримати доступ до вихідної папки. Перевірте конфігурацію дозволів на доступ до сховища.
+          error: Сталася неочікувана помилка. Щоб дізнатися більше, перегляньте журнали MarvalProjects або зверніться до адміністратора.
+          forbidden: MarvalProjects не вдалось отримати доступ до вихідної папки. Перевірте конфігурацію дозволів на доступ до сховища.
           not_found: Розташування вихідного шаблону %{source_path} не знайдено.
-          unauthorized: OpenProject не вдалося пройти автентифікацію в постачальника сховища. Перевірте конфігурацію сховища.
+          unauthorized: MarvalProjects не вдалося пройти автентифікацію в постачальника сховища. Перевірте конфігурацію сховища.
         nextcloud_sync_service:
           attributes:
             add_user_to_group:
@@ -149,16 +149,16 @@ uk:
               conflict: 'Користувача %{user} не вдалося вилучити з групи «%{group}» з такої причини: %{reason}'
               failed_to_remove: 'Користувача %{user} не вдалося вилучити з групи «%{group}» з такої причини: %{reason}'
             rename_project_folder:
-              conflict: OpenProject could not rename the project folder to %{current_path} as a folder with the same name already exists
-              forbidden: Користувач OpenProject не має доступу до папки %{current_path}.
+              conflict: MarvalProjects could not rename the project folder to %{current_path} as a folder with the same name already exists
+              forbidden: Користувач MarvalProjects не має доступу до папки %{current_path}.
               not_found: "%{current_path} не знайдено."
             set_folders_permissions:
               permission_not_set: не вдалося встановити дозволи за шляхом %{path}.
-          error: Сталася неочікувана помилка. Щоб дізнатися більше, переконайтеся, що маєте доступ до свого екземпляра Nextcloud, і перевірте журнали працівників OpenProject.
+          error: Сталася неочікувана помилка. Щоб дізнатися більше, переконайтеся, що маєте доступ до свого екземпляра Nextcloud, і перевірте журнали працівників MarvalProjects.
           group_does_not_exist: "Групи «%{group}» не існує. Перевірте конфігурацію свого екземпляра Nextcloud."
-          insufficient_privileges: OpenProject не має достатніх привілеїв, щоб додати користувача %{user} в групу «%{group}». Перевірте налаштування своєї групи в Nextcloud.
+          insufficient_privileges: MarvalProjects не має достатніх привілеїв, щоб додати користувача %{user} в групу «%{group}». Перевірте налаштування своєї групи в Nextcloud.
           not_allowed: Nextcloud блокує запит.
-          unauthorized: Не вдалося синхронізувати OpenProject із Nextcloud. Перевірте своє сховище й конфігурацію Nextcloud.
+          unauthorized: Не вдалося синхронізувати MarvalProjects із Nextcloud. Перевірте своє сховище й конфігурацію Nextcloud.
           user_does_not_exist: "%{user} не існує в Nextcloud."
         one_drive_sync_service:
           attributes:
@@ -168,16 +168,16 @@ uk:
             hide_inactive_folders:
               permission_not_set: не вдалося встановити дозволи за шляхом %{path}.
             remote_folders:
-              request_error: OpenProject не вдалося отримати доступ до вашого диска %{drive_id}. Перевірте правильність конфігурації свого сховища.
+              request_error: MarvalProjects не вдалося отримати доступ до вашого диска %{drive_id}. Перевірте правильність конфігурації свого сховища.
             rename_project_folder:
-              conflict: OpenProject не вдалося змінити назву папки «%{current_path}» на «%{project_folder_name}», оскільки папка з такою назвою вже існує
-              forbidden: OpenProject не має дозволу на перейменування папки %{current_path}.
+              conflict: MarvalProjects не вдалося змінити назву папки «%{current_path}» на «%{project_folder_name}», оскільки папка з такою назвою вже існує
+              forbidden: MarvalProjects не має дозволу на перейменування папки %{current_path}.
               not_found: "%{current_path} не знайдено."
             set_folders_permissions:
               permission_not_set: не вдалося встановити дозволи за шляхом %{path}.
-          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check OpenProject worker logs for more information
-          not_allowed: OpenProject не має дозволу на доступ до вашого диска OneDrive. Перевірте дозволи, установлені в програмі Azure.
-          unauthorized: Не вдалося синхронізувати OpenProject із OneDrive. Перевірте конфігурацію свого сховища й додатку Azure.
+          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check MarvalProjects worker logs for more information
+          not_allowed: MarvalProjects не має дозволу на доступ до вашого диска OneDrive. Перевірте дозволи, установлені в програмі Azure.
+          unauthorized: Не вдалося синхронізувати MarvalProjects із OneDrive. Перевірте конфігурацію свого сховища й додатку Azure.
           user_does_not_exist: "%{user} не існує в Nextcloud."
         upload_link_service:
           not_found: Теку призначення %{folder} не вдалося знайти на %{storage_name}.
@@ -187,17 +187,17 @@ uk:
       done_complete_setup: Готово – завершити налаштування
       done_continue: Виконано, продовжити 
       open_storage: Відкрити файлове сховище
-      replace_oauth_application: Замінити OpenProject OAuth
+      replace_oauth_application: Замінити MarvalProjects OAuth
       replace_oauth_client: Замінити %{provider_type} OAuth
       save_and_continue: Зберегти та продовжити
       select_folder: Вибрати папку
     configuration_checks:
       oauth_client_incomplete:
-        nextcloud: Надайте OpenProject доступ до даних Nextcloud із використанням OAuth.
-        one_drive: Allow OpenProject to access Azure data using OAuth to connect OneDrive.
+        nextcloud: Надайте MarvalProjects доступ до даних Nextcloud із використанням OAuth.
+        one_drive: Allow MarvalProjects to access Azure data using OAuth to connect OneDrive.
       redirect_uri_incomplete:
         one_drive: Завершіть налаштування за допомогою правильного URI переспрямування.
-    confirm_replace_oauth_application: Ця дія призведе до скидання поточних облікових даних OAuth. Коли ви підтвердите дію, вам потрібно буде повторно ввести облікові дані в системі постачальника сховища. У такому разі всім віддаленим користувачам знадобиться знову пройти автентифікацію в OpenProject. Продовжити?
+    confirm_replace_oauth_application: Ця дія призведе до скидання поточних облікових даних OAuth. Коли ви підтвердите дію, вам потрібно буде повторно ввести облікові дані в системі постачальника сховища. У такому разі всім віддаленим користувачам знадобиться знову пройти автентифікацію в MarvalProjects. Продовжити?
     confirm_replace_oauth_client: Ця дія призведе до скидання поточних облікових даних OAuth. Коли ви підтвердите дію, вам потрібно буде ввести нові облікові дані в системі постачальника сховища. У такому разі всім користувачам знадобиться знову пройти автентифікацію в %{provider_type}. Продовжити?
     delete_warning:
       input_delete_confirmation: Введіть ім’я файлового сховища %{file_storage}, щоб підтвердити видалення.
@@ -212,7 +212,7 @@ uk:
     dependencies:
       nextcloud:
         group_folders_app: Папки групи
-        integration_app: Інтеграція OpenProject
+        integration_app: Інтеграція MarvalProjects
     enabled_in_projects:
       setup_incomplete_description: Це сховище ще не налаштоване. Завершіть налаштування, перш ніж вмикати його в кількох проєктах.
       setup_incomplete_header: Налаштування сховища не завершено
@@ -220,7 +220,7 @@ uk:
     file_storage_view:
       access_management:
         automatic_management: Доступ і папки з автоматичним керуванням
-        automatic_management_description: Дозвольте OpenProject автоматично створювати папки для проєкту й керувати доступом користувачів до них. Радимо зробити це, адже в такому разі кожен учасник команди завжди матиме належні дозволи на доступ.
+        automatic_management_description: Дозвольте MarvalProjects автоматично створювати папки для проєкту й керувати доступом користувачів до них. Радимо зробити це, адже в такому разі кожен учасник команди завжди матиме належні дозволи на доступ.
         description: Виберіть тип керування доступом користувачів і створенням папок. Рекомендуємо використовувати «Автоматичне керування доступом». Це забезпечує більш організовану структуру й гарантує доступ усім відповідним користувачам.
         manual_management: Доступ і папки з ручним керуванням
         manual_management_description: Створюйте папки для кожного проєкту й керуйте ними самостійно. Вам знадобиться вручну надавати доступ відповідним користувачам.
@@ -231,7 +231,7 @@ uk:
       general_information: Загальна інформація
       oauth_configuration: Конфігурація OAuth
       one_drive_oauth: Azure OAuth
-      openproject_oauth: OpenProject OAuth
+      openproject_oauth: MarvalProjects OAuth
       project_folders: Папки проєкту
       redirect_uri: URI переспрямування
       storage_audience_blank: Аудиторію не налаштовано.
@@ -298,7 +298,7 @@ uk:
         nc_host_not_found: Сервер Nextcloud  не знайдено за вказаною URL-адресою. Перевірте конфігурацію.
         nc_oauth_request_not_found: Кінцеву точку для отримання підключеного зараз користувача не знайдено. Щоб дізнатися більше, перевірте журнали сервера.
         nc_oauth_request_unauthorized: Поточний користувач не має дозволу на доступ до віддаленого файлового сховища. Щоб дізнатися більше, перевірте журнали сервера.
-        nc_oauth_token_missing: OpenProject не може перевірити з’єднання на рівні користувача з Nextcloud, оскільки користувач досі не зв’язав свій обліковий запис Nextcloud.
+        nc_oauth_token_missing: MarvalProjects не може перевірити з’єднання на рівні користувача з Nextcloud, оскільки користувач досі не зв’язав свій обліковий запис Nextcloud.
         nc_unexpected_content: У теці керованої групи знайдено неочікуваний вміст.
         nc_userless_access_denied: Налаштований пароль застосунку недійсний.
         not_configured: Не вдалося перевірити підключення. Спочатку налаштуйте конфігурацію.
@@ -308,7 +308,7 @@ uk:
         od_drive_id_not_found: Налаштований ідентифікатор Drive ID не знайдено. Перевірте конфігурацію.
         od_oauth_request_not_found: Кінцеву точку для отримання підключеного зараз користувача не знайдено. Щоб дізнатися більше, перевірте журнали сервера.
         od_oauth_request_unauthorized: Поточний користувач не має дозволу на доступ до віддаленого файлового сховища. Щоб дізнатися більше, перевірте журнали сервера.
-        od_oauth_token_missing: OpenProject cannot test the user level communication with OneDrive as the user did not yet link their Microsoft account.
+        od_oauth_token_missing: MarvalProjects cannot test the user level communication with OneDrive as the user did not yet link their Microsoft account.
         od_tenant_id_wrong: Налаштований ідентифікатор каталогу (клієнта) недійсний. Перевірте конфігурацію.
         od_test_folder_exists: Папка %{folder_name}, необхідна для тестування, уже існує. Видаліть її та повторіть спробу.
         od_unexpected_content: На диску знайдено неочікуваний контент.
@@ -350,7 +350,7 @@ uk:
       project_folder_bulk: Папка проєкту – це папка за замовчуванням, у якій зберігаються додані файли для всіх вибраних проєктів. Ви можете змінити її окремо в налаштуваннях кожного проєкту. Однак користувачі все одно можуть додавати файли в інші папки.
     instructions:
       all_available_storages_already_added: У проєкт уже додано всі доступні сховища.
-      authentication_method: Спосіб автентифікації запитів між OpenProject і сховищем.
+      authentication_method: Спосіб автентифікації запитів між MarvalProjects і сховищем.
       automatic_folder: Буде автоматично створено кореневу папку для цього проєкту й налаштовано дозволи на доступ для кожного учасника проєкту.
       empty_project_folder_validation: Щоб продовжити, потрібно вибрати папку.
       existing_manual_folder: Ви можете призначити наявну папку як кореневу папку для цього проєкту. Однак дозволи автоматично не налаштовуються, і адміністратор має вручну надати користувачам відповідні дозволи на доступ. Вибрану папку зможуть використовувати кілька проєктів.
@@ -359,8 +359,8 @@ uk:
       name: Назвіть своє сховище, щоб користувачі могли відрізняти його від інших сховищ.
       new_storage: Щою дізнатися більше, ознайомтеся з нашою документацією щодо <a target='_blank' href='%{provider_link}'>налаштування інтеграції файлового сховища %{provider_name}</a>.
       nextcloud:
-        application_link_text: Integration OpenProject
-        integration: Адміністрування Nextcloud / OpenProject
+        application_link_text: Integration MarvalProjects
+        integration: Адміністрування Nextcloud / MarvalProjects
         oauth_configuration: Скопіюйте ці значення з додатка %{application_link_text}.
         provider_configuration: Перш ніж виконувати налаштування, переконайтеся, що маєте права адміністратора у своєму екземплярі Nextcloud і що встановлено %{application_link_text}.
         storage_audience: ID клієнта, який використовує екземпляр Nextcloud для обміну даними з постачальником ідентифікаційних даних.
@@ -370,7 +370,7 @@ uk:
       no_storage_set_up: Файлові сховища поки не створено.
       not_logged_into_storage: Шоб вибрати папку проєкту, спочатку ввійдіть
       oauth_application_details: Секретний ключ клієнта стане недоступним, коли ви закриєте це вікно. Скопіюйте ці значення в %{oauth_application_details_link}.
-      oauth_application_details_link_text: Налаштування інтеграції Nextcloud OpenProject
+      oauth_application_details_link_text: Налаштування інтеграції Nextcloud MarvalProjects
       one_drive:
         application_link_text: Портал Azure
         copy_redirect_uri: Копіювати URI переспрямування
@@ -389,7 +389,7 @@ uk:
       setting_up_storages: Щоб створити файлові сховища, перейдіть у
       setting_up_storages_non_admin: Адміністратори можуть налаштовувати файлові сховища в розділі «Адміністрування» / «Файлові сховища».
       type: 'Перш ніж виконувати налаштування, переконайтеся, що маєте права адміністратора у своєму екземплярі Nextcloud і що встановлено цей додаток:'
-      type_link_text: "«Інтеграція OpenProject»"
+      type_link_text: "«Інтеграція MarvalProjects»"
     label_active: Активний
     label_add_new_storage: Додати нове сховище
     label_automatic_folder: Нова папка з автоматичним керуванням дозволами
@@ -413,8 +413,8 @@ uk:
     label_no_selected_folder: Папку не вибрано
     label_no_specific_folder: Немає конкретної папки
     label_oauth_client_id: Ідентифікатор клієнта OAuth
-    label_openproject_oauth_application_id: Ідентифікатор клієнта OpenProject OAuth
-    label_openproject_oauth_application_secret: Секрет клієнта OpenProject OAuth
+    label_openproject_oauth_application_id: Ідентифікатор клієнта MarvalProjects OAuth
+    label_openproject_oauth_application_secret: Секрет клієнта MarvalProjects OAuth
     label_project_folder: Папка проєкту
     label_provider: Постачальник
     label_redirect_uri: URI переспрямування
@@ -454,7 +454,7 @@ uk:
         title: Налаштування інтеграції завершено
       timeout:
         link_text: стан справності конфігурації файлового сховища
-        subtitle: Додатку OpenProject не вдалося надати вам доступ до папки проєкту протягом очікуваного періоду. Повторіть спробу.<br><br> Якщо ця проблема не зникне, зверніться до адміністратора OpenProject і попросіть його перевірити %{storages_health_link}.
+        subtitle: Додатку MarvalProjects не вдалося надати вам доступ до папки проєкту протягом очікуваного періоду. Повторіть спробу.<br><br> Якщо ця проблема не зникне, зверніться до адміністратора MarvalProjects і попросіть його перевірити %{storages_health_link}.
       waiting:
         subtitle: Трохи зачекайте. Це може зайняти деякий час...
         title: Ми налаштовуємо ваші дозволи для папки проєкту.
@@ -464,9 +464,9 @@ uk:
         subtitle: Додайте зовнішнє файлове сховище, щоб вивантажувати файли, створювати посилання й керувати файлами в пакетах робіт.
       managed_project_folders:
         subtitle: |-
-          Дозвольте OpenProject автоматично створювати папки для проєкту. Радимо зробити це, адже в такому разі кожен учасник
+          Дозвольте MarvalProjects автоматично створювати папки для проєкту. Радимо зробити це, адже в такому разі кожен учасник
           команди завжди матиме належні дозволи на доступ.
-        subtitle_short: Дозвольте автоматично створювати папки для кожного проєкту в OpenProject.
+        subtitle_short: Дозвольте автоматично створювати папки для кожного проєкту в MarvalProjects.
         title: Папки проєкту з автоматичним керуванням
       project_settings:
         delete: Видалити файлове сховище
@@ -500,10 +500,10 @@ uk:
     storage_audience:
       documentation_intro: Ознайомтеся з нашою документацією, щоб дізнатися більше про наведені нижче параметри й конфігурацію постачальника ідентифікаційних даних.
       idp:
-        helptext: OpenProject використовуватиме маркер доступу, отриманий від постачальника ідентифікаційних даних під час входу, щоб перевіряти запити до сховища, і не намагатиметься отримати інший маркер.
+        helptext: MarvalProjects використовуватиме маркер доступу, отриманий від постачальника ідентифікаційних даних під час входу, щоб перевіряти запити до сховища, і не намагатиметься отримати інший маркер.
         label: Використовувати маркер доступу, отриманий під час входу користувача
       manual:
-        helptext: OpenProject отримає маркер у постачальника ідентифікаційних даних для визначеної аудиторії.
+        helptext: MarvalProjects отримає маркер у постачальника ідентифікаційних даних для визначеної аудиторії.
         label: Вручну вказати аудиторію, для якої потрібно отримати маркер доступу
     storage_list_blank_slate:
       description: Додайте сховище, щоб воно з’явилося тут.
@@ -511,6 +511,6 @@ uk:
     successful_storage_connection: Сховище підключено. Щоб користуватися ним, активуйте модуль і визначене сховище в налаштуваннях кожного потрібного проєкту.
     upsell:
       description: |-
-        Integrate your OneDrive as a file storage with OpenProject. Upload files and link them directly to
+        Integrate your OneDrive as a file storage with MarvalProjects. Upload files and link them directly to
         work packages in a project.
       title: OneDrive integration

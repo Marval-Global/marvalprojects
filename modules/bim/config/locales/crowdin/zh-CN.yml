@@ -1,8 +1,8 @@
 #English strings go here for Rails i18n
 zh-CN:
   plugin_openproject_bim:
-    name: "OpenProject BIM 和 BCF 功能"
-    description: "该 OpenProject 插件介绍了 BIM 和 BCF 功能。"
+    name: "MarvalProjects BIM 和 BCF 功能"
+    description: "该 MarvalProjects 插件介绍了 BIM 和 BCF 功能。"
   bim:
     label_bim: 'BIM'
   bcf:
@@ -75,7 +75,7 @@ zh-CN:
   oauth:
     scopes:
       bcf_v2_1: "BCF v2.1 API 的完全访问权限"
-      bcf_v2_1_text: "应用程序将获得 OpenProject BCF API v2.1 的完全读写访问权限来代表您执行操作。"
+      bcf_v2_1_text: "应用程序将获得 MarvalProjects BCF API v2.1 的完全读写访问权限来代表您执行操作。"
   activerecord:
     models:
       bim/ifc_models/ifc_model: "IFC 模型"

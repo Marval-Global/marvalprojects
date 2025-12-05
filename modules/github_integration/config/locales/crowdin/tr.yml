@@ -43,13 +43,13 @@ tr:
   notice_deploy_target_created: Dağıtım hedefi oluşturuldu
   notice_deploy_target_destroyed: Dağıtım hedefi silindi
   plugin_openproject_github_integration:
-    name: "OpenProject GitHub Entegrasyonu"
-    description: "OpenProject'i ve GitHub'ı daha iyi iş akışları için birleştirir"
+    name: "MarvalProjects GitHub Entegrasyonu"
+    description: "MarvalProjects'i ve GitHub'ı daha iyi iş akışları için birleştirir"
   project_module_github: "GitHub"
   permission_show_github_content: "Github içeriğini göster"
-  permission_introspection: Çalışan OpenProject çekirdek sürümünü okuyun ve SHA oluşturun
+  permission_introspection: Çalışan MarvalProjects çekirdek sürümünü okuyun ve SHA oluşturun
   text_deploy_target_type_info: >
-    Şimdiye kadar sadece OpenProject'in kendisini destekliyoruz.
+    Şimdiye kadar sadece MarvalProjects'in kendisini destekliyoruz.
   text_deploy_target_api_key_info: >
-    Global iç gözlem iznine sahip bir kullanıcıya ait bir OpenProject [API anahtarı](docs_url).
+    Global iç gözlem iznine sahip bir kullanıcıya ait bir MarvalProjects [API anahtarı](docs_url).
   text_pull_request_deployed_to: "%{pr_link} %{deploy_target_link} adresine yüklendi"

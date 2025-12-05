@@ -21,8 +21,8 @@
 #++
 vi:
   plugin_openproject_documents:
-    name: "Tài liệu OpenProject"
-    description: "Một plugin OpenProject cho phép tạo tài liệu trong các dự án."
+    name: "Tài liệu MarvalProjects"
+    description: "Một plugin MarvalProjects cho phép tạo tài liệu trong các dự án."
   activerecord:
     models:
       document: "Tài liệu"

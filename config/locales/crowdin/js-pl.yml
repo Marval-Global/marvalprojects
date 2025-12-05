@@ -52,7 +52,7 @@ pl:
         Nowa kopia zapasowa zastąpi poprzednią. Można żądać tylko ograniczonej liczby kopii zapasowych dziennie.
       last_backup: Ostatnia kopia zapasowa
       last_backup_from: 'Ostatnia kopia zapasowa: z'
-      title: Kopia zapasowa OpenProject
+      title: Kopia zapasowa MarvalProjects
       options: Opcje
       include_attachments: Dołącz załączniki
       download_backup: Pobierz kopię zapasową
@@ -510,7 +510,7 @@ pl:
         next: "Następny"
         got_it: "OK"
       steps:
-        help_menu: "Menu Pomoc (?) zawiera <b>dodatkowe zasoby pomocy</b>. Tutaj znajdziesz przewodnik użytkownika, pomocne filmy instruktażowe i nie tylko. <br> Życzymy miłej pracy z OpenProject!"
+        help_menu: "Menu Pomoc (?) zawiera <b>dodatkowe zasoby pomocy</b>. Tutaj znajdziesz przewodnik użytkownika, pomocne filmy instruktażowe i nie tylko. <br> Życzymy miłej pracy z MarvalProjects!"
         members: "Zaproś nowych <b>członków</b> do swojego projektu."
         quick_add_button: "Kliknij ikonę plus (+) w nawigacji nagłówka, aby <b>utworzyć nowy projekt</b> lub <b>zaprosić współpracowników</b>."
         sidebar_arrow: "Użyj strzałki powrotu w lewym górnym rogu, aby wrócić do <b>menu głównego</b> projektu."

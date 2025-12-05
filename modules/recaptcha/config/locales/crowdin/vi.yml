@@ -1,7 +1,7 @@
 #English strings go here for Rails i18n
 vi:
   plugin_openproject_recaptcha:
-    name: "OpenProject ReCaptcha"
+    name: "MarvalProjects ReCaptcha"
     description: "Mô-đun này cung cấp các kiểm tra recaptcha trong quá trình đăng nhập."
   recaptcha:
     label_recaptcha: "reCAPTCHA"

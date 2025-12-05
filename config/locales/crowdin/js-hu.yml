@@ -52,7 +52,7 @@ hu:
         Egy új biztonsági mentés felülír minden előzőt. Naponta csak korlátozott számú biztonsági mentés kérhető.
       last_backup: 'Utolsó biztonsági mentés:'
       last_backup_from: 'Legutóbbi biztonsági mentés: '
-      title: "Az OpenProject biztonsági mentése\n"
+      title: "Az MarvalProjects biztonsági mentése\n"
       options: Beállítások
       include_attachments: "Mellékletek csatolása\n"
       download_backup: Biztonsági mentés letöltése
@@ -509,7 +509,7 @@ hu:
         next: " Következő"
         got_it: "Rendben"
       steps:
-        help_menu: "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!"
+        help_menu: "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with MarvalProjects!"
         members: "Új <b>tagok</b> meghívása, hogy a projekthez csatlakozzanak."
         quick_add_button: "Kattintson a fejlécben található (+) ikonra hogy   <b>create a new project</b> vagy  <b>invite coworkers</b>."
         sidebar_arrow: "Használja a vissza nyilat bal felül hogy visszatérjen a projektekhez <b>main menu</b>.."

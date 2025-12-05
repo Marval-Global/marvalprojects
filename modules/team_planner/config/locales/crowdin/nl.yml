@@ -1,7 +1,7 @@
 #English strings go here
 nl:
   plugin_openproject_team_planner:
-    name: "OpenProject Teamplanner"
+    name: "MarvalProjects Teamplanner"
     description: "Biedt teamplannerweergaven."
   permission_view_team_planner: "Bekijk team planner"
   permission_manage_team_planner: "Teamplanner beheren"

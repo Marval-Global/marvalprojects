@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 ja:
   plugin_openproject_two_factor_authentication:
-    name: "OpenProject の2要素認証"
+    name: "MarvalProjects の2要素認証"
     description: >-
-      このOpenProjectプラグインは、TOTP標準(Google Authenticator)を介したワンタイムパスワード、またはSMSや音声通話を介したユーザーの携帯電話への送信により、二要素認証を使用してユーザーを認証します。
+      このMarvalProjectsプラグインは、TOTP標準(Google Authenticator)を介したワンタイムパスワード、またはSMSや音声通話を介したユーザーの携帯電話への送信により、二要素認証を使用してユーザーを認証します。
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ ja:
       only_sms_allowed: "他のユーザーにはSMS配信のみ設定可能です。"
     upsell:
       title: "2要素認証"
-      description: "すべてのプロジェクトメンバーに2要素認証を提供(または強制)することで、OpenProjectインスタンスのセキュリティを強化します。"
+      description: "すべてのプロジェクトメンバーに2要素認証を提供(または強制)することで、MarvalProjectsインスタンスのセキュリティを強化します。"
     backup_codes:
       none_found: このアカウントのバックアップコードはありません。
       singular: バックアップコード

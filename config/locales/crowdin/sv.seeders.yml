@@ -495,7 +495,7 @@ sv:
         item_6:
           name: Bugg
       welcome:
-        title: Välkommen till OpenProject!
+        title: Välkommen till MarvalProjects!
         text: |
           MarvalProjects is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
 

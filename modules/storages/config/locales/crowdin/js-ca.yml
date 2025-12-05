@@ -75,12 +75,12 @@ ca:
           403: >
             El fitxer (%{fileName}) no s'ha pogut carregar a causa de les restriccions del sistema. Si us plau, contacta el teu administrador per a més informació.
           413: >
-            El fitxer (%{fileName}) és més gran del que OpenProject pot carregar a %{storageType}. Pots carregar-lo directament a %{storageType} i després vincular-lo.
+            El fitxer (%{fileName}) és més gran del que MarvalProjects pot carregar a %{storageType}. Pots carregar-lo directament a %{storageType} i després vincular-lo.
           507: >
             El fitxer (%{fileName}) és més gran que la quota d'emmagatzematge permesa. Si us plau, contacta el teu administrador per a modificar aquesta quota.
           detail:
             nextcloud: >
-              Si us plau, comprova l'última versió de l'aplicació Nextcloud "OpenProject Integration" estigui instal·lada i contacta el teu administrador per més informació.
+              Si us plau, comprova l'última versió de l'aplicació Nextcloud "MarvalProjects Integration" estigui instal·lada i contacta el teu administrador per més informació.
         link_uploaded_file_error: >
           S'ha produït un error en enllaçar els fitxers carregats recentment "%{fileName}" al paquet de treball %{workPackageId}.
         tooltip:

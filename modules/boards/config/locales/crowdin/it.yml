@@ -1,7 +1,7 @@
 #English strings go here
 it:
   plugin_openproject_boards:
-    name: "Bacheche OpenProject"
+    name: "Bacheche MarvalProjects"
     description: "Fornisce visualizzazioni a bacheca."
   permission_show_board_views: "Mostra schede"
   permission_manage_board_views: "Gestisci schede"

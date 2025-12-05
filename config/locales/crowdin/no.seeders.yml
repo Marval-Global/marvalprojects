@@ -148,7 +148,7 @@
                 options:
                   name: Komme i gang
                   text: |
-                    Vi er glade for at du ble med! Vi foreslår å prøve noen ting for å komme i gang i OpenProject.
+                    Vi er glade for at du ble med! Vi foreslår å prøve noen ting for å komme i gang i MarvalProjects.
 
                     Oppdag de viktigste funksjonene med vår [Guided Tour]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true).
 
@@ -319,7 +319,7 @@
                 options:
                   name: Komme i gang
                   text: |
-                    Vi er glad for at du er med! Vi foreslår å prøve et par ting for å komme i gang i OpenProject.
+                    Vi er glad for at du er med! Vi foreslår å prøve et par ting for å komme i gang i MarvalProjects.
 
                     _Prøv følgende trinn:_[Backlogs]. *Inviter nye medlemmer til prosjektet ditt*: &rightarrow; Gå til [Members]({{opSetting:base_url}}/projects/your-scrum-project/members) i prosjektmenyen.
                     2. *Vis dine produkt backlog og print backlogs*: &rightarrow; Gå til [Backlogs]({{opSetting:base_url}}/projects/your-scrum-project/backlogs) i prosjektmenyen.
@@ -491,9 +491,9 @@
         item_6:
           name: Avvik
       welcome:
-        title: Velkommen til OpenProject!
+        title: Velkommen til MarvalProjects!
         text: |
-          OpenProject er den ledende programvaren for prosjektstyring med åpen kildekode. Det støtter klassisk, dynamisk og hybrid prosjektstyring og gir deg full kontroll over dine data.
+          MarvalProjects er den ledende programvaren for prosjektstyring med åpen kildekode. Det støtter klassisk, dynamisk og hybrid prosjektstyring og gir deg full kontroll over dine data.
 
           Kjernefunksjoner og bruk kasser:
 
