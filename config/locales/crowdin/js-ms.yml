@@ -52,7 +52,7 @@ ms:
         Sandaran baharu akan mengatasi mana-mana yang terdahulu. Hanya beberapa bilangan sandaran yang terhad boleh diminta mengikut hari.
       last_backup: Sandaran terakhir
       last_backup_from: Sandaran terakhir daripada
-      title: Sandaran MarvalProjects
+      title: Sandaran OpenProject
       options: Pilihan
       include_attachments: Sertakan lampiran
       download_backup: Muat turun sandaran
@@ -510,7 +510,7 @@ ms:
         next: "Seterusnya"
         got_it: "Faham"
       steps:
-        help_menu: "Menu Bantuan (?) menyediakan <b>sumber bantuan tambahan</b>. Di sini anda akan menjumpai panduan pengguna, video panduan dan lebih lagi. <br> Nikmati kerja anda di MarvalProjects!"
+        help_menu: "Menu Bantuan (?) menyediakan <b>sumber bantuan tambahan</b>. Di sini anda akan menjumpai panduan pengguna, video panduan dan lebih lagi. <br> Nikmati kerja anda di OpenProject!"
         members: "Jemput <b>ahli</b> baharu untuk sertai projek anda."
         quick_add_button: "Klik ikon tambah (+) dalam navigasi pengepala untuk <b>cipta projek baharu</b> atau untuk <b>jemput rakan sekerja</b>."
         sidebar_arrow: "Guna anak panah kembali di sudut kiri atas untuk kembali ke <b>menu utama</b> projek."
@@ -707,7 +707,7 @@ ms:
         confirm_reset: >
           Amaran: Adakah anda pasti anda ingin set semula konfigurasi borang? Ini akan set semula atribut kumpulan asal mereka dan menyahdayakan SEMUA ruang tersuai.
         upgrade_to_ee: "Naik taraf edisi Enterprise di premis"
-        upgrade_to_ee_text: "Wah! Jika anda perlukan tambahan ini anda sungguh pro! Bolehkah anda menyokong kami, pembangun MarvalProjects, dengan menjadi pelanggan edisi Enterprise?"
+        upgrade_to_ee_text: "Wah! Jika anda perlukan tambahan ini anda sungguh pro! Bolehkah anda menyokong kami, pembangun OpenProject, dengan menjadi pelanggan edisi Enterprise?"
         more_information: "Maklumat lanjut"
         nevermind: "Tidak mengapa"
     time_entry:

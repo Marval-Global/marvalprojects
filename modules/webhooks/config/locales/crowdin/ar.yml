@@ -1,7 +1,7 @@
 ar:
   plugin_openproject_webhooks:
-    name: "MarvalProjects Webhooks"
-    description: "يوفر واجهة برمجة تطبيقات إضافية لدعم MarvalProjects webhooks من أجل تكامل أفضل مع الطرف الثالث."
+    name: "OpenProject Webhooks"
+    description: "يوفر واجهة برمجة تطبيقات إضافية لدعم OpenProject webhooks من أجل تكامل أفضل مع الطرف الثالث."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -66,4 +66,4 @@ ar:
           title: 'Selected projects'
         secret:
           description: >
-            If set, this secret value is used by MarvalProjects to sign the webhook payload.
+            If set, this secret value is used by OpenProject to sign the webhook payload.

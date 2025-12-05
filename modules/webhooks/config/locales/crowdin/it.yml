@@ -1,7 +1,7 @@
 it:
   plugin_openproject_webhooks:
-    name: "Webhook MarvalProjects"
-    description: "Fornisce un'API plug-in per supportare i webhook MarvalProjects per una migliore integrazione di terze parti."
+    name: "Webhook OpenProject"
+    description: "Fornisce un'API plug-in per supportare i webhook OpenProject per una migliore integrazione di terze parti."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -35,7 +35,7 @@ it:
         internal_comment: "Commento interno"
       explanation:
         text: >
-          Al verificarsi di un evento come la creazione di un pacchetto di lavoro o di un aggiornamento su un progetto, MarvalProjects invierà una richiesta POST agli endpoint web configurati. Spesso, l'evento viene inviato dopo che il %{link} è passato.
+          Al verificarsi di un evento come la creazione di un pacchetto di lavoro o di un aggiornamento su un progetto, OpenProject invierà una richiesta POST agli endpoint web configurati. Spesso, l'evento viene inviato dopo che il %{link} è passato.
         link: periodo di aggregazione configurato
       status:
         enabled: 'Webhook abilitato'
@@ -66,4 +66,4 @@ it:
           title: 'Progetti selezionati'
         secret:
           description: >
-            Se impostato, questo valore segreto è utilizzato da MarvalProjects per firmare il payload del webhook.
+            Se impostato, questo valore segreto è utilizzato da OpenProject per firmare il payload del webhook.

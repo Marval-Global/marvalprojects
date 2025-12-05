@@ -21,8 +21,8 @@
 #++
 lt:
   plugin_openproject_backlogs:
-    name: "MarvalProjects žurnalai"
-    description: "Šis modulis prideda funkcionalumą, leidžianti agile komandoms dirbti su MarvalProjects Scrum projektuose."
+    name: "OpenProject žurnalai"
+    description: "Šis modulis prideda funkcionalumą, leidžianti agile komandoms dirbti su OpenProject Scrum projektuose."
   activerecord:
     attributes:
       work_package:

@@ -1,6 +1,6 @@
 zh-CN:
   plugin_openproject_xls_export:
-    name: "MarvalProjects XLS 导出"
+    name: "OpenProject XLS 导出"
     description: "将问题列表导出为 Excel 电子表格 (.xls)"
   export_to_excel: "导出 XLS"
   print_with_description: "带说明的打印预览"

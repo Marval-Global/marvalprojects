@@ -1,7 +1,7 @@
 #English strings go here
 pt-PT:
   plugin_openproject_boards:
-    name: "Quadros do MarvalProjects"
+    name: "Quadros do OpenProject"
     description: "Fornece vistas de quadro."
   permission_show_board_views: "Ver quadros"
   permission_manage_board_views: "Gerir quadros"

@@ -21,8 +21,8 @@
 #++
 ru:
   plugin_openproject_documents:
-    name: "Документы MarvalProjects"
-    description: "Плагин MarvalProjects позволяет создавать документы в проектах."
+    name: "Документы OpenProject"
+    description: "Плагин OpenProject позволяет создавать документы в проектах."
   activerecord:
     models:
       document: "Документ"

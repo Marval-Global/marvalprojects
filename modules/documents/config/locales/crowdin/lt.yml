@@ -21,8 +21,8 @@
 #++
 lt:
   plugin_openproject_documents:
-    name: "MarvalProjects dokumentai"
-    description: "MarvalProjects priedas, leidžiantis kurti dokumentus projektuose."
+    name: "OpenProject dokumentai"
+    description: "OpenProject priedas, leidžiantis kurti dokumentus projektuose."
   activerecord:
     models:
       document: "Dokumentas"

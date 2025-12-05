@@ -1,7 +1,7 @@
 vi:
   label_job_status_plural: "Tình trạng công việc"
   plugin_openproject_job_status:
-    name: "Tình trạng công việc MarvalProjects"
+    name: "Tình trạng công việc OpenProject"
     description: "Danh sách và trạng thái của các công việc nền."
   job_status_dialog:
     download_starts: 'Quá trình tải xuống sẽ tự động bắt đầu.'

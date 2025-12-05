@@ -131,13 +131,13 @@ sl:
       edit:
         label_delete_scim_client: "Delete SCIM client"
       form:
-        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in MarvalProjects."
-        authentication_method_description_html: "This is how the SCIM client authenticates at MarvalProjects. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
+        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in OpenProject."
+        authentication_method_description_html: "This is how the SCIM client authenticates at OpenProject. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
         description_html: 'Please refer to our <a href="%{docs_url}">documentation on configuring SCIM clients</a> for more information on these configuration options.'
         jwt_sub_description_html: 'For example, for Keycloak, this is the UUID of the service account  associated with the SCIM client. Consult <a href="%{docs_url}">our documentation</a> to learn how to find  the subject claim for your use case.'
         name_description: "Choose a name that will help other admins better understand why this client was configured."
       index:
-        description: "SCIM clients configured here are able to interact with MarvalProjects SCIM server API to provision, update, and deprovision user accounts and groups."
+        description: "SCIM clients configured here are able to interact with OpenProject SCIM server API to provision, update, and deprovision user accounts and groups."
         label_create_button: "Add SCIM client"
       new:
         title: "New SCIM client"
@@ -145,14 +145,14 @@ sl:
         confirm_button: "Revoke"
         title: "Revoke static token"
         heading: "Are you sure you want to revoke this token?"
-        description: "The SCIM client that uses this token will no longer be able to access MarvalProjects's SCIM server API."
+        description: "The SCIM client that uses this token will no longer be able to access OpenProject's SCIM server API."
       table_component:
         blank_slate:
           title: "No SCIM clients configured yet"
           description: "Add clients to see them here"
         user_count: "Users"
       token_list_component:
-        description: "The tokens you generate here can be passed by a SCIM client to access the MarvalProjects SCIM API."
+        description: "The tokens you generate here can be passed by a SCIM client to access the OpenProject SCIM API."
         heading: "Tokens"
         label_add_token: "Token"
         label_aria_add_token: "Add token"
@@ -204,37 +204,37 @@ sl:
       name: Samovoljno ime povezave LDAP
       host: Ime gostitelja LDAP ali IP naslov
       login_map: Atributni ključ v LDAP, ki se uporablja za identifikacijo edinstvene uporabniške prijave. Običajno bo to "uid" ali "samImeRačuna".
-      generic_map: Atributni ključ v LDAP, ki je preslikan na MarvalProjects '%{attribute}' atribut
-      admin_map_html: "Neobvezno: atributski ključ v LDAP-u, ki <strong> če je prisoten </strong>, uporabnika MarvalProjects označi kot skrbnika. Pustite prazno, ko ste v dvomih."
+      generic_map: Atributni ključ v LDAP, ki je preslikan na OpenProject '%{attribute}' atribut
+      admin_map_html: "Neobvezno: atributski ključ v LDAP-u, ki <strong> če je prisoten </strong>, uporabnika OpenProject označi kot skrbnika. Pustite prazno, ko ste v dvomih."
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br>
-        Example: uid=MarvalProjects,ou=system,dc=example,dc=com
+        Example: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Vnesite geslo za vezavo uporabnika sistema
       base_dn: |
-        Vnesite Base DN poddrevesa v LDAP, če želite, da vam MarvalProjects išče uporabnike ter skupine.
-        MarvalProjects bo filtriral samo za podana uporabniška imena v tem podrevjuju.
+        Vnesite Base DN poddrevesa v LDAP, če želite, da vam OpenProject išče uporabnike ter skupine.
+        OpenProject bo filtriral samo za podana uporabniška imena v tem podrevjuju.
         Primer: ou=users,dc=example,dc=com
       filter_string: |
         Dodajte neobvezni RFC4515 filter, ki se bo uporabil za rezultate, vrnjene za uporabnike, filtrirane v LDAP.
-        S tem lahko omejite nabor uporabnikov, ki jih MarvalProjects najde za preverjanje pristnosti in skupinsko sinhronizacijo.
+        S tem lahko omejite nabor uporabnikov, ki jih OpenProject najde za preverjanje pristnosti in skupinsko sinhronizacijo.
       filter_string_concat: |
-        MarvalProjects bo vedno filtriral atribut za prijavo, ki ga je uporabnik določil za identifikacijo zapisa. Če vstavite filter tu,
+        OpenProject bo vedno filtriral atribut za prijavo, ki ga je uporabnik določil za identifikacijo zapisa. Če vstavite filter tu,
         bo združen z AND. Privzeto bo kot element (objectClass = *) uporabljen kot filter.
       onthefly_register: |
-        Če potrdite to polje, bo MarvalProjects samodejno ustvaril nove uporabnike iz njihovih vnosov LDAP, ko se prvič potrdijo z MarvalProjects.
-        Pustite to polje brez potrditve, da samo obstoječim računom v programu MarvalProjects dovolite avtentikacijo preko LDAP.
+        Če potrdite to polje, bo OpenProject samodejno ustvaril nove uporabnike iz njihovih vnosov LDAP, ko se prvič potrdijo z OpenProject.
+        Pustite to polje brez potrditve, da samo obstoječim računom v programu OpenProject dovolite avtentikacijo preko LDAP.
     connection_encryption: "Šifriranje povezave"
     encryption_details: "LDAPS / STARTTLS options"
     system_account: "Sistemski račun"
     system_account_legend: |
-      MarvalProjects zahteva dostop "samo za branje" prek sistemskega računa za iskanje uporabnikov in skupin v vašem drevesu LDAP.
+      OpenProject zahteva dostop "samo za branje" prek sistemskega računa za iskanje uporabnikov in skupin v vašem drevesu LDAP.
       V naslednjem razdelku navedite povezovalne poverilnice za tega uporabnika sistema.
     ldap_details: "LDAP nastavitve"
     user_settings: "Povezovanje lastnosti"
     user_settings_legend: |
-      Naslednja polja so povezana s tem, kako so uporabniki v MarvalProjects ustvarjeni iz vnosov LDAP in
-      kateri atributi LDAP se uporabljajo za definiranje atributov uporabnika MarvalProjects (preslikava atributov).
+      Naslednja polja so povezana s tem, kako so uporabniki v OpenProject ustvarjeni iz vnosov LDAP in
+      kateri atributi LDAP se uporabljajo za definiranje atributov uporabnika OpenProject (preslikava atributov).
     tls_mode:
       plain: "Brez"
       simple_tls: "LDAP-i"
@@ -1257,7 +1257,7 @@ sl:
         confirmation: "se ne ujema %{attribute}"
         could_not_be_copied: "%{dependency} ni bilo mogoče (v celoti) kopirati."
         does_not_exist: "ne obstaja"
-        error_enterprise_only: "%{action} is only available in the MarvalProjects Enterprise edition"
+        error_enterprise_only: "%{action} is only available in the OpenProject Enterprise edition"
         error_unauthorized: "morda ni mogoče dostopati."
         error_readonly: "poskušano je bilo napisati, vendar ni mogoče pisati."
         error_conflict: "Medtem so bili podatki posodobljeni od vsaj še enega uporabnika."
@@ -1864,7 +1864,7 @@ sl:
       heading_reset: "Ponastavi žeton za varnostno kopiranje"
       heading_create: "Ustvari žeton za varnostno kopiranje"
       implications: >
-        Aktiviranje varnostnih kopij bo kateremu koli uporabniku z zahtevanimi dovoljenji in tem žetonom omogočilo prenos var. kopije, ki vsebuje vse podatke te MarvalProjects instalacije. To vključuje tudi podatke vseh drugih uporabnikov
+        Aktiviranje varnostnih kopij bo kateremu koli uporabniku z zahtevanimi dovoljenji in tem žetonom omogočilo prenos var. kopije, ki vsebuje vse podatke te OpenProject instalacije. To vključuje tudi podatke vseh drugih uporabnikov
       info: >
         Za kreiranje varnostne kopije morate najprej ustvariti žeton za varnostno kopiranje. Vsakič, ko želite kreirati var. kopijo, morate podati ta žeton. Žeton lahko izbrišete, če želite onemogočiti kreiranje var. kopij za tega uporabnika.
       verification: >
@@ -2237,7 +2237,7 @@ sl:
         Already have a token? Add it using the button below to upgrade to the booked Enterprise plan.
       hide_banner: "Hide this banner"
       homescreen_description: >
-        Enterprise plans extend the Community edition of MarvalProjects you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
+        Enterprise plans extend the Community edition of OpenProject you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
       homescreen_subline: By upgrading, you will also be supporting an open source project.
       baseline_comparison:
         description: Highlight changes made to this list since any point in the past.
@@ -2250,7 +2250,7 @@ sl:
         premium_features: "Enterprise add-ons"
         premium_features_text: "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields."
         professional_support: "Professional support"
-        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running MarvalProjects in business-critical environments."
+        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
       work_package_subject_generation:
         description: "Create automatically generated subjects using referenced attributes and text."
       customize_life_cycle:
@@ -2278,7 +2278,7 @@ sl:
       define_custom_style:
         title: "Custom color theme and logo"
         more_info: "Note: the used logo will be publicly accessible."
-        description: Customize your MarvalProjects installation with your own logo and colors.
+        description: Customize your OpenProject installation with your own logo and colors.
       custom_actions:
         title: "Dejanja po meri"
         description: "Custom actions are one-click shortcuts to a set of pre-defined actions that you can make available on certain work packages based on status, role, type or project."
@@ -2287,13 +2287,13 @@ sl:
         description: "Enable seamless and secure authentication for your Nextcloud storage with Single Sign-On. Simplify access management and enhance user convenience."
       scim_api:
         title: "SCIM clients"
-        description: "Automate user management in MarvalProjects by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
+        description: "Automate user management in OpenProject by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
       virus_scanning:
-        description: "Ensure uploaded files in MarvalProjects are scanned for viruses before being accessible by other users."
+        description: "Ensure uploaded files in OpenProject are scanned for viruses before being accessible by other users."
       placeholder_users:
         title: Nadomestni uporabniki
         description: >
-          Placeholder users are a way to assign work packages to users who are not part of your project. They can be useful in a range of scenarios; for example, if you need to track tasks for a resource that is not yet named or available, or if you don’t want to give that person access to MarvalProjects but still want to track tasks assigned to them.
+          Placeholder users are a way to assign work packages to users who are not part of your project. They can be useful in a range of scenarios; for example, if you need to track tasks for a resource that is not yet named or available, or if you don’t want to give that person access to OpenProject but still want to track tasks assigned to them.
       internal_comments:
         title: Internal comments
         description: "Internal comments allow an internal team to communicate amongst themselves privately. These are only visible to certain project roles and will never be visible publicly."
@@ -2317,9 +2317,9 @@ sl:
       request_again: "Request again"
       resend_action: "Resend confirmation email"
       welcome_title: "Quick feature overview"
-      welcome_description: "Get a quick overview of project management and team collaboration with MarvalProjects Enterprise edition."
+      welcome_description: "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition."
       confirmation_info: >
-        We sent you an email on %{date} to %{email} with all the information to start the free trial of MarvalProjects Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
+        We sent you an email on %{date} to %{email} with all the information to start the free trial of OpenProject Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
       confirmation_subline: >
         Please, check your inbox and follow the steps to start your 14-day free trial.
       domain_caption: The token will be valid for your currently configured host name.
@@ -2349,7 +2349,7 @@ sl:
   error_check_user_and_role: "Izberite uporabnika in vlogo."
   error_code: "Napaka %{code}"
   error_color_could_not_be_saved: "Barve ni mogoče shraniti"
-  error_cookie_missing: "Piškotek MarvalProjects manjka. Prepričajte se, da so piškotki omogočeni, saj ta aplikacija ne bo pravilno delovala brez."
+  error_cookie_missing: "Piškotek OpenProject manjka. Prepričajte se, da so piškotki omogočeni, saj ta aplikacija ne bo pravilno delovala brez."
   error_custom_option_not_found: "Možnost ne obstaja."
   error_enterprise_plan_needed: "You need the %{plan} enterprise plan to perform this action."
   error_enterprise_activation_user_limit: "Vašega računa ni bilo mogoče aktivirati (dosežena uporabniška omejitev). Če želite dobiti dostop, se obrnite na skrbnika."
@@ -2366,7 +2366,7 @@ sl:
   error_work_package_not_found_in_project: "Delovnega paketa/ zahtevka ni bilo mogoče najti ali ne spada v ta projekt"
   error_work_package_id_not_found: "The work package was not found."
   error_must_be_project_member: "mora biti član projekta"
-  error_migrations_are_pending: "Vaša namestitev MarvalProjects ima čakajoče selitve baze podatkov. Verjetno ste zamudili izvajanje migracij ob zadnji nadgradnji. Preverite vodnik za nadgradnjo, da pravilno nadgradite namestitev."
+  error_migrations_are_pending: "Vaša namestitev OpenProject ima čakajoče selitve baze podatkov. Verjetno ste zamudili izvajanje migracij ob zadnji nadgradnji. Preverite vodnik za nadgradnjo, da pravilno nadgradite namestitev."
   error_migrations_visit_upgrade_guides: "Obiščite našo dokumentacijo z navodili za nadgradnjo"
   error_no_default_work_package_status: 'Ni definirano privzetega stanja delovnega paketa/ zahtevka. Preverite konfiguracijo (pojdite na "Administracija -> Stanje zahtevka/ delovnega paketa").'
   error_no_type_in_project: "Noben tip ni povezan s tem projektom. Prosimo preverite nastavitve projekta."
@@ -2553,7 +2553,7 @@ sl:
       no_visible_projects: "V tem primeru ni vidnih projektov."
       users: "Najnovejši registrirani uporabniki v tem primeru."
     blocks:
-      community: "Skupnost MarvalProjects"
+      community: "Skupnost OpenProject"
       upsell:
         title: "Upgrade to Enterprise edition"
     links:
@@ -2564,7 +2564,7 @@ sl:
       impressum: "Pravno obvestilo"
       glossary: "Slovar"
       shortcuts: "Bližnjice"
-      blog: "Blog MarvalProjects"
+      blog: "Blog OpenProject"
       forums: "Forum skupnosti"
       newsletter: "Varnostna opozorila / Glasilo"
   image_conversion:
@@ -2576,7 +2576,7 @@ sl:
       default_attribute_written: "Read-only attributes written"
       progress_mode_changed_to_status_based: "Progress calculation updated"
       status_changed: "Status '%{status_name}'"
-      system_update: "MarvalProjects system update:"
+      system_update: "OpenProject system update:"
       work_package_duplicate_closed: "Duplicate work package updated:"
       total_percent_complete_mode_changed_to_work_weighted_average: "Calculation of % Complete totals now weighted by Work."
       total_percent_complete_mode_changed_to_simple_average: "Calculation of % Complete totals now based on a simple average of only % Complete values."
@@ -2646,7 +2646,7 @@ sl:
         disabled_text: "API tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       ical:
         title: "iCalendar"
-        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to MarvalProjects calendars</a> and view up-to-date work package information from external clients.'
+        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to OpenProject calendars</a> and view up-to-date work package information from external clients.'
         disabled_text: "iCalendar subscriptions are not enabled by the administrator. Please contact your administrator to use this feature."
         empty_text_hint: "To add an iCalendar token, subscribe to a new or existing calendar from within the Calendar module of a project. You must have the necessary permissions."
       oauth:
@@ -2832,7 +2832,7 @@ sl:
   label_custom_field_plural: "Polja po meri"
   label_custom_field_default_type: "Prazen tip"
   label_custom_style: "Oblika"
-  label_custom_style_description: "Choose how MarvalProjects looks to you with themes, select your default colors to use in the app and how exports look like."
+  label_custom_style_description: "Choose how OpenProject looks to you with themes, select your default colors to use in the app and how exports look like."
   label_dashboard: "Nadzorna plošča"
   label_database_version: "PostgreSQL verzija"
   label_date: "Datum"
@@ -3088,7 +3088,7 @@ sl:
   label_open_menu: "Odpri meni"
   label_open_work_packages: "odpri"
   label_open_work_packages_plural: "odpri"
-  label_openproject_website: "Spletno mesto MarvalProjects"
+  label_openproject_website: "Spletno mesto OpenProject"
   label_optional_description: "Opis"
   label_options: "Možnosti"
   label_other: "Drugo"
@@ -3479,8 +3479,8 @@ sl:
   mail_body_backup_token_reset_user_info: Vaš žeton je ponastavljen.
   mail_body_backup_token_info: Prejšnji žeton ni več veljaven.
   mail_body_backup_waiting_period: Novi žeton bo omogočen v %{hours} urah.
-  mail_body_backup_token_warning: Če to niste bili vi, se takoj prijavite v MarvalProjects in ponovno ponastavite.
-  mail_body_incoming_email_error: The email you sent to MarvalProjects could not be processed.
+  mail_body_backup_token_warning: Če to niste bili vi, se takoj prijavite v OpenProject in ponovno ponastavite.
+  mail_body_incoming_email_error: The email you sent to OpenProject could not be processed.
   mail_body_incoming_email_error_in_reply_to: "At %{received_at} %{from_email} wrote"
   mail_body_incoming_email_error_logs: "Logs"
   mail_body_lost_password: "Za spremembo glesla kliknite na naslednjo povezavo:"
@@ -3493,10 +3493,10 @@ sl:
   mail_body_register_user: "Dragi %{name},"
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in MarvalProjects as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Tvoja MarvalProjects ekipa"
+  mail_body_register_closing: "Tvoja OpenProject ekipa"
   mail_body_register_ending: "Ostanite povezani! Lep pozdrav,"
   mail_body_reminder: "%{count} delovni paketi, ki so vam dodeljeni bodo zapadli v naslednjih dneh: %{days}"
   mail_body_group_reminder: '%{count} delovni paketi, ki so dodeljeni skupini "%{group}" bodo zapadli v naslednjih %{days} dneh:'
@@ -3505,7 +3505,7 @@ sl:
   mail_subject_account_activation_request: "%{value} zahtevek za aktivacijo računa"
   mail_subject_backup_ready: "Vaša varnostna kopija je pripravljena"
   mail_subject_backup_token_reset: "Backup token reset"
-  mail_subject_incoming_email_error: "An email you sent to MarvalProjects could not be processed"
+  mail_subject_incoming_email_error: "An email you sent to OpenProject could not be processed"
   mail_subject_lost_password: "Vaše %{value} geslo"
   mail_subject_register: "Aktivacija %{value} vašega računa"
   mail_subject_wiki_content_added: "'%{id}' je bil dodan strani wiki"
@@ -3534,14 +3534,14 @@ sl:
   mail_user_activation_limit_reached:
     subject: Aktivacijski limit uporabnika je bil dosežen
     message: |
-      Nov uporabnik (%{email}) je poizkušal ustvariti račun v MarvalProjects okolju katerega nadzorujete vi (%{host}).
+      Nov uporabnik (%{email}) je poizkušal ustvariti račun v OpenProject okolju katerega nadzorujete vi (%{host}).
       Uporabnik ne mora aktivirati računa, saj je bil limit uporabnikov dosežen.
     steps:
       label: "Da uporabniku dovolite, da se prijavi lahko:"
       a: "Nadgradite svoj naročniški plan ([here](upgrade_url))" #here turned into a link
       b: "Zaklenite ali izbrišite obstoječega uporabnika ([here](users_url))" #here turned into a link
   more_actions: "Več funkcij"
-  noscript_description: "Aktivirati morate JavaScript, če želite uporabljati MarvalProjects!"
+  noscript_description: "Aktivirati morate JavaScript, če želite uporabljati OpenProject!"
   noscript_heading: "JavaScript onemogočen"
   noscript_learn_more: "Več o tem"
   notice_accessibility_mode: Način dostopa lahko omogočite v vašem [account settings](url).
@@ -3617,7 +3617,7 @@ sl:
   notice_wont_delete_auth_source: The LDAP connection cannot be deleted as long as there are still users using it.
   notice_project_cannot_update_custom_fields: "Projektnih dostopnih polj po meri ne morete posodobiti. Projekt je neveljaven: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Ta stran je bila avtomatično generirana med posodabljanjem MarvalProjectsa. Vsebuje vse priponke, ki so bile povezane z %{container_type} "%{container_name}".
+    Ta stran je bila avtomatično generirana med posodabljanjem OpenProjecta. Vsebuje vse priponke, ki so bile povezane z %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -3642,7 +3642,7 @@ sl:
           tb: "TB"
   onboarding:
     heading_getting_started: "Pridobite pregled"
-    text_getting_started_description: "Get a quick overview of project management and team collaboration with MarvalProjects. You can restart this video from the help menu."
+    text_getting_started_description: "Get a quick overview of project management and team collaboration with OpenProject. You can restart this video from the help menu."
     welcome: "Welcome to %{app_title}"
     select_language: "Prosimo izberite jezik"
   permission_add_work_package_comments: "Add comments"
@@ -3725,7 +3725,7 @@ sl:
   permission_manage_types: "Izberi vrste"
   permission_manage_own_reminders: "Create own reminders"
   permission_view_project: "View projects"
-  permission_view_changesets: "Oglejte si revizije repozitorija v MarvalProjects"
+  permission_view_changesets: "Oglejte si revizije repozitorija v OpenProject"
   permission_view_internal_comments: "View internal comments"
   permission_view_commit_author_statistics: "Oglejte si statistiko avtorjev"
   permission_view_dashboards: "View dashboards"
@@ -3835,7 +3835,7 @@ sl:
     destroy:
       confirmation: "Če nadaljujete bo to permanentno izbrisalo upravljano odlagališče."
       info: "Brisanje odlagališča je nepovraten ukrep."
-      info_not_managed: "Opomba: To NE bo izbrisalo vsebine tega odlagališča, saj ni upravljan iz strani MarvalProjects."
+      info_not_managed: "Opomba: To NE bo izbrisalo vsebine tega odlagališča, saj ni upravljan iz strani OpenProject."
       managed_path_note: "Sledeči direktorij bo izbrisan: %{path}"
       repository_verification: "Vpišite identifikator projekta %{identifier} ,da preverite izbris njegovega odlagališča."
       subtitle: "Ali res želite izbrisati %{repository_type} projekta %{project_name}?"
@@ -3849,8 +3849,8 @@ sl:
       empty_repository: "Odlagališče obstaja ampak je prazno. Zaenkrat še ne vsebuje revizij."
       exists_on_filesystem: "Direktorij odlagališča že obstaja v sistemu datotek."
       filesystem_access_failed: "Napaka se je pojavila med dostopanjem odlagališča v sistemu datotek: %{message}"
-      not_manageable: "Ta prodajalec odlagališč ne more biti upravljan z MarvalProjects."
-      path_permission_failed: "Napaka se je pojavila med ustvarjanjem sledeče poti: %{path}. Prosimo preverite, če lahko MarvalProjects dostopa do te mape."
+      not_manageable: "Ta prodajalec odlagališč ne more biti upravljan z OpenProject."
+      path_permission_failed: "Napaka se je pojavila med ustvarjanjem sledeče poti: %{path}. Prosimo preverite, če lahko OpenProject dostopa do te mape."
       unauthorized: "Niste odobreni ali pa vaše poverilnice niso veljavne za dostop do odlagališča."
       unavailable: "Repozitorij ni na voljo"
       exception_title: "Cannot access the repository: %{message}"
@@ -3867,9 +3867,9 @@ sl:
         path_encoding: "Preveri kodiranje Git poti (Privzeto: UTF-8)"
       local_title: "Povežite obstoječe lokalno Git skladišče"
       local_url: "Lokalni URL"
-      local_introduction: "Če imate obstoječe lokalno Git skladišče, ga lahko povežete z MarvalProjectsom, če želite dostopati do njega znotraj aplikacije."
-      managed_introduction: "Naj MarvalProjects samodejno ustvari in vključi lokalno Git skladišče avtomatično."
-      managed_title: "Git skladišče, integrirano v MarvalProjects"
+      local_introduction: "Če imate obstoječe lokalno Git skladišče, ga lahko povežete z OpenProjectom, če želite dostopati do njega znotraj aplikacije."
+      managed_introduction: "Naj OpenProject samodejno ustvari in vključi lokalno Git skladišče avtomatično."
+      managed_title: "Git skladišče, integrirano v OpenProject"
       managed_url: "Upravljani URL"
       path: "Pot do skladišča Git"
       path_encoding: "Kodiranje poti"
@@ -3886,24 +3886,24 @@ sl:
     scm_types:
       local: "Povezava obstoječe lokalne shrambe"
       existing: "Povezava obstoječe shrambe"
-      managed: "Ustvari novo shrambo v MarvalProjects"
+      managed: "Ustvari novo shrambo v OpenProject"
     storage:
       not_available: "Poraba diskovne shrambe za to vrsto shrambo ni na voljo."
       update_timeout: "Zadnje potrebne podatke o diskovnem prostoru shranite za N minut.\nKer je lahko štetje potrebnega diskovnega prostora v skladišču drago, povečajte to vrednost, da zmanjšate njegov učinek na zmogljivost."
-      oauth_application_details: "The client secret value will not be accessible again after you close this window. Please copy these values into the Nextcloud MarvalProjects Integration settings:"
+      oauth_application_details: "The client secret value will not be accessible again after you close this window. Please copy these values into the Nextcloud OpenProject Integration settings:"
       oauth_application_details_link_text: "Go to settings page"
       setup_documentation_details: "If you need help configuring a new file storage please check the documentation: "
       setup_documentation_details_link_text: "File storages setup"
       show_warning_details: "To use this file storage remember to activate the module and the specific storage in the project settings of each desired project."
     subversion:
       existing_title: "Obstoječe skladišče podrazličice"
-      existing_introduction: "Če imate obstoječe skladišče podrazličic, ga lahko povežete z MarvalProjectsom, če želite dostopati do njega znotraj aplikacije."
+      existing_introduction: "Če imate obstoječe skladišče podrazličic, ga lahko povežete z OpenProjectom, če želite dostopati do njega znotraj aplikacije."
       existing_url: "Obstoječi URL"
       instructions:
         managed_url: "To je URL upravljanega (lokalnega) skladišča podrazličice."
         url: "Enter the repository URL. This may either target a local repository (starting with %{local_proto} ), or a remote repository.\nThe following URL schemes are supported:"
-      managed_title: "Subverzijsko skladišče, integrirano v MarvalProjects"
-      managed_introduction: "Naj MarvalProjects samodejno ustvari in vključi lokalno skladišče podrazličice."
+      managed_title: "Subverzijsko skladišče, integrirano v OpenProject"
+      managed_introduction: "Naj OpenProject samodejno ustvari in vključi lokalno skladišče podrazličice."
       managed_url: "Upravljani URL"
       password: "Geslo odlagališča"
       username: "Uporbniški ime odlagališča"
@@ -3930,7 +3930,7 @@ sl:
   setting_apiv3_cors_enabled: "Omogoči CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) dovoljen izvir"
   setting_apiv3_cors_origins_text_html: >
-    To so izviri, ki jim je dovoljeno dostopati do MarvalProjects API, če je CORS omogočen. <br/> Preverite <a href="%{origin_link}" target="_blank">dokumentacijo o glavi izvira</a> kako navesti pričakovane vrednosti.
+    To so izviri, ki jim je dovoljeno dostopati do OpenProject API, če je CORS omogočen. <br/> Preverite <a href="%{origin_link}" target="_blank">dokumentacijo o glavi izvira</a> kako navesti pričakovane vrednosti.
   setting_apiv3_write_readonly_attributes: "Write access to read-only attributes"
   setting_apiv3_write_readonly_attributes_instructions_html: >
     If enabled, the API will allow administrators to write static read-only attributes during creation, such as createdAt and author. <br/> <strong>Warning:</strong> This setting has a use-case for e.g., importing data, but allows administrators to impersonate the creation of items as other users. All creation requests are being logged however with the true author. </br> For more information on attributes and supported resources, please see the %{api_documentation_link}.
@@ -4132,7 +4132,7 @@ sl:
         clamav_socket_html: Enter the socket to the clamd daemon, e.g., %{example}
         clamav_host_html: Enter the hostname and port to the clamd daemon separated by colon. e.g., %{example}
         description_html: >
-          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as MarvalProjects and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
+          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as OpenProject and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
     brute_force_prevention: "Avtomatično blokiranje uporabnika"
     date_format:
       first_date_of_week_and_year_set: >
@@ -4140,7 +4140,7 @@ sl:
       first_week_of_year_text_html: >
         Select the date of January that is contained in the first week of the year. This value together with first day of the week determines the total number of weeks in a year. For more information, please see our <a href="%{link}" target="_blank">documentation</a> on this topic.
     experimental:
-      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your MarvalProjects installation and losing all of its data.
+      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your OpenProject installation and losing all of its data.
       warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on MarvalProjects installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
       feature_flags: Feature flags
     general: "Splošno"
@@ -4224,7 +4224,7 @@ sl:
       sentence_connector: "in"
       skip_last_comma: "Napačno"
   text_accessibility_hint: "Način dostopnosti je zasnovan za uporabnike, ki so slepi, gibalno ovirani ali imajo slab vid. Pri slednjih so posebej poudarjeni osredotočeni elementi.  Upoštevajte da Backlogs modul ni na voljo v tem načinu."
-  text_access_token_hint: "Žetoni dostopa vam omogočajo, da zunanjim aplikacijam omogočite dostop do virov v MarvalProjectsu."
+  text_access_token_hint: "Žetoni dostopa vam omogočajo, da zunanjim aplikacijam omogočite dostop do virov v OpenProjectu."
   text_analyze: "Nadaljnja analiza: %{subject}"
   text_are_you_sure: "Ste prepričani?"
   text_are_you_sure_continue: "Are you sure you want to continue?"
@@ -4315,7 +4315,7 @@ sl:
   text_reassign: "Ponovno dodelitev delovnemu paketu:"
   text_regexp_info: "npr. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Označba se uporablja v večvrstičnem načinu. npr. ^ --- \ s +'
-  text_repository_usernames_mapping: "Izberite ali posodobite uporabnika MarvalProjects, vezanega na vsako uporabniško ime, ki ga najdete v dnevniku repozitorija.\nUporabniki z istim uporabniškim imenom ali e-poštnim imenom skladišča MarvalProjects se samodejno povežejo."
+  text_repository_usernames_mapping: "Izberite ali posodobite uporabnika OpenProject, vezanega na vsako uporabniško ime, ki ga najdete v dnevniku repozitorija.\nUporabniki z istim uporabniškim imenom ali e-poštnim imenom skladišča OpenProject se samodejno povežejo."
   text_status_changed_by_changeset: "Dodano v zapis sprememb %{value}."
   text_table_difference_description: "In this table the single %{entries} are shown. You can view the difference between any two entries by first selecting the according checkboxes in the table. When clicking on the button below the table the differences are shown."
   text_time_logged_by_changeset: "Dodano v zapis sprememb %{value}."
@@ -4390,7 +4390,7 @@ sl:
     authentication_provider: "Ponudnik overovitve"
     identity_url_text: "The internal unique identifier provided by the authentication provider."
     authentication_settings_disabled_due_to_external_authentication: >
-      Ta uporabnik overja prek zunanjega ponudnika overjanja, tako da v MarvalProjectsu ni gesla, ki bi ga bilo treba spremeniti.
+      Ta uporabnik overja prek zunanjega ponudnika overjanja, tako da v OpenProjectu ni gesla, ki bi ga bilo treba spremeniti.
     authorization_rejected: "Nimate dovoljenja za prijavo."
     assign_random_password: "Dodelite naključno geslo (poslano uporabniku po e-pošti)"
     blocked: "začasno zaklenjeno"
@@ -4424,7 +4424,7 @@ sl:
   warning: Opozorilo
   warning_attachments_not_saved: "%{count} datotek(e) ni bilo mogoče shraniti."
   warning_imminent_user_limit: >
-    Povabili ste več uporabnikov, kot jih podpira vaš trenutni načrt. Povabljeni uporabniki se ne bodo mogli pridružiti vašemu okolju MarvalProjects. <a href="%{upgrade_url}"> nadgradite svoj načrt </a> ali blokirajte obstoječe uporabnike, če želite povabljenim in registriranim uporabnikom omogočiti pridružitev.
+    Povabili ste več uporabnikov, kot jih podpira vaš trenutni načrt. Povabljeni uporabniki se ne bodo mogli pridružiti vašemu okolju OpenProject. <a href="%{upgrade_url}"> nadgradite svoj načrt </a> ali blokirajte obstoječe uporabnike, če želite povabljenim in registriranim uporabnikom omogočiti pridružitev.
   warning_registration_token_expired: |
     The activation email has expired. We sent you a new one to %{email}.
     Please click the link inside of it to activate your account.
@@ -4433,7 +4433,7 @@ sl:
   warning_user_limit_reached_admin: >
     Adding additional users will exceed the current limit. Please <a href="%{upgrade_url}">upgrade your plan</a> to be able to ensure external users are able to access this instance.
   warning_user_limit_reached_instructions: >
-    You reached your user limit (%{current}/%{max} active users). Please contact sales@MarvalProjects.com to upgrade your Enterprise edition plan and add additional users.
+    You reached your user limit (%{current}/%{max} active users). Please contact sales@openproject.com to upgrade your Enterprise edition plan and add additional users.
   warning_protocol_mismatch_html: >
 
   warning_bar:
@@ -4700,7 +4700,7 @@ sl:
         confidential: "Preverite, ali se bo aplikacija uporabljala tam, kjer je lahko tajna stranke zaupna. Domače mobilne aplikacije in aplikacije za eno stran veljajo za nezaupne.\n"
         scopes: "Preverite področja uporabe, do katerih aplikacija lahko odobri dostop. Če obseg ni preverjen, se domneva, da je api_v3.\n"
         client_credential_user_id: "Izbirni ID uporabnika, da se predstavi, ko stranke uporabljajo to aplikacijo. Pustite prazno, če želite omogočiti samo javni dostop\n"
-        register_intro: "Če razvijate odjemalsko aplikacijo API OAuth za MarvalProjects, jo lahko registrirate s tem obrazcem za vse uporabnike."
+        register_intro: "Če razvijate odjemalsko aplikacijo API OAuth za OpenProject, jo lahko registrirate s tem obrazcem za vse uporabnike."
         default_scopes: ""
     header:
       builtin_applications: Built-in OAuth applications
@@ -4708,7 +4708,7 @@ sl:
     empty_application_lists: No OAuth applications have been registered.
     client_id: "ID odjemalca"
     client_secret_notice: >
-      To je edini čas, ko lahko natisnemo skrivnost stranke. Prosimo, zapišite jo in ohranite varno. To bi moralo biti obravnavano kot geslo in ga MarvalProjects ne more pozneje pridobiti.
+      To je edini čas, ko lahko natisnemo skrivnost stranke. Prosimo, zapišite jo in ohranite varno. To bi moralo biti obravnavano kot geslo in ga OpenProject ne more pozneje pridobiti.
     authorization_dialog:
       authorize: "Avtorizacija"
       cancel: "Prekličite in zavrnite avtorizacijo."
@@ -4719,7 +4719,7 @@ sl:
         Ta aplikacija zahteva dostop do vašega računa OpenProject. <br/> <strong> Zahteval je naslednja dovoljenja: </strong>
     scopes:
       api_v3: "Polni API v3 dostop"
-      api_v3_text: "Aplikacija bo prejela popoln dostop za branje in pisanje do API-ja MarvalProjects v3 za izvajanje dejanj v vašem imenu."
+      api_v3_text: "Aplikacija bo prejela popoln dostop za branje in pisanje do API-ja OpenProject v3 za izvajanje dejanj v vašem imenu."
     grants:
       created_date: "Odobreno na"
       scopes: "Dovoljenja"
@@ -4737,7 +4737,7 @@ sl:
     client_credentials_impersonation_set_to: "Uporabnik poverilnic uporabnika nastavljen na"
     client_credentials_impersonation_warning: "Opomba: Odjemalci, ki v tej aplikaciji uporabljajo tok »poverilnice strank«, bodo imeli pravice tega uporabnika"
     client_credentials_impersonation_html: >
-      MarvalProjects privzeto zagotavlja pooblastilo OAuth 2.0 prek %{authorization_code_flow_link}. Izbirno lahko omogočite %{client_credentials_flow_link}, vendar morate navesti uporabnika, po imenu katerega se bodo izvajale zahteve.
+      OpenProject privzeto zagotavlja pooblastilo OAuth 2.0 prek %{authorization_code_flow_link}. Izbirno lahko omogočite %{client_credentials_flow_link}, vendar morate navesti uporabnika, po imenu katerega se bodo izvajale zahteve.
     authorization_error: "Prišlo je do napake v avtorizaciji."
     revoke_my_application_confirmation: "Ali res želite odstraniti to aplikacijo? To bo preklicalo %{token_count} aktivno."
     my_registered_applications: "Registrirane aplikacije OAuth"
@@ -4766,20 +4766,20 @@ sl:
         Internal error: Called refresh_token without a previously existing token.
       refresh_token_updated_failed: "Error during update of OAuthClientToken"
       oauth_client_not_found_explanation: >
-        This error appears after you have updated the client_id and client_secret in MarvalProjects, but haven't updated the 'Return URI' field in the OAuth2 provider.
+        This error appears after you have updated the client_id and client_secret in OpenProject, but haven't updated the 'Return URI' field in the OAuth2 provider.
       oauth_code_not_present: "OAuth2 'code' not found in 'callback' endpoint (redirect_uri)."
       oauth_code_not_present_explanation: >
         This error appears if you have selected the wrong response_type in the OAuth2 provider. Response_type should be 'code' or similar.
       oauth_state_not_present: "OAuth2 'state' not found in 'callback' endpoint (redirect_uri)."
       oauth_state_not_present_explanation: >
-        The 'state' is used to indicate to MarvalProjects where to continue after a successful OAuth2 authorization. A missing 'state' is an internal error that may appear during setup. Please contact your system administrator.
+        The 'state' is used to indicate to OpenProject where to continue after a successful OAuth2 authorization. A missing 'state' is an internal error that may appear during setup. Please contact your system administrator.
       rack_oauth2:
         client_secret_invalid: "Client secret is invalid (client_secret_invalid)"
         invalid_request: >
           OAuth2 Authorization Server responded with 'invalid_request'. This error appears if you try to authorize multiple times or in case of technical issues.
         invalid_response: "OAuth2 Authorization Server provided an invalid response (invalid_response)"
         invalid_grant: "The OAuth2 Authorization Server asks you to reauthorize (invalid_grant)."
-        invalid_client: "The OAuth2 Authorization Server doesn't recognize MarvalProjects (invalid_client)."
+        invalid_client: "The OAuth2 Authorization Server doesn't recognize OpenProject (invalid_client)."
         unauthorized_client: "The OAuth2 Authorization Server rejects the grant type (unauthorized_client)"
         unsupported_grant_type: "The OAuth2 Authorization Server asks you to reauthorize (unsupported_grant_type)."
         invalid_scope: "You are not allowed to access the requested resource (invalid_scope)."
@@ -4792,10 +4792,10 @@ sl:
   you: vi
   link: link
   plugin_openproject_auth_plugins:
-    name: "MarvalProjects Auth Plugins"
-    description: "Integration of OmniAuth strategy providers for authentication in MarvalProjects."
+    name: "OpenProject Auth Plugins"
+    description: "Integration of OmniAuth strategy providers for authentication in OpenProject."
   plugin_openproject_auth_saml:
     name: "OmniAuth SAML / Single-Sign On"
-    description: "Adds the OmniAuth SAML provider to MarvalProjects"
+    description: "Adds the OmniAuth SAML provider to OpenProject"
   enterprise_plans:
     legacy_enterprise: "Enterprise Plan"

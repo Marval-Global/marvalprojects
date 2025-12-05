@@ -1,8 +1,8 @@
 #English strings go here for Rails i18n
 sl:
   plugin_openproject_bim:
-    name: "MarvalProjects BIM and BCF functionality"
-    description: "This MarvalProjects plugin introduces BIM and BCF functionality."
+    name: "OpenProject BIM and BCF functionality"
+    description: "This OpenProject plugin introduces BIM and BCF functionality."
   bim:
     label_bim: 'BIM'
   bcf:
@@ -75,7 +75,7 @@ sl:
   oauth:
     scopes:
       bcf_v2_1: "Popoln dostop do BCF v2.1 API"
-      bcf_v2_1_text: "Aplikacija prejme popoln dostop za branje in pisanje do MarvalProjects BCF API v2.1 za izvajanje dejanj v vašem imenu."
+      bcf_v2_1_text: "Aplikacija prejme popoln dostop za branje in pisanje do OpenProject BCF API v2.1 za izvajanje dejanj v vašem imenu."
   activerecord:
     models:
       bim/ifc_models/ifc_model: "model IFC"

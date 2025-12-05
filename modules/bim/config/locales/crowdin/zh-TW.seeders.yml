@@ -71,7 +71,7 @@ zh-TW:
         item_7:
           name: 結構工程師
       welcome:
-        title: 歡迎使用 MarvalProjects BIM版本！
+        title: 歡迎使用 OpenProject BIM版本！
         text: |
           查看示範項目以開始使用一些範例。
 
@@ -120,7 +120,7 @@ zh-TW:
                 options:
                   name: 開始使用
                   text: |
-                    我們很高興您加入！我們建議您嘗試以下幾件事來開始使用 MarvalProjects。
+                    我們很高興您加入！我們建議您嘗試以下幾件事來開始使用 OpenProject。
 
                     但在一開始之前，您應該知道這個模範專案被劃分為兩個不同的專案：
 
@@ -179,7 +179,7 @@ zh-TW:
                 options:
                   name: 開始
                   text: |
-                    我們很高興您加入！我們建議您嘗試以下幾件事來開始使用 MarvalProjects。
+                    我們很高興您加入！我們建議您嘗試以下幾件事來開始使用 OpenProject。
 
                     在這裡您將找到傳統的角色、一些工作流程以及您建築專案的工作套件。
 
@@ -430,7 +430,7 @@ zh-TW:
                 options:
                   name: 開始
                   text: |
-                    我們很高興您加入！我們建議您嘗試以下幾件事來開始使用 MarvalProjects。
+                    我們很高興您加入！我們建議您嘗試以下幾件事來開始使用 OpenProject。
 
                     這個示範專案提供針對 BIM 專業化的角色、工作流程和工作套件。
 
@@ -706,7 +706,7 @@ zh-TW:
                 options:
                   name: 開始
                   text: |
-                    我們很高興您的加入！我們建議嘗試一些方法來開始使用 MarvalProjects。
+                    我們很高興您的加入！我們建議嘗試一些方法來開始使用 OpenProject。
 
                     此演示專案展示了 BCF 管理功能。
 

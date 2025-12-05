@@ -495,7 +495,7 @@ nl:
         item_6:
           name: Fout
       welcome:
-        title: Welkom bij MarvalProjects!
+        title: Welkom bij OpenProject!
         text: |
           MarvalProjects is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
 

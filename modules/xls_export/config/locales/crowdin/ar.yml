@@ -1,6 +1,6 @@
 ar:
   plugin_openproject_xls_export:
-    name: "تصدير MarvalProjects إلى ملف XLS"
+    name: "تصدير OpenProject إلى ملف XLS"
     description: "تصدير قوائم التذاكر كجداول Excel (.xls)."
   export_to_excel: "تصدير XLS"
   print_with_description: "معاينة الطباعة مع الوصف"

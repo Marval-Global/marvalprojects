@@ -2,7 +2,7 @@
 
 #-- copyright
 # OpenProject is an open source project management software.
-# Copyright (C) the MarvalProjects GmbH
+# Copyright (C) the OpenProject GmbH
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License version 3.
@@ -31,7 +31,7 @@ class AdminUserSeeder < Seeder
   def seed_data!
     user = new_admin
     if user.save!(validate: false)
-      seed_data.store_reference(:MarvalProjects_admin, user)
+      seed_data.store_reference(:openproject_admin, user)
     else
       print_error "Seeding admin failed:"
       user.errors.full_messages.each do |msg|
@@ -45,7 +45,7 @@ class AdminUserSeeder < Seeder
   end
 
   def lookup_existing_references
-    seed_data.store_reference(:MarvalProjects_admin, User.not_builtin.admin.first)
+    seed_data.store_reference(:openproject_admin, User.not_builtin.admin.first)
   end
 
   def not_applicable_message

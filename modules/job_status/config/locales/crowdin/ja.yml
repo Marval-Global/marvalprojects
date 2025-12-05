@@ -1,7 +1,7 @@
 ja:
   label_job_status_plural: "ジョブステータス"
   plugin_openproject_job_status:
-    name: "MarvalProjects ジョブの状態"
+    name: "OpenProject ジョブの状態"
     description: "バックグラウンドジョブのリストとステータス。"
   job_status_dialog:
     download_starts: 'ダウンロードは自動的に開始されます。'

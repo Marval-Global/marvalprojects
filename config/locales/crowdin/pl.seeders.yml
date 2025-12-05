@@ -148,7 +148,7 @@ pl:
                 options:
                   name: Pierwsze kroki
                   text: |
-                    Cieszymy się, że dołączasz! Sugerujemy na początek spróbować kilku rzeczy w MarvalProjects.
+                    Cieszymy się, że dołączasz! Sugerujemy na początek spróbować kilku rzeczy w OpenProject.
 
                     Odkryj najważniejsze funkcje za pomocą naszej [Wycieczki z przewodnikiem]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true).
 
@@ -320,7 +320,7 @@ pl:
                 options:
                   name: Pierwsze kroki
                   text: |
-                    Cieszymy się, że do nas dołączasz! Sugerujemy wypróbowanie kilku rzeczy, aby rozpocząć pracę w MarvalProjects.
+                    Cieszymy się, że do nas dołączasz! Sugerujemy wypróbowanie kilku rzeczy, aby rozpocząć pracę w OpenProject.
 
                     _Spróbuj wykonać następujące kroki:_
 
@@ -495,9 +495,9 @@ pl:
         item_6:
           name: Błąd
       welcome:
-        title: Witamy w MarvalProjects!
+        title: Witamy w OpenProject!
         text: |
-          MarvalProjects jest czołowym oprogramowaniem open source do zarządzania projektami. Obsługuje klasyczne, zwinne oraz hybrydowe zarządzanie projektami i zapewnia pełną kontrolę nad danymi.
+          OpenProject jest czołowym oprogramowaniem open source do zarządzania projektami. Obsługuje klasyczne, zwinne oraz hybrydowe zarządzanie projektami i zapewnia pełną kontrolę nad danymi.
 
           Podstawowe funkcje i przypadki stosowania:
 

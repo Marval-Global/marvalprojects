@@ -71,7 +71,7 @@ ms:
         item_7:
           name: Jurutera Struktur
       welcome:
-        title: Selamat datang ke MarvalProjects edisi BIM!
+        title: Selamat datang ke OpenProject edisi BIM!
         text: |
           Lihat demo projek untuk bermula dengan beberapa contoh.
 
@@ -120,7 +120,7 @@ ms:
                 options:
                   name: Permulaan
                   text: |
-                    Kami gembira anda menyertai kami! Kami cadangkan beberapa perkara sebagai permulaan di MarvalProjects.
+                    Kami gembira anda menyertai kami! Kami cadangkan beberapa perkara sebagai permulaan di OpenProject.
 
                     Sebelum anda bermula, anda harus tahu projek contoh ini terbahagi kepada dua projek yang berbeza:
 
@@ -138,7 +138,7 @@ ms:
                     7.  _Pemangkin kerja? Semak board kami yang baru:_ → Pergi ke [Board]({{opSetting:base_url}}/projects/demo-construction-project/boards)
 
                     Disini anda akan jumpa [Panduan Pengguna] (https://www.openproject.org/docs/user-guide/) kami.
-                    Sila beritahu kami jika anda mempunyai sebarang soalan atau memerlukan sokongan. Hubungi kami: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Sila beritahu kami jika anda mempunyai sebarang soalan atau memerlukan sokongan. Hubungi kami: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Ahli-ahli
@@ -179,7 +179,7 @@ ms:
                 options:
                   name: Permulaan
                   text: |
-                    Kami gembira anda menyertai kami! Kami cadangkan beberapa perkara sebagai permulaan di MarvalProjects.
+                    Kami gembira anda menyertai kami! Kami cadangkan beberapa perkara sebagai permulaan di OpenProject.
 
                     Disini anda akan menjumpai peranan klasik, beberapa aliran kerja dan pakej kerja untuk projek pembinaan anda.
 
@@ -193,7 +193,7 @@ ms:
                     6.  _Pemangkin kerja? Cipta satu board baharu:_ → Pergi ke [Board]({{opSetting:base_url}}/projects/demo-planning-constructing-project/boards)
 
                     Di sini anda akan menemui [Panduan Pengguna](https://www.openproject.org/docs/user-guide/) kami.
-                    Sila beritahu kami untuk sebarang soalan atau bantuan. Hubungi kami: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Sila beritahu kami untuk sebarang soalan atau bantuan. Hubungi kami: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Ahli-ahli
@@ -433,7 +433,7 @@ ms:
                 options:
                   name: Permulaan
                   text: |
-                    Kami gembira anda menyertai kami! Kami cadangkan beberapa perkara sebagai permulaan di MarvalProjects.
+                    Kami gembira anda menyertai kami! Kami cadangkan beberapa perkara sebagai permulaan di OpenProject.
 
                     Projek demo ini menawarkan peranan, aliran kerja dan pakej pekerjaan yang mengkhususkan kepada BIM.
 
@@ -450,7 +450,7 @@ ms:
                     9.  _Pemangkin kerja? Cipta satu panel baharu:_ → Pergi ke [Board]({{opSetting:base_url}}/projects/demo-bim-project/boards)
 
                     Di sini anda akan menemui [Panduan pengguna](https://www.openproject.org/docs/user-guide/) kami.
-                    Sila beritahu kami untuk sebarang soalan atau bantuan. Hubungi kami: [support\[at\]MarvalProjects.com](mel ke:support@marvalglobal.com).
+                    Sila beritahu kami untuk sebarang soalan atau bantuan. Hubungi kami: [support\[at\]openproject.com](mel ke:support@marvalglobal.com).
               item_4:
                 options:
                   name: Ahli-ahli
@@ -709,7 +709,7 @@ ms:
                 options:
                   name: Permulaan
                   text: |
-                    Kami gembira anda menyertai kami! Kami cadangkan beberapa perkara sebagai permulaan di MarvalProjects.
+                    Kami gembira anda menyertai kami! Kami cadangkan beberapa perkara sebagai permulaan di OpenProject.
 
                     Demo projek ini menunjukkan fungsi pengurusan BCF.
 
@@ -725,7 +725,7 @@ ms:
                     8.  _Anda suka pendekatan yang pantas ini? Cipta Board:_ → Pergi ke [Board]({{opSetting:base_url}}/projects/demo-bcf-management-project/boards).
 
                     Di sini anda akan menemui [Panduan pengguna](https://www.openproject.org/docs/user-guide/) kami.
-                    Sila beritahu kami untuk sebarang soalan atau bantuan. Hubungi kami: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Sila beritahu kami untuk sebarang soalan atau bantuan. Hubungi kami: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Ahli-ahli

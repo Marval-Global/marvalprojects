@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 pl:
   plugin_openproject_two_factor_authentication:
-    name: "Autoryzacja dwuskładnikowa MarvalProjects"
+    name: "Autoryzacja dwuskładnikowa OpenProject"
     description: >-
-      Ta wtyczka MarvalProjects uwierzytelnia Twoich użytkowników przy użyciu uwierzytelniania dwuskładnikowego za pomocą jednorazowego hasła w standardzie TOTP (Google Authenticator) lub wysyłanego na telefon komórkowy użytkownika w wiadomości SMS lub za pośrednictwem połączenia głosowego.
+      Ta wtyczka OpenProject uwierzytelnia Twoich użytkowników przy użyciu uwierzytelniania dwuskładnikowego za pomocą jednorazowego hasła w standardzie TOTP (Google Authenticator) lub wysyłanego na telefon komórkowy użytkownika w wiadomości SMS lub za pośrednictwem połączenia głosowego.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ pl:
       only_sms_allowed: "Dla innych użytkowników można skonfigurować tylko dostarczanie wiadomości SMS."
     upsell:
       title: "Uwierzytelnianie dwuskładnikowe"
-      description: "Potwierdź bezpieczeństwo twojej instancji MarvalProjects poprzez zaoferowanie (lub wyegzekwowanie) uwierzytelnienia dwuskładnikowego wszystkim członkom projektu."
+      description: "Potwierdź bezpieczeństwo twojej instancji OpenProject poprzez zaoferowanie (lub wyegzekwowanie) uwierzytelnienia dwuskładnikowego wszystkim członkom projektu."
     backup_codes:
       none_found: Na tym koncie nie ma kodów zapasowych.
       singular: Kod zapasowy

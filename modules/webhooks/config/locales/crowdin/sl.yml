@@ -1,7 +1,7 @@
 sl:
   plugin_openproject_webhooks:
-    name: "MarvalProjects Webhooks"
-    description: "Provides a plug-in API to support MarvalProjects webhooks for better 3rd party integration."
+    name: "OpenProject Webhooks"
+    description: "Provides a plug-in API to support OpenProject webhooks for better 3rd party integration."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -66,4 +66,4 @@ sl:
           title: 'Izbrani projekti'
         secret:
           description: >
-            Če je nastavljeno, MarvalProjects to skrivno vrednost uporabi za podpis uporabnega bremena spletne zanke. 
+            Če je nastavljeno, OpenProject to skrivno vrednost uporabi za podpis uporabnega bremena spletne zanke. 

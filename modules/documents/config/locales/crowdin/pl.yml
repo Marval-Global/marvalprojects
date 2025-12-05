@@ -21,8 +21,8 @@
 #++
 pl:
   plugin_openproject_documents:
-    name: "Dokumenty MarvalProjects"
-    description: "Wtyczka MarvalProjects umożliwiająca tworzenie dokumentów w projektach."
+    name: "Dokumenty OpenProject"
+    description: "Wtyczka OpenProject umożliwiająca tworzenie dokumentów w projektach."
   activerecord:
     models:
       document: "Dokument"

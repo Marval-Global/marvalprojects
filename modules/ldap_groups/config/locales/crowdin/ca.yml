@@ -3,9 +3,9 @@ ca:
     upsell:
       ldap_groups:
         title: 'Sincronització de grup LDAP'
-        description: 'Synchronize LDAP groups with MarvalProjects groups to manage users, change their permissions and facilitate user management across groups.'
+        description: 'Synchronize LDAP groups with OpenProject groups to manage users, change their permissions and facilitate user management across groups.'
   plugin_openproject_ldap_groups:
-    name: "MarvalProjects LDAP groups"
+    name: "OpenProject LDAP groups"
     description: "Synchronization of LDAP group memberships."
   activerecord:
     attributes:
@@ -34,7 +34,7 @@ ca:
     label_synchronize: 'Sincronitzar'
     settings:
       name_attribute: 'Atribut de nom de grup LDAP'
-      name_attribute_text: 'L''atribut LDAP utilitzat per nomenar el grup d''MarvalProjects quan s''ha creat a través d''un filtre'
+      name_attribute_text: 'L''atribut LDAP utilitzat per nomenar el grup d''OpenProject quan s''ha creat a través d''un filtre'
     synchronized_filters:
       add_new: 'Afegeix sincronització del filtre LDAP'
       singular: 'Filtre de sincronització de grup LDAP'
@@ -46,11 +46,11 @@ ca:
       destroy:
         title: 'Elimina el filtre de sincronització %{name}'
         confirmation: "Si continues, el filtre de sincronització %{name} i tots els grups %{groups_count} creats seran eliminats."
-        removed_groups: "Alerta: Aquest eliminarà els següents grups d'MarvalProjects i l'eliminarà de tots els projectes!"
+        removed_groups: "Alerta: Aquest eliminarà els següents grups d'OpenProject i l'eliminarà de tots els projectes!"
         verification: "Introdueix el nom del filtre %{name} per verificar l'eliminació."
       form:
-        group_name_attribute_text: 'Afegeix l''atribut del grup LDAP utilitzat per a la configuració del nom de grup d''MarvalProjects.'
-        filter_string_text: 'Afegeix el filtre LDAP RFC4515 que retorna els grups en el teu LDAP per sincronitzar amb MarvalProjects.'
+        group_name_attribute_text: 'Afegeix l''atribut del grup LDAP utilitzat per a la configuració del nom de grup d''OpenProject.'
+        filter_string_text: 'Afegeix el filtre LDAP RFC4515 que retorna els grups en el teu LDAP per sincronitzar amb OpenProject.'
         base_dn_text: >
           Afegeix la base de cerca DN per utilitzar aquest filtre. Ha d'estar dins de la base DN de la connexió LDAP seleccionada. Deixa aquest camp buit per reutilitzar la base DN de la connexió.
     synchronized_groups:
@@ -58,11 +58,11 @@ ca:
       destroy:
         title: 'Elimina el grup de sincronització %{name}'
         confirmation: "Si continues, el grup de sincronització %{name} i tots els %{users_count} usuaris sincronitzats seran eliminats."
-        info: "Nota: El grup d'MarvalProjects i els membres afegits fora d'aquesta sincronització de LDAP no seran eliminats."
+        info: "Nota: El grup d'OpenProject i els membres afegits fora d'aquesta sincronització de LDAP no seran eliminats."
         verification: "Introdueix el nom del grup %{name} per verificar l'eliminació."
       help_text_html: |
-        Aquest mòdul et permet configurar sincronitzacions entre grups de LDAP i MarvalProjects.
-        Depénent dels grups de LDAP s'ha d'utilitzar els atributs <em>groupOfNames / memberOf</em> configurats per poder treballar amb MarvalProjects.
+        Aquest mòdul et permet configurar sincronitzacions entre grups de LDAP i OpenProject.
+        Depénent dels grups de LDAP s'ha d'utilitzar els atributs <em>groupOfNames / memberOf</em> configurats per poder treballar amb OpenProject.
         <br/>
         Els grups es sincronitzen cada hora a través d'un treball de "cron".
         <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Si us plau, llegeix la documentació relacionada amb aquest tema</a>.
@@ -73,8 +73,8 @@ ca:
       form:
         auth_source_text: 'Selecciona quina connexió LDAP s''ha d''utilitzar.'
         sync_users_text: >
-          Si actives aquesta opció, trobar els usuaris serà activat automàticament a MarvalProjects. Si no està activat, només comptes existents a MarvalProjects seran afegits al grup.
+          Si actives aquesta opció, trobar els usuaris serà activat automàticament a OpenProject. Si no està activat, només comptes existents a OpenProject seran afegits al grup.
         dn_text: 'Afegeix el DN del grup LDAP complet'
-        group_text: 'Selecciona un grup d''MarvalProjects existent el qual els seus membres del grup LDAP estiguin sincronitzats amb'
+        group_text: 'Selecciona un grup d''OpenProject existent el qual els seus membres del grup LDAP estiguin sincronitzats amb'
       upsell:
         description: 'Beneficiat de la sincronització de grups LDAP per administrar usuaris, cambiar permisos i facilitar l''administració d''usuaris entre grups.'

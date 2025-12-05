@@ -148,7 +148,7 @@ ca:
                 options:
                   name: Primers passos
                   text: |
-                    Estem contents que t'hagis decidit per MarvalProjects! Et suggerim que provis algunes coses per començar amb MarvalProjects.
+                    Estem contents que t'hagis decidit per OpenProject! Et suggerim que provis algunes coses per començar amb OpenProject.
 
                     Descobreix les funcions més importants amb el nostre [Tour guiat]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true).
 
@@ -491,7 +491,7 @@ ca:
         item_6:
           name: Error
       welcome:
-        title: Benvingut a MarvalProjects!
+        title: Benvingut a OpenProject!
         text: |
           MarvalProjects is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
 

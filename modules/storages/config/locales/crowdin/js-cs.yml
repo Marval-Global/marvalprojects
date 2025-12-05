@@ -79,12 +79,12 @@ cs:
           403: >
             Váš soubor (%{fileName}) nelze nahrát kvůli systémovým omezením. Pro více informací kontaktujte svého správce.
           413: >
-            Váš soubor (%{fileName}) je větší než to, co může MarvalProjects nahrát do %{storageType}. Nejprve jej můžete nahrát přímo do %{storageType} a poté propojit soubor.
+            Váš soubor (%{fileName}) je větší než to, co může OpenProject nahrát do %{storageType}. Nejprve jej můžete nahrát přímo do %{storageType} a poté propojit soubor.
           507: >
             Váš soubor (%{fileName}) je větší než kvóta na úložiště. Obraťte se na správce pro úpravu této kvóty.
           detail:
             nextcloud: >
-              Zkontrolujte, zda je nainstalována nejnovější verze aplikace Nextcloud "MarvalProjects Integration" a pro více informací kontaktujte administrátora.
+              Zkontrolujte, zda je nainstalována nejnovější verze aplikace Nextcloud "OpenProject Integration" a pro více informací kontaktujte administrátora.
         link_uploaded_file_error: >
           Došlo k chybě při propojení nedávno nahraného souboru '%{fileName}' s pracovním balíčkem %{workPackageId}.
         tooltip:

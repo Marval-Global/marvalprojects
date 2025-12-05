@@ -3,7 +3,7 @@ it:
   plugin_openproject_avatars:
     name: "Avatars"
     description: >-
-      Questo plugin consente agli utenti di MarvalProjects di caricare un'immagine da usare come avatar o utilizzare immagini registrate da Gravatar.
+      Questo plugin consente agli utenti di OpenProject di caricare un'immagine da usare come avatar o utilizzare immagini registrate da Gravatar.
   label_avatar: "Avatar"
   label_avatar_plural: "Avatars"
   label_current_avatar: "Avatar attuale"
@@ -28,11 +28,11 @@ it:
       Una volta selezionata un'immagine, verrà mostrata un'anteprima del tuo avatar prima del caricamento.
     text_change_gravatar_html: 'Per cambiare o aggiungere il Gravatar per il tuo indirizzo email, vai su %{gravatar_url}.'
     text_your_local_avatar: |
-      MarvalProjects ti permette di caricare il tuo avatar personalizzato.
+      OpenProject ti permette di caricare il tuo avatar personalizzato.
     text_local_avatar_over_gravatar: |
       Se ne selezioni uno, questo avatar personalizzato viene utilizzato in precedenza rispetto al gravatar sopra.
     text_your_current_gravatar: |
-      MarvalProjects utilizza il tuo gravatar se ne hai registrato uno, o un'immagine o un'icona predefinita se esiste.
+      OpenProject utilizza il tuo gravatar se ne hai registrato uno, o un'immagine o un'icona predefinita se esiste.
       Il gravatar corrente è il seguente:
     settings:
       enable_gravatars: 'Abilita i gravatars dell''utente'

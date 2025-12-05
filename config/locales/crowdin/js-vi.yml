@@ -52,7 +52,7 @@ vi:
         Một sao lưu mới sẽ ghi đè lên bất kỳ sao lưu trước đó nào. Chỉ có một số lượng giới hạn các sao lưu mỗi ngày có thể được yêu cầu.
       last_backup: Sao lưu cuối cùng
       last_backup_from: Sao lưu cuối cùng từ
-      title: Sao lưu MarvalProjects
+      title: Sao lưu OpenProject
       options: Tùy chọn
       include_attachments: Bao gồm tập tin đính kèm
       download_backup: Tải xuống sao lưu
@@ -510,7 +510,7 @@ vi:
         next: "Tiếp theo"
         got_it: "Đã hiểu"
       steps:
-        help_menu: "Menu Trợ giúp (?) cung cấp <b>các tài nguyên trợ giúp bổ sung</b>. Tại đây bạn có thể tìm thấy hướng dẫn người dùng, video hướng dẫn hữu ích và nhiều hơn nữa. <br> Chúc bạn làm việc vui vẻ với MarvalProjects!"
+        help_menu: "Menu Trợ giúp (?) cung cấp <b>các tài nguyên trợ giúp bổ sung</b>. Tại đây bạn có thể tìm thấy hướng dẫn người dùng, video hướng dẫn hữu ích và nhiều hơn nữa. <br> Chúc bạn làm việc vui vẻ với OpenProject!"
         members: "Mời <b>thành viên mới</b> tham gia dự án của bạn."
         quick_add_button: "Nhấp vào biểu tượng cộng (+) trong thanh điều hướng tiêu đề để <b>tạo một dự án mới</b> hoặc <b>mời đồng nghiệp</b>."
         sidebar_arrow: "Sử dụng mũi tên trở lại ở góc trên bên trái để quay lại <b>menu chính</b> của dự án."

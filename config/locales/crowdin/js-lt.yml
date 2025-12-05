@@ -52,7 +52,7 @@ lt:
         Nauja atsarginė kopija perrašys senąją. Per dieną galima prašyti tik riboto kiekio atsarginių kopijų.
       last_backup: Paskutinė kopija
       last_backup_from: Paskutinė kopija nuo
-      title: MarvalProjects atsarginė kopija
+      title: OpenProject atsarginė kopija
       options: Parinktys
       include_attachments: Įtraukti priedus
       download_backup: Atsiųsti atsarginę kopiją
@@ -510,7 +510,7 @@ lt:
         next: "Kitas"
         got_it: "Supratau"
       steps:
-        help_menu: "Pagalbos (?) meniu yra <b>papildomi pagalbos resursai</b>. Čia jūs galite rasti naudotojo vadovą, naudingus video kaip atlikti veiksmus ir dar daugiau. <br>Sėkmės naudojant MarvalProjects!"
+        help_menu: "Pagalbos (?) meniu yra <b>papildomi pagalbos resursai</b>. Čia jūs galite rasti naudotojo vadovą, naudingus video kaip atlikti veiksmus ir dar daugiau. <br>Sėkmės naudojant OpenProject!"
         members: "Pakvieskite naujus <b>narius</b> prisijungti prie projekto."
         quick_add_button: "Paspauskite pliuso (+) ženklą navigacijos antraštėje ir <b>sukursite naują projektą</b> arba </b>pakviesite bendradarbius</b>."
         sidebar_arrow: "Pasinaudokite grįžimo rodykle viršutiniame kairiajame kampe grįžimui į projekto <b>pagrindinį meniu</b>."

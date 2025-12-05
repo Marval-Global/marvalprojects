@@ -131,13 +131,13 @@ nl:
       edit:
         label_delete_scim_client: "Delete SCIM client"
       form:
-        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in MarvalProjects."
-        authentication_method_description_html: "This is how the SCIM client authenticates at MarvalProjects. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
+        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in OpenProject."
+        authentication_method_description_html: "This is how the SCIM client authenticates at OpenProject. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
         description_html: 'Please refer to our <a href="%{docs_url}">documentation on configuring SCIM clients</a> for more information on these configuration options.'
         jwt_sub_description_html: 'For example, for Keycloak, this is the UUID of the service account  associated with the SCIM client. Consult <a href="%{docs_url}">our documentation</a> to learn how to find  the subject claim for your use case.'
         name_description: "Choose a name that will help other admins better understand why this client was configured."
       index:
-        description: "SCIM clients configured here are able to interact with MarvalProjects SCIM server API to provision, update, and deprovision user accounts and groups."
+        description: "SCIM clients configured here are able to interact with OpenProject SCIM server API to provision, update, and deprovision user accounts and groups."
         label_create_button: "Add SCIM client"
       new:
         title: "New SCIM client"
@@ -145,14 +145,14 @@ nl:
         confirm_button: "Revoke"
         title: "Revoke static token"
         heading: "Are you sure you want to revoke this token?"
-        description: "The SCIM client that uses this token will no longer be able to access MarvalProjects's SCIM server API."
+        description: "The SCIM client that uses this token will no longer be able to access OpenProject's SCIM server API."
       table_component:
         blank_slate:
           title: "No SCIM clients configured yet"
           description: "Add clients to see them here"
         user_count: "Users"
       token_list_component:
-        description: "The tokens you generate here can be passed by a SCIM client to access the MarvalProjects SCIM API."
+        description: "The tokens you generate here can be passed by a SCIM client to access the OpenProject SCIM API."
         heading: "Tokens"
         label_add_token: "Token"
         label_aria_add_token: "Add token"
@@ -204,35 +204,35 @@ nl:
       name: Willekeurige naam van de LDAP-verbinding
       host: LDAP hostnaam of IP-adres
       login_map: De attribuut sleutel in LDAP, gebruikt om de unieke gebruiker inlog te identificeren. Meestal zal dit `uid` of `samAccountName` zijn.
-      generic_map: De attribuut sleutel in LDAP die is toegewezen aan het MarvalProjects `%{attribute}` attribuut
-      admin_map_html: "Optioneel: De attribuut sleutel in LDAP dat <strong>indien aanwezig</strong> de MarvalProjects gebruiker markeert als een beheerder. Laat leeg bij twijfel."
+      generic_map: De attribuut sleutel in LDAP die is toegewezen aan het OpenProject `%{attribute}` attribuut
+      admin_map_html: "Optioneel: De attribuut sleutel in LDAP dat <strong>indien aanwezig</strong> de OpenProject gebruiker markeert als een beheerder. Laat leeg bij twijfel."
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br>
-        Example: uid=MarvalProjects,ou=system,dc=example,dc=com
+        Example: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Voer het bindwachtwoord van de systeemgebruiker in
       base_dn: |
-        Voer de Basis DN in van de subboom in LDAP waar u wilt dat MarvalProjects zoekt naar gebruikers en groepen. MarvalProjects zal filteren op opgegeven gebruikersnamen in deze subboom alleen.
+        Voer de Basis DN in van de subboom in LDAP waar u wilt dat OpenProject zoekt naar gebruikers en groepen. OpenProject zal filteren op opgegeven gebruikersnamen in deze subboom alleen.
         Voorbeeld: ou=users,dc=example,dc=com
       filter_string: |
         Voeg een optioneel RFC4515 filter toe om toe te passen op de resultaten van gebruikers die gefilterd zijn in het LDAP.
-        Dit kan worden gebruikt om de set gebruikers te beperken die gevonden zijn in MarvalProjects voor authenticatie en groepssynchronisatie.
+        Dit kan worden gebruikt om de set gebruikers te beperken die gevonden zijn in OpenProject voor authenticatie en groepssynchronisatie.
       filter_string_concat: |
-        MarvalProjects zal altijd filteren op het login attribuut dat door de gebruiker wordt opgegeven om het record te identificeren. Als je hier een filter opgeeft,
+        OpenProject zal altijd filteren op het login attribuut dat door de gebruiker wordt opgegeven om het record te identificeren. Als je hier een filter opgeeft,
         het wordt samengevoegd met een AND. Standaard wordt een catch-all (objectClass=*) gebruikt als een filter.
       onthefly_register: |
-        Als u dit selectievakje aanvinkt, zal MarvalProjects automatisch nieuwe gebruikers aanmaken van hun LDAP-items wanneer ze eerst verifiëren met MarvalProjects.
-        Laat dit uitgevinkt om alleen bestaande accounts in MarvalProjects te laten verifiëren via LDAP!
+        Als u dit selectievakje aanvinkt, zal OpenProject automatisch nieuwe gebruikers aanmaken van hun LDAP-items wanneer ze eerst verifiëren met OpenProject.
+        Laat dit uitgevinkt om alleen bestaande accounts in OpenProject te laten verifiëren via LDAP!
     connection_encryption: "Verbinding encryptie"
     encryption_details: "LDAPS / STARTTLS options"
     system_account: "Systeem account"
     system_account_legend: |
-      MarvalProjects vereist alleen-lezen toegang via een systeemaccount om gebruikers en groepen in uw LDAP-boomstructuur op te zoeken.
+      OpenProject vereist alleen-lezen toegang via een systeemaccount om gebruikers en groepen in uw LDAP-boomstructuur op te zoeken.
       Specificeer a.u.b. de bindgegevens voor deze systeemgebruiker in de volgende sectie.
     ldap_details: "LDAP details"
     user_settings: "Attribuut toewijzen"
     user_settings_legend: |
-      De volgende velden zijn gerelateerd aan hoe gebruikers worden aangemaakt in MarvalProjects van LDAP items en welke LDAP attributen worden gebruikt om de attributen van een MarvalProjects gebruiker te definiëren (attribuut toewijzing).
+      De volgende velden zijn gerelateerd aan hoe gebruikers worden aangemaakt in OpenProject van LDAP items en welke LDAP attributen worden gebruikt om de attributen van een OpenProject gebruiker te definiëren (attribuut toewijzing).
     tls_mode:
       plain: "geen"
       simple_tls: "LDAPS"
@@ -1238,7 +1238,7 @@ nl:
         confirmation: "komt niet overeen met %{attribute}."
         could_not_be_copied: "%{dependency} kon niet (volledig) worden gekopieerd."
         does_not_exist: "bestaat niet."
-        error_enterprise_only: "%{action} is alleen beschikbaar in de MarvalProjects Enterprise editie"
+        error_enterprise_only: "%{action} is alleen beschikbaar in de OpenProject Enterprise editie"
         error_unauthorized: "geen toegang."
         error_readonly: "werd geprobeerd te schrijven maar is niet schrijfbaar."
         error_conflict: "Informatie is in de tussentijd door ten minste één andere gebruiker bijgewerkt."
@@ -1817,7 +1817,7 @@ nl:
       heading_reset: "Reset back-up token"
       heading_create: "Back-up token maken"
       implications: >
-        Back-ups inschakelen zal elke gebruiker met de vereiste machtigingen en deze back-up token toestaan om een back-up te downloaden met alle gegevens van deze MarvalProjects installatie. Dit omvat de gegevens van alle andere gebruikers.
+        Back-ups inschakelen zal elke gebruiker met de vereiste machtigingen en deze back-up token toestaan om een back-up te downloaden met alle gegevens van deze OpenProject installatie. Dit omvat de gegevens van alle andere gebruikers.
       info: >
         U moet een  back-up token genereren om een back-up te kunnen maken. Elke keer dat je een back-up wilt aanvragen, moet je deze back-up token opgeven. U kunt het back-up token verwijderen om back-ups voor deze gebruiker uit te schakelen.
       verification: >
@@ -2150,7 +2150,7 @@ nl:
         Already have a token? Add it using the button below to upgrade to the booked Enterprise plan.
       hide_banner: "Hide this banner"
       homescreen_description: >
-        Enterprise plans extend the Community edition of MarvalProjects you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
+        Enterprise plans extend the Community edition of OpenProject you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
       homescreen_subline: By upgrading, you will also be supporting an open source project.
       baseline_comparison:
         description: Markeer wijzigingen die sindsdien in deze lijst zijn aangebracht.
@@ -2163,7 +2163,7 @@ nl:
         premium_features: "Enterprise add-ons"
         premium_features_text: "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields."
         professional_support: "Professional support"
-        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running MarvalProjects in business-critical environments."
+        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
       work_package_subject_generation:
         description: "Maak automatisch gegenereerde onderwerpen met behulp van kenmerken en tekst waarnaar verwezen wordt."
       customize_life_cycle:
@@ -2191,7 +2191,7 @@ nl:
       define_custom_style:
         title: "Custom color theme and logo"
         more_info: "Opmerking: het gebruikte logo is openbaar toegankelijk."
-        description: Pas uw MarvalProjects installatie aan met uw eigen logo en kleuren.
+        description: Pas uw OpenProject installatie aan met uw eigen logo en kleuren.
       custom_actions:
         title: "Aangepaste acties"
         description: "Aangepaste acties zijn met één klik snelkoppelingen naar een aantal vooraf gedefinieerde acties die u op bepaalde werkpakketten op basis van status beschikbaar kunt maken rol, type of project."
@@ -2200,13 +2200,13 @@ nl:
         description: "Enable seamless and secure authentication for your Nextcloud storage with Single Sign-On. Simplify access management and enhance user convenience."
       scim_api:
         title: "SCIM clients"
-        description: "Automate user management in MarvalProjects by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
+        description: "Automate user management in OpenProject by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
       virus_scanning:
-        description: "Ensure uploaded files in MarvalProjects are scanned for viruses before being accessible by other users."
+        description: "Ensure uploaded files in OpenProject are scanned for viruses before being accessible by other users."
       placeholder_users:
         title: Tijdelijke gebruikers
         description: >
-          Tijdelijke gebruikers zijn een manier om werkpakketten toe te wijzen aan gebruikers die geen deel uitmaken van uw project. Ze kunnen nuttig zijn in een reeks van scenario's; Bijvoorbeeld, als u de taken wilt bijhouden van een bron die nog niet genoemd of beschikbaar is, of als je die persoon geen toegang wilt geven tot MarvalProjects maar toch de taken wilt bijhouden die aan hen zijn toegewezen.
+          Tijdelijke gebruikers zijn een manier om werkpakketten toe te wijzen aan gebruikers die geen deel uitmaken van uw project. Ze kunnen nuttig zijn in een reeks van scenario's; Bijvoorbeeld, als u de taken wilt bijhouden van een bron die nog niet genoemd of beschikbaar is, of als je die persoon geen toegang wilt geven tot OpenProject maar toch de taken wilt bijhouden die aan hen zijn toegewezen.
       internal_comments:
         title: Internal comments
         description: "Internal comments allow an internal team to communicate amongst themselves privately. These are only visible to certain project roles and will never be visible publicly."
@@ -2228,9 +2228,9 @@ nl:
       request_again: "Request again"
       resend_action: "Resend confirmation email"
       welcome_title: "Quick feature overview"
-      welcome_description: "Get a quick overview of project management and team collaboration with MarvalProjects Enterprise edition."
+      welcome_description: "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition."
       confirmation_info: >
-        We sent you an email on %{date} to %{email} with all the information to start the free trial of MarvalProjects Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
+        We sent you an email on %{date} to %{email} with all the information to start the free trial of OpenProject Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
       confirmation_subline: >
         Please, check your inbox and follow the steps to start your 14-day free trial.
       domain_caption: The token will be valid for your currently configured host name.
@@ -2260,7 +2260,7 @@ nl:
   error_check_user_and_role: "Kies een gebruiker en een rol."
   error_code: "Fout %{code}"
   error_color_could_not_be_saved: "Kleur kon niet opgeslagen worden"
-  error_cookie_missing: "De cookie voor MarvalProjects ontbreekt. Zorg ervoor dat cookies zijn ingeschakeld aangezien deze toepassing anders niet goed zal functioneren."
+  error_cookie_missing: "De cookie voor OpenProject ontbreekt. Zorg ervoor dat cookies zijn ingeschakeld aangezien deze toepassing anders niet goed zal functioneren."
   error_custom_option_not_found: "Optie bestaat niet."
   error_enterprise_plan_needed: "You need the %{plan} enterprise plan to perform this action."
   error_enterprise_activation_user_limit: "Uw account kon niet worden geactiveerd (gebruikerslimiet bereikt). Neem contact op met uw beheerder om toegang te krijgen."
@@ -2277,7 +2277,7 @@ nl:
   error_work_package_not_found_in_project: "Het werkpakket werd niet gevonden of maakt geen deel uit van dit project"
   error_work_package_id_not_found: "Het werkpakket is niet gevonden."
   error_must_be_project_member: "moet een project lid zijn"
-  error_migrations_are_pending: "Uw MarvalProjects installatie heeft database migraties in afwachting. U heeft waarschijnlijk de migraties gemist tijdens uw laatste upgrade. Controleer a.u.b. de upgrade gids om uw installatie goed bij te werken."
+  error_migrations_are_pending: "Uw OpenProject installatie heeft database migraties in afwachting. U heeft waarschijnlijk de migraties gemist tijdens uw laatste upgrade. Controleer a.u.b. de upgrade gids om uw installatie goed bij te werken."
   error_migrations_visit_upgrade_guides: "Bezoek onze upgrade gids a.u.b."
   error_no_default_work_package_status: 'Geen standaard werkpakket status is gedefinieerd. Controleer uw configuratie (Ga naar ''Administratie-> werkpakket statussen'').'
   error_no_type_in_project: "Er is geen type gekoppeld aan dit project. Controleer de projectinstellingen."
@@ -2464,7 +2464,7 @@ nl:
       no_visible_projects: "Er zijn geen zichtbare projecten binnen deze instantie."
       users: "Nieuwste geregistreerde gebruikers in deze instantie."
     blocks:
-      community: "MarvalProjects gemeenschap"
+      community: "OpenProject gemeenschap"
       upsell:
         title: "Upgrade naar Enterprise-editie"
     links:
@@ -2475,7 +2475,7 @@ nl:
       impressum: "Juridische mededeling"
       glossary: "Woordenlijst"
       shortcuts: "Snelkoppelingen"
-      blog: "MarvalProjects blog"
+      blog: "OpenProject blog"
       forums: "Gemeenschapsforum"
       newsletter: "Beveiligingswaarschuwingen / nieuwsbrief"
   image_conversion:
@@ -2487,7 +2487,7 @@ nl:
       default_attribute_written: "Alleen-lezen kenmerken geschreven"
       progress_mode_changed_to_status_based: "Voortgangsberekening bijgewerkt"
       status_changed: "Status '%{status_name}'"
-      system_update: "MarvalProjects systeemupdate:"
+      system_update: "OpenProject systeemupdate:"
       work_package_duplicate_closed: "Duplicate work package updated:"
       total_percent_complete_mode_changed_to_work_weighted_average: "Calculation of % Complete totals now weighted by Work."
       total_percent_complete_mode_changed_to_simple_average: "Calculation of % Complete totals now based on a simple average of only % Complete values."
@@ -2557,7 +2557,7 @@ nl:
         disabled_text: "API tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       ical:
         title: "iCalendar"
-        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to MarvalProjects calendars</a> and view up-to-date work package information from external clients.'
+        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to OpenProject calendars</a> and view up-to-date work package information from external clients.'
         disabled_text: "iCalendar subscriptions are not enabled by the administrator. Please contact your administrator to use this feature."
         empty_text_hint: "To add an iCalendar token, subscribe to a new or existing calendar from within the Calendar module of a project. You must have the necessary permissions."
       oauth:
@@ -2743,7 +2743,7 @@ nl:
   label_custom_field_plural: "Aangepaste velden"
   label_custom_field_default_type: "Leeg type"
   label_custom_style: "Ontwerp"
-  label_custom_style_description: "Choose how MarvalProjects looks to you with themes, select your default colors to use in the app and how exports look like."
+  label_custom_style_description: "Choose how OpenProject looks to you with themes, select your default colors to use in the app and how exports look like."
   label_dashboard: "Dashboard"
   label_database_version: "PostgreSQL versie"
   label_date: "Datum"
@@ -2999,7 +2999,7 @@ nl:
   label_open_menu: "Menu openen"
   label_open_work_packages: "Open"
   label_open_work_packages_plural: "Open"
-  label_openproject_website: "MarvalProjects website"
+  label_openproject_website: "OpenProject website"
   label_optional_description: "Omschrijving"
   label_options: "Opties"
   label_other: "Overige"
@@ -3388,8 +3388,8 @@ nl:
   mail_body_backup_token_reset_user_info: Uw back-up token is gereset.
   mail_body_backup_token_info: Het vorige token is niet langer geldig.
   mail_body_backup_waiting_period: Het nieuwe token zal ingeschakeld worden in %{hours} uur.
-  mail_body_backup_token_warning: Als u dit niet was, log dan onmiddellijk in op MarvalProjects en reset het opnieuw.
-  mail_body_incoming_email_error: De e-mail die u naar MarvalProjects heeft verzonden kon niet worden verwerkt.
+  mail_body_backup_token_warning: Als u dit niet was, log dan onmiddellijk in op OpenProject en reset het opnieuw.
+  mail_body_incoming_email_error: De e-mail die u naar OpenProject heeft verzonden kon niet worden verwerkt.
   mail_body_incoming_email_error_in_reply_to: "Op %{received_at} %{from_email} geschreven"
   mail_body_incoming_email_error_logs: "Logboeken"
   mail_body_lost_password: "Om uw wachtwoord te wijzigen, klikt u op op de volgende link:"
@@ -3402,10 +3402,10 @@ nl:
   mail_body_register_user: "Beste %{name},"
   mail_body_register_links_html: |
     Blader gerust door ons youtube kanaal (%{youtube_link}) waar we een webinar (%{webinar_link})
-    en "Aan de slag gaan" video's (%{get_started_link}) voorzien om uw eerste stappen in MarvalProjects zo eenvoudig mogelijk te maken.
+    en "Aan de slag gaan" video's (%{get_started_link}) voorzien om uw eerste stappen in OpenProject zo eenvoudig mogelijk te maken.
     <br />
     Als u nog vragen heeft, raadpleeg dan onze documentatie (%{documentation_link}) of neem contact op met uw beheerder.
-  mail_body_register_closing: "Jouw MarvalProjects team"
+  mail_body_register_closing: "Jouw OpenProject team"
   mail_body_register_ending: "Blijf op de hoogte! Met vriendelijke groet,"
   mail_body_reminder: "%{count} werkpakket(ten) die aan u zijn toegewezen bereiken in de volgende %{days} dagen hun uiterste datum:"
   mail_body_group_reminder: '%{count} werkpakket(ten) die zijn toegewezen aan groep "%{group}" zullen in de komende %{days} dagen klaar zijn:'
@@ -3414,7 +3414,7 @@ nl:
   mail_subject_account_activation_request: "%{value} account aanvraag dient geactiveerd te worden"
   mail_subject_backup_ready: "Je back-up is klaar"
   mail_subject_backup_token_reset: "Back-up token restten"
-  mail_subject_incoming_email_error: "Een e-mail die u naar MarvalProjects heeft verzonden kon niet worden verwerkt"
+  mail_subject_incoming_email_error: "Een e-mail die u naar OpenProject heeft verzonden kon niet worden verwerkt"
   mail_subject_lost_password: "Uw wachtwoord %{value}"
   mail_subject_register: "Uw %{value} account activatie"
   mail_subject_wiki_content_added: "'%{id}' wikipagina is toegevoegd"
@@ -3443,13 +3443,13 @@ nl:
   mail_user_activation_limit_reached:
     subject: Activering gebruikerslimiet bereikt
     message: |
-      Een nieuwe gebruiker (%{email}) heeft geprobeerd om een account in een MarvalProjects omgeving dat u beheerd (%{host}) te maken. De gebruiker kan het account niet activeren omdat het maximum aantal gebruikers is bereikt.
+      Een nieuwe gebruiker (%{email}) heeft geprobeerd om een account in een OpenProject omgeving dat u beheerd (%{host}) te maken. De gebruiker kan het account niet activeren omdat het maximum aantal gebruikers is bereikt.
     steps:
       label: "Als u wilt dat de gebruiker ja inloggen kunt in u: "
       a: "Upgrade uw abbonement ([here](upgrade_url))" #here turned into a link
       b: "Vergrendelen of verwijderen van een bestaande gebruiker ([here](users_url))" #here turned into a link
   more_actions: "Meer functies"
-  noscript_description: "U moet JavaScript activeren om MarvalProjects te kunnen gebruiken!"
+  noscript_description: "U moet JavaScript activeren om OpenProject te kunnen gebruiken!"
   noscript_heading: "JavaScript uitgeschakeld"
   noscript_learn_more: "Meer informatie"
   notice_accessibility_mode: De toegankelijkheidsmodus kan worden ingeschakeld in de [settings](url) van uw account.
@@ -3525,7 +3525,7 @@ nl:
   notice_wont_delete_auth_source: The LDAP connection cannot be deleted as long as there are still users using it.
   notice_project_cannot_update_custom_fields: "U kunt de beschikbare aangepaste projectvelden niet bijwerken. Het project is ongeldig: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Deze pagina is automatisch gegenereerd tijdens het bijwerken van MarvalProjects. Het bevat alle bijlagen die eerder gekoppeld waren aan de %{container_type} "%{container_name}".
+    Deze pagina is automatisch gegenereerd tijdens het bijwerken van OpenProject. Het bevat alle bijlagen die eerder gekoppeld waren aan de %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -3548,7 +3548,7 @@ nl:
           tb: "TB"
   onboarding:
     heading_getting_started: "Krijg een overzicht"
-    text_getting_started_description: "Krijg een snel overzicht van projectbeheer en teamsamenwerking met MarvalProjects. U kunt deze video opnieuw starten vanuit het helpmenu."
+    text_getting_started_description: "Krijg een snel overzicht van projectbeheer en teamsamenwerking met OpenProject. U kunt deze video opnieuw starten vanuit het helpmenu."
     welcome: "Welkom bij %{app_title}"
     select_language: "Gelieve uw taal te kiezen"
   permission_add_work_package_comments: "Add comments"
@@ -3631,7 +3631,7 @@ nl:
   permission_manage_types: "Selecteer typen"
   permission_manage_own_reminders: "Create own reminders"
   permission_view_project: "Bekijk projecten"
-  permission_view_changesets: "Bekijk opslagplaats wijzigingen in MarvalProjects"
+  permission_view_changesets: "Bekijk opslagplaats wijzigingen in OpenProject"
   permission_view_internal_comments: "View internal comments"
   permission_view_commit_author_statistics: "Bekijk de commit auteur statistieken"
   permission_view_dashboards: "View dashboards"
@@ -3742,7 +3742,7 @@ nl:
     destroy:
       confirmation: "Als u doorgaat, wordt de beheerde opslagplaats permanent verwijderd."
       info: "Het verwijderen van de opslagplaats is een onomkeerbare actie."
-      info_not_managed: "Opmerking: Dit zal niet de inhoud verwijderen van deze opslagplaats, aangezien het niet wordt beheerd door MarvalProjects."
+      info_not_managed: "Opmerking: Dit zal niet de inhoud verwijderen van deze opslagplaats, aangezien het niet wordt beheerd door OpenProject."
       managed_path_note: "De volgende doelmap wordt gewist: %{path}"
       repository_verification: "Voer het project identificatienummer %{identifier} in om de verwijdering van de opslagplaats te verifiëren."
       subtitle: "Wil je echt de %{repository_type} van het project %{project_name} verwijderen?"
@@ -3756,8 +3756,8 @@ nl:
       empty_repository: "De opslagplaats bestaat, maar is leeg. Het bevat nog niet alle revisies."
       exists_on_filesystem: "De opslagplaats doelmap bestaat al in het bestandssysteem."
       filesystem_access_failed: "Er is een fout opgetreden tijdens het toegang verkrijgen tot de opslagplaats in het bestandssysteem: %{message}"
-      not_manageable: "Deze opslagplaats leverancier kan niet worden beheerd door MarvalProjects."
-      path_permission_failed: "Er is een fout opgetreden tijdens het maken van het volgende pad: %{path}. Zorg ervoor dat MarvalProjects naar die map kan schrijven."
+      not_manageable: "Deze opslagplaats leverancier kan niet worden beheerd door OpenProject."
+      path_permission_failed: "Er is een fout opgetreden tijdens het maken van het volgende pad: %{path}. Zorg ervoor dat OpenProject naar die map kan schrijven."
       unauthorized: "U bent niet gemachtigd voor toegang tot de opslagplaats of de gebruikersnaam en wachtwoordcombinatie is ongeldig."
       unavailable: "De opslagplaats is niet beschikbaar."
       exception_title: "Geen toegang tot de opslagplaats: %{message}"
@@ -3774,9 +3774,9 @@ nl:
         path_encoding: "Overschrijven Git pad codering (standaard: UTF-8)"
       local_title: "Koppeling van de bestaande lokale Git repository"
       local_url: "Lokale URL"
-      local_introduction: "Als u een bestaande lokale Git repository hebt, kunt u deze koppelen met MarvalProjects om deze te openen van binnen de toepassing."
-      managed_introduction: "Laat MarvalProjects een lokaal Git repository automatisch aanmaken en integreren."
-      managed_title: "Git repository geïntegreerd in MarvalProjects"
+      local_introduction: "Als u een bestaande lokale Git repository hebt, kunt u deze koppelen met OpenProject om deze te openen van binnen de toepassing."
+      managed_introduction: "Laat OpenProject een lokaal Git repository automatisch aanmaken en integreren."
+      managed_title: "Git repository geïntegreerd in OpenProject"
       managed_url: "Beheerde URL"
       path: "Pad naar Git repository"
       path_encoding: "Pad codering"
@@ -3793,24 +3793,24 @@ nl:
     scm_types:
       local: "Koppel een bestaand lokaal repository"
       existing: "Koppel een bestaand repository"
-      managed: "Maak nieuwe repository aan in MarvalProjects"
+      managed: "Maak nieuwe repository aan in OpenProject"
     storage:
       not_available: "Schijf opslag consumptie is niet beschikbaar voor deze repository."
       update_timeout: "Houd de laatste vereiste vrije schijfruimte voor een repository voor N minuten. Als het tellen van de vereiste schijfruimte van een repository kostbaar is, verhoog dit getal om invloed op de prestaties verminderen."
-      oauth_application_details: "De klantgeheim waarde zal niet meer toegankelijk zijn nadat u dit venster sluit. Kopieer deze waarden in de Nextcloud MarvalProjects integratie-instellingen:"
+      oauth_application_details: "De klantgeheim waarde zal niet meer toegankelijk zijn nadat u dit venster sluit. Kopieer deze waarden in de Nextcloud OpenProject integratie-instellingen:"
       oauth_application_details_link_text: "Ga naar instellingen pagina"
       setup_documentation_details: "Als u hulp nodig heeft bij het configureren van een nieuw bestand controleer dan de documentatie: "
       setup_documentation_details_link_text: "File storages setup"
       show_warning_details: "Als u deze bestandsopslag wilt gebruiken, moet u de module en de specifieke opslag activeren in de projectinstellingen van elk gewenst project."
     subversion:
       existing_title: "Bestaande Subversion-repository"
-      existing_introduction: "Als u een bestaand Subversion repository hebt, kunt u deze koppelen met MarvalProjects om deze te openen van binnen de toepassing."
+      existing_introduction: "Als u een bestaand Subversion repository hebt, kunt u deze koppelen met OpenProject om deze te openen van binnen de toepassing."
       existing_url: "Bestaande URL"
       instructions:
         managed_url: "Dit is de URL van de beheerde (lokale) Subversion-repository."
         url: "Voer de URL in van de repository. Dit kan ook gericht zijn op een lokaal repository (beginnend met %{local_proto}), of een remote repository. De volgende URL-schema's worden ondersteund:"
-      managed_title: "Geïntegreerd Subversion-repository in MarvalProjects"
-      managed_introduction: "Laat MarvalProjects een lokale Subversion repository automatisch aanmaken en integreren."
+      managed_title: "Geïntegreerd Subversion-repository in OpenProject"
+      managed_introduction: "Laat OpenProject een lokale Subversion repository automatisch aanmaken en integreren."
       managed_url: "Beheerde URL"
       password: "Repository wachtwoord"
       username: "Repository-gebruikersnaam"
@@ -3837,7 +3837,7 @@ nl:
   setting_apiv3_cors_enabled: "Inschakelen CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) toegestane oorsprong"
   setting_apiv3_cors_origins_text_html: >
-    Als CORS is ingeschakeld, zijn dit de oorsprong die toegang heeft tot MarvalProjects API. <br/> Bekijk de <a href="%{origin_link}" target="_blank">Documentatie op de Oorsprongshoofd</a> over hoe u de verwachte waarden kunt opgeven.
+    Als CORS is ingeschakeld, zijn dit de oorsprong die toegang heeft tot OpenProject API. <br/> Bekijk de <a href="%{origin_link}" target="_blank">Documentatie op de Oorsprongshoofd</a> over hoe u de verwachte waarden kunt opgeven.
   setting_apiv3_write_readonly_attributes: "Schrijftoegang tot alleen-lezen attributen"
   setting_apiv3_write_readonly_attributes_instructions_html: >
     Als deze optie is ingeschakeld, staat de API beheerders toe om statische alleen-lezen attributen te schrijven tijdens het aanmaken, zoals createdAt en author. <br/> <strong>Waarschuwing:</strong> Deze instelling heeft een use-case voor bijvoorbeeld het importeren van gegevens, maar staat beheerders toe om zich bij het aanmaken van items voor te doen als andere gebruikers. Alle aanmaakverzoeken worden echter gelogd met de echte auteur. </br> Voor meer informatie over attributen en ondersteunde bronnen, zie de %{api_documentation_link}.
@@ -4039,7 +4039,7 @@ nl:
         clamav_socket_html: Enter the socket to the clamd daemon, e.g., %{example}
         clamav_host_html: Enter the hostname and port to the clamd daemon separated by colon. e.g., %{example}
         description_html: >
-          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as MarvalProjects and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
+          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as OpenProject and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
     brute_force_prevention: "Automatische gebruiker blokkering"
     date_format:
       first_date_of_week_and_year_set: >
@@ -4047,7 +4047,7 @@ nl:
       first_week_of_year_text_html: >
         Select the date of January that is contained in the first week of the year. This value together with first day of the week determines the total number of weeks in a year. For more information, please see our <a href="%{link}" target="_blank">documentation</a> on this topic.
     experimental:
-      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your MarvalProjects installation and losing all of its data.
+      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your OpenProject installation and losing all of its data.
       warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on MarvalProjects installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
       feature_flags: Functievlaggen
     general: "Algemeen"
@@ -4131,7 +4131,7 @@ nl:
       sentence_connector: "en"
       skip_last_comma: "onwaar"
   text_accessibility_hint: "De toegankelijkheid-modus is ontworpen voor gebruikers die blind, motorisch gehandicapte of een slecht gezichtsvermogen hebben. Voor de laatste gericht zijn elementen speciaal gemarkeerd. Let op, dat de backlog-module is niet beschikbaar in deze modus."
-  text_access_token_hint: "Toegangstokens kunnen u externe toepassingen toegang verlenen tot bronnen in MarvalProjects."
+  text_access_token_hint: "Toegangstokens kunnen u externe toepassingen toegang verlenen tot bronnen in OpenProject."
   text_analyze: "Verdere analyse: %{subject}"
   text_are_you_sure: "Weet u het zeker?"
   text_are_you_sure_continue: "Weet u zeker dat u wilt doorgaan?"
@@ -4213,7 +4213,7 @@ nl:
   text_no_notes: "Er is geen commentaar beschikbaar voor dit werkpakket."
   text_notice_too_many_values_are_inperformant: "Opmerking: Meer dan 100 items per pagina weergeven kan de laadtijd van de pagina verhogen."
   text_notice_security_badge_displayed_html: >
-    Opmerking: indien ingeschakeld zal dit een badge weergeven met uw installatiestatus in de <a href="%{information_panel_path}">%{information_panel_label}</a> administratie paneel, en op de homepage. Deze wordt alleen getoond aan beheerders. <br/> De badge zal uw huidige MarvalProjects versie controleren tegen de officiële MarvalProjects-database om u te waarschuwen voor updates of bekende kwetsbaarheden. Voor meer informatie over wat de controle biedt, welke gegevens nodig zijn om beschikbare updates te verstrekken en hoe deze controle kan worden uitgeschakeld, bezoek <a href="%{more_info_url}">de configuratiedocumentatie</a>.
+    Opmerking: indien ingeschakeld zal dit een badge weergeven met uw installatiestatus in de <a href="%{information_panel_path}">%{information_panel_label}</a> administratie paneel, en op de homepage. Deze wordt alleen getoond aan beheerders. <br/> De badge zal uw huidige OpenProject versie controleren tegen de officiële OpenProject-database om u te waarschuwen voor updates of bekende kwetsbaarheden. Voor meer informatie over wat de controle biedt, welke gegevens nodig zijn om beschikbare updates te verstrekken en hoe deze controle kan worden uitgeschakeld, bezoek <a href="%{more_info_url}">de configuratiedocumentatie</a>.
   text_own_membership_delete_confirmation: "U staat op het punt om enkele of alle van uw machtigingen te verwijderen en kan dit project daarna mogelijk niet meer bewerken.\nWeet u zeker dat u wilt doorgaan?"
   text_permanent_delete_confirmation_checkbox_label: "I understand that this deletion cannot be reversed"
   text_plugin_assets_writable: "Plugin directory schrijfbaar"
@@ -4222,7 +4222,7 @@ nl:
   text_reassign: "Opnieuw toewijzen aan werkpakket:"
   text_regexp_info: "bijv. ^[A-Z0-9]+$"
   text_regexp_multiline: 'De regex wordt toegepast in een modus met meerdere regels. bijvoorbeeld, ^---\s+'
-  text_repository_usernames_mapping: "Selecteer of update de gebruiker van de MarvalProjects gelinkt aan elke gebruikersnaam gevonden in het repository log. Gebruikers met de zelfde MarvalProjects en repository gebruikersnaam of e-mail worden automatisch gelinkt."
+  text_repository_usernames_mapping: "Selecteer of update de gebruiker van de OpenProject gelinkt aan elke gebruikersnaam gevonden in het repository log. Gebruikers met de zelfde OpenProject en repository gebruikersnaam of e-mail worden automatisch gelinkt."
   text_status_changed_by_changeset: "Toegepast in changeset %{value}."
   text_table_difference_description: "In deze tabel worden de enkele %{entries} weergegeven. U kunt het verschil tussen twee vermeldingen bekijken door eerst de bijhorende selectievakjes te selecteren in de tabel. Bij het klikken op de knop onder de tabel worden de verschillen weergegeven."
   text_time_logged_by_changeset: "Toegepast in changeset %{value}."
@@ -4297,7 +4297,7 @@ nl:
     authentication_provider: "Verificatieprovider"
     identity_url_text: "The internal unique identifier provided by the authentication provider."
     authentication_settings_disabled_due_to_external_authentication: >
-      Deze gebruiker wordt geverifieerd via een externe-verificatieprovider, dus er is geen wachtwoord in MarvalProjects wat moet worden veranderd.
+      Deze gebruiker wordt geverifieerd via een externe-verificatieprovider, dus er is geen wachtwoord in OpenProject wat moet worden veranderd.
     authorization_rejected: "U bent niet toegestaan aan te melden."
     assign_random_password: "Toewijzen van willekeurig wachtwoord (verzonden naar de gebruiker via e-mail)"
     blocked: "tijdelijk geblokkeerd"
@@ -4329,7 +4329,7 @@ nl:
   warning: Waarschuwing
   warning_attachments_not_saved: "%{count} bestanden kunnen niet worden opgeslagen."
   warning_imminent_user_limit: >
-    U heeft meer gebruikers uitgenodigd dan wordt ondersteund in uw huidig abbonement. Uitgenodigde gebruikers kunnen mogelijk niet kunnen inloggen in uw MarvalProjects omgeving. Voer een <a href="%{upgrade_url}">verhoging van het abbonement uit</a> of blokkeer bestaande gebruikers zodat nieuwe gebruikers kunnen inloggen.
+    U heeft meer gebruikers uitgenodigd dan wordt ondersteund in uw huidig abbonement. Uitgenodigde gebruikers kunnen mogelijk niet kunnen inloggen in uw OpenProject omgeving. Voer een <a href="%{upgrade_url}">verhoging van het abbonement uit</a> of blokkeer bestaande gebruikers zodat nieuwe gebruikers kunnen inloggen.
   warning_registration_token_expired: |
     De activatie e-mail is verlopen. Wij sturen u een nieuwe activatie e-mail naar %{email} gestuurd. Klik op de link in de activatie e-mail om uw account te activeren.
   warning_user_limit_reached: >
@@ -4337,7 +4337,7 @@ nl:
   warning_user_limit_reached_admin: >
     Adding additional users will exceed the current limit. Please <a href="%{upgrade_url}">upgrade your plan</a> to be able to ensure external users are able to access this instance.
   warning_user_limit_reached_instructions: >
-    You reached your user limit (%{current}/%{max} active users). Please contact sales@MarvalProjects.com to upgrade your Enterprise edition plan and add additional users.
+    You reached your user limit (%{current}/%{max} active users). Please contact sales@openproject.com to upgrade your Enterprise edition plan and add additional users.
   warning_protocol_mismatch_html: >
 
   warning_bar:
@@ -4604,7 +4604,7 @@ nl:
         confidential: "Controleer of de toepassing zal worden gebruikt waar het cliëntgeheim vertrouwelijk kan worden gehouden. Native mobiele apps en Single Page Apps worden verondersteld niet-vertrouwelijk."
         scopes: "Controleer de toepassingsgebieden waartoe u toegang wilt geven. Als geen bereik is geselecteerd, wordt api_v3 aangenomen."
         client_credential_user_id: "Optionele gebruikersID om te impersoneren wanneer klanten deze applicatie gebruiken. Laat leeg om alleen openbare toegang toe te staan"
-        register_intro: "Als u een OAuth API client applicatie voor MarvalProjects ontwikkelt, kunt u het registreren met dit formulier voor alle gebruikers om te gebruiken."
+        register_intro: "Als u een OAuth API client applicatie voor OpenProject ontwikkelt, kunt u het registreren met dit formulier voor alle gebruikers om te gebruiken."
         default_scopes: ""
     header:
       builtin_applications: Built-in OAuth applications
@@ -4612,7 +4612,7 @@ nl:
     empty_application_lists: No OAuth applications have been registered.
     client_id: "Client ID"
     client_secret_notice: >
-      Dit is de enige keer dat we het cliënt geheim kunnen drukken, let het op en houd het veilig. Het moet als wachtwoord worden behandeld en kan niet later door MarvalProjects worden opgehaald.
+      Dit is de enige keer dat we het cliënt geheim kunnen drukken, let het op en houd het veilig. Het moet als wachtwoord worden behandeld en kan niet later door OpenProject worden opgehaald.
     authorization_dialog:
       authorize: "Autoriseer"
       cancel: "Annuleren en weigeren van de authorisatie."
@@ -4622,7 +4622,7 @@ nl:
         Deze applicatie vraagt toegang tot uw OpenProject account. <br/> <strong>heeft de volgende machtigingen aangevraagd:</strong>
     scopes:
       api_v3: "Volledige API v3 toegang"
-      api_v3_text: "Toepassing zal volledige lees- en schrijftoegang krijgen tot de MarvalProjects API v3 om namens u acties uit te voeren."
+      api_v3_text: "Toepassing zal volledige lees- en schrijftoegang krijgen tot de OpenProject API v3 om namens u acties uit te voeren."
     grants:
       created_date: "Goedgekeurd op"
       scopes: "Machtigingen"
@@ -4638,7 +4638,7 @@ nl:
     client_credentials_impersonation_set_to: "Klant referentiegebruiker ingesteld op"
     client_credentials_impersonation_warning: "Opmerking: Clienten die gebruik maken van de 'Client referenties' stroom in deze applicatie zullen de rechten van deze gebruiker hebben"
     client_credentials_impersonation_html: >
-      Standaard biedt MarvalProjects OAuth 2.0 autorisatie via %{authorization_code_flow_link}. U kunt optioneel %{client_credentials_flow_link} inschakelen, maar u moet een gebruiker geven wier verzoeken namens zullen worden uitgevoerd.
+      Standaard biedt OpenProject OAuth 2.0 autorisatie via %{authorization_code_flow_link}. U kunt optioneel %{client_credentials_flow_link} inschakelen, maar u moet een gebruiker geven wier verzoeken namens zullen worden uitgevoerd.
     authorization_error: "Er is een autorisatiefout opgetreden."
     revoke_my_application_confirmation: "Weet u zeker dat u deze applicatie wilt verwijderen? Dit zal %{token_count} actief voor deze verwijderen."
     my_registered_applications: "Geregistreerde OAuth toepassingen"
@@ -4667,20 +4667,20 @@ nl:
         Interne fout: Vernieuw token zonder eerder bestaande token.
       refresh_token_updated_failed: "Fout tijdens het bijwerken van OAuthClientToken"
       oauth_client_not_found_explanation: >
-        Deze fout verschijnt nadat u de client_id en client_secret in MarvalProjects hebt bijgewerkt, maar heeft het 'Return URI' veld niet bijgewerkt in de OAuth2 provider.
+        Deze fout verschijnt nadat u de client_id en client_secret in OpenProject hebt bijgewerkt, maar heeft het 'Return URI' veld niet bijgewerkt in de OAuth2 provider.
       oauth_code_not_present: "OAuth2 'code' niet gevonden in 'callback' eindpunt (redirect_uri)."
       oauth_code_not_present_explanation: >
         Deze fout wordt weergegeven als u het verkeerde response_type in de OAuth2 provider hebt geselecteerd. Response_type moet 'code' zijn of gelijkwaardig.
       oauth_state_not_present: "OAuth2 'staat' niet gevonden in 'callback' eindpunt (redirect_uri)."
       oauth_state_not_present_explanation: >
-        De 'staat' wordt gebruikt om aan te geven aan MarvalProjects waar verder te gaan na een succesvolle OAuth2 autorisatie. Een ontbrekende 'staat' is een interne fout die kan verschijnen tijdens het instellen. Neem contact op met de systeembeheerder.
+        De 'staat' wordt gebruikt om aan te geven aan OpenProject waar verder te gaan na een succesvolle OAuth2 autorisatie. Een ontbrekende 'staat' is een interne fout die kan verschijnen tijdens het instellen. Neem contact op met de systeembeheerder.
       rack_oauth2:
         client_secret_invalid: "Klant geheim is ongeldig (client_secret_invalid)"
         invalid_request: >
           OAuth2 Authorization Server reageerde met 'invalid_request'. Deze fout verschijnt als je meerdere keren probeert te autoriseren of in geval van technische problemen.
         invalid_response: "OAuth2 Autorisatie Server gaf een ongeldig antwoord (invalid_response)"
         invalid_grant: "De OAuth2 Autorisatie Server vraagt u om opnieuw te autoriseren (invalid_grant)."
-        invalid_client: "De OAuth2 Authorization Server herkent MarvalProjects (invalid_client) niet."
+        invalid_client: "De OAuth2 Authorization Server herkent OpenProject (invalid_client) niet."
         unauthorized_client: "De OAuth2 Autorisatie Server verwerpt het subsidietype (unauthorized_client)"
         unsupported_grant_type: "De OAuth2 Autorisatie Server vraagt u om opnieuw toestemming (niet-supported_grant_type)."
         invalid_scope: "Je hebt geen toegang tot de gevraagde bron (ongeldig_scope)."
@@ -4693,10 +4693,10 @@ nl:
   you: jij
   link: link
   plugin_openproject_auth_plugins:
-    name: "MarvalProjects Auth Plugins"
-    description: "Integration of OmniAuth strategy providers for authentication in MarvalProjects."
+    name: "OpenProject Auth Plugins"
+    description: "Integration of OmniAuth strategy providers for authentication in OpenProject."
   plugin_openproject_auth_saml:
     name: "OmniAuth SAML / Single-Sign On"
-    description: "Adds the OmniAuth SAML provider to MarvalProjects"
+    description: "Adds the OmniAuth SAML provider to OpenProject"
   enterprise_plans:
     legacy_enterprise: "Enterprise Plan"

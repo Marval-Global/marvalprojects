@@ -43,13 +43,13 @@ uk:
   notice_deploy_target_created: Створено ціль розгортання
   notice_deploy_target_destroyed: Ціль розгортання видалено
   plugin_openproject_github_integration:
-    name: "Інтеграція MarvalProjects GitHub"
-    description: "Інтегрує MarvalProjects і GitHub для покращення робочого процесу"
+    name: "Інтеграція OpenProject GitHub"
+    description: "Інтегрує OpenProject і GitHub для покращення робочого процесу"
   project_module_github: "GitHub"
   permission_show_github_content: "Показати контент GitHub"
-  permission_introspection: Зчитування даних про запущену версію ядра MarvalProjects і SHA складання
+  permission_introspection: Зчитування даних про запущену версію ядра OpenProject і SHA складання
   text_deploy_target_type_info: >
-    Зараз ми підтримуємо лише MarvalProjects.
+    Зараз ми підтримуємо лише OpenProject.
   text_deploy_target_api_key_info: >
-    MarvalProjects [API key](docs_url), що належить користувачу, який має глобальний дозвіл на аналіз об’єктів.
+    OpenProject [API key](docs_url), що належить користувачу, який має глобальний дозвіл на аналіз об’єктів.
   text_pull_request_deployed_to: "%{pr_link} розгорнуто в %{deploy_target_link}"

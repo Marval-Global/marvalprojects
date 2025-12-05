@@ -1,6 +1,6 @@
 cs:
   plugin_openproject_webhooks:
-    name: "MarvalProjects Webhooks"
+    name: "OpenProject Webhooks"
     description: ""
   activerecord:
     attributes:
@@ -35,7 +35,7 @@ cs:
         internal_comment: "Interní komentář"
       explanation:
         text: >
-          Při výskytu události, jako je vytvoření pracovního balíčku nebo aktualizace projektu, MarvalProjects odešle POST požadavek na nakonfigurované webové koncové body. Často je událost odeslána poté, co %{link} prošel.
+          Při výskytu události, jako je vytvoření pracovního balíčku nebo aktualizace projektu, OpenProject odešle POST požadavek na nakonfigurované webové koncové body. Často je událost odeslána poté, co %{link} prošel.
         link: konfigurovaná doba agregace
       status:
         enabled: 'webhook je povolen'
@@ -66,4 +66,4 @@ cs:
           title: 'Vybrané projekty'
         secret:
           description: >
-            Je-li nastaveno, MarvalProjects používá tuto tajnou hodnotu k podpisu payloadu webhooku.
+            Je-li nastaveno, OpenProject používá tuto tajnou hodnotu k podpisu payloadu webhooku.

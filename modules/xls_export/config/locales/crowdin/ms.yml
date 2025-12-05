@@ -1,6 +1,6 @@
 ms:
   plugin_openproject_xls_export:
-    name: "Eksport XLS MarvalProjects"
+    name: "Eksport XLS OpenProject"
     description: "Eksport senarai isu sebagai hamparan Excel (.xls)."
   export_to_excel: "Eksport XLS"
   print_with_description: "Cetak previu serta deskripsi"

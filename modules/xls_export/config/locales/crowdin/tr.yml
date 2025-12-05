@@ -1,6 +1,6 @@
 tr:
   plugin_openproject_xls_export:
-    name: "MarvalProjects XLS Dışa Aktarma"
+    name: "OpenProject XLS Dışa Aktarma"
     description: "Sorun listelerini Excel elektronik tabloları (.xls) olarak dışa aktarın."
   export_to_excel: "XLS'yi dışa aktar"
   print_with_description: "Açıklama ile önizlemeyi yazdır"

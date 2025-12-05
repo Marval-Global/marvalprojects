@@ -21,8 +21,8 @@
 #++
 ro:
   plugin_openproject_reporting:
-    name: "Raport MarvalProjects"
-    description: "Acest plugin permite crearea de rapoarte de costuri personalizate cu filtrare şi grupare create de MarvalProjects Time şi de plugin-ul costuri."
+    name: "Raport OpenProject"
+    description: "Acest plugin permite crearea de rapoarte de costuri personalizate cu filtrare şi grupare create de OpenProject Time şi de plugin-ul costuri."
   button_save_report_as: "Salvează raportul ca..."
   comments: "Comentariu"
   cost_reports_title: "Timp și costuri"

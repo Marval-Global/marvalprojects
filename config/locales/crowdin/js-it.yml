@@ -52,7 +52,7 @@ it:
         Un nuovo backup sovrascriverà ogni suo precedente. Sono richiedibili solo un numero limitato di backup giornalieri.
       last_backup: Ultimo backup
       last_backup_from: Ultimo backup da
-      title: Backup MarvalProjects
+      title: Backup OpenProject
       options: Opzioni
       include_attachments: Includi allegati
       download_backup: Scarica backup
@@ -510,7 +510,7 @@ it:
         next: "Prossimo"
         got_it: "Capito"
       steps:
-        help_menu: "Il menu Aiuto (?) fornisce <b>ulteriori risorse di aiuto</b>. Qui puoi trovare una guida utente, video utili e altro ancora. <br> Goditi il tuo lavoro con MarvalProjects!"
+        help_menu: "Il menu Aiuto (?) fornisce <b>ulteriori risorse di aiuto</b>. Qui puoi trovare una guida utente, video utili e altro ancora. <br> Goditi il tuo lavoro con OpenProject!"
         members: "Invita nuovi <b>membri</b> per entrare al tuo progetto."
         quick_add_button: "Clicca sull'icona più (+) nella navigazione dell'intestazione per <b>creare un nuovo progetto</b> o per <b>invitare colleghi</b>."
         sidebar_arrow: "Utilizza la freccia di ritorno nell'angolo in alto a sinistra per tornare al <b>menu principale</b> del progetto."

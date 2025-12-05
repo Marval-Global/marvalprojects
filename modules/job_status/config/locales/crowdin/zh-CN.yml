@@ -1,7 +1,7 @@
 zh-CN:
   label_job_status_plural: "工作状态"
   plugin_openproject_job_status:
-    name: "MarvalProjects 作业状态"
+    name: "OpenProject 作业状态"
     description: "后台作业的列表和状态。"
   job_status_dialog:
     download_starts: '下载会自动开始。'

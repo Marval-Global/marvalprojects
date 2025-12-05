@@ -3,7 +3,7 @@ mn:
   plugin_openproject_avatars:
     name: "Аватар"
     description: >-
-      This plugin allows MarvalProjects users to upload a picture to be used as an avatar or use registered images from Gravatar.
+      This plugin allows OpenProject users to upload a picture to be used as an avatar or use registered images from Gravatar.
   label_avatar: "Аватар"
   label_avatar_plural: "Аватар"
   label_current_avatar: "Одоогийн Аватар"
@@ -28,11 +28,11 @@ mn:
       Зургийг сонгосны дараа таны аватарыг байршуулахаас өмнө урьдчилан харуулах болно.
     text_change_gravatar_html: 'Өөрийн имэйл хаягийн Gravatar-г өөрчлөх эсвэл нэмэхийн тулд %{gravatar_url} руу очно уу.'
     text_your_local_avatar: |
-      MarvalProjects нь танд өөрийн хувийн аватарыг байршуулах боломжийг олгодог.
+      OpenProject нь танд өөрийн хувийн аватарыг байршуулах боломжийг олгодог.
     text_local_avatar_over_gravatar: |
       Хэрэв та нэгийг тохируулсан бол энэ хувийн аватарыг дээрх граватараас давуулан ашиглана.
     text_your_current_gravatar: |
-      MarvalProjects нь бүртгүүлсэн таны граватар, өгөгдмөл зураг эсвэл дүрс байгаа тохиолдол аль нэгийг автоматаар ашигладаг.
+      OpenProject нь бүртгүүлсэн таны граватар, өгөгдмөл зураг эсвэл дүрс байгаа тохиолдол аль нэгийг автоматаар ашигладаг.
       Одоогийн граватар нь дараах байдалтай байна:
     settings:
       enable_gravatars: 'Хэрэглэгчийн граватаруудыг идэвхжүүлнэ'

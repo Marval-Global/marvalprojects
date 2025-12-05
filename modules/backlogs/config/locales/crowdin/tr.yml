@@ -21,8 +21,8 @@
 #++
 tr:
   plugin_openproject_backlogs:
-    name: "MarvalProjects Backlog"
-    description: "Bu modül, çevik ekiplerin Scrum projelerinde MarvalProjects ile çalışmasını sağlayan özellikler ekler."
+    name: "OpenProject Backlog"
+    description: "Bu modül, çevik ekiplerin Scrum projelerinde OpenProject ile çalışmasını sağlayan özellikler ekler."
   activerecord:
     attributes:
       work_package:

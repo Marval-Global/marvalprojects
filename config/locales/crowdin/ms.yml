@@ -131,13 +131,13 @@ ms:
       edit:
         label_delete_scim_client: "Delete SCIM client"
       form:
-        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in MarvalProjects."
-        authentication_method_description_html: "This is how the SCIM client authenticates at MarvalProjects. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
+        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in OpenProject."
+        authentication_method_description_html: "This is how the SCIM client authenticates at OpenProject. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
         description_html: 'Please refer to our <a href="%{docs_url}">documentation on configuring SCIM clients</a> for more information on these configuration options.'
         jwt_sub_description_html: 'For example, for Keycloak, this is the UUID of the service account  associated with the SCIM client. Consult <a href="%{docs_url}">our documentation</a> to learn how to find  the subject claim for your use case.'
         name_description: "Choose a name that will help other admins better understand why this client was configured."
       index:
-        description: "SCIM clients configured here are able to interact with MarvalProjects SCIM server API to provision, update, and deprovision user accounts and groups."
+        description: "SCIM clients configured here are able to interact with OpenProject SCIM server API to provision, update, and deprovision user accounts and groups."
         label_create_button: "Add SCIM client"
       new:
         title: "New SCIM client"
@@ -145,14 +145,14 @@ ms:
         confirm_button: "Revoke"
         title: "Revoke static token"
         heading: "Are you sure you want to revoke this token?"
-        description: "The SCIM client that uses this token will no longer be able to access MarvalProjects's SCIM server API."
+        description: "The SCIM client that uses this token will no longer be able to access OpenProject's SCIM server API."
       table_component:
         blank_slate:
           title: "No SCIM clients configured yet"
           description: "Add clients to see them here"
         user_count: "Users"
       token_list_component:
-        description: "The tokens you generate here can be passed by a SCIM client to access the MarvalProjects SCIM API."
+        description: "The tokens you generate here can be passed by a SCIM client to access the OpenProject SCIM API."
         heading: "Tokens"
         label_add_token: "Token"
         label_aria_add_token: "Add token"
@@ -204,37 +204,37 @@ ms:
       name: Nama arbitrari sambungan LDAP
       host: Nama hos atau alamat IP LDAP
       login_map: Kunci atribut dalam LDAP yang digunakan untuk mengenal pasti log masuk pengguna yang unik. Biasanya, ini akan menjadi `uid` atau `samAccountName`.
-      generic_map: Kunci atribut LDAP yang telah dipetakan ke atribut `%{attribute}` MarvalProjects
-      admin_map_html: "Pilihan: Kunci atribut LDAP yang <strong>jika hadir</strong> menandakan pengguna MarvalProjects sebagai pentadbir. Biarkan kosong jika ragu-ragu."
+      generic_map: Kunci atribut LDAP yang telah dipetakan ke atribut `%{attribute}` OpenProject
+      admin_map_html: "Pilihan: Kunci atribut LDAP yang <strong>jika hadir</strong> menandakan pengguna OpenProject sebagai pentadbir. Biarkan kosong jika ragu-ragu."
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br>
-        Example: uid=MarvalProjects,ou=system,dc=example,dc=com
+        Example: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Masukkan kata laluan ikatan bagi pengguna sistem
       base_dn: |
-        Masukkan pangkalan DN dari subpokok LDAP yang anda mahukan di MarvalProjects untuk mencari pengguna dan kumpulan.
-        MarvalProjects akan menyaring nama pengguna yang disediakan di subpokok ini sahaja.
+        Masukkan pangkalan DN dari subpokok LDAP yang anda mahukan di OpenProject untuk mencari pengguna dan kumpulan.
+        OpenProject akan menyaring nama pengguna yang disediakan di subpokok ini sahaja.
         Contoh: ou=pengguna,dc=contoh,dc=com
       filter_string: |
         Tambah penyaring RFC4515 secara pilihan untuk digunakan pada hasil yang dikembalikan untuk pengguna yang disaring dalam LDAP.
-        Ini boleh digunakan untuk mengehadkan set pengguna yang ditemui oleh MarvalProjects untuk pengesahan dan sinkronisasi kumpulan.
+        Ini boleh digunakan untuk mengehadkan set pengguna yang ditemui oleh OpenProject untuk pengesahan dan sinkronisasi kumpulan.
       filter_string_concat: |
-        MarvalProjects akan sentiasa menyaring atribut log masuk yang disediakan oleh pengguna untuk mengenal pasti rekod. Jika anda menyediakan penyaringan di sini, ia akan digabungkan ke satu AND. Secara default, tangkap semua (objekKelas=*) akan digunakan sebagai penyaring.
+        OpenProject akan sentiasa menyaring atribut log masuk yang disediakan oleh pengguna untuk mengenal pasti rekod. Jika anda menyediakan penyaringan di sini, ia akan digabungkan ke satu AND. Secara default, tangkap semua (objekKelas=*) akan digunakan sebagai penyaring.
       onthefly_register: |
-        Jika anda menandakan kotak ini, MarvalProjects akan mencipta pengguna baharu secara automatik daripada entri LDAP mereka
-        apabila mereka pertama kali mengesahkan dengan MarvalProjects.
-        Biarkan kotak ini kosong untuk hanya membenarkan akaun sedia ada dalam MarvalProjects untuk mengesahkan melalui LDAP!
+        Jika anda menandakan kotak ini, OpenProject akan mencipta pengguna baharu secara automatik daripada entri LDAP mereka
+        apabila mereka pertama kali mengesahkan dengan OpenProject.
+        Biarkan kotak ini kosong untuk hanya membenarkan akaun sedia ada dalam OpenProject untuk mengesahkan melalui LDAP!
     connection_encryption: "Penyulitan sambungan"
     encryption_details: "pilihan-pilihan LDAPS/STARTTTLS"
     system_account: "Akaun sistem"
     system_account_legend: |
-      MarvalProjects memerlukan akses baca-sahaja melalui akaun sistem untuk pencarian pengguna dan kumpulan dalam pokok LDAP anda.
+      OpenProject memerlukan akses baca-sahaja melalui akaun sistem untuk pencarian pengguna dan kumpulan dalam pokok LDAP anda.
       Sila tetapkan kelayakan ikatan bagi pengguna sistem tersebut dalam bahagian berikutnya.
     ldap_details: "Butiran LDAP"
     user_settings: "Pemetaan atribut"
     user_settings_legend: |
-      Ruang berikut berkaitan tentang bagaimana pengguna dicipta dalam MarvalProjects daripada entri LDAP dan
-      atribut LDAP apa yang digunakan untuk menentukan atribut pengguna MarvalProjects (pemetaan atribut)
+      Ruang berikut berkaitan tentang bagaimana pengguna dicipta dalam OpenProject daripada entri LDAP dan
+      atribut LDAP apa yang digunakan untuk menentukan atribut pengguna OpenProject (pemetaan atribut)
     tls_mode:
       plain: "tiada"
       simple_tls: "LDAPS"
@@ -1232,7 +1232,7 @@ ms:
         confirmation: "tidak sepadan dengan %{attribute}."
         could_not_be_copied: "%{dependency} tidak dapat disalin (sepenuhnya)."
         does_not_exist: "tidak wujud."
-        error_enterprise_only: "%{action} hanya tersedia di MarvalProjects edisi Enterprise"
+        error_enterprise_only: "%{action} hanya tersedia di OpenProject edisi Enterprise"
         error_unauthorized: "tidak boleh diakses."
         error_readonly: "telah cuba untuk menulis tetapi tidak dapat ditulis."
         error_conflict: "Sementara itu, maklumat telah dikemas kini oleh sekurang-kurangnya salah satu pengguna lain."
@@ -1797,7 +1797,7 @@ ms:
       heading_reset: "Set semula token sandaran"
       heading_create: "Cipta token sandaran"
       implications: >
-        Mengaktifkan sandaran akan membenarkan mana-mana pengguna dengan kebenaran yang diperlukan, dan token sandaran ini untuk memuat turun sandaran yang mengandungi semua data pemasangan MarvalProjects ini. Ini termasuk data semua pengguna.
+        Mengaktifkan sandaran akan membenarkan mana-mana pengguna dengan kebenaran yang diperlukan, dan token sandaran ini untuk memuat turun sandaran yang mengandungi semua data pemasangan OpenProject ini. Ini termasuk data semua pengguna.
       info: >
         Anda perlu menghasilkan token sandaran untuk dapat mencipta sandaran. Setiap kali anda ingin meminta sandaran anda perlu menyediakan token ini. Anda boleh memadam token sandaran tersebut untuk menyahdayakan sandaran untuk pengguna ini.
       verification: >
@@ -2110,7 +2110,7 @@ ms:
         Already have a token? Add it using the button below to upgrade to the booked Enterprise plan.
       hide_banner: "Hide this banner"
       homescreen_description: >
-        Enterprise plans extend the Community edition of MarvalProjects you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
+        Enterprise plans extend the Community edition of OpenProject you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
       homescreen_subline: By upgrading, you will also be supporting an open source project.
       baseline_comparison:
         description: Sorotkan perubahan yang dibuat ke senarai ini pada bila-bila masa lalu.
@@ -2123,7 +2123,7 @@ ms:
         premium_features: "Enterprise add-ons"
         premium_features_text: "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields."
         professional_support: "Professional support"
-        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running MarvalProjects in business-critical environments."
+        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
       work_package_subject_generation:
         description: "Create automatically generated subjects using referenced attributes and text."
       customize_life_cycle:
@@ -2151,7 +2151,7 @@ ms:
       define_custom_style:
         title: "Custom color theme and logo"
         more_info: "Perhatian: logo yang digunakan akan boleh diakses secara umum."
-        description: Ubah suai pemasangan MarvalProjects dengan logo dan warna anda sendiri.
+        description: Ubah suai pemasangan OpenProject dengan logo dan warna anda sendiri.
       custom_actions:
         title: "Tindakan tersuai"
         description: "Tindakan tersuai adalah pintasan satu klik ke satu set tindakan yang telah ditetapkan yang anda boleh sediakan untuk pakej kerja tertentu berdasarkan status, peranan, jenis atau projek."
@@ -2160,13 +2160,13 @@ ms:
         description: "Enable seamless and secure authentication for your Nextcloud storage with Single Sign-On. Simplify access management and enhance user convenience."
       scim_api:
         title: "SCIM clients"
-        description: "Automate user management in MarvalProjects by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
+        description: "Automate user management in OpenProject by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
       virus_scanning:
-        description: "Pastikan fail yang dimuat naik dalam MarvalProjects diimbas untuk virus sebelum boleh diakses oleh pengguna lain."
+        description: "Pastikan fail yang dimuat naik dalam OpenProject diimbas untuk virus sebelum boleh diakses oleh pengguna lain."
       placeholder_users:
         title: Pengguna placeholder
         description: >
-          Pengguna placeholder ialah satu cara untuk memperuntukkan pakej kerja kepada pengguna yang bukan sebahagian daripada projek anda. Ianya berguna dalam pelbagai senario; contohnya, jika anda perlu menjejaki tugas untuk sumber yang masih belum dinamakan atau disediakan, atau jika anda tidak ingin memberikan akses kepada seseorang di MarvalProjects, tetapi masih hendak menjejaki tugas yang telah diperuntukkan ke mereka.
+          Pengguna placeholder ialah satu cara untuk memperuntukkan pakej kerja kepada pengguna yang bukan sebahagian daripada projek anda. Ianya berguna dalam pelbagai senario; contohnya, jika anda perlu menjejaki tugas untuk sumber yang masih belum dinamakan atau disediakan, atau jika anda tidak ingin memberikan akses kepada seseorang di OpenProject, tetapi masih hendak menjejaki tugas yang telah diperuntukkan ke mereka.
       internal_comments:
         title: Internal comments
         description: "Internal comments allow an internal team to communicate amongst themselves privately. These are only visible to certain project roles and will never be visible publicly."
@@ -2187,9 +2187,9 @@ ms:
       request_again: "Request again"
       resend_action: "Resend confirmation email"
       welcome_title: "Quick feature overview"
-      welcome_description: "Get a quick overview of project management and team collaboration with MarvalProjects Enterprise edition."
+      welcome_description: "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition."
       confirmation_info: >
-        We sent you an email on %{date} to %{email} with all the information to start the free trial of MarvalProjects Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
+        We sent you an email on %{date} to %{email} with all the information to start the free trial of OpenProject Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
       confirmation_subline: >
         Please, check your inbox and follow the steps to start your 14-day free trial.
       domain_caption: The token will be valid for your currently configured host name.
@@ -2219,7 +2219,7 @@ ms:
   error_check_user_and_role: "Sila pilih pengguna dan peranan."
   error_code: "Ralat %{code}"
   error_color_could_not_be_saved: "Warna tidak dapat disimpan"
-  error_cookie_missing: "Kuki MarvalProjects tidak ditemui. Sila pastikan bahawa kuki telah diaktifkan, kerana aplikasi ini tidak akan berfungsi dengan betul tanpanya."
+  error_cookie_missing: "Kuki OpenProject tidak ditemui. Sila pastikan bahawa kuki telah diaktifkan, kerana aplikasi ini tidak akan berfungsi dengan betul tanpanya."
   error_custom_option_not_found: "Pilihan tidak wujud."
   error_enterprise_plan_needed: "You need the %{plan} enterprise plan to perform this action."
   error_enterprise_activation_user_limit: "Akaun anda tidak dapat diaktifkan (had pengguna dicapai). Sila hubungi pentadbir anda  untuk dapatkan akses."
@@ -2236,7 +2236,7 @@ ms:
   error_work_package_not_found_in_project: "Pakej kerja tidak ditemui atau tidak tergolong dalam projek ini"
   error_work_package_id_not_found: "Pakej kerja tidak ditemui."
   error_must_be_project_member: "perlu menjadi ahli projek"
-  error_migrations_are_pending: "Pemasangan MarvalProjects anda mempunyai migrasi pangkalan data yang belum selesai. Anda mungkin telah terlepas menjalankan migrasi semasa naik taraf terakhir anda. Sila semak panduan menaik taraf untuk menaikkan taraf pemasangan anda dengan betul."
+  error_migrations_are_pending: "Pemasangan OpenProject anda mempunyai migrasi pangkalan data yang belum selesai. Anda mungkin telah terlepas menjalankan migrasi semasa naik taraf terakhir anda. Sila semak panduan menaik taraf untuk menaikkan taraf pemasangan anda dengan betul."
   error_migrations_visit_upgrade_guides: "Sila kunjungi dokumentasi panduan naik taraf kami"
   error_no_default_work_package_status: 'Tiada status pakej kerja default telah ditetapkan. Sila semak konfigurasi anda (Pergi ke "Pentadbiran -> Status pakej kerja").'
   error_no_type_in_project: "Tiada jenis yang berkaitan dengan projek ini. Sila semak tetapan Projek."
@@ -2423,7 +2423,7 @@ ms:
       no_visible_projects: "Tiada projek yang dapat dilihat dalam contoh ini."
       users: "Pengguna berdaftar terbaru dalam contoh ini"
     blocks:
-      community: "Komuniti MarvalProjects"
+      community: "Komuniti OpenProject"
       upsell:
         title: "Naik taraf ke edisi Enterprise"
     links:
@@ -2434,7 +2434,7 @@ ms:
       impressum: "Notis undang-undang"
       glossary: "Glosari"
       shortcuts: "Pintasan"
-      blog: "Blog MarvalProjects"
+      blog: "Blog OpenProject"
       forums: "Forum komuniti"
       newsletter: "Amaran keselamatan / Surat berita"
   image_conversion:
@@ -2446,7 +2446,7 @@ ms:
       default_attribute_written: "Atribut baca-sahaja ditulis"
       progress_mode_changed_to_status_based: "Pengiraan perkembangan dikemas kini"
       status_changed: "Status '%{status_name}'"
-      system_update: "Kemas kini sistem MarvalProjects:"
+      system_update: "Kemas kini sistem OpenProject:"
       work_package_duplicate_closed: "Pakej kerja pendua dikemas kini:"
       total_percent_complete_mode_changed_to_work_weighted_average: "Pengiraan % Jumlah lengkap kini ditimbang mengikut Kerja."
       total_percent_complete_mode_changed_to_simple_average: "Pengiraan % Jumlah lengkap sekarang berdasarkan purata mudah hanya % nilai Lengkap."
@@ -2511,26 +2511,26 @@ ms:
       simple_revoke_confirmation: "Adakah anda pasti anda mahu membatalkan token ini?"
       api:
         title: "API"
-        text_hint: "Token API membenarkan aplikasi pihak ketiga untuk berkomunikasi dengan MarvalProjects ini, contohnya, melalui REST API."
+        text_hint: "Token API membenarkan aplikasi pihak ketiga untuk berkomunikasi dengan OpenProject ini, contohnya, melalui REST API."
         static_token_name: "Token API"
         disabled_text: "Token API tidak didayakan oleh pentadbir. Sila hubungi pentadbir anda untuk menggunakan fitur ini."
       ical:
         title: "iCalendar"
-        text_hint: 'Token iCalendar membenarkan pengguna untuk <a href="%{path}" target="_blank">melanggan kalendar MarvalProjects</a> dan lihat maklumat pakej kerja terkini daripada pelanggan luaran.'
+        text_hint: 'Token iCalendar membenarkan pengguna untuk <a href="%{path}" target="_blank">melanggan kalendar OpenProject</a> dan lihat maklumat pakej kerja terkini daripada pelanggan luaran.'
         disabled_text: "Langganan iCalendar tidak didayakan oleh pentadbir. Sila hubungi pentadbir anda untuk menggunakan fitur ini."
         empty_text_hint: "Untuk menambah token iCalendar, langgan kalendar baharu atau kalendar yang sedia ada dalam modul Kalendar projek. Anda perlu mempunyai kebenaran yang diperlukan."
       oauth:
         title: "OAuth"
-        text_hint: "Token OAuth membenarkan aplikasi pihak ketiga untuk menyambung dengan contoh MarvalProjects ini."
+        text_hint: "Token OAuth membenarkan aplikasi pihak ketiga untuk menyambung dengan contoh OpenProject ini."
         empty_text_hint: "Tiada akses aplikasi pihak ketiga yang dikonfigurasikan dan aktif untuk anda. Sila hubungi pentadbir anda untuk aktifkan fitur ini."
       rss:
         title: "RSS"
-        text_hint: "Token RSS membenarkan pengguna untuk mengikut perubahan terkini dalam contoh MarvalProjects ini melalui pembaca RSS luaran. "
+        text_hint: "Token RSS membenarkan pengguna untuk mengikut perubahan terkini dalam contoh OpenProject ini melalui pembaca RSS luaran. "
         static_token_name: "Token RSS"
         disabled_text: "Token RSS tidak diaktifkan oleh pentadbir. Sila hubungi pentadbir anda untuk menggunakan fitur ini."
       storages:
         title: "File storages"
-        text_hint: "Token Storan Fail menyambungkan contoh MarvalProjects dengan Storan Fail luaran."
+        text_hint: "Token Storan Fail menyambungkan contoh OpenProject dengan Storan Fail luaran."
         empty_text_hint: "Tiada akses storan terpaut pada akaun anda."
         revoke_token: "Adakah anda ingin membuang token ini? Anda perlu log masuk semula di %{storage}"
         removed: "Token Storan Fail berjaya dipadamkan"
@@ -2702,7 +2702,7 @@ ms:
   label_custom_field_plural: "Ruangan tersuai"
   label_custom_field_default_type: "Jenis kosong"
   label_custom_style: "Reka bentuk"
-  label_custom_style_description: "Pilih cara MarvalProjects melihat kepada anda dengan tema, pilih warna lalai anda untuk digunakan dalam apl dan rupa eksport."
+  label_custom_style_description: "Pilih cara OpenProject melihat kepada anda dengan tema, pilih warna lalai anda untuk digunakan dalam apl dan rupa eksport."
   label_dashboard: "Papan Pemuka"
   label_database_version: "Versi PostgreSQL"
   label_date: "Tarikh"
@@ -2958,7 +2958,7 @@ ms:
   label_open_menu: "Buka menu"
   label_open_work_packages: "buka"
   label_open_work_packages_plural: "buka"
-  label_openproject_website: "Laman web MarvalProjects"
+  label_openproject_website: "Laman web OpenProject"
   label_optional_description: "Deskripsi"
   label_options: "Pilihan"
   label_other: "Lain-lain"
@@ -3346,8 +3346,8 @@ ms:
   mail_body_backup_token_reset_user_info: Token sandaran anda telah ditetapkan semula.
   mail_body_backup_token_info: Token sebelumnya sudah tidak sah.
   mail_body_backup_waiting_period: Token baharu akan diaktifkan dalam %{hours} jam.
-  mail_body_backup_token_warning: Jika ini bukan anda, log masuk ke MarvalProjects dengan serta merta dan tetapkannya semula.
-  mail_body_incoming_email_error: E-mel yang anda hantar ke MarvalProjects tidak boleh diproses.
+  mail_body_backup_token_warning: Jika ini bukan anda, log masuk ke OpenProject dengan serta merta dan tetapkannya semula.
+  mail_body_incoming_email_error: E-mel yang anda hantar ke OpenProject tidak boleh diproses.
   mail_body_incoming_email_error_in_reply_to: "Di %{received_at} %{from_email} menulis"
   mail_body_incoming_email_error_logs: "Log"
   mail_body_lost_password: "Untuk menukar kata laluan, klik pautan berikut:"
@@ -3360,10 +3360,10 @@ ms:
   mail_body_register_user: "Kepada %{name},"
   mail_body_register_links_html: |
     Dengan rasa lapang, sila melayari saluran Youtube kami (%{youtube_link}), di mana kami akan menyediakan webinar (%{webinar_link})
-    dan video-video "Mari bermula" (%{get_started_link}) untuk membuat langkah pertama anda di MarvalProjects dengan mudah.
+    dan video-video "Mari bermula" (%{get_started_link}) untuk membuat langkah pertama anda di OpenProject dengan mudah.
     <br />
     Jika anda mempunyai sebarang soalan, rujuklah dokumentasi kami (%{documentation_link}) atau hubungi pentadbir anda.
-  mail_body_register_closing: "Pasukan MarvalProjects anda"
+  mail_body_register_closing: "Pasukan OpenProject anda"
   mail_body_register_ending: "Kekal berhubung! Yang benar, "
   mail_body_reminder: "%{count} pakej kerja yang ditugaskan kepada anda akan tamat dalam masa %{days} hari yang akan datang:"
   mail_body_group_reminder: '%{count} pakej kerja yang ditugaskan kepada kumpulan "%{group}" akan tamat dalam masa %{days} hari yang akan datang:'
@@ -3372,7 +3372,7 @@ ms:
   mail_subject_account_activation_request: "Permintaan pengaktifan akaun %{value}"
   mail_subject_backup_ready: "Sandaran anda telah siap"
   mail_subject_backup_token_reset: "Tetapkan semula token sandaran"
-  mail_subject_incoming_email_error: "E-mel yang anda hantar ke MarvalProjects tidak boleh diproses"
+  mail_subject_incoming_email_error: "E-mel yang anda hantar ke OpenProject tidak boleh diproses"
   mail_subject_lost_password: "Kata laluan %{value} anda"
   mail_subject_register: "Pengaktifan akaun %{value} anda"
   mail_subject_wiki_content_added: "Halaman wiki '%{id}' telah ditambah"
@@ -3401,14 +3401,14 @@ ms:
   mail_user_activation_limit_reached:
     subject: Had pengaktifan pengguna dicapai
     message: |
-      Pengguna baharu (%{email}) telah cuba mencipta satu akaun pada persekitaran MarvalProjects yang anda uruskan (%{host}).
+      Pengguna baharu (%{email}) telah cuba mencipta satu akaun pada persekitaran OpenProject yang anda uruskan (%{host}).
       Pengguna tersebut tidak dapat mengaktifkan akaun mereka kerana had pengguna telah dicapai.
     steps:
       label: "Untuk membenarkan pengguna untuk daftar masuk, anda juga boleh: "
       a: "Naik taraf pelan pembayaran anda ([di sini](upgrade_url))" #here turned into a link
       b: "Kunci atau padam pengguna sedia ada ([di sini](users_url))" #here turned into a link
   more_actions: "Lebih banyak fungsi"
-  noscript_description: "Anda perlu mengaktifkan JavaScript untuk menggunakan MarvalProjects!"
+  noscript_description: "Anda perlu mengaktifkan JavaScript untuk menggunakan OpenProject!"
   noscript_heading: "JavaScript dinyahdayakan"
   noscript_learn_more: "Ketahui lebih lanjut"
   notice_accessibility_mode: Mod kebolehcapaian boleh didayakan dalam [tetapan akaun](url) anda.
@@ -3483,7 +3483,7 @@ ms:
   notice_wont_delete_auth_source: Sambungan LDAP tidak boleh dipadam sekiranya masih ada pengguna yang menggunakannya.
   notice_project_cannot_update_custom_fields: "Anda tidak boleh mengemas kini ruang tersuai tersedia projek. Projek tersebut tidak sah: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Halaman ini dijanakan secara automatik semasa penaiktarafan MarvalProjects. Ia mengandungi semua lampiran yang sebelum ini berkaitan dengan %{container_type} "%{container_name}".
+    Halaman ini dijanakan secara automatik semasa penaiktarafan OpenProject. Ia mengandungi semua lampiran yang sebelum ini berkaitan dengan %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -3505,7 +3505,7 @@ ms:
           tb: "TB"
   onboarding:
     heading_getting_started: "Dapatkan gambaran keseluruhan"
-    text_getting_started_description: "Dapatkan gambaran ringkas pengurusan projek dan kolaborasi kumpulan dengan MarvalProjects. Anda boleh mula semula video ini di menu bantuan."
+    text_getting_started_description: "Dapatkan gambaran ringkas pengurusan projek dan kolaborasi kumpulan dengan OpenProject. Anda boleh mula semula video ini di menu bantuan."
     welcome: "Selamat datang ke %{app_title}"
     select_language: "Sila pilih bahasa anda"
   permission_add_work_package_comments: "Add comments"
@@ -3588,7 +3588,7 @@ ms:
   permission_manage_types: "Pilih jenis"
   permission_manage_own_reminders: "Buat peringatan sendiri"
   permission_view_project: "Lihat projek"
-  permission_view_changesets: "Lihat semakan repositori dalam MarvalProjects"
+  permission_view_changesets: "Lihat semakan repositori dalam OpenProject"
   permission_view_internal_comments: "View internal comments"
   permission_view_commit_author_statistics: "Lihat statistik pengarang komit"
   permission_view_dashboards: "Lihat papan pemuka"
@@ -3699,7 +3699,7 @@ ms:
     destroy:
       confirmation: "Jika anda teruskan, ini akan memadamkan repositori yang diuruskan selama-lamanya."
       info: "Memadam repositori tersebut adalah tindakan yang tidak dapat dipulihkan."
-      info_not_managed: "Perhatian: Ini TIDAK akan memadam kandungan repositori, kerana ia bukan diuruskan oleh MarvalProjects."
+      info_not_managed: "Perhatian: Ini TIDAK akan memadam kandungan repositori, kerana ia bukan diuruskan oleh OpenProject."
       managed_path_note: "Direktori berikut akan dipadamkan: %{path}"
       repository_verification: "Masukkan pengenal projek %{identifier} untuk mengesahkan pemadaman repositorinya."
       subtitle: "Adakah anda benar-benar ingin memadam %{repository_type} projek %{project_name}?"
@@ -3713,8 +3713,8 @@ ms:
       empty_repository: "Repositori tersebut wujud, tetapi kosong. Ia tidak mengandungi sebarang semakan lagi."
       exists_on_filesystem: "Direktori repositori telah wujud dalam sistem fail."
       filesystem_access_failed: "Satu ralat berlaku semasa mengakses repositori dalam sistem fail: %{message}"
-      not_manageable: "Vendor repositori ini tidak boleh diuruskan oleh MarvalProjects."
-      path_permission_failed: "Ralat berlaku semasa percubaan membuat laluan berikut: %{path}. Sila pastikan MarvalProjects boleh menulis pada folder tersebut."
+      not_manageable: "Vendor repositori ini tidak boleh diuruskan oleh OpenProject."
+      path_permission_failed: "Ralat berlaku semasa percubaan membuat laluan berikut: %{path}. Sila pastikan OpenProject boleh menulis pada folder tersebut."
       unauthorized: "Anda tidak dibenarkan untuk mengakses repositori atau kelayakan tersebut tidak sah."
       unavailable: "Repositori tersebut tidak tersedia."
       exception_title: "Tidak boleh mengakses repositori tersebut: %{message}"
@@ -3731,9 +3731,9 @@ ms:
         path_encoding: "Mengatasi pengekodan laluan Git (Default: UTF-8)"
       local_title: "Pautkan repositori Git lokal sedia ada"
       local_url: "URL lokal"
-      local_introduction: "JIka anda mempunyai repositori Git sedia ada, anda boleh pautkan ia dengan MarvalProjects untuk mengaksesnya dari dalam aplikasi."
-      managed_introduction: "Biarkan MarvalProjects mencipta dan mengintegrasikan repositori Git lokal secara automatik."
-      managed_title: "Repositori Git diintegrasikan ke dalam MarvalProjects"
+      local_introduction: "JIka anda mempunyai repositori Git sedia ada, anda boleh pautkan ia dengan OpenProject untuk mengaksesnya dari dalam aplikasi."
+      managed_introduction: "Biarkan OpenProject mencipta dan mengintegrasikan repositori Git lokal secara automatik."
+      managed_title: "Repositori Git diintegrasikan ke dalam OpenProject"
       managed_url: "URL yang diuruskan"
       path: "Laluan ke repositori Git"
       path_encoding: "Laluan pengekodan"
@@ -3750,24 +3750,24 @@ ms:
     scm_types:
       local: "Pautkan repositori lokal sedia ada"
       existing: "Pautkan repositori lokal"
-      managed: "Cipta repositori baharu dalam MarvalProjects"
+      managed: "Cipta repositori baharu dalam OpenProject"
     storage:
       not_available: "Penggunaan storan cakera tidak tersedia untuk repositori."
       update_timeout: "Simpan informasi ruang cakera terakhir yang diperlukan untuk repositori selama N minit.\nMemandangkan pengiraan ruang cakera yang diperlukan bagi repositori mungkin mahal, tinggikan nilai ini untuk mengurangkan kesan prestasinya."
-      oauth_application_details: "Nilai rahsia pelanggan tidak akan dapat untuk diakses lagi setelah anda menutup tetingkap ini. Sila salin nilai-nilai ini ke tetapan Integrasi Nextcloud MarvalProjects:"
+      oauth_application_details: "Nilai rahsia pelanggan tidak akan dapat untuk diakses lagi setelah anda menutup tetingkap ini. Sila salin nilai-nilai ini ke tetapan Integrasi Nextcloud OpenProject:"
       oauth_application_details_link_text: "Pergi ke halaman tetapan"
       setup_documentation_details: "Jika anda memerlukan bantuan mengkonfigurasikan storan fail baharu, sila lihat dokumentasi berikut:"
       setup_documentation_details_link_text: "File storages setup"
       show_warning_details: "Untuk gunakan storan fail ini, ingat untuk mengaktifkan modul dan storan khusus di tetapan projek setiap projek yang dikehendaki."
     subversion:
       existing_title: "Repositori Subversion sedia ada"
-      existing_introduction: "Jika anda mempunyai repositori Subversion sedia ada, anda boleh pautkan ia dengan MarvalProjects untuk mengaksesnya dari dalam aplikasi."
+      existing_introduction: "Jika anda mempunyai repositori Subversion sedia ada, anda boleh pautkan ia dengan OpenProject untuk mengaksesnya dari dalam aplikasi."
       existing_url: "URL sedia ada"
       instructions:
         managed_url: "Ini ialah URL repositori Subversion yang telah dikendalikan (lokal)."
         url: "Masukkan URL repositori. Ia mungkin sama ada menyasarkan repositori lokal (bermula dengan %{local_proto} ), atau repositori jauh.\nSkim URL yang disokong adalah seperti berikut:"
-      managed_title: "Repositori Subversion diintegrasikan ke MarvalProjects"
-      managed_introduction: "Biarkan MarvalProjects mencipta dan mengintegrasikan repositori Subversion lokal secara automatik."
+      managed_title: "Repositori Subversion diintegrasikan ke OpenProject"
+      managed_introduction: "Biarkan OpenProject mencipta dan mengintegrasikan repositori Subversion lokal secara automatik."
       managed_url: "URL yang diuruskan"
       password: "Kata Laluan Repositori "
       username: " Nama Pengguna Repositori"
@@ -3794,7 +3794,7 @@ ms:
   setting_apiv3_cors_enabled: "Aktifkan CORS"
   setting_apiv3_cors_origins: "Asal yang dibenarkan Perkongsian Sumber Rentas Asal (CORS) API V3 "
   setting_apiv3_cors_origins_text_html: >
-    Jika CORS telah dibenarkan, ini ialah asal yang dibenarkan untuk mengakses API MarvalProjects. <br/> Sila semak dokumentasi <a href="%{origin_link}" target="_blank">di pengepala Asal </a> untuk cara nyatakan nilai-nilai yang dijangkakan.
+    Jika CORS telah dibenarkan, ini ialah asal yang dibenarkan untuk mengakses API OpenProject. <br/> Sila semak dokumentasi <a href="%{origin_link}" target="_blank">di pengepala Asal </a> untuk cara nyatakan nilai-nilai yang dijangkakan.
   setting_apiv3_write_readonly_attributes: "Tulis akses pada atribut baca-sahaja"
   setting_apiv3_write_readonly_attributes_instructions_html: >
     Jika dibenarkan, API tersebut akan membenarkan para pentadbir untuk menulis atribut statik baca-sahaja semasa penciptaan, seperti diciptakanPada dan pengarang. <br/> <strong>Amaran:</strong> Tetapan ini mempunyai kes-guna untuk, cth., mengimport data, tetapi membenarkan para pentadbir untuk meniru penciptaan item sebagai pengguna lain. Walau bagaimanapun, semua permintaan penciptaan sedang dilog oleh pengarang sebenar. </br> Untuk maklumat lanjut tentang atribut dan sumber yang disokong, sila lihat %{api_documentation_link}.
@@ -3996,7 +3996,7 @@ ms:
         clamav_socket_html: Masukkan soket ke clamd daemon, cth., %{example}
         clamav_host_html: Masukkan nama hos dan port ke clamd daemon dipisahkan dengan kolon. cth., %{example}
         description_html: >
-          Pilih mod di mana integrasi pengimbas antivirus perlu dioperasikan. <br/> <ul> <li><strong>%{disabled_option}</strong>: Fail yang telah dimuat naik belum diimbas untuk virus.</li> <li><strong>%{socket_option}</strong>: Anda telah tetapkan ClamAV di server sama seperti MarvalProjects dan imbasan daemon clamd sedang dilancarkan di latar belakang </li> <li><strong>%{host_option}</strong>: Anda sedang strim fail ke hos imbasan virus luaran.</li> </ul>
+          Pilih mod di mana integrasi pengimbas antivirus perlu dioperasikan. <br/> <ul> <li><strong>%{disabled_option}</strong>: Fail yang telah dimuat naik belum diimbas untuk virus.</li> <li><strong>%{socket_option}</strong>: Anda telah tetapkan ClamAV di server sama seperti OpenProject dan imbasan daemon clamd sedang dilancarkan di latar belakang </li> <li><strong>%{host_option}</strong>: Anda sedang strim fail ke hos imbasan virus luaran.</li> </ul>
     brute_force_prevention: "Penyekatan pengguna secara automatik"
     date_format:
       first_date_of_week_and_year_set: >
@@ -4004,8 +4004,8 @@ ms:
       first_week_of_year_text_html: >
         Pilih tarikh pada Januari yang mengandungi minggu pertama dari tahun tersebut. Nilai ini sekali dengan hari pertama dari minggu tersebut menentukan jumlah mingguan dalam setahun. Untuk maklumat lanjut, sila lihat <a href="%{link}" target="_blank">dokumentasi kami</a>bagi topik ini.
     experimental:
-      save_confirmation: Awas! Risiko kehilangan data! Hanyalah aktifkan fitur eksperimen jika anda tidak keberatan melanggar pemasangan MarvalProjects anda dan kehilangan kesemua datanya.
-      warning_toast: Bendera fitur ialah tetapan yang mengaktifkan fitur yang masih dalam pembangunan. Ia hanyalah patut digunakan atas tujuan pemeriksaan. Ia tidak boleh diaktifkan pada pemasangan MarvalProjects yang memegang data penting. Fitur ini kemungkinan besar akan merosakkan data anda. Gunakannya dengan risiko anda sendiri.
+      save_confirmation: Awas! Risiko kehilangan data! Hanyalah aktifkan fitur eksperimen jika anda tidak keberatan melanggar pemasangan OpenProject anda dan kehilangan kesemua datanya.
+      warning_toast: Bendera fitur ialah tetapan yang mengaktifkan fitur yang masih dalam pembangunan. Ia hanyalah patut digunakan atas tujuan pemeriksaan. Ia tidak boleh diaktifkan pada pemasangan OpenProject yang memegang data penting. Fitur ini kemungkinan besar akan merosakkan data anda. Gunakannya dengan risiko anda sendiri.
       feature_flags: Bendera fitur
     general: "Umum"
     highlighting:
@@ -4016,7 +4016,7 @@ ms:
         type: "Keseluruhan baris mengikut Jenis"
         priority: "Keseluruhan baris mengikut Keutamaan"
     icalendar:
-      enable_subscriptions_text_html: "Benarkan pengguna dengan kebenaran yang diperlukan untuk melanggan kalendar MarvalProjects dan akses maklumat pakej kerja melalui kalendar pelanggan luaran.\n<strong>Perhatian:</strong> Sila baca tentang <a href=\"%{link}\" target=\"_blank\">langganan iCalendar</a> untuk fahami tentang potensi risiko keselamatan sebelum membenarkannya."
+      enable_subscriptions_text_html: "Benarkan pengguna dengan kebenaran yang diperlukan untuk melanggan kalendar OpenProject dan akses maklumat pakej kerja melalui kalendar pelanggan luaran.\n<strong>Perhatian:</strong> Sila baca tentang <a href=\"%{link}\" target=\"_blank\">langganan iCalendar</a> untuk fahami tentang potensi risiko keselamatan sebelum membenarkannya."
     language_name_being_default: "%{language_name} (default)"
     notifications:
       events_explanation: "Tetapkan mana-mana peristiwa untuk e-mel dihantar keluar. Pakej kerja dikecualikan daripada senarai ini kerana pemberitahuannya boleh dikonfigurasikan khusus ke setiap pengguna."
@@ -4088,7 +4088,7 @@ ms:
       sentence_connector: "dan"
       skip_last_comma: "palsu"
   text_accessibility_hint: "Mod kebolehcapaian direka untuk pengguna yang buta, kurang upaya atau yang mempunyai masalah penglihatan. Untuk yang kemudian, unsur yang difokuskan ditekankan secara khusus. Harap maklum, modul Tunggakan tersebut tidak tersedia dalam mod ini."
-  text_access_token_hint: "Token akses membenarkan anda untuk memberikan aplikasi luaran akses kepada sumber data MarvalProjects."
+  text_access_token_hint: "Token akses membenarkan anda untuk memberikan aplikasi luaran akses kepada sumber data OpenProject."
   text_analyze: "Analisis selanjutnya: %{subject}"
   text_are_you_sure: "Adakah anda pasti?"
   text_are_you_sure_continue: "Adakah anda pasti anda ingin teruskan?"
@@ -4170,7 +4170,7 @@ ms:
   text_no_notes: "Tiada komen yang tersedia untuk pakej kerja ini."
   text_notice_too_many_values_are_inperformant: "Perhatian: Memaparkan lebih daripada 100 item setiap halaman akan meningkatkan masa muat halaman."
   text_notice_security_badge_displayed_html: >
-    Perhatian: jika dibenarkan, ini akan paparkan lambang bersertaan status pemasangan di <a href="%{information_panel_path}">%{information_panel_label}</a> panel pentadbiran, dan di halaman utama. Ia hanya akan dipaparkan ke para pentadbir sahaja. <br/> Lambang tersebut akan menyemak versi MarvalProjects terkini anda terhadap pangkalan data keluaran rasmi MarvalProjects untuk memaklumkan anda tentang sebarang kemas kini atau kelemahan yang diketahui. Untuk maklumat lanjut bagi penyediaan semakan, data apa yang diperlukan untuk menyediakan kemas kini tersedia, dan bagaimana untuk menyahaktifkan semakan ini, sila kunjungi <a href="%{more_info_url}">dokumentasi konfigurasi</a>.
+    Perhatian: jika dibenarkan, ini akan paparkan lambang bersertaan status pemasangan di <a href="%{information_panel_path}">%{information_panel_label}</a> panel pentadbiran, dan di halaman utama. Ia hanya akan dipaparkan ke para pentadbir sahaja. <br/> Lambang tersebut akan menyemak versi OpenProject terkini anda terhadap pangkalan data keluaran rasmi OpenProject untuk memaklumkan anda tentang sebarang kemas kini atau kelemahan yang diketahui. Untuk maklumat lanjut bagi penyediaan semakan, data apa yang diperlukan untuk menyediakan kemas kini tersedia, dan bagaimana untuk menyahaktifkan semakan ini, sila kunjungi <a href="%{more_info_url}">dokumentasi konfigurasi</a>.
   text_own_membership_delete_confirmation: "Anda akan mengeluarkan beberapa atau semua kebenaran anda dan mungkin tidak lagi dapat mengedit projek ini selepas itu.\nAdakah anda pasti anda ingin teruskan?"
   text_permanent_delete_confirmation_checkbox_label: "I understand that this deletion cannot be reversed"
   text_plugin_assets_writable: "Aset plugin direktori yang boleh ditulis"
@@ -4179,7 +4179,7 @@ ms:
   text_reassign: "Tugaskan semula ke pakej kerja:"
   text_regexp_info: "cth. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Regex digunakan dalam mod berbilang baris. cth., ^---\s+'
-  text_repository_usernames_mapping: "Pilih atau kemas kini pengguna MarvalProjects yang dipetakan ke setiap nama pengguna yang ditemui dalam log repositori.\nPengguna dengan MarvalProjects dan nama pengguna repositori atau e-mel yang sama dipetakan secara automatik. "
+  text_repository_usernames_mapping: "Pilih atau kemas kini pengguna OpenProject yang dipetakan ke setiap nama pengguna yang ditemui dalam log repositori.\nPengguna dengan OpenProject dan nama pengguna repositori atau e-mel yang sama dipetakan secara automatik. "
   text_status_changed_by_changeset: "Dilaksanakan dalam set perubahan %{value}."
   text_table_difference_description: "Dalam jadual ini, %{entries} yang tunggal dipaparkan. Anda boleh lihat perbezaan antara mana-mana dua entri dengan mula memilih kotak penyemakan dalam jadual. Apabila butang di bawah jadual ditekan, perbezaan akan ditunjukkan."
   text_time_logged_by_changeset: "Dilaksanakan dalam set perubahan %{value}."
@@ -4254,7 +4254,7 @@ ms:
     authentication_provider: "Penyedia Pengesahan"
     identity_url_text: "Pengenal unik dalaman disediakan oleh pemberi pengesahan."
     authentication_settings_disabled_due_to_external_authentication: >
-      Pengguna ini mengesahkan melalui penyedia pengesahan luaran, jadi tiada kata laluan dalam MarvalProjects untuk diubah.
+      Pengguna ini mengesahkan melalui penyedia pengesahan luaran, jadi tiada kata laluan dalam OpenProject untuk diubah.
     authorization_rejected: "Anda tidak dibenarkan untuk daftar masuk."
     assign_random_password: "Tetapkan kata laluan rawak (dihantar ke pengguna melalui e-mel)"
     blocked: "dikunci sementara"
@@ -4285,7 +4285,7 @@ ms:
   warning: Amaran
   warning_attachments_not_saved: "%{count} fail tidak dapat disimpan."
   warning_imminent_user_limit: >
-    Anda menjemput pengguna lebih dari yang disokong pelan semasa anda. Pengguna yang dijemput mungkin tidak dapat sertai persekitaran MarvalProjects anda. Sila <a href="%{upgrade_url}">naik taraf pelan anda</a> atau sekat pengguna sedia ada untuk membenarkan pengguna yang dijemput dan berdaftar untuk menyertai.
+    Anda menjemput pengguna lebih dari yang disokong pelan semasa anda. Pengguna yang dijemput mungkin tidak dapat sertai persekitaran OpenProject anda. Sila <a href="%{upgrade_url}">naik taraf pelan anda</a> atau sekat pengguna sedia ada untuk membenarkan pengguna yang dijemput dan berdaftar untuk menyertai.
   warning_registration_token_expired: |
     Pengaktifan e-mel telah tamat tempoh. Kami telah hantar yang baharu kepada anda di %{email}.
     Sila klik pautan di dalamnya untuk mengaktifkan akaun anda.
@@ -4294,7 +4294,7 @@ ms:
   warning_user_limit_reached_admin: >
     Menambah pengguna tambahan akan melebihi had semasa. Sila <a href="%{upgrade_url}">naik taraf pelan anda</a> bagi memastikan pengguna luaran dapat mengakses contoh ini.
   warning_user_limit_reached_instructions: >
-    Anda telah mencapai had pengguna anda (%{current}/%{max} pengguna aktif). Sila hubungi sales@MarvalProjects.com untuk menaik taraf pelan edisi Enterprise anda dan tambah pengguna tambahan.
+    Anda telah mencapai had pengguna anda (%{current}/%{max} pengguna aktif). Sila hubungi sales@openproject.com untuk menaik taraf pelan edisi Enterprise anda dan tambah pengguna tambahan.
   warning_protocol_mismatch_html: >
 
   warning_bar:
@@ -4561,7 +4561,7 @@ ms:
         confidential: "Semak jika aplikasi akan digunakan dimana rahsia pelanggan boleh dikekalkan sulit. Aplikasi mudah alih asal dan Single Page Apps dianggap sebagai tidak sulit."
         scopes: "Tandakan skop yang anda mahu untuk berikan akses ke aplikasi tersebut. Jika tiada skop ditandakan, api_v3 akan diandaikan."
         client_credential_user_id: "ID pengguna pilihan untuk menyamar apabila pelanggan menggunakan aplikasi ini. Tinggalkan kosong untuk benarkan akses awam sahaja."
-        register_intro: "Jika anda sedang membangunkan aplikasi pelanggan API OAuth untuk MarvalProjects, anda boleh mendaftarkannya menggunakan borang ini untuk semua pengguna menggunakannya."
+        register_intro: "Jika anda sedang membangunkan aplikasi pelanggan API OAuth untuk OpenProject, anda boleh mendaftarkannya menggunakan borang ini untuk semua pengguna menggunakannya."
         default_scopes: ""
     header:
       builtin_applications: Aplikasi OAuth terbina dalam
@@ -4569,7 +4569,7 @@ ms:
     empty_application_lists: Tiada aplikasi OAuth telah didaftarkan.
     client_id: "ID pelanggan"
     client_secret_notice: >
-      Ini adalah satu-satunya masa di mana kita boleh mencetak rahsia pelanggan, sila catat dan simpankan ia dengan selamat. Ia perlu diperlakukan sebagai sebuah kata laluan dan tidak boleh dipulihkan oleh MarvalProjects pada masa kemudian.
+      Ini adalah satu-satunya masa di mana kita boleh mencetak rahsia pelanggan, sila catat dan simpankan ia dengan selamat. Ia perlu diperlakukan sebagai sebuah kata laluan dan tidak boleh dipulihkan oleh OpenProject pada masa kemudian.
     authorization_dialog:
       authorize: "Benarkan"
       cancel: "Batal dan nafikan kebenaran."
@@ -4579,7 +4579,7 @@ ms:
         Aplikasi ini meminta akses ke akaun OpenProject anda. <br/> <strong>Ia telah meminta kebenaran yang berikut:</strong>
     scopes:
       api_v3: "Akses API v3 penuh"
-      api_v3_text: "Aplikasi akan menerima akses penuh baca & tulis di MarvalProjects API v3 untuk melaksanakan tindakan bagi pihak anda."
+      api_v3_text: "Aplikasi akan menerima akses penuh baca & tulis di OpenProject API v3 untuk melaksanakan tindakan bagi pihak anda."
     grants:
       created_date: "Diluluskan pada"
       scopes: "Kebenaran"
@@ -4594,7 +4594,7 @@ ms:
     client_credentials_impersonation_set_to: "Pengguna kelayakan pelanggan ditetapkan kepada"
     client_credentials_impersonation_warning: "Perhatian: Pelanggan yang menggunakan aliran 'Kelayakan Pelanggan' dalam aplikasi ini akan mempunyai hak pengguna ini."
     client_credentials_impersonation_html: >
-      Secara default, MarvalProjects menyediakan kebenaran OAuth 2.0 melalui %{authorization_code_flow_link}. Anda boleh memilih untuk mengaktifkan %{client_credentials_flow_link}, tetapi anda mesti menyediakan pengguna yang akan mewakili permintaan.
+      Secara default, OpenProject menyediakan kebenaran OAuth 2.0 melalui %{authorization_code_flow_link}. Anda boleh memilih untuk mengaktifkan %{client_credentials_flow_link}, tetapi anda mesti menyediakan pengguna yang akan mewakili permintaan.
     authorization_error: "Sebuah ralat kebenaran telah berlaku."
     revoke_my_application_confirmation: "Adakah anda benar-benar mahu memadam aplikasi ini? Ini akan menarik balik %{token_count} yang aktif darinya."
     my_registered_applications: "Aplikasi OAuth berdaftar"
@@ -4623,20 +4623,20 @@ ms:
         Ralat dalaman: Memanggil refresh_token tanpa token yang sedia ada sebelum ini.
       refresh_token_updated_failed: "Ralat semasa kemas kini OAuthClientToken"
       oauth_client_not_found_explanation: >
-        Ralat muncul selepas anda mengemas kini client_id dan client_secret di MarvalProjects, tetapi belum mengemas kini ruangan 'URI Kembali' dalam penyedia OAuth2.
+        Ralat muncul selepas anda mengemas kini client_id dan client_secret di Openproject, tetapi belum mengemas kini ruangan 'URI Kembali' dalam penyedia OAuth2.
       oauth_code_not_present: "'Kod' OAuth2 tidak ditemui dalam titik terakhir 'panggilan balik' (redirect_url)."
       oauth_code_not_present_explanation: >
         Ralat ini muncul jika anda telah memilih response_type yang salah dalam pembekal OAuth2. Response_type perlu 'kod' atau serupa.
       oauth_state_not_present: "'Kondisi' OAuth2 tidak ditemui dalam titik terakhir 'panggilan balik' (ubah hala_url)."
       oauth_state_not_present_explanation: >
-        'Kondisi' digunakan untuk menunjukkan ke MarvalProjects tempat untuk meneruskan selepas kebenaran OAuth2 berjaya. Ketiadaan 'kondisi' adalah ralat dalaman yang mungkin muncul semasa penyediaan. Sila hubungi pentadbir sistem anda.
+        'Kondisi' digunakan untuk menunjukkan ke OpenProject tempat untuk meneruskan selepas kebenaran OAuth2 berjaya. Ketiadaan 'kondisi' adalah ralat dalaman yang mungkin muncul semasa penyediaan. Sila hubungi pentadbir sistem anda.
       rack_oauth2:
         client_secret_invalid: "Rahsia pelanggan adalah tidak sah (rahsia_pelanggan_tidak sah)"
         invalid_request: >
           Server Pengesahan OAuth2 menjawab dengan 'permintaan_tidak sah'. Ralat ini muncul jika anda cuba untuk mendapatkan kebenaran beberapa kali atau dalam kes masalah teknikal.
         invalid_response: "Server Pengesahan OAuth2 menyediakan tindak balas yang tidak sah (respons_tidak sah)"
         invalid_grant: "Server Pengesahan OAuth2 tersebut meminta anda untuk mengesahkan semula (pemberian_tidak sah)."
-        invalid_client: "Server Pengesahan OAuth2 tidak mengenali MarvalProjects (pelanggan_tidak sah)."
+        invalid_client: "Server Pengesahan OAuth2 tidak mengenali OpenProject (pelanggan_tidak sah)."
         unauthorized_client: "Server Pengesahan OAuth2 tersebut menolak jenis pemberian (pelanggan_tidak berkebenaran)"
         unsupported_grant_type: "Server Pengesahan OAuth2 tersebut meminta anda untuk mengesahkan semula (jenis_pemberian_tidak disokong)."
         invalid_scope: "Anda tidak dibenarkan untuk mengakses sumber yang diminta (skop_tidak sah)."
@@ -4649,10 +4649,10 @@ ms:
   you: anda
   link: pautan
   plugin_openproject_auth_plugins:
-    name: "Plugin Auth MarvalProjects"
-    description: "Integrasi penyedia strategi OmniAuth untuk pengesahan dalam MarvalProjects."
+    name: "Plugin Auth OpenProject"
+    description: "Integrasi penyedia strategi OmniAuth untuk pengesahan dalam OpenProject."
   plugin_openproject_auth_saml:
     name: "SAML OmniAuth / Daftar Masuk Tunggal"
-    description: "Tambah penyediaan SAML OmniAuth ke MarvalProjects"
+    description: "Tambah penyediaan SAML OmniAuth ke OpenProject"
   enterprise_plans:
     legacy_enterprise: "Enterprise Plan"

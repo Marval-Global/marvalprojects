@@ -1,6 +1,6 @@
 id:
   plugin_openproject_xls_export:
-    name: "Ekspor MarvalProjects XLS"
+    name: "Ekspor OpenProject XLS"
     description: "Ekspor daftar masalah sebagai lembar kerja Excel (.xls)."
   export_to_excel: "Ekspor XLS"
   print_with_description: "Pratinjau cetak dengan deskripsi"

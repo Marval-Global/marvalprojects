@@ -21,8 +21,8 @@
 #++
 tr:
   plugin_openproject_documents:
-    name: "MarvalProjects Belgeler"
-    description: "Projelerde belge oluşturulmasına izin veren bir MarvalProjects eklentisi."
+    name: "OpenProject Belgeler"
+    description: "Projelerde belge oluşturulmasına izin veren bir OpenProject eklentisi."
   activerecord:
     models:
       document: "Belge"

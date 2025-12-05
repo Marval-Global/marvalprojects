@@ -148,7 +148,7 @@ pt-BR:
                 options:
                   name: Guia de introdução
                   text: |
-                    Estamos felizes que você tenha se juntado a nós! Aqui estão algumas sugestões para começar a usar o MarvalProjects.
+                    Estamos felizes que você tenha se juntado a nós! Aqui estão algumas sugestões para começar a usar o OpenProject.
 
                     Descubra os principais recursos com o nosso [Tour Guiado]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true).
 
@@ -318,7 +318,7 @@ pt-BR:
                 options:
                   name: Guia de introdução
                   text: |
-                    Ficamos felizes que você tenha se juntado! Sugerimos que você tente algumas coisas para começar no MarvalProjects.
+                    Ficamos felizes que você tenha se juntado! Sugerimos que você tente algumas coisas para começar no OpenProject.
 
                     _Tente as seguintes etapas:_
 
@@ -494,9 +494,9 @@ pt-BR:
         item_6:
           name: Bug
       welcome:
-        title: Boas-vindas ao MarvalProjects!
+        title: Boas-vindas ao OpenProject!
         text: |
-          O MarvalProjects é o principal software de gestão de projetos de código aberto. Ele dá suporte à gestão de projetos clássica, ágil e híbrida e dá a você o controlo total sobre os seus dados.
+          O OpenProject é o principal software de gestão de projetos de código aberto. Ele dá suporte à gestão de projetos clássica, ágil e híbrida e dá a você o controlo total sobre os seus dados.
 
           Características principais e casos de uso:
 

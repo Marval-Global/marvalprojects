@@ -148,7 +148,7 @@ tr:
                 options:
                   name: Başlarken
                   text: |
-                    Katıldığınız için çok mutluyuz! MarvalProjects'e başlamak için birkaç şey denemenizi öneririz.
+                    Katıldığınız için çok mutluyuz! OpenProject'e başlamak için birkaç şey denemenizi öneririz.
 
                     [Rehberli Tur]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true) ile en önemli özellikleri keşfedin.
 
@@ -320,7 +320,7 @@ tr:
                 options:
                   name: Başlarken
                   text: |
-                    Katıldığınız için çok mutluyuz! MarvalProjects'e başlamak için birkaç şey denemenizi öneririz.
+                    Katıldığınız için çok mutluyuz! OpenProject'e başlamak için birkaç şey denemenizi öneririz.
 
                     Aşağıdaki adımları deneyin:_
 
@@ -495,9 +495,9 @@ tr:
         item_6:
           name: Hata
       welcome:
-        title: MarvalProjects'e hoş geldiniz!
+        title: OpenProject'e hoş geldiniz!
         text: |
-          MarvalProjects, önde gelen açık kaynaklı proje yönetim yazılımıdır. Klasik, çevik ve hibrit proje yönetimini destekler ve verileriniz üzerinde tam kontrol sahibi olmanızı sağlar.
+          OpenProject, önde gelen açık kaynaklı proje yönetim yazılımıdır. Klasik, çevik ve hibrit proje yönetimini destekler ve verileriniz üzerinde tam kontrol sahibi olmanızı sağlar.
 
           Temel özellikler ve kullanım durumları:
 

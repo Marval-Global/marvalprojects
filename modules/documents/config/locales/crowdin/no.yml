@@ -21,8 +21,8 @@
 #++
 "no":
   plugin_openproject_documents:
-    name: "MarvalProjects Dokumenter"
-    description: "En MarvalProjects utvidelse for å tillate oppretting av dokumenter i prosjekter."
+    name: "OpenProject Dokumenter"
+    description: "En OpenProject utvidelse for å tillate oppretting av dokumenter i prosjekter."
   activerecord:
     models:
       document: "Dokument"

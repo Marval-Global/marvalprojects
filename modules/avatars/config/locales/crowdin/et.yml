@@ -3,7 +3,7 @@ et:
   plugin_openproject_avatars:
     name: "Profiilipildid"
     description: >-
-      This plugin allows MarvalProjects users to upload a picture to be used as an avatar or use registered images from Gravatar.
+      This plugin allows OpenProject users to upload a picture to be used as an avatar or use registered images from Gravatar.
   label_avatar: "Profiilipilt"
   label_avatar_plural: "Profiilipildid"
   label_current_avatar: "Praegune profiilipilt"

@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 cs:
   plugin_openproject_two_factor_authentication:
-    name: "Dvoufaktorové ověření MarvalProjects"
+    name: "Dvoufaktorové ověření OpenProject"
     description: >-
-      Tento MarvalProjects plugin ověřuje vaše uživatele pomocí dvoufaktorového ověřování pomocí jednorázového hesla přes TOTP standard (Google Authenticator) nebo zasílá uživateli mobilní telefon přes SMS nebo hlasový hovor.
+      Tento OpenProject plugin ověřuje vaše uživatele pomocí dvoufaktorového ověřování pomocí jednorázového hesla přes TOTP standard (Google Authenticator) nebo zasílá uživateli mobilní telefon přes SMS nebo hlasový hovor.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -83,7 +83,7 @@ cs:
       only_sms_allowed: "Pro ostatní uživatele lze nastavit pouze doručení SMS."
     upsell:
       title: "Dvoufázové ověření"
-      description: "Posilte bezpečnost vaší MarvalProjects instance tím, že nabízíte (nebo vynucujte) dvoufaktorové ověřování všem členům projektu."
+      description: "Posilte bezpečnost vaší OpenProject instance tím, že nabízíte (nebo vynucujte) dvoufaktorové ověřování všem členům projektu."
     backup_codes:
       none_found: Pro tento účet neexistují žádné záložní kódy.
       singular: Záložní kód

@@ -71,7 +71,7 @@ fr:
         item_7:
           name: Ingénieurs structurels
       welcome:
-        title: Bienvenue dans l'édition d'MarvalProjects BIM !
+        title: Bienvenue dans l'édition d'OpenProject BIM !
         text: |
           Consultez les projets de démonstration pour commencer avec quelques exemples.
 
@@ -120,7 +120,7 @@ fr:
                 options:
                   name: Pour commencer
                   text: |
-                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec MarvalProjects.
+                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec OpenProject.
 
                     Mais avant de vous lancer, sachez que ce projet d'exemple est divisé en deux projets différents :
 
@@ -138,7 +138,7 @@ fr:
                     7.  _Vous utilisez la méthode Agile ? Consultez nos tout nouveaux tableaux :_ → Accédez à [Tableaux]({{opSetting:base_url}}/projects/demo-construction-project/boards)
 
                     Vous trouverez ici nos [Guides de l'utilisateur](https://www.openproject.org/docs/user-guide/).
-                    Si vous avez des questions ou si vous avez besoin d'aide, n’hésitez pas à nous contacter : [support [at ]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Si vous avez des questions ou si vous avez besoin d'aide, n’hésitez pas à nous contacter : [support [at ]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Membres
@@ -179,7 +179,7 @@ fr:
                 options:
                   name: Pour commencer
                   text: |
-                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec MarvalProjects.
+                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec OpenProject.
 
                     Vous trouverez ici les rôles classiques, quelques flux de travail et des lots de travaux pour votre projet de construction.
 
@@ -193,7 +193,7 @@ fr:
                     6.  _Vous utilisez la méthode Agile ? Créez un nouveau tableau :_ → Accédez à [Tableaux]({{opSetting:base_url}}/projects/demo-planning-constructing-project/boards)
 
                     Vous trouverez ici nos [Guides de l'utilisateur](https://www.openproject.org/docs/user-guide/).
-                    Si vous avez des questions ou si vous avez besoin d'aide, n'hésitez pas à nous contacter : [support [at ]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Si vous avez des questions ou si vous avez besoin d'aide, n'hésitez pas à nous contacter : [support [at ]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Membres
@@ -433,7 +433,7 @@ fr:
                 options:
                   name: Pour commencer
                   text: |
-                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec MarvalProjects.
+                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec OpenProject.
 
                     Ce projet de démonstration propose des rôles, des flux de travail et des lots de travaux spécialisés pour BIM.
 
@@ -450,7 +450,7 @@ fr:
                     9.  _Vous utilisez la méthode Agile ? Créez un nouveau tableau :_ Accédez à [Tableaux]({{opSetting:base_url}}/projects/demo-bim-project/boards)
 
                     Vous trouverez ici nos [Guides de l'utilisateur](https://www.openproject.org/docs/user-guide/).
-                    Si vous avez des questions ou si vous avez besoin d'aide, n’hésitez pas à nous contacter : [support [at ]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Si vous avez des questions ou si vous avez besoin d'aide, n’hésitez pas à nous contacter : [support [at ]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Membres
@@ -709,7 +709,7 @@ fr:
                 options:
                   name: Pour commencer
                   text: |
-                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec MarvalProjects.
+                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec OpenProject.
 
                     Ce projet de démonstration montre les fonctionnalités de gestion de BCF.
 
@@ -725,7 +725,7 @@ fr:
                     8.  _Vous utilisez la méthode Agile ? Créez un tableau :_ → Accédez à [Tableaux]({{opSetting:base_url}}/projects/demo-bcf-management-project/boards).
 
                     Vous trouverez ici nos [Guides de l'utilisateur](https://www.openproject.org/docs/user-guide/).
-                    Si vous avez des questions ou si vous avez besoin d'aide, n'hésitez pas à nous contacter : [support [at ]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Si vous avez des questions ou si vous avez besoin d'aide, n'hésitez pas à nous contacter : [support [at ]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Membres

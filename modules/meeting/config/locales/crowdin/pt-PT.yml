@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 pt-PT:
   plugin_openproject_meeting:
-    name: "Reunião do MarvalProjects"
+    name: "Reunião do OpenProject"
     description: >-
-      Este módulo adiciona ao MarvalProjects funções de apoio às reuniões de projeto. As reuniões podem ser agendadas selecionando convidados do mesmo projeto para participarem na reunião. Uma agenda pode ser criada e enviada para os convidados. Após a reunião, os participantes podem ser selecionados e as minutas podem ser criadas com base na agenda. Por fim, as minutas podem ser enviadas  para todos os participantes e convidados.
+      Este módulo adiciona ao OpenProject funções de apoio às reuniões de projeto. As reuniões podem ser agendadas selecionando convidados do mesmo projeto para participarem na reunião. Uma agenda pode ser criada e enviada para os convidados. Após a reunião, os participantes podem ser selecionados e as minutas podem ser criadas com base na agenda. Por fim, as minutas podem ser enviadas  para todos os participantes e convidados.
   activerecord:
     attributes:
       meeting:

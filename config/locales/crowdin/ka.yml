@@ -131,13 +131,13 @@ ka:
       edit:
         label_delete_scim_client: "Delete SCIM client"
       form:
-        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in MarvalProjects."
-        authentication_method_description_html: "This is how the SCIM client authenticates at MarvalProjects. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
+        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in OpenProject."
+        authentication_method_description_html: "This is how the SCIM client authenticates at OpenProject. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
         description_html: 'Please refer to our <a href="%{docs_url}">documentation on configuring SCIM clients</a> for more information on these configuration options.'
         jwt_sub_description_html: 'For example, for Keycloak, this is the UUID of the service account  associated with the SCIM client. Consult <a href="%{docs_url}">our documentation</a> to learn how to find  the subject claim for your use case.'
         name_description: "Choose a name that will help other admins better understand why this client was configured."
       index:
-        description: "SCIM clients configured here are able to interact with MarvalProjects SCIM server API to provision, update, and deprovision user accounts and groups."
+        description: "SCIM clients configured here are able to interact with OpenProject SCIM server API to provision, update, and deprovision user accounts and groups."
         label_create_button: "Add SCIM client"
       new:
         title: "New SCIM client"
@@ -145,14 +145,14 @@ ka:
         confirm_button: "Revoke"
         title: "Revoke static token"
         heading: "Are you sure you want to revoke this token?"
-        description: "The SCIM client that uses this token will no longer be able to access MarvalProjects's SCIM server API."
+        description: "The SCIM client that uses this token will no longer be able to access OpenProject's SCIM server API."
       table_component:
         blank_slate:
           title: "No SCIM clients configured yet"
           description: "Add clients to see them here"
         user_count: "Users"
       token_list_component:
-        description: "The tokens you generate here can be passed by a SCIM client to access the MarvalProjects SCIM API."
+        description: "The tokens you generate here can be passed by a SCIM client to access the OpenProject SCIM API."
         heading: "Tokens"
         label_add_token: "Token"
         label_aria_add_token: "Add token"
@@ -204,38 +204,38 @@ ka:
       name: Arbitrary name of the LDAP connection
       host: LDAP host name or IP address
       login_map: The attribute key in LDAP that is used to identify the unique user login. Usually, this will be `uid` or `samAccountName`.
-      generic_map: The attribute key in LDAP that is mapped to the MarvalProjects `%{attribute}` attribute
-      admin_map_html: "Optional: The attribute key in LDAP that <strong>if present</strong> marks the MarvalProjects user an admin. Leave empty when in doubt."
+      generic_map: The attribute key in LDAP that is mapped to the OpenProject `%{attribute}` attribute
+      admin_map_html: "Optional: The attribute key in LDAP that <strong>if present</strong> marks the OpenProject user an admin. Leave empty when in doubt."
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br>
-        Example: uid=MarvalProjects,ou=system,dc=example,dc=com
+        Example: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Enter the bind password of the system user
       base_dn: |
-        Enter the Base DN of the subtree in LDAP you want MarvalProjects to look for users and groups.
-        MarvalProjects will filter for provided usernames in this subtree only.
+        Enter the Base DN of the subtree in LDAP you want OpenProject to look for users and groups.
+        OpenProject will filter for provided usernames in this subtree only.
         Example: ou=users,dc=example,dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by MarvalProjects for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
       filter_string_concat: |
-        MarvalProjects will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        If you check this box, MarvalProjects will automatically create new users from their LDAP entries
-        when they first authenticate with MarvalProjects.
-        Leave this unchecked to only allow existing accounts in MarvalProjects to authenticate through LDAP!
+        If you check this box, OpenProject will automatically create new users from their LDAP entries
+        when they first authenticate with OpenProject.
+        Leave this unchecked to only allow existing accounts in OpenProject to authenticate through LDAP!
     connection_encryption: "Connection encryption"
     encryption_details: "LDAPS / STARTTLS options"
     system_account: "სისტემური ანგარიში"
     system_account_legend: |
-      MarvalProjects requires read-only access through a system account to lookup users and groups in your LDAP tree.
+      OpenProject requires read-only access through a system account to lookup users and groups in your LDAP tree.
       Please specify the bind credentials for that system user in the following section.
     ldap_details: "LDAP-ის დეტალები"
     user_settings: "Attribute mapping"
     user_settings_legend: |
-      The following fields are related to how users are created in MarvalProjects from LDAP entries and
-      what LDAP attributes are used to define the attributes of an MarvalProjects user (attribute mapping).
+      The following fields are related to how users are created in OpenProject from LDAP entries and
+      what LDAP attributes are used to define the attributes of an OpenProject user (attribute mapping).
     tls_mode:
       plain: "არა"
       simple_tls: "LDAPS"
@@ -1242,7 +1242,7 @@ ka:
         confirmation: "doesn't match %{attribute}."
         could_not_be_copied: "%{dependency} could not be (fully) copied."
         does_not_exist: "does not exist."
-        error_enterprise_only: "%{action} is only available in the MarvalProjects Enterprise edition"
+        error_enterprise_only: "%{action} is only available in the OpenProject Enterprise edition"
         error_unauthorized: "may not be accessed."
         error_readonly: "was attempted to be written but is not writable."
         error_conflict: "Information has been updated by at least one other user in the meantime."
@@ -1821,7 +1821,7 @@ ka:
       heading_reset: "Reset backup token"
       heading_create: "Create backup token"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this MarvalProjects installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -2154,7 +2154,7 @@ ka:
         Already have a token? Add it using the button below to upgrade to the booked Enterprise plan.
       hide_banner: "Hide this banner"
       homescreen_description: >
-        Enterprise plans extend the Community edition of MarvalProjects you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
+        Enterprise plans extend the Community edition of OpenProject you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
       homescreen_subline: By upgrading, you will also be supporting an open source project.
       baseline_comparison:
         description: Highlight changes made to this list since any point in the past.
@@ -2167,7 +2167,7 @@ ka:
         premium_features: "Enterprise add-ons"
         premium_features_text: "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields."
         professional_support: "Professional support"
-        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running MarvalProjects in business-critical environments."
+        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
       work_package_subject_generation:
         description: "Create automatically generated subjects using referenced attributes and text."
       customize_life_cycle:
@@ -2195,7 +2195,7 @@ ka:
       define_custom_style:
         title: "Custom color theme and logo"
         more_info: "Note: the used logo will be publicly accessible."
-        description: Customize your MarvalProjects installation with your own logo and colors.
+        description: Customize your OpenProject installation with your own logo and colors.
       custom_actions:
         title: "მორგებული ქმედებები"
         description: "Custom actions are one-click shortcuts to a set of pre-defined actions that you can make available on certain work packages based on status, role, type or project."
@@ -2204,13 +2204,13 @@ ka:
         description: "Enable seamless and secure authentication for your Nextcloud storage with Single Sign-On. Simplify access management and enhance user convenience."
       scim_api:
         title: "SCIM clients"
-        description: "Automate user management in MarvalProjects by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
+        description: "Automate user management in OpenProject by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
       virus_scanning:
-        description: "Ensure uploaded files in MarvalProjects are scanned for viruses before being accessible by other users."
+        description: "Ensure uploaded files in OpenProject are scanned for viruses before being accessible by other users."
       placeholder_users:
         title: Placeholder users
         description: >
-          Placeholder users are a way to assign work packages to users who are not part of your project. They can be useful in a range of scenarios; for example, if you need to track tasks for a resource that is not yet named or available, or if you don’t want to give that person access to MarvalProjects but still want to track tasks assigned to them.
+          Placeholder users are a way to assign work packages to users who are not part of your project. They can be useful in a range of scenarios; for example, if you need to track tasks for a resource that is not yet named or available, or if you don’t want to give that person access to OpenProject but still want to track tasks assigned to them.
       internal_comments:
         title: Internal comments
         description: "Internal comments allow an internal team to communicate amongst themselves privately. These are only visible to certain project roles and will never be visible publicly."
@@ -2232,9 +2232,9 @@ ka:
       request_again: "Request again"
       resend_action: "Resend confirmation email"
       welcome_title: "Quick feature overview"
-      welcome_description: "Get a quick overview of project management and team collaboration with MarvalProjects Enterprise edition."
+      welcome_description: "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition."
       confirmation_info: >
-        We sent you an email on %{date} to %{email} with all the information to start the free trial of MarvalProjects Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
+        We sent you an email on %{date} to %{email} with all the information to start the free trial of OpenProject Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
       confirmation_subline: >
         Please, check your inbox and follow the steps to start your 14-day free trial.
       domain_caption: The token will be valid for your currently configured host name.
@@ -2264,7 +2264,7 @@ ka:
   error_check_user_and_role: "Please choose a user and a role."
   error_code: "შეცდომა %{code}"
   error_color_could_not_be_saved: "Color could not be saved"
-  error_cookie_missing: "The MarvalProjects cookie is missing. Please ensure that cookies are enabled, as this application will not properly function without."
+  error_cookie_missing: "The OpenProject cookie is missing. Please ensure that cookies are enabled, as this application will not properly function without."
   error_custom_option_not_found: "Option does not exist."
   error_enterprise_plan_needed: "You need the %{plan} enterprise plan to perform this action."
   error_enterprise_activation_user_limit: "Your account could not be activated (user limit reached). Please contact your administrator to gain access."
@@ -2281,7 +2281,7 @@ ka:
   error_work_package_not_found_in_project: "The work package was not found or does not belong to this project"
   error_work_package_id_not_found: "The work package was not found."
   error_must_be_project_member: "must be project member"
-  error_migrations_are_pending: "Your MarvalProjects installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
+  error_migrations_are_pending: "Your OpenProject installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
   error_migrations_visit_upgrade_guides: "Please visit our upgrade guide documentation"
   error_no_default_work_package_status: 'No default work package status is defined. Please check your configuration (Go to "Administration -> Work package statuses").'
   error_no_type_in_project: "No type is associated to this project. Please check the Project settings."
@@ -2468,7 +2468,7 @@ ka:
       no_visible_projects: "There are no visible projects in this instance."
       users: "Newest registered users in this instance."
     blocks:
-      community: "MarvalProjects community"
+      community: "OpenProject community"
       upsell:
         title: "Upgrade to Enterprise edition"
     links:
@@ -2479,7 +2479,7 @@ ka:
       impressum: "იურიდიული გაფრთხილება"
       glossary: "ლექსიკონი"
       shortcuts: "მალსახმობები"
-      blog: "MarvalProjects blog"
+      blog: "OpenProject blog"
       forums: "Community forum"
       newsletter: "Security alerts / Newsletter"
   image_conversion:
@@ -2491,7 +2491,7 @@ ka:
       default_attribute_written: "Read-only attributes written"
       progress_mode_changed_to_status_based: "Progress calculation updated"
       status_changed: "Status '%{status_name}'"
-      system_update: "MarvalProjects system update:"
+      system_update: "OpenProject system update:"
       work_package_duplicate_closed: "Duplicate work package updated:"
       total_percent_complete_mode_changed_to_work_weighted_average: "Calculation of % Complete totals now weighted by Work."
       total_percent_complete_mode_changed_to_simple_average: "Calculation of % Complete totals now based on a simple average of only % Complete values."
@@ -2561,7 +2561,7 @@ ka:
         disabled_text: "API tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       ical:
         title: "iCalendar"
-        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to MarvalProjects calendars</a> and view up-to-date work package information from external clients.'
+        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to OpenProject calendars</a> and view up-to-date work package information from external clients.'
         disabled_text: "iCalendar subscriptions are not enabled by the administrator. Please contact your administrator to use this feature."
         empty_text_hint: "To add an iCalendar token, subscribe to a new or existing calendar from within the Calendar module of a project. You must have the necessary permissions."
       oauth:
@@ -2747,7 +2747,7 @@ ka:
   label_custom_field_plural: "მორგებადი ველები"
   label_custom_field_default_type: "ცარიელი ტიპი"
   label_custom_style: "დიზაინი"
-  label_custom_style_description: "Choose how MarvalProjects looks to you with themes, select your default colors to use in the app and how exports look like."
+  label_custom_style_description: "Choose how OpenProject looks to you with themes, select your default colors to use in the app and how exports look like."
   label_dashboard: "სამუშაო დაფა"
   label_database_version: "PostgreSQL version"
   label_date: "თარიღი"
@@ -3003,7 +3003,7 @@ ka:
   label_open_menu: "მენიუს გახსნა"
   label_open_work_packages: "გახსნა"
   label_open_work_packages_plural: "გახსნა"
-  label_openproject_website: "MarvalProjects website"
+  label_openproject_website: "OpenProject website"
   label_optional_description: "აღწერა"
   label_options: "მორგება"
   label_other: "სხვა"
@@ -3392,8 +3392,8 @@ ka:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to MarvalProjects immediately and reset it again.
-  mail_body_incoming_email_error: The email you sent to MarvalProjects could not be processed.
+  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_incoming_email_error: The email you sent to OpenProject could not be processed.
   mail_body_incoming_email_error_in_reply_to: "At %{received_at} %{from_email} wrote"
   mail_body_incoming_email_error_logs: "ჟურნალი"
   mail_body_lost_password: "To change your password, click on the following link:"
@@ -3406,10 +3406,10 @@ ka:
   mail_body_register_user: "ძვირფასო %{name}, "
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in MarvalProjects as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Your MarvalProjects team"
+  mail_body_register_closing: "Your OpenProject team"
   mail_body_register_ending: "Stay connected! Kind regards,"
   mail_body_reminder: "%{count} work package(s) that are assigned to you are due in the next %{days} days:"
   mail_body_group_reminder: '%{count} work package(s) that are assigned to group "%{group}" are due in the next %{days} days:'
@@ -3418,7 +3418,7 @@ ka:
   mail_subject_account_activation_request: "%{value} account activation request"
   mail_subject_backup_ready: "Your backup is ready"
   mail_subject_backup_token_reset: "Backup token reset"
-  mail_subject_incoming_email_error: "An email you sent to MarvalProjects could not be processed"
+  mail_subject_incoming_email_error: "An email you sent to OpenProject could not be processed"
   mail_subject_lost_password: "Your %{value} password"
   mail_subject_register: "Your %{value} account activation"
   mail_subject_wiki_content_added: "'%{id}' wiki page has been added"
@@ -3447,14 +3447,14 @@ ka:
   mail_user_activation_limit_reached:
     subject: User activation limit reached
     message: |
-      A new user (%{email}) tried to create an account on an MarvalProjects environment that you manage (%{host}).
+      A new user (%{email}) tried to create an account on an OpenProject environment that you manage (%{host}).
       The user cannot activate their account since the user limit has been reached.
     steps:
       label: "To allow the user to sign in you can either: "
       a: "Upgrade your payment plan ([here](upgrade_url))" #here turned into a link
       b: "Lock or delete an existing user ([here](users_url))" #here turned into a link
   more_actions: "მეტი ფუნქცია"
-  noscript_description: "You need to activate JavaScript in order to use MarvalProjects!"
+  noscript_description: "You need to activate JavaScript in order to use OpenProject!"
   noscript_heading: "JavaScript disabled"
   noscript_learn_more: "გაიგეთ მეტი"
   notice_accessibility_mode: The accessibility mode can be enabled in your [account settings](url).
@@ -3530,7 +3530,7 @@ ka:
   notice_wont_delete_auth_source: The LDAP connection cannot be deleted as long as there are still users using it.
   notice_project_cannot_update_custom_fields: "You cannot update the project's available custom fields. The project is invalid: %{errors}"
   notice_attachment_migration_wiki_page: >
-    This page was generated automatically during the update of MarvalProjects. It contains all attachments previously associated with the %{container_type} "%{container_name}".
+    This page was generated automatically during the update of OpenProject. It contains all attachments previously associated with the %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -3553,7 +3553,7 @@ ka:
           tb: "ტბ"
   onboarding:
     heading_getting_started: "Get an overview"
-    text_getting_started_description: "Get a quick overview of project management and team collaboration with MarvalProjects. You can restart this video from the help menu."
+    text_getting_started_description: "Get a quick overview of project management and team collaboration with OpenProject. You can restart this video from the help menu."
     welcome: "Welcome to %{app_title}"
     select_language: "Please select your language"
   permission_add_work_package_comments: "Add comments"
@@ -3636,7 +3636,7 @@ ka:
   permission_manage_types: "აირჩიეთ ტიპები"
   permission_manage_own_reminders: "Create own reminders"
   permission_view_project: "პროექტების ნახვა"
-  permission_view_changesets: "View repository revisions in MarvalProjects"
+  permission_view_changesets: "View repository revisions in OpenProject"
   permission_view_internal_comments: "View internal comments"
   permission_view_commit_author_statistics: "View commit author statistics"
   permission_view_dashboards: "View dashboards"
@@ -3747,7 +3747,7 @@ ka:
     destroy:
       confirmation: "If you continue, this will permanently delete the managed repository."
       info: "Deleting the repository is an irreversible action."
-      info_not_managed: "Note: This will NOT delete the contents of this repository, as it is not managed by MarvalProjects."
+      info_not_managed: "Note: This will NOT delete the contents of this repository, as it is not managed by OpenProject."
       managed_path_note: "The following directory will be erased: %{path}"
       repository_verification: "Enter the project's identifier %{identifier} to verify the deletion of its repository."
       subtitle: "Do you really want to delete the %{repository_type} of the project %{project_name}?"
@@ -3761,8 +3761,8 @@ ka:
       empty_repository: "The repository exists, but is empty. It does not contain any revisions yet."
       exists_on_filesystem: "The repository directory already exists in the filesystem."
       filesystem_access_failed: "An error occurred while accessing the repository in the filesystem: %{message}"
-      not_manageable: "This repository vendor cannot be managed by MarvalProjects."
-      path_permission_failed: "An error occurred trying to create the following path: %{path}. Please ensure that MarvalProjects may write to that folder."
+      not_manageable: "This repository vendor cannot be managed by OpenProject."
+      path_permission_failed: "An error occurred trying to create the following path: %{path}. Please ensure that OpenProject may write to that folder."
       unauthorized: "You're not authorized to access the repository or the credentials are invalid."
       unavailable: "The repository is unavailable."
       exception_title: "Cannot access the repository: %{message}"
@@ -3779,9 +3779,9 @@ ka:
         path_encoding: "Override Git path encoding (Default: UTF-8)"
       local_title: "Link existing local Git repository"
       local_url: "ლოკალური ბმული"
-      local_introduction: "If you have an existing local Git repository, you can link it with MarvalProjects to access it from within the application."
-      managed_introduction: "Let MarvalProjects create and integrate a local Git repository automatically."
-      managed_title: "Git repository integrated into MarvalProjects"
+      local_introduction: "If you have an existing local Git repository, you can link it with OpenProject to access it from within the application."
+      managed_introduction: "Let OpenProject create and integrate a local Git repository automatically."
+      managed_title: "Git repository integrated into OpenProject"
       managed_url: "მართული ბმული"
       path: "Path to Git repository"
       path_encoding: "ბილიკის კოდირება"
@@ -3798,24 +3798,24 @@ ka:
     scm_types:
       local: "Link existing local repository"
       existing: "Link existing repository"
-      managed: "Create new repository in MarvalProjects"
+      managed: "Create new repository in OpenProject"
     storage:
       not_available: "Disk storage consumption is not available for this repository."
       update_timeout: "Keep the last required disk space information for a repository for N minutes.\nAs counting the required disk space of a repository may be costly, increase this value to reduce performance impact."
-      oauth_application_details: "The client secret value will not be accessible again after you close this window. Please copy these values into the Nextcloud MarvalProjects Integration settings:"
+      oauth_application_details: "The client secret value will not be accessible again after you close this window. Please copy these values into the Nextcloud OpenProject Integration settings:"
       oauth_application_details_link_text: "Go to settings page"
       setup_documentation_details: "If you need help configuring a new file storage please check the documentation: "
       setup_documentation_details_link_text: "File storages setup"
       show_warning_details: "To use this file storage remember to activate the module and the specific storage in the project settings of each desired project."
     subversion:
       existing_title: "Existing Subversion repository"
-      existing_introduction: "If you have an existing Subversion repository, you can link it with MarvalProjects to access it from within the application."
+      existing_introduction: "If you have an existing Subversion repository, you can link it with OpenProject to access it from within the application."
       existing_url: "არსებული ბმული"
       instructions:
         managed_url: "This is the URL of the managed (local) Subversion repository."
         url: "Enter the repository URL. This may either target a local repository (starting with %{local_proto} ), or a remote repository.\nThe following URL schemes are supported:"
-      managed_title: "Subversion repository integrated into MarvalProjects"
-      managed_introduction: "Let MarvalProjects create and integrate a local Subversion repository automatically."
+      managed_title: "Subversion repository integrated into OpenProject"
+      managed_introduction: "Let OpenProject create and integrate a local Subversion repository automatically."
       managed_url: "მართული ბმული"
       password: "Repository Password"
       username: "Repository username"
@@ -4044,7 +4044,7 @@ ka:
         clamav_socket_html: Enter the socket to the clamd daemon, e.g., %{example}
         clamav_host_html: Enter the hostname and port to the clamd daemon separated by colon. e.g., %{example}
         description_html: >
-          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as MarvalProjects and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
+          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as OpenProject and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
     brute_force_prevention: "Automated user blocking"
     date_format:
       first_date_of_week_and_year_set: >
@@ -4052,7 +4052,7 @@ ka:
       first_week_of_year_text_html: >
         Select the date of January that is contained in the first week of the year. This value together with first day of the week determines the total number of weeks in a year. For more information, please see our <a href="%{link}" target="_blank">documentation</a> on this topic.
     experimental:
-      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your MarvalProjects installation and losing all of its data.
+      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your OpenProject installation and losing all of its data.
       warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on MarvalProjects installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
       feature_flags: ფუნქციის ალმები
     general: "ზოგადი"
@@ -4136,7 +4136,7 @@ ka:
       sentence_connector: "და"
       skip_last_comma: "ცრუ"
   text_accessibility_hint: "The accessibility mode is designed for users who are blind, motorically handicaped or have a bad eyesight. For the latter focused elements are specially highlighted. Please notice, that the Backlogs module is not available in this mode."
-  text_access_token_hint: "Access tokens allow you to grant external applications access to resources in MarvalProjects."
+  text_access_token_hint: "Access tokens allow you to grant external applications access to resources in OpenProject."
   text_analyze: "Further analyze: %{subject}"
   text_are_you_sure: "დარწმუნებული ბრძანდებით?"
   text_are_you_sure_continue: "Are you sure you want to continue?"
@@ -4227,7 +4227,7 @@ ka:
   text_reassign: "Reassign to work package:"
   text_regexp_info: "eg. ^[A-Z0-9]+$"
   text_regexp_multiline: 'The regex is applied in a multi-line mode. e.g., ^---\s+'
-  text_repository_usernames_mapping: "Select or update the MarvalProjects user mapped to each username found in the repository log.\nUsers with the same MarvalProjects and repository username or email are automatically mapped."
+  text_repository_usernames_mapping: "Select or update the OpenProject user mapped to each username found in the repository log.\nUsers with the same OpenProject and repository username or email are automatically mapped."
   text_status_changed_by_changeset: "Applied in changeset %{value}."
   text_table_difference_description: "In this table the single %{entries} are shown. You can view the difference between any two entries by first selecting the according checkboxes in the table. When clicking on the button below the table the differences are shown."
   text_time_logged_by_changeset: "Applied in changeset %{value}."
@@ -4302,7 +4302,7 @@ ka:
     authentication_provider: "Authentication Provider"
     identity_url_text: "The internal unique identifier provided by the authentication provider."
     authentication_settings_disabled_due_to_external_authentication: >
-      This user authenticates via an external authentication provider, so there is no password in MarvalProjects to be changed.
+      This user authenticates via an external authentication provider, so there is no password in OpenProject to be changed.
     authorization_rejected: "You are not allowed to sign in."
     assign_random_password: "Assign random password (sent to user via email)"
     blocked: "locked temporarily"
@@ -4334,7 +4334,7 @@ ka:
   warning: გაფრთხილება
   warning_attachments_not_saved: "%{count} file(s) could not be saved."
   warning_imminent_user_limit: >
-    You invited more users than are supported by your current plan. Invited users may not be able to join your MarvalProjects environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
+    You invited more users than are supported by your current plan. Invited users may not be able to join your OpenProject environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
   warning_registration_token_expired: |
     The activation email has expired. We sent you a new one to %{email}.
     Please click the link inside of it to activate your account.
@@ -4343,7 +4343,7 @@ ka:
   warning_user_limit_reached_admin: >
     Adding additional users will exceed the current limit. Please <a href="%{upgrade_url}">upgrade your plan</a> to be able to ensure external users are able to access this instance.
   warning_user_limit_reached_instructions: >
-    You reached your user limit (%{current}/%{max} active users). Please contact sales@MarvalProjects.com to upgrade your Enterprise edition plan and add additional users.
+    You reached your user limit (%{current}/%{max} active users). Please contact sales@openproject.com to upgrade your Enterprise edition plan and add additional users.
   warning_protocol_mismatch_html: >
 
   warning_bar:
@@ -4610,7 +4610,7 @@ ka:
         confidential: "Check if the application will be used where the client secret can be kept confidential. Native mobile apps and Single Page Apps are assumed non-confidential."
         scopes: "Check the scopes you want the application to grant access to. If no scope is checked, api_v3 is assumed."
         client_credential_user_id: "Optional user ID to impersonate when clients use this application. Leave empty to allow public access only"
-        register_intro: "If you are developing an OAuth API client application for MarvalProjects, you can register it using this form for all users to use."
+        register_intro: "If you are developing an OAuth API client application for OpenProject, you can register it using this form for all users to use."
         default_scopes: ""
     header:
       builtin_applications: Built-in OAuth applications
@@ -4618,7 +4618,7 @@ ka:
     empty_application_lists: No OAuth applications have been registered.
     client_id: "კლიენტის ID"
     client_secret_notice: >
-      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by MarvalProjects at a later time.
+      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by OpenProject at a later time.
     authorization_dialog:
       authorize: "ავტორიზაცია"
       cancel: "Cancel and deny authorization."
@@ -4628,7 +4628,7 @@ ka:
         This application requests access to your OpenProject account. <br/> <strong>It has requested the following permissions:</strong>
     scopes:
       api_v3: "Full API v3 access"
-      api_v3_text: "Application will receive full read & write access to the MarvalProjects API v3 to perform actions on your behalf."
+      api_v3_text: "Application will receive full read & write access to the OpenProject API v3 to perform actions on your behalf."
     grants:
       created_date: "დადასტურების დრო"
       scopes: "წვდომები"
@@ -4644,7 +4644,7 @@ ka:
     client_credentials_impersonation_set_to: "Client credentials user set to"
     client_credentials_impersonation_warning: "Note: Clients using the 'Client credentials' flow in this application will have the rights of this user"
     client_credentials_impersonation_html: >
-      By default, MarvalProjects provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
+      By default, OpenProject provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
     authorization_error: "An authorization error has occurred."
     revoke_my_application_confirmation: "Do you really want to remove this application? This will revoke %{token_count} active for it."
     my_registered_applications: "Registered OAuth applications"
@@ -4673,20 +4673,20 @@ ka:
         Internal error: Called refresh_token without a previously existing token.
       refresh_token_updated_failed: "Error during update of OAuthClientToken"
       oauth_client_not_found_explanation: >
-        This error appears after you have updated the client_id and client_secret in MarvalProjects, but haven't updated the 'Return URI' field in the OAuth2 provider.
+        This error appears after you have updated the client_id and client_secret in OpenProject, but haven't updated the 'Return URI' field in the OAuth2 provider.
       oauth_code_not_present: "OAuth2 'code' not found in 'callback' endpoint (redirect_uri)."
       oauth_code_not_present_explanation: >
         This error appears if you have selected the wrong response_type in the OAuth2 provider. Response_type should be 'code' or similar.
       oauth_state_not_present: "OAuth2 'state' not found in 'callback' endpoint (redirect_uri)."
       oauth_state_not_present_explanation: >
-        The 'state' is used to indicate to MarvalProjects where to continue after a successful OAuth2 authorization. A missing 'state' is an internal error that may appear during setup. Please contact your system administrator.
+        The 'state' is used to indicate to OpenProject where to continue after a successful OAuth2 authorization. A missing 'state' is an internal error that may appear during setup. Please contact your system administrator.
       rack_oauth2:
         client_secret_invalid: "Client secret is invalid (client_secret_invalid)"
         invalid_request: >
           OAuth2 Authorization Server responded with 'invalid_request'. This error appears if you try to authorize multiple times or in case of technical issues.
         invalid_response: "OAuth2 Authorization Server provided an invalid response (invalid_response)"
         invalid_grant: "The OAuth2 Authorization Server asks you to reauthorize (invalid_grant)."
-        invalid_client: "The OAuth2 Authorization Server doesn't recognize MarvalProjects (invalid_client)."
+        invalid_client: "The OAuth2 Authorization Server doesn't recognize OpenProject (invalid_client)."
         unauthorized_client: "The OAuth2 Authorization Server rejects the grant type (unauthorized_client)"
         unsupported_grant_type: "The OAuth2 Authorization Server asks you to reauthorize (unsupported_grant_type)."
         invalid_scope: "You are not allowed to access the requested resource (invalid_scope)."
@@ -4699,10 +4699,10 @@ ka:
   you: თქვენ
   link: ბმული
   plugin_openproject_auth_plugins:
-    name: "MarvalProjects Auth Plugins"
-    description: "Integration of OmniAuth strategy providers for authentication in MarvalProjects."
+    name: "OpenProject Auth Plugins"
+    description: "Integration of OmniAuth strategy providers for authentication in OpenProject."
   plugin_openproject_auth_saml:
     name: "OmniAuth SAML / Single-Sign On"
-    description: "Adds the OmniAuth SAML provider to MarvalProjects"
+    description: "Adds the OmniAuth SAML provider to OpenProject"
   enterprise_plans:
     legacy_enterprise: "Enterprise Plan"

@@ -71,7 +71,7 @@ uk:
         item_7:
           name: Інженери-конструктори
       welcome:
-        title: Вітаємо у випуску MarvalProjects BIM!
+        title: Вітаємо у випуску OpenProject BIM!
         text: |
           Ознайомтеся з демопроєктами, щоб переглянути кілька прикладів, перш ніж почати роботу.
 
@@ -120,7 +120,7 @@ uk:
                 options:
                   name: Починаємо
                   text: |
-                    Ми раді, що ви приєдналися! Пропонуємо вам дещо підготувати перед початком роботи в MarvalProjects.
+                    Ми раді, що ви приєдналися! Пропонуємо вам дещо підготувати перед початком роботи в OpenProject.
 
                     Але перш ніж ви почнете, ми повинні повідомити вас, що цей зразок проєкту складається з двох різних проєктів:
 
@@ -138,7 +138,7 @@ uk:
                     7.  _Застосовуєте підхід Agile? Ознайомтеся з нашими новими дошками:_ → виберіть [Дошки]({{opSetting:base_url}}/projects/demo-construction-project/boards)
 
                     Тут ви знайдете наші [Посібники користувача](https://www.openproject.org/docs/user-guide/).
-                    Якщо маєте запитання або потребуєте допомоги, зв’яжіться з нами: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Якщо маєте запитання або потребуєте допомоги, зв’яжіться з нами: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Учасники
@@ -179,7 +179,7 @@ uk:
                 options:
                   name: Починаємо
                   text: |
-                    Ми раді, що ви приєдналися! Пропонуємо вам дещо підготувати перед початком роботи в MarvalProjects.
+                    Ми раді, що ви приєдналися! Пропонуємо вам дещо підготувати перед початком роботи в OpenProject.
 
                     Тут ви знайдете класичні ролі, деякі робочі процеси й пакети робіт для свого проєкту будівництва.
 
@@ -193,7 +193,7 @@ uk:
                     6. _Застосовуєте підхід Agile? Ознайомтеся з нашими новими дошками:_ → виберіть [Дошки]({{opSetting:base_url}}/projects/demo-planning-constructing-project/boards)
 
                     Тут ви знайдете наші [Посібники користувача](https://www.openproject.org/docs/user-guide/).
-                    Якщо маєте запитання або потребуєте допомоги, зв’яжіться з нами: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Якщо маєте запитання або потребуєте допомоги, зв’яжіться з нами: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Учасники
@@ -433,7 +433,7 @@ uk:
                 options:
                   name: Починаємо
                   text: |
-                    Ми раді, що ви приєдналися! Пропонуємо вам дещо підготувати перед початком роботи в MarvalProjects.
+                    Ми раді, що ви приєдналися! Пропонуємо вам дещо підготувати перед початком роботи в OpenProject.
 
                     Цей демопроєкт ознайомить вас із ролями, робочими процесами й пакетами робіт, призначеними для BIM.
 
@@ -449,7 +449,7 @@ uk:
                     8.  _Ознайомтеся з поданням плиток, щоб переглянути свої проблеми BCF:_ → виберіть [Пакети робіт]({{opSetting:base_url}}/projects/demo-bim-project/work_packages?query_props=%7B%22c%22%3A%5B%22type%22%2C%22id%22%2C%22subject%22%2C%22status%22%2C%22assignee%22%2C%22priority%22%5D%2C%22hl%22%3A%22priority%22%2C%22hi%22%3Atrue%2C%22g%22%3A%22%22%2C%22t%22%3A%22id%3Aasc%22%2C%22f%22%3A%5B%5D%2C%22pa%22%3A1%2C%22pp%22%3A100%2C%22dr%22%3A%22card%22%7D)
                     9.  _Застосовуєте підхід Agile? Створіть нову дошку:_ → виберіть [Дошки]({{opSetting:base_url}}/projects/demo-bim-project/boards)
 
-                    Тут ви знайдете наші [Посібники користувача](https://www.openproject.org/docs/user-guide/). Якщо маєте запитання або потребуєте допомоги, зв’яжіться з нами: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Тут ви знайдете наші [Посібники користувача](https://www.openproject.org/docs/user-guide/). Якщо маєте запитання або потребуєте допомоги, зв’яжіться з нами: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Учасники
@@ -708,7 +708,7 @@ uk:
                 options:
                   name: Починаємо
                   text: |
-                    Ми раді, що ви приєдналися! Пропонуємо вам дещо підготувати перед початком роботи в MarvalProjects.
+                    Ми раді, що ви приєдналися! Пропонуємо вам дещо підготувати перед початком роботи в OpenProject.
 
                     Цей демопроєкт ознайомить вас із функціями керування BCF.
 
@@ -724,7 +724,7 @@ uk:
                     8.  _Подобається підхід Agile? Створіть дошку:_ → Виберіть [Дошки]({{opSetting:base_url}}/projects/demo-bcf-management-project/boards).
 
                     Тут ви знайдете наші [Посібники користувача](https://www.openproject.org/docs/user-guide/).
-                    Якщо маєте запитання або потребуєте допомоги, зв’яжіться з нами: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Якщо маєте запитання або потребуєте допомоги, зв’яжіться з нами: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Учасники

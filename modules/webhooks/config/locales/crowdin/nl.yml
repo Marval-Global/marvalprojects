@@ -1,7 +1,7 @@
 nl:
   plugin_openproject_webhooks:
-    name: "MarvalProjects Webhooks"
-    description: "Provides a plug-in API to support MarvalProjects webhooks for better 3rd party integration."
+    name: "OpenProject Webhooks"
+    description: "Provides a plug-in API to support OpenProject webhooks for better 3rd party integration."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -35,7 +35,7 @@ nl:
         internal_comment: "Internal comment"
       explanation:
         text: >
-          Bij het voorkomen van een gebeurtenis zoals het maken van een werkpakket of een update van een project MarvalProjects stuurt een POST-aanvraag naar de geconfigureerde webeindpunten. Vaak wordt de afspraak verzonden nadat de %{link} voorbij is.
+          Bij het voorkomen van een gebeurtenis zoals het maken van een werkpakket of een update van een project OpenProject stuurt een POST-aanvraag naar de geconfigureerde webeindpunten. Vaak wordt de afspraak verzonden nadat de %{link} voorbij is.
         link: geconfigureerde aggregatie periode
       status:
         enabled: 'Webhook is ingeschakeld'
@@ -66,4 +66,4 @@ nl:
           title: 'Geselecteerde projecten'
         secret:
           description: >
-            Indien ingesteld, wordt deze geheime waarde gebruikt door MarvalProjects om de webhook payload te ondertekenen.
+            Indien ingesteld, wordt deze geheime waarde gebruikt door OpenProject om de webhook payload te ondertekenen.

@@ -1,7 +1,7 @@
 #English strings go here
 uk:
   plugin_openproject_boards:
-    name: "Дошки MarvalProjects"
+    name: "Дошки OpenProject"
     description: "Дає змогу переглядати дошки."
   permission_show_board_views: "Дивитись дошки"
   permission_manage_board_views: "Керувати дошками"

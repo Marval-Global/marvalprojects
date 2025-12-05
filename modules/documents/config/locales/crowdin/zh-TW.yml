@@ -21,8 +21,8 @@
 #++
 zh-TW:
   plugin_openproject_documents:
-    name: "MarvalProjects 文件"
-    description: "一個允許在 MarvalProjects 專案中建立文件的外掛。"
+    name: "OpenProject 文件"
+    description: "一個允許在 OpenProject 專案中建立文件的外掛。"
   activerecord:
     models:
       document: "文件"

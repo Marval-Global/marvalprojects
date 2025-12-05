@@ -71,7 +71,7 @@ lt:
         item_7:
           name: Struktūros inžinieriai
       welcome:
-        title: Jus sveikina MarvalProjects BIM versija!
+        title: Jus sveikina OpenProject BIM versija!
         text: |
           Išbandykite demonstracinius projektus, kad susipažintumėte su kai kuriais pavyzdžiais.
 
@@ -120,7 +120,7 @@ lt:
                 options:
                   name: Darbo pradžia
                   text: |
-                    Džiaugiamės, kad prisijungėte! Siūlome pabandyti kelis dalykus, kurie padės jums susipažinti su MarvalProjects.
+                    Džiaugiamės, kad prisijungėte! Siūlome pabandyti kelis dalykus, kurie padės jums susipažinti su OpenProject.
 
                     Prieš pradėdami turėtumėte žinoti, kad šis pavyzdinis projektas yra padalintas į du skirtingus projektus:
 
@@ -138,7 +138,7 @@ lt:
                     7.  _Dirbate pagal Agile? Pabandykite mūsų naujas lentas:_ → Eikite į [Lentos]({{opSetting:base_url}}/projects/demo-construction-project/boards)
 
                     Čia rasite mūsų [Naudotojų vadovus](https://www.openproject.org/docs/user-guide/).
-                    Praneškite mums, jei turite bet kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Praneškite mums, jei turite bet kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Nariai
@@ -179,7 +179,7 @@ lt:
                 options:
                   name: Darbo pradžia
                   text: |
-                    Džiaugiamės, kad prisijungėte! Mes siūlome pabandyti kelis dalykus, kurie patės susipažinti su MarvalProjects.
+                    Džiaugiamės, kad prisijungėte! Mes siūlome pabandyti kelis dalykus, kurie patės susipažinti su OpenProject.
 
                     Čia rasite klasikinius vaidmenis, kelis procesus ir darbo paktus jūsų statybos projektui.
 
@@ -193,7 +193,7 @@ lt:
                     6.  _Dirbate pagal Agile? Sukurkite naują lentą:_ → Eikite į [Lentos]({{opSetting:base_url}}/projects/demo-planning-constructing-project/boards)
 
                     Čia rasite mūsų [Naudotojų vadovus](https://www.openproject.org/docs/user-guide/).
-                    Praneškite mums, jei turite bet kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Praneškite mums, jei turite bet kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Nariai
@@ -433,7 +433,7 @@ lt:
                 options:
                   name: Darbo pradžia
                   text: |
-                    Mes džiaugiamės, kad jūs prisikungėte! Siūlome pabandyti keletą dalykų, kad susipažintumėte su MarvalProjects.
+                    Mes džiaugiamės, kad jūs prisikungėte! Siūlome pabandyti keletą dalykų, kad susipažintumėte su OpenProject.
 
                     Šiame demonstraciniame projekte yra vaidmenys, procesai ir darbo paketai, kurie pritaikyti BIM.
 
@@ -450,7 +450,7 @@ lt:
                     9.  _Naudojate Agile? Kurkite naują lentą:_ → Eikite į [Lentos]({{opSetting:base_url}}/projects/demo-bim-project/boards)
 
                     Čia rastie mūsų [Naudotojų vadovus](https://www.openproject.org/docs/user-guide/).
-                    Praneškite mums, jei turite kokių nors klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Praneškite mums, jei turite kokių nors klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Nariai
@@ -709,7 +709,7 @@ lt:
                 options:
                   name: Darbo pradžia
                   text: |
-                    Mes džiaugiamės, kad jūs prisijungėte! Siūlome jums pabandyti kelis dalykus, kad susipažintumėte su MarvalProjects.
+                    Mes džiaugiamės, kad jūs prisijungėte! Siūlome jums pabandyti kelis dalykus, kad susipažintumėte su OpenProject.
 
                     Šis demonstracinis projektas rodo BCF tvarkymo funkcionalumą.
 
@@ -725,7 +725,7 @@ lt:
                     8.  _Mėgstate Agile? Sukurkite lentą:_ → Eikite į [Lentos]({{opSetting:base_url}}/projects/demo-bcf-management-project/boards).
 
                     Čia rasite mūsų [Naudotojo vadovus](https://www.openproject.org/docs/user-guide/).
-                    Praneškite mums, jei turite bet kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Praneškite mums, jei turite bet kokių klausimų ar jums reikia pagalbos. Susisiekite su mumis: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Nariai

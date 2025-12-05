@@ -131,13 +131,13 @@ si:
       edit:
         label_delete_scim_client: "Delete SCIM client"
       form:
-        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in MarvalProjects."
-        authentication_method_description_html: "This is how the SCIM client authenticates at MarvalProjects. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
+        auth_provider_description: "This is the service that users added by the SCIM provider will use to authenticate in OpenProject."
+        authentication_method_description_html: "This is how the SCIM client authenticates at OpenProject. Please ensure that OAuth tokens include the <code>scim_v2</code> scope."
         description_html: 'Please refer to our <a href="%{docs_url}">documentation on configuring SCIM clients</a> for more information on these configuration options.'
         jwt_sub_description_html: 'For example, for Keycloak, this is the UUID of the service account  associated with the SCIM client. Consult <a href="%{docs_url}">our documentation</a> to learn how to find  the subject claim for your use case.'
         name_description: "Choose a name that will help other admins better understand why this client was configured."
       index:
-        description: "SCIM clients configured here are able to interact with MarvalProjects SCIM server API to provision, update, and deprovision user accounts and groups."
+        description: "SCIM clients configured here are able to interact with OpenProject SCIM server API to provision, update, and deprovision user accounts and groups."
         label_create_button: "Add SCIM client"
       new:
         title: "New SCIM client"
@@ -145,14 +145,14 @@ si:
         confirm_button: "Revoke"
         title: "Revoke static token"
         heading: "Are you sure you want to revoke this token?"
-        description: "The SCIM client that uses this token will no longer be able to access MarvalProjects's SCIM server API."
+        description: "The SCIM client that uses this token will no longer be able to access OpenProject's SCIM server API."
       table_component:
         blank_slate:
           title: "No SCIM clients configured yet"
           description: "Add clients to see them here"
         user_count: "Users"
       token_list_component:
-        description: "The tokens you generate here can be passed by a SCIM client to access the MarvalProjects SCIM API."
+        description: "The tokens you generate here can be passed by a SCIM client to access the OpenProject SCIM API."
         heading: "Tokens"
         label_add_token: "Token"
         label_aria_add_token: "Add token"
@@ -204,38 +204,38 @@ si:
       name: LDAP සම්බන්ධතාවයේ අත්තනෝමතික නම
       host: LDAP ධාරක නම හෝ IP ලිපිනය
       login_map: අද්විතීය පරිශීලක පිවිසුම හඳුනා ගැනීම සඳහා භාවිතා කරන LDAP හි ගුණාංග යතුර. සාමාන්යයෙන් මෙය `uid` හෝ `SamAccounname` වනු ඇත.
-      generic_map: MarvalProjects `%{attribute}` ගුණාංගයට සිතියම් ගත කර ඇති LDAP හි ගුණාංග යතුර
-      admin_map_html: "විකල්ප: LDAP හි ගුණාංග යතුර <strong>වර්තමාන නම්</strong> MarvalProjects පරිශීලකයා පරිපාලක සලකුණු කරයි. සැක සහිත විට හිස් තබන්න."
+      generic_map: OpenProject `%{attribute}` ගුණාංගයට සිතියම් ගත කර ඇති LDAP හි ගුණාංග යතුර
+      admin_map_html: "විකල්ප: LDAP හි ගුණාංග යතුර <strong>වර්තමාන නම්</strong> OpenProject පරිශීලකයා පරිපාලක සලකුණු කරයි. සැක සහිත විට හිස් තබන්න."
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br>
-        Example: uid=MarvalProjects,ou=system,dc=example,dc=com
+        Example: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: පද්ධති පරිශීලකයාගේ බඳින්න මුරපදය ඇතුළත් කරන්න
       base_dn: |
-        LDAP හි උප ගසෙහි මූලික ඩීඑන් ඇතුළත් කරන්න ඔබට MarvalProjects පරිශීලකයින් සහ කණ්ඩායම් සොයා ගැනීමට අවශ්යය.
-        MarvalProjects මෙම උප ගසෙහි ලබා දී ඇති පරිශීලක නාම සඳහා පමණක් පෙරහන් කරනු ඇත.
+        LDAP හි උප ගසෙහි මූලික ඩීඑන් ඇතුළත් කරන්න ඔබට OpenProject පරිශීලකයින් සහ කණ්ඩායම් සොයා ගැනීමට අවශ්යය.
+        OpenProject මෙම උප ගසෙහි ලබා දී ඇති පරිශීලක නාම සඳහා පමණක් පෙරහන් කරනු ඇත.
         උදාහරණය: ou=පරිශීලකයන්, dc=උදාහරණ, dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by MarvalProjects for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
       filter_string_concat: |
-        MarvalProjects will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        If you check this box, MarvalProjects will automatically create new users from their LDAP entries
-        when they first authenticate with MarvalProjects.
-        Leave this unchecked to only allow existing accounts in MarvalProjects to authenticate through LDAP!
+        If you check this box, OpenProject will automatically create new users from their LDAP entries
+        when they first authenticate with OpenProject.
+        Leave this unchecked to only allow existing accounts in OpenProject to authenticate through LDAP!
     connection_encryption: "සම්බන්ධතාවය ගුප්ත කේතනය"
     encryption_details: "LDAPS / STARTTLS options"
     system_account: "පද්ධති ගිණුම"
     system_account_legend: |
-      MarvalProjects ඔබේ LDAP ගසෙහි පරිශීලකයින් සහ කණ්ඩායම් බලා ගැනීම සඳහා පද්ධති ගිණුමක් හරහා කියවිය හැකි ප්රවේශයක් අවශ්ය වේ.
+      OpenProject ඔබේ LDAP ගසෙහි පරිශීලකයින් සහ කණ්ඩායම් බලා ගැනීම සඳහා පද්ධති ගිණුමක් හරහා කියවිය හැකි ප්රවේශයක් අවශ්ය වේ.
       කරුණාකර පහත දැක්වෙන කොටසේ එම පද්ධති පරිශීලකයා සඳහා බැඳීමේ අක්තපත්ර සඳහන් කරන්න.
     ldap_details: "LDAP විස්තර"
     user_settings: "සිතියම්කරණය විශේෂණය"
     user_settings_legend: |
-      පහත දැක්වෙන ක්ෂේත්ර LDAP ඇතුළත් කිරීම් වලින් MarvalProjects හි පරිශීලකයින් නිර්මාණය කරන ආකාරය හා
-      MarvalProjects පරිශීලකයෙකුගේ ගුණාංග නිර්වචනය කිරීමට භාවිතා කරන LDAP ගුණාංග මොනවාද යන්න සම්බන්ධ වේ (ගුණාංග සිතියම්කරණය).
+      පහත දැක්වෙන ක්ෂේත්ර LDAP ඇතුළත් කිරීම් වලින් OpenProject හි පරිශීලකයින් නිර්මාණය කරන ආකාරය හා
+      OpenProject පරිශීලකයෙකුගේ ගුණාංග නිර්වචනය කිරීමට භාවිතා කරන LDAP ගුණාංග මොනවාද යන්න සම්බන්ධ වේ (ගුණාංග සිතියම්කරණය).
     tls_mode:
       plain: "කිසිවක් නැත"
       simple_tls: "LDAPS"
@@ -1242,7 +1242,7 @@ si:
         confirmation: "%{attribute}නොගැලපේ."
         could_not_be_copied: "%{dependency} could not be (fully) copied."
         does_not_exist: "නොපවතී."
-        error_enterprise_only: "%{action} is only available in the MarvalProjects Enterprise edition"
+        error_enterprise_only: "%{action} is only available in the OpenProject Enterprise edition"
         error_unauthorized: "ප්රවේශ විය නොහැක."
         error_readonly: "ලිවීමට උත්සාහ කළ නමුත් එය ලිවිය නොහැක."
         error_conflict: "මේ අතර අවම වශයෙන් එක් පරිශීලකයෙකු විසින් තොරතුරු යාවත්කාලීන කර ඇත."
@@ -1821,7 +1821,7 @@ si:
       heading_reset: "Reset backup token"
       heading_create: "Create backup token"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this MarvalProjects installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -2154,7 +2154,7 @@ si:
         Already have a token? Add it using the button below to upgrade to the booked Enterprise plan.
       hide_banner: "Hide this banner"
       homescreen_description: >
-        Enterprise plans extend the Community edition of MarvalProjects you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
+        Enterprise plans extend the Community edition of OpenProject you are currently using. They include add-ons, additional features and professional support that enables organisations of all sizes to achieve great things together.
       homescreen_subline: By upgrading, you will also be supporting an open source project.
       baseline_comparison:
         description: Highlight changes made to this list since any point in the past.
@@ -2167,7 +2167,7 @@ si:
         premium_features: "Enterprise add-ons"
         premium_features_text: "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields."
         professional_support: "Professional support"
-        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running MarvalProjects in business-critical environments."
+        professional_support_text: "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
       work_package_subject_generation:
         description: "Create automatically generated subjects using referenced attributes and text."
       customize_life_cycle:
@@ -2195,7 +2195,7 @@ si:
       define_custom_style:
         title: "Custom color theme and logo"
         more_info: "Note: the used logo will be publicly accessible."
-        description: Customize your MarvalProjects installation with your own logo and colors.
+        description: Customize your OpenProject installation with your own logo and colors.
       custom_actions:
         title: "අභිරුචි ක්‍රියාමාර්ග"
         description: "Custom actions are one-click shortcuts to a set of pre-defined actions that you can make available on certain work packages based on status, role, type or project."
@@ -2204,13 +2204,13 @@ si:
         description: "Enable seamless and secure authentication for your Nextcloud storage with Single Sign-On. Simplify access management and enhance user convenience."
       scim_api:
         title: "SCIM clients"
-        description: "Automate user management in MarvalProjects by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
+        description: "Automate user management in OpenProject by seamlessly integrating external identity services like Microsoft Entra or Keycloak through our SCIM Server API. Available starting with the Enterprise corporate plan."
       virus_scanning:
-        description: "Ensure uploaded files in MarvalProjects are scanned for viruses before being accessible by other users."
+        description: "Ensure uploaded files in OpenProject are scanned for viruses before being accessible by other users."
       placeholder_users:
         title: Placeholder users
         description: >
-          Placeholder users are a way to assign work packages to users who are not part of your project. They can be useful in a range of scenarios; for example, if you need to track tasks for a resource that is not yet named or available, or if you don’t want to give that person access to MarvalProjects but still want to track tasks assigned to them.
+          Placeholder users are a way to assign work packages to users who are not part of your project. They can be useful in a range of scenarios; for example, if you need to track tasks for a resource that is not yet named or available, or if you don’t want to give that person access to OpenProject but still want to track tasks assigned to them.
       internal_comments:
         title: Internal comments
         description: "Internal comments allow an internal team to communicate amongst themselves privately. These are only visible to certain project roles and will never be visible publicly."
@@ -2232,9 +2232,9 @@ si:
       request_again: "Request again"
       resend_action: "Resend confirmation email"
       welcome_title: "Quick feature overview"
-      welcome_description: "Get a quick overview of project management and team collaboration with MarvalProjects Enterprise edition."
+      welcome_description: "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition."
       confirmation_info: >
-        We sent you an email on %{date} to %{email} with all the information to start the free trial of MarvalProjects Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
+        We sent you an email on %{date} to %{email} with all the information to start the free trial of OpenProject Enterprise. Please check your inbox and click the confirmation link provided to start your 14-day free trial.
       confirmation_subline: >
         Please, check your inbox and follow the steps to start your 14-day free trial.
       domain_caption: The token will be valid for your currently configured host name.
@@ -2264,7 +2264,7 @@ si:
   error_check_user_and_role: "කරුණාකර පරිශීලකයෙකු සහ භූමිකාවක් තෝරන්න."
   error_code: "දෝෂය %{code}"
   error_color_could_not_be_saved: "වර්ණය සුරැකිය නොහැකි විය"
-  error_cookie_missing: "MarvalProjects කුකිය අස්ථානගත වී ඇත. මෙම යෙදුම නොමැතිව නිසි ලෙස ක්රියා නොකරන බැවින් කුකීස් සක්රීය කර ඇති බවට සහතික වන්න."
+  error_cookie_missing: "OpenProject කුකිය අස්ථානගත වී ඇත. මෙම යෙදුම නොමැතිව නිසි ලෙස ක්රියා නොකරන බැවින් කුකීස් සක්රීය කර ඇති බවට සහතික වන්න."
   error_custom_option_not_found: "විකල්පය නොපවතී."
   error_enterprise_plan_needed: "You need the %{plan} enterprise plan to perform this action."
   error_enterprise_activation_user_limit: "ඔබගේ ගිණුම සක්රිය කළ නොහැක (පරිශීලක සීමාව කරා ළඟා විය). ප්රවේශය ලබා ගැනීම සඳහා කරුණාකර ඔබේ පරිපාලක අමතන්න."
@@ -2281,7 +2281,7 @@ si:
   error_work_package_not_found_in_project: "වැඩ පැකේජය සොයාගත නොහැකි හෝ මෙම ව්යාපෘතියට අයත් නොවේ"
   error_work_package_id_not_found: "The work package was not found."
   error_must_be_project_member: "ව්යාපෘති සාමාජිකයෙකු විය යුතුය"
-  error_migrations_are_pending: "ඔබගේ MarvalProjects ස්ථාපනයට දත්ත සමුදායන් ඉරුවාරදය ඇත. ඔබගේ අවසාන උත්ශ්රේණි කිරීම මත ඉරුවාරදය ධාවනය කිරීම ඔබට මග හැරී ඇත. කරුණාකර ඔබගේ ස්ථාපනය නිසි උත්ශ්රේණි කිරීම සඳහා උත්ශ්රේණි කිරීමේ මාර්ගෝපදේශය පරීක්ෂා කරන්න."
+  error_migrations_are_pending: "ඔබගේ OpenProject ස්ථාපනයට දත්ත සමුදායන් ඉරුවාරදය ඇත. ඔබගේ අවසාන උත්ශ්රේණි කිරීම මත ඉරුවාරදය ධාවනය කිරීම ඔබට මග හැරී ඇත. කරුණාකර ඔබගේ ස්ථාපනය නිසි උත්ශ්රේණි කිරීම සඳහා උත්ශ්රේණි කිරීමේ මාර්ගෝපදේශය පරීක්ෂා කරන්න."
   error_migrations_visit_upgrade_guides: "කරුණාකර අපගේ උත්ශ්රේණි කිරීමේ මාර්ගෝපදේශ ප්රලේඛනය වෙත පිවිසෙන්න"
   error_no_default_work_package_status: 'පෙරනිමි වැඩ පැකේජ තත්ත්වය අර්ථ දක්වා නැත. කරුණාකර ඔබගේ වින්යාසය පරීක්ෂා කරන්න (“පරිපාලන -> වැඩ පැකේජ තත්වයන්” වෙත යන්න).'
   error_no_type_in_project: "මෙම ව්යාපෘතියට කිසිදු වර්ගයක් සම්බන්ධ නොවේ. කරුණාකර ව්යාපෘති සැකසුම් පරීක්ෂා කරන්න."
@@ -2479,7 +2479,7 @@ si:
       impressum: "නීතිමය දැනුම්දීම"
       glossary: "පාරිභාෂික ශබ්ද මාලාව"
       shortcuts: "කෙටිමං"
-      blog: "MarvalProjects බ්ලොග්"
+      blog: "OpenProject බ්ලොග්"
       forums: "ප්රජා සංසදය"
       newsletter: "ආරක්ෂක ඇඟවීම්/පුවත් ලිපි"
   image_conversion:
@@ -2491,7 +2491,7 @@ si:
       default_attribute_written: "Read-only attributes written"
       progress_mode_changed_to_status_based: "Progress calculation updated"
       status_changed: "Status '%{status_name}'"
-      system_update: "MarvalProjects system update:"
+      system_update: "OpenProject system update:"
       work_package_duplicate_closed: "Duplicate work package updated:"
       total_percent_complete_mode_changed_to_work_weighted_average: "Calculation of % Complete totals now weighted by Work."
       total_percent_complete_mode_changed_to_simple_average: "Calculation of % Complete totals now based on a simple average of only % Complete values."
@@ -2561,7 +2561,7 @@ si:
         disabled_text: "API tokens are not enabled by the administrator. Please contact your administrator to use this feature."
       ical:
         title: "iCalendar"
-        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to MarvalProjects calendars</a> and view up-to-date work package information from external clients.'
+        text_hint: 'iCalendar tokens allow users to <a href="%{path}" target="_blank">subscribe to OpenProject calendars</a> and view up-to-date work package information from external clients.'
         disabled_text: "iCalendar subscriptions are not enabled by the administrator. Please contact your administrator to use this feature."
         empty_text_hint: "To add an iCalendar token, subscribe to a new or existing calendar from within the Calendar module of a project. You must have the necessary permissions."
       oauth:
@@ -2747,7 +2747,7 @@ si:
   label_custom_field_plural: "අභිරුචි ක්ෂේත්ර"
   label_custom_field_default_type: "හිස් වර්ගය"
   label_custom_style: "නිර්මාණ"
-  label_custom_style_description: "Choose how MarvalProjects looks to you with themes, select your default colors to use in the app and how exports look like."
+  label_custom_style_description: "Choose how OpenProject looks to you with themes, select your default colors to use in the app and how exports look like."
   label_dashboard: "Dashboard"
   label_database_version: "PostgreSQL version"
   label_date: "දිනය"
@@ -3392,8 +3392,8 @@ si:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to MarvalProjects immediately and reset it again.
-  mail_body_incoming_email_error: The email you sent to MarvalProjects could not be processed.
+  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_incoming_email_error: The email you sent to OpenProject could not be processed.
   mail_body_incoming_email_error_in_reply_to: "At %{received_at} %{from_email} wrote"
   mail_body_incoming_email_error_logs: "Logs"
   mail_body_lost_password: "ඔබගේ මුරපදය වෙනස් කිරීම සඳහා, පහත සබැඳිය ක්ලික් කරන්න:"
@@ -3406,10 +3406,10 @@ si:
   mail_body_register_user: "Dear %{name}, "
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in MarvalProjects as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Your MarvalProjects team"
+  mail_body_register_closing: "Your OpenProject team"
   mail_body_register_ending: "Stay connected! Kind regards,"
   mail_body_reminder: "ඔබට පවරා ඇති%{count} වැඩ පැකේජය (න්) ඉදිරි දින %{days} තුළ නියමිත වේ:"
   mail_body_group_reminder: '“%{group}" කාණ්ඩයට පවරා ඇති%{count} වැඩ පැකේජය (න්) ඉදිරි දින %{days} තුළ සිදු වේ:'
@@ -3418,7 +3418,7 @@ si:
   mail_subject_account_activation_request: "%{value} ගිණුම සක්රිය කිරීමේ ඉල්ලීම"
   mail_subject_backup_ready: "Your backup is ready"
   mail_subject_backup_token_reset: "Backup token reset"
-  mail_subject_incoming_email_error: "An email you sent to MarvalProjects could not be processed"
+  mail_subject_incoming_email_error: "An email you sent to OpenProject could not be processed"
   mail_subject_lost_password: "ඔබගේ %{value} මුරපදය"
   mail_subject_register: "ඔබගේ %{value} ගිණුම සක්රිය කිරීම"
   mail_subject_wiki_content_added: "'%{id}' විකි පිටුව එකතු කර ඇත"
@@ -3447,14 +3447,14 @@ si:
   mail_user_activation_limit_reached:
     subject: පරිශීලක සක්රීය කිරීමේ සීමාව ළඟා විය
     message: |
-      නව පරිශීලකයෙකු (%{email}) ඔබ කළමනාකරණය කරන MarvalProjects පරිසරයක් මත ගිණුමක් නිර්මාණය කිරීමට උත්සාහ කළේය (%{host}).
+      නව පරිශීලකයෙකු (%{email}) ඔබ කළමනාකරණය කරන OpenProject පරිසරයක් මත ගිණුමක් නිර්මාණය කිරීමට උත්සාහ කළේය (%{host}).
       පරිශීලක සීමාව ළඟා වී ඇති බැවින් පරිශීලකයාට ඔවුන්ගේ ගිණුම සක්රිය කළ නොහැක.
     steps:
       label: "පරිශීලකයාට පුරනය වීමට ඉඩ දීම සඳහා ඔබට හැකිය: "
       a: "ඔබගේ ගෙවීම් සැලැස්ම වැඩි දියුණු කරන්න ([here](upgrade_url))" #here turned into a link
       b: "පවත්නා පරිශීලකයෙකු අගුළු දැමීම හෝ මකා දැමීම ([here](users_url))" #here turned into a link
   more_actions: "තවත් කාර්යයන්"
-  noscript_description: "MarvalProjects භාවිතා කිරීම සඳහා ඔබට JavaScript සක්රිය කළ යුතුය!"
+  noscript_description: "OpenProject භාවිතා කිරීම සඳහා ඔබට JavaScript සක්රිය කළ යුතුය!"
   noscript_heading: "ජාවාස්ක්රිප්ට් ආබාධිත"
   noscript_learn_more: "වැඩිදුර ඉගෙන ගන්න"
   notice_accessibility_mode: ප්රවේශ ප්රකාරය ඔබගේ [ගිණුම් සැකසුම්] (url) තුළ සක්රීය කළ හැකිය.
@@ -3530,7 +3530,7 @@ si:
   notice_wont_delete_auth_source: The LDAP connection cannot be deleted as long as there are still users using it.
   notice_project_cannot_update_custom_fields: "ඔබට ව්යාපෘතියේ පවතින අභිරුචි ක්ෂේත්ර යාවත්කාලීන කළ නොහැක. ව්යාපෘතිය අවලංගුයි: %{errors}"
   notice_attachment_migration_wiki_page: >
-    MarvalProjects යාවත්කාලීන කිරීමේදී මෙම පිටුව ස්වයංක්රීයව ජනනය කරන ලදී. %{container_type} "%{container_name}” සමඟ කලින් සම්බන්ධ වූ සියලුම ඇමුණුම් එහි අඩංගු වේ.
+    OpenProject යාවත්කාලීන කිරීමේදී මෙම පිටුව ස්වයංක්රීයව ජනනය කරන ලදී. %{container_type} "%{container_name}” සමඟ කලින් සම්බන්ධ වූ සියලුම ඇමුණුම් එහි අඩංගු වේ.
   #Default format for numbers
   number:
     format:
@@ -3553,7 +3553,7 @@ si:
           tb: "ටෙ.බ."
   onboarding:
     heading_getting_started: "දළ විශ්ලේෂණයක් ලබා ගන්න"
-    text_getting_started_description: "Get a quick overview of project management and team collaboration with MarvalProjects. You can restart this video from the help menu."
+    text_getting_started_description: "Get a quick overview of project management and team collaboration with OpenProject. You can restart this video from the help menu."
     welcome: "Welcome to %{app_title}"
     select_language: "කරුණාකර ඔබේ භාෂාව තෝරන්න"
   permission_add_work_package_comments: "Add comments"
@@ -3636,7 +3636,7 @@ si:
   permission_manage_types: "වර්ග තෝරන්න"
   permission_manage_own_reminders: "Create own reminders"
   permission_view_project: "View projects"
-  permission_view_changesets: "MarvalProjects හි නිධි සංශෝධන බලන්න"
+  permission_view_changesets: "OpenProject හි නිධි සංශෝධන බලන්න"
   permission_view_internal_comments: "View internal comments"
   permission_view_commit_author_statistics: "කතෘ සංඛ්යා ලේඛන බලන්න"
   permission_view_dashboards: "View dashboards"
@@ -3747,7 +3747,7 @@ si:
     destroy:
       confirmation: "ඔබ දිගටම කරගෙන ගියහොත්, මෙය කළමනාකරණය කරන ලද ගබඩාව ස්ථිරවම මකා දමනු ඇත."
       info: "ගබඩාව මකා දැමීම ආපසු හැරවිය නොහැකි ක්රියාවකි."
-      info_not_managed: "සටහන: මෙය MarvalProjects විසින් කළමනාකරණය නොකරන බැවින් මෙම ගබඩාවේ අන්තර්ගතය මකා නොදමනු ඇත."
+      info_not_managed: "සටහන: මෙය OpenProject විසින් කළමනාකරණය නොකරන බැවින් මෙම ගබඩාවේ අන්තර්ගතය මකා නොදමනු ඇත."
       managed_path_note: "පහත සඳහන් බහලුම මකා දමනු ඇත: %{path}"
       repository_verification: "ව්යාපෘතියේ හඳුනාගැනීමේ %{identifier} ඇතුල් කරන්න එහි ගබඩාව මකාදැමීම සත්යාපනය කිරීමට."
       subtitle: "%{project_name}ව්යාපෘතියේ %{repository_type} මකා දැමීමට ඔබට ඇත්තටම අවශ්යද?"
@@ -3761,8 +3761,8 @@ si:
       empty_repository: "ගබඩාව පවතී, නමුත් හිස් ය. එහි තවමත් කිසිදු සංශෝධනයක් අඩංගු නොවේ."
       exists_on_filesystem: "ගබඩාවේ බහලුම දැනටමත් ගොනු පද්ධතිය තුළ පවතී."
       filesystem_access_failed: "ගොනු පද්ධතිය තුළ ගබඩාවක් වෙත පිවිසීමේදී දෝෂයක් ඇති විය: %{message}"
-      not_manageable: "මෙම ගබඩාව වෙළෙන්දා MarvalProjects මගින් කළමනාකරණය කළ නොහැක."
-      path_permission_failed: "පහත සඳහන් මාර්ගය නිර්මාණය කිරීමට උත්සාහ දෝෂයක් ඇති විය: %{path}. MarvalProjects එම ෆෝල්ඩරයට ලිවිය හැකි බවට කරුණාකර සහතික වන්න."
+      not_manageable: "මෙම ගබඩාව වෙළෙන්දා OpenProject මගින් කළමනාකරණය කළ නොහැක."
+      path_permission_failed: "පහත සඳහන් මාර්ගය නිර්මාණය කිරීමට උත්සාහ දෝෂයක් ඇති විය: %{path}. OpenProject එම ෆෝල්ඩරයට ලිවිය හැකි බවට කරුණාකර සහතික වන්න."
       unauthorized: "ඔබට ගබඩාවට ප්රවේශ වීමට අවසර නැත හෝ අක්තපත්ර අවලංගු වේ."
       unavailable: "ගබඩාව ලබා ගත නොහැකි ය."
       exception_title: "ගබඩයට ප්රවේශ විය නොහැක: %{message}"
@@ -3779,9 +3779,9 @@ si:
         path_encoding: "Git මාර්ගය කේතන ක්රමය අභිබවා (පෙරනිමි: UTF-8)"
       local_title: "පවතින දේශීය Git ගබඩාව සම්බන්ධ කරන්න"
       local_url: "දේශීය URL"
-      local_introduction: "ඔබට දැනට පවතින දේශීය Git ගබඩාවක් තිබේ නම්, යෙදුම තුළ සිට එය ප්රවේශ වීම සඳහා MarvalProjects සමඟ එය සම්බන්ධ කළ හැකිය."
-      managed_introduction: "MarvalProjects දේශීය ගිට් ගබඩාවක් ස්වයංක්රීයව නිර්මාණය කර ඒකාබද්ධ කිරීමට ඉඩ දෙන්න."
-      managed_title: "Git ගබඩාව MarvalProjects ඒකාබද්ධ කරයි"
+      local_introduction: "ඔබට දැනට පවතින දේශීය Git ගබඩාවක් තිබේ නම්, යෙදුම තුළ සිට එය ප්රවේශ වීම සඳහා OpenProject සමඟ එය සම්බන්ධ කළ හැකිය."
+      managed_introduction: "OpenProject දේශීය ගිට් ගබඩාවක් ස්වයංක්රීයව නිර්මාණය කර ඒකාබද්ධ කිරීමට ඉඩ දෙන්න."
+      managed_title: "Git ගබඩාව OpenProject ඒකාබද්ධ කරයි"
       managed_url: "කළමනාකරණය කළ URL"
       path: "Git ගබඩාවට යන මාර්ගය"
       path_encoding: "මාර්ගය කේතන"
@@ -3798,24 +3798,24 @@ si:
     scm_types:
       local: "පවත්නා දේශීය ගබඩාව සම්බන්ධ කරන්න"
       existing: "පවතින ගබඩාව සම්බන්ධ කරන්න"
-      managed: "MarvalProjects හි නව ගබඩාවක් සාදන්න"
+      managed: "OpenProject හි නව ගබඩාවක් සාදන්න"
     storage:
       not_available: "තැටි ගබඩා පරිභෝජනය මෙම ගබඩාව සඳහා ලබා ගත නොහැක."
       update_timeout: "එන් විනාඩි සඳහා ගබඩාවක් සඳහා අවසන් අවශ්ය තැටි ඉඩ තොරතුරු තබා ගන්න.\nගබඩාවේ අවශ්ය තැටි අවකාශය ගණන් කිරීම මිල අධික විය හැකි බැවින්, කාර්ය සාධන බලපෑම අඩු කිරීම සඳහා මෙම අගය වැඩි කරන්න."
-      oauth_application_details: "The client secret value will not be accessible again after you close this window. Please copy these values into the Nextcloud MarvalProjects Integration settings:"
+      oauth_application_details: "The client secret value will not be accessible again after you close this window. Please copy these values into the Nextcloud OpenProject Integration settings:"
       oauth_application_details_link_text: "Go to settings page"
       setup_documentation_details: "If you need help configuring a new file storage please check the documentation: "
       setup_documentation_details_link_text: "File storages setup"
       show_warning_details: "To use this file storage remember to activate the module and the specific storage in the project settings of each desired project."
     subversion:
       existing_title: "දැනට පවතින අනුකරණ ගබඩාව"
-      existing_introduction: "ඔබට දැනට පවතින අනුකරණ ගබඩාවක් තිබේ නම්, යෙදුම තුළ සිට එය ප්රවේශ වීමට MarvalProjects සමඟ සම්බන්ධ කළ හැකිය."
+      existing_introduction: "ඔබට දැනට පවතින අනුකරණ ගබඩාවක් තිබේ නම්, යෙදුම තුළ සිට එය ප්රවේශ වීමට OpenProject සමඟ සම්බන්ධ කළ හැකිය."
       existing_url: "දැනට පවතින URL"
       instructions:
         managed_url: "මෙය කළමනාකරණය කරන ලද (දේශීය) අනුකරණ ගබඩාවේ URL වේ."
         url: "ගබඩාව URL එක ඇතුල් කරන්න. මෙය දේශීය ගබඩාවක් ( %{local_proto} වලින් ආරම්භ වන) හෝ දුරස්ථ ගබඩාවක් ඉලක්ක කර ගත හැකිය.\nපහත දැක්වෙන URL යෝජනා ක්රම සඳහා සහය දක්වයි:"
-      managed_title: "MarvalProjects වෙත ඒකාබද්ධ කරන ලද අනුකරණ ගබඩාව"
-      managed_introduction: "MarvalProjects දේශීය අනුකරණ ගබඩාවක් ස්වයංක්රීයව නිර්මාණය කර ඒකාබද්ධ කිරීමට ඉඩ දෙන්න."
+      managed_title: "OpenProject වෙත ඒකාබද්ධ කරන ලද අනුකරණ ගබඩාව"
+      managed_introduction: "OpenProject දේශීය අනුකරණ ගබඩාවක් ස්වයංක්රීයව නිර්මාණය කර ඒකාබද්ධ කිරීමට ඉඩ දෙන්න."
       managed_url: "කළමනාකරණය කළ URL"
       password: "රහස් පදය ගබඩාව"
       username: "ගබඩාව පරිශීලක නාමය"
@@ -4044,7 +4044,7 @@ si:
         clamav_socket_html: Enter the socket to the clamd daemon, e.g., %{example}
         clamav_host_html: Enter the hostname and port to the clamd daemon separated by colon. e.g., %{example}
         description_html: >
-          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as MarvalProjects and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
+          Select the mode in which the antivirus scanner integration should operate. <br/> <ul> <li><strong>%{disabled_option}</strong>: Uploaded files are not scanned for viruses.</li> <li><strong>%{socket_option}</strong>: You have set up ClamAV on the same server as OpenProject and the scan daemon clamd is running in the background</li> <li><strong>%{host_option}</strong>: You are streaming files to an external virus scanning host.</li> </ul>
     brute_force_prevention: "ස්වයංක්රීය පරිශීලක අවහිර"
     date_format:
       first_date_of_week_and_year_set: >
@@ -4052,7 +4052,7 @@ si:
       first_week_of_year_text_html: >
         Select the date of January that is contained in the first week of the year. This value together with first day of the week determines the total number of weeks in a year. For more information, please see our <a href="%{link}" target="_blank">documentation</a> on this topic.
     experimental:
-      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your MarvalProjects installation and losing all of its data.
+      save_confirmation: Caution! Risk of data loss! Only activate experimental features if you do not mind breaking your OpenProject installation and losing all of its data.
       warning_toast: Feature flags are settings that activate features that are still under development. They shall only be used for testing purposes. They shall never be activated on MarvalProjects installations holding important data. These features will very likely corrupt your data. Use them at your own risk.
       feature_flags: Feature flags
     general: "පොදු"
@@ -4136,7 +4136,7 @@ si:
       sentence_connector: "සහ"
       skip_last_comma: "අසත්ය"
   text_accessibility_hint: "ප්රවේශ ප්රකාරය නිර්මාණය කර ඇත්තේ අන්ධ, මෝටර් රථ ආබාධිත හෝ නරක ඇස් පෙනීම ඇති පරිශීලකයින් සඳහා ය. අවසාන වශයෙන් අවධානය යොමු කරන ලද අංග සඳහා විශේෂයෙන් ඉස්මතු කර ඇත. කරුණාකර සැලකිල්ලට ගන්න, Backlogs මොඩියුලය මෙම ප්රකාරයේදී ලබා ගත නොහැකි බව."
-  text_access_token_hint: "ප්රවේශ ටෝකන ඔබට MarvalProjects හි සම්පත් සඳහා බාහිර යෙදුම් ප්රවේශය ලබා දීමට ඉඩ සලසයි."
+  text_access_token_hint: "ප්රවේශ ටෝකන ඔබට OpenProject හි සම්පත් සඳහා බාහිර යෙදුම් ප්රවේශය ලබා දීමට ඉඩ සලසයි."
   text_analyze: "තවදුරටත් විශ්ලේෂණය: %{subject}"
   text_are_you_sure: "ඔබට විශ්වාසද?"
   text_are_you_sure_continue: "Are you sure you want to continue?"
@@ -4218,7 +4218,7 @@ si:
   text_no_notes: "මෙම වැඩ පැකේජය සඳහා කිසිදු අදහස් නොමැත."
   text_notice_too_many_values_are_inperformant: "සටහන: පිටුවකට අයිතම 100 කට වඩා ප්රදර්ශනය කිරීමෙන් පිටු පැටවීමේ කාලය වැඩි කළ හැකිය."
   text_notice_security_badge_displayed_html: >
-    සටහන: සක්රීය කර ඇත්නම්, මෙය <a href="%{information_panel_path}">%{information_panel_label}</a> පරිපාලන පැනලයේ ඔබේ ස්ථාපන තත්ත්වය සහිත ලාංඡනයක් සහ මුල් පිටුවේ පෙන්වනු ඇත. එය පරිපාලකයින්ට පමණක් පෙන්වනු ලැබේ. <br/> මෙම ලාංඡනය මඟින් ඔබගේ වර්තමාන MarvalProjects අනුවාදය නිල MarvalProjects නිකුතු දත්ත ගබඩාවට එරෙහිව පරීක්ෂා කරනු ඇත. චෙක්පත සපයන දේ පිළිබඳ වැඩි විස්තර සඳහා, ලබා ගත හැකි යාවත්කාලීන ලබා දීමට අවශ්ය දත්ත මොනවාද, සහ මෙම චෙක්පත අක්රිය කරන්නේ කෙසේද, කරුණාකර <a href="%{more_info_url}">මානකරන ලියකියවිලි</a>වෙත පිවිසෙන්න.
+    සටහන: සක්රීය කර ඇත්නම්, මෙය <a href="%{information_panel_path}">%{information_panel_label}</a> පරිපාලන පැනලයේ ඔබේ ස්ථාපන තත්ත්වය සහිත ලාංඡනයක් සහ මුල් පිටුවේ පෙන්වනු ඇත. එය පරිපාලකයින්ට පමණක් පෙන්වනු ලැබේ. <br/> මෙම ලාංඡනය මඟින් ඔබගේ වර්තමාන OpenProject අනුවාදය නිල OpenProject නිකුතු දත්ත ගබඩාවට එරෙහිව පරීක්ෂා කරනු ඇත. චෙක්පත සපයන දේ පිළිබඳ වැඩි විස්තර සඳහා, ලබා ගත හැකි යාවත්කාලීන ලබා දීමට අවශ්ය දත්ත මොනවාද, සහ මෙම චෙක්පත අක්රිය කරන්නේ කෙසේද, කරුණාකර <a href="%{more_info_url}">මානකරන ලියකියවිලි</a>වෙත පිවිසෙන්න.
   text_own_membership_delete_confirmation: "ඔබ ඔබේ අවසර කිහිපයක් හෝ සියල්ල ඉවත් කිරීමට ආසන්නව සිටින අතර ඉන් පසුව මෙම ව්යාපෘතිය සංස්කරණය කිරීමට තවදුරටත් නොහැකි වනු ඇත.\nඔබට දිගටම කරගෙන යාමට අවශ්ය බව ඔබට විශ්වාසද?"
   text_permanent_delete_confirmation_checkbox_label: "I understand that this deletion cannot be reversed"
   text_plugin_assets_writable: "ප්ලගිනය වත්කම් නාමාවලිය ලිවිය හැකි"
@@ -4227,7 +4227,7 @@ si:
   text_reassign: "වැඩ පැකේජයට නැවත පැවරීම:"
   text_regexp_info: "උදා: ^[A-Z0-9]+$"
   text_regexp_multiline: 'රීජෙක්ස් බහු රේඛා මාදිලියක යොදනු ලැබේ. උදා: ^ —\ s+'
-  text_repository_usernames_mapping: "ගබඩාවේ ඇති එක් එක් පරිශීලක නාමයට සිතියම් ගත කර ඇති MarvalProjects පරිශීලකයා තෝරන්න හෝ යාවත්කාලීන කරන්න.\nඑකම MarvalProjects සහ ගබඩාව පරිශීලක නාමය හෝ විද්යුත් තැපෑල සහිත පරිශීලකයින් ස්වයංක්රීයව සිතියම් ගත කරනු ලැබේ."
+  text_repository_usernames_mapping: "ගබඩාවේ ඇති එක් එක් පරිශීලක නාමයට සිතියම් ගත කර ඇති OpenProject පරිශීලකයා තෝරන්න හෝ යාවත්කාලීන කරන්න.\nඑකම OpenProject සහ ගබඩාව පරිශීලක නාමය හෝ විද්යුත් තැපෑල සහිත පරිශීලකයින් ස්වයංක්රීයව සිතියම් ගත කරනු ලැබේ."
   text_status_changed_by_changeset: "%{value}හි ව්යවහාරික වේ."
   text_table_difference_description: "මෙම වගුවේ තනි %{entries} පෙන්වා ඇත. වගුවෙහි ඇති පිරික්සුම් පෙට්ටි මුලින්ම තෝරා ගැනීමෙන් ඔබට ඕනෑම ප්රවේශයන් දෙකක් අතර වෙනස දැක ගත හැකිය. මේසයට පහළින් ඇති බොත්තම ක්ලික් කළ විට වෙනස්කම් පෙන්වයි."
   text_time_logged_by_changeset: "%{value}හි ව්යවහාරික වේ."
@@ -4302,7 +4302,7 @@ si:
     authentication_provider: "සත්යාපන සපයන්නා"
     identity_url_text: "The internal unique identifier provided by the authentication provider."
     authentication_settings_disabled_due_to_external_authentication: >
-      මෙම පරිශීලකයා බාහිර සත්යාපන සැපයුම්කරුවෙකු හරහා සත්යාපනය කරයි, එබැවින් MarvalProjects හි මුරපදයක් නොමැත.
+      මෙම පරිශීලකයා බාහිර සත්යාපන සැපයුම්කරුවෙකු හරහා සත්යාපනය කරයි, එබැවින් OpenProject හි මුරපදයක් නොමැත.
     authorization_rejected: "ඔබට පුරනය වීමට අවසර නැත."
     assign_random_password: "අහඹු මුරපදය පැවරීම (විද්යුත් තැපෑල හරහා පරිශීලකයා වෙත යවන ලදි)"
     blocked: "තාවකාලිකව අගුළු දමා ඇත"
@@ -4334,7 +4334,7 @@ si:
   warning: අවවාදය
   warning_attachments_not_saved: "%{count} ගොනුව (ය) සුරැකිය නොහැකි විය."
   warning_imminent_user_limit: >
-    ඔබගේ වර්තමාන සැලැස්මට සහය දක්වන වඩා ඔබට වැඩි පරිශීලකයින්ට ආරාධනා කළේය. ආරාධනා කළ පරිශීලකයින්ට ඔබේ MarvalProjects පරිසරයට සම්බන්ධ වීමට නොහැකි විය හැකිය. කරුණාකර <a href="%{upgrade_url}">ඔබගේ සැලැස්ම උත්ශ්රේණි කිරීම</a> හෝ ආරාධනා කරන ලද සහ ලියාපදිංචි පරිශීලකයින්ට සම්බන්ධ වීමට ඉඩ දීම සඳහා දැනට පවතින පරිශීලකයින් අවහිර කරන්න.
+    ඔබගේ වර්තමාන සැලැස්මට සහය දක්වන වඩා ඔබට වැඩි පරිශීලකයින්ට ආරාධනා කළේය. ආරාධනා කළ පරිශීලකයින්ට ඔබේ OpenProject පරිසරයට සම්බන්ධ වීමට නොහැකි විය හැකිය. කරුණාකර <a href="%{upgrade_url}">ඔබගේ සැලැස්ම උත්ශ්රේණි කිරීම</a> හෝ ආරාධනා කරන ලද සහ ලියාපදිංචි පරිශීලකයින්ට සම්බන්ධ වීමට ඉඩ දීම සඳහා දැනට පවතින පරිශීලකයින් අවහිර කරන්න.
   warning_registration_token_expired: |
     සක්රිය කිරීමේ විද්යුත් තැපෑල කල් ඉකුත් වී ඇත. අපි ඔබට අලුත් එකක් %{email}වෙත යැව්වා.
     කරුණාකර ඔබගේ ගිණුම සක්රිය කිරීම සඳහා එහි ඇතුළත සබැඳිය ක්ලික් කරන්න.
@@ -4343,7 +4343,7 @@ si:
   warning_user_limit_reached_admin: >
     Adding additional users will exceed the current limit. Please <a href="%{upgrade_url}">upgrade your plan</a> to be able to ensure external users are able to access this instance.
   warning_user_limit_reached_instructions: >
-    You reached your user limit (%{current}/%{max} active users). Please contact sales@MarvalProjects.com to upgrade your Enterprise edition plan and add additional users.
+    You reached your user limit (%{current}/%{max} active users). Please contact sales@openproject.com to upgrade your Enterprise edition plan and add additional users.
   warning_protocol_mismatch_html: >
 
   warning_bar:
@@ -4610,7 +4610,7 @@ si:
         confidential: "සේවාදායක රහස රහසිගතව තබා ගත හැකි අයදුම්පත භාවිතා කරන්නේ දැයි පරීක්ෂා කරන්න. ස්වදේශීය ජංගම යෙදුම් සහ තනි පිටු යෙදුම් රහස්ය නොවන බවට උපකල්පනය කෙරේ."
         scopes: "යෙදුමට ප්රවේශය ලබා දීමට ඔබට අවශ්ය විෂය පථයන් පරීක්ෂා කරන්න. කිසිදු විෂය පථයක් පරීක්ෂා කර නොමැති නම්, api_v3 උපකල්පනය කරනු ලැබේ."
         client_credential_user_id: "සේවාදායකයින් මෙම යෙදුම භාවිතා කරන විට පෙනී සිටීම සඳහා විකල්ප පරිශීලක ID. පොදු ප්රවේශයට පමණක් ඉඩ දීම සඳහා හිස්ව තබන්න"
-        register_intro: "ඔබ MarvalProjects සඳහා OAUTH API සේවාදායක යෙදුමක් සංවර්ධනය කරන්නේ නම්, සියලුම පරිශීලකයින්ට භාවිතා කිරීමට මෙම පෝරමය භාවිතා කර එය ලියාපදිංචි කළ හැකිය."
+        register_intro: "ඔබ OpenProject සඳහා OAUTH API සේවාදායක යෙදුමක් සංවර්ධනය කරන්නේ නම්, සියලුම පරිශීලකයින්ට භාවිතා කිරීමට මෙම පෝරමය භාවිතා කර එය ලියාපදිංචි කළ හැකිය."
         default_scopes: ""
     header:
       builtin_applications: Built-in OAuth applications
@@ -4618,7 +4618,7 @@ si:
     empty_application_lists: No OAuth applications have been registered.
     client_id: "සේවාලාභියා හැඳුනුම්පත"
     client_secret_notice: >
-      සේවාදායකයා රහසිගතව මුද්රණය කළ හැකි එකම අවස්ථාව මෙයයි, කරුණාකර එය සටහන් කර එය ආරක්ෂිතව තබා ගන්න. එය මුරපදයක් ලෙස සැලකිය යුතු අතර පසු කාලයකදී MarvalProjects මගින් නැවත ලබා ගත නොහැක.
+      සේවාදායකයා රහසිගතව මුද්රණය කළ හැකි එකම අවස්ථාව මෙයයි, කරුණාකර එය සටහන් කර එය ආරක්ෂිතව තබා ගන්න. එය මුරපදයක් ලෙස සැලකිය යුතු අතර පසු කාලයකදී OpenProject මගින් නැවත ලබා ගත නොහැක.
     authorization_dialog:
       authorize: "බලය පැවරීම"
       cancel: "අවසරය අවලංගු කිරීම සහ ප්රතික්ෂේප කිරීම."
@@ -4628,7 +4628,7 @@ si:
         මෙම යෙදුම මඟින් ඔබගේ OpenProject ගිණුමට ප්රවේශය ඉල්ලා සිටී. <br/> <strong>එය පහත සඳහන් අවසර ඉල්ලා ඇත:</strong>
     scopes:
       api_v3: "පූර්ණ API v3 ප්රවේශ"
-      api_v3_text: "ඔබ වෙනුවෙන් ක්රියාවන් සිදු කිරීම සඳහා MarvalProjects API v3 වෙත සම්පූර්ණ කියවීමට සහ ලිවීමට ප්රවේශය ලබා දෙනු ඇත."
+      api_v3_text: "ඔබ වෙනුවෙන් ක්රියාවන් සිදු කිරීම සඳහා OpenProject API v3 වෙත සම්පූර්ණ කියවීමට සහ ලිවීමට ප්රවේශය ලබා දෙනු ඇත."
     grants:
       created_date: "මත අනුමත"
       scopes: "අවසර"
@@ -4644,7 +4644,7 @@ si:
     client_credentials_impersonation_set_to: "සේවාලාභියා අක්තපත්ර පරිශීලක"
     client_credentials_impersonation_warning: "සටහන: මෙම යෙදුමේ 'සේවාලාභී අක්තපත්ර' ප්රවාහය භාවිතා කරන සේවාදායකයින්ට මෙම පරිශීලකයාගේ අයිතිවාසිකම් ඇත"
     client_credentials_impersonation_html: >
-      පෙරනිමියෙන්, MarvalProjects මඟින් OAUTH 2.0 බලය %{authorization_code_flow_link}හරහා සපයයි. ඔබට විකල්පයක් ලෙස %{client_credentials_flow_link}සක්රීය කළ හැකිය, නමුත් ඔබ වෙනුවෙන් ඉල්ලීම් සිදු කරනු ලබන පරිශීලකයෙකුට ලබා දිය යුතුය.
+      පෙරනිමියෙන්, OpenProject මඟින් OAUTH 2.0 බලය %{authorization_code_flow_link}හරහා සපයයි. ඔබට විකල්පයක් ලෙස %{client_credentials_flow_link}සක්රීය කළ හැකිය, නමුත් ඔබ වෙනුවෙන් ඉල්ලීම් සිදු කරනු ලබන පරිශීලකයෙකුට ලබා දිය යුතුය.
     authorization_error: "බලය පැවරීමේ දෝෂයක් සිදුවී ඇත."
     revoke_my_application_confirmation: "ඔබට ඇත්තටම මෙම යෙදුම ඉවත් කිරීමට අවශ්යද? මෙය %{token_count} ක් අවලංගු කරනු ඇත."
     my_registered_applications: "ලියාපදිංචි OAUTH අයදුම්පත්"
@@ -4673,20 +4673,20 @@ si:
         Internal error: Called refresh_token without a previously existing token.
       refresh_token_updated_failed: "Error during update of OAuthClientToken"
       oauth_client_not_found_explanation: >
-        This error appears after you have updated the client_id and client_secret in MarvalProjects, but haven't updated the 'Return URI' field in the OAuth2 provider.
+        This error appears after you have updated the client_id and client_secret in OpenProject, but haven't updated the 'Return URI' field in the OAuth2 provider.
       oauth_code_not_present: "OAuth2 'code' not found in 'callback' endpoint (redirect_uri)."
       oauth_code_not_present_explanation: >
         This error appears if you have selected the wrong response_type in the OAuth2 provider. Response_type should be 'code' or similar.
       oauth_state_not_present: "OAuth2 'state' not found in 'callback' endpoint (redirect_uri)."
       oauth_state_not_present_explanation: >
-        The 'state' is used to indicate to MarvalProjects where to continue after a successful OAuth2 authorization. A missing 'state' is an internal error that may appear during setup. Please contact your system administrator.
+        The 'state' is used to indicate to OpenProject where to continue after a successful OAuth2 authorization. A missing 'state' is an internal error that may appear during setup. Please contact your system administrator.
       rack_oauth2:
         client_secret_invalid: "Client secret is invalid (client_secret_invalid)"
         invalid_request: >
           OAuth2 Authorization Server responded with 'invalid_request'. This error appears if you try to authorize multiple times or in case of technical issues.
         invalid_response: "OAuth2 Authorization Server provided an invalid response (invalid_response)"
         invalid_grant: "The OAuth2 Authorization Server asks you to reauthorize (invalid_grant)."
-        invalid_client: "The OAuth2 Authorization Server doesn't recognize MarvalProjects (invalid_client)."
+        invalid_client: "The OAuth2 Authorization Server doesn't recognize OpenProject (invalid_client)."
         unauthorized_client: "The OAuth2 Authorization Server rejects the grant type (unauthorized_client)"
         unsupported_grant_type: "The OAuth2 Authorization Server asks you to reauthorize (unsupported_grant_type)."
         invalid_scope: "You are not allowed to access the requested resource (invalid_scope)."
@@ -4699,10 +4699,10 @@ si:
   you: you
   link: link
   plugin_openproject_auth_plugins:
-    name: "MarvalProjects Auth Plugins"
-    description: "Integration of OmniAuth strategy providers for authentication in MarvalProjects."
+    name: "OpenProject Auth Plugins"
+    description: "Integration of OmniAuth strategy providers for authentication in OpenProject."
   plugin_openproject_auth_saml:
     name: "OmniAuth SAML / Single-Sign On"
-    description: "Adds the OmniAuth SAML provider to MarvalProjects"
+    description: "Adds the OmniAuth SAML provider to OpenProject"
   enterprise_plans:
     legacy_enterprise: "Enterprise Plan"

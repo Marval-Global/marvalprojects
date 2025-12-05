@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 ja:
   plugin_openproject_meeting:
-    name: "MarvalProjects 会議"
+    name: "OpenProject 会議"
     description: >-
-      このモジュールは、MarvalProjectsにプロジェクト会議をサポートする機能を追加します。会議への参加者を同じプロジェクトから選択して、会議をスケジュールできます。議題を作成して招待者に送信することができます。会議後には参加者を選択し、議題に基づいて議事録を作成できます。最後に、議事録をすべての参加者と招待者に送信することができます。
+      このモジュールは、OpenProjectにプロジェクト会議をサポートする機能を追加します。会議への参加者を同じプロジェクトから選択して、会議をスケジュールできます。議題を作成して招待者に送信することができます。会議後には参加者を選択し、議題に基づいて議事録を作成できます。最後に、議事録をすべての参加者と招待者に送信することができます。
   activerecord:
     attributes:
       meeting:

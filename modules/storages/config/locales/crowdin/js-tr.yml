@@ -75,12 +75,12 @@ tr:
           403: >
             Dosyanız (%{fileName}) sistem kısıtlamaları nedeniyle yüklenemedi. Daha fazla bilgi için lütfen yöneticinize başvurun.
           413: >
-            Dosyanız (%{fileName}) MarvalProjects'in %{storageType} adresine yükleyebileceğinden daha büyüktür. Önce doğrudan %{storageType} adresine yükleyebilir ve ardından dosyayı bağlayabilirsiniz.
+            Dosyanız (%{fileName}) OpenProject'in %{storageType} adresine yükleyebileceğinden daha büyüktür. Önce doğrudan %{storageType} adresine yükleyebilir ve ardından dosyayı bağlayabilirsiniz.
           507: >
             Dosyanız (%{fileName}) depolama kotasının izin verdiğinden daha büyük. Bu kotayı değiştirmek için yöneticinize başvurun.
           detail:
             nextcloud: >
-              Lütfen Nextcloud Uygulaması "MarvalProjects Integration"ın en son sürümünün yüklü olduğunu kontrol edin ve daha fazla bilgi için yöneticinizle iletişime geçin.
+              Lütfen Nextcloud Uygulaması "OpenProject Integration"ın en son sürümünün yüklü olduğunu kontrol edin ve daha fazla bilgi için yöneticinizle iletişime geçin.
         link_uploaded_file_error: >
           Yakın zamanda yüklenen '%{fileName}' dosyasını %{workPackageId} iş paketine bağlarken bir hata oluştu.
         tooltip:

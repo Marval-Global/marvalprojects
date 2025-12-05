@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 tr:
   plugin_openproject_two_factor_authentication:
-    name: "MarvalProjects İki faktörlü kimlik doğrulama"
+    name: "OpenProject İki faktörlü kimlik doğrulama"
     description: >-
-      Bu MarvalProjects eklentisi, TOTP standardı (Google Authenticator) kullanılarak tek kullanımlık parola aracılığıyla veya SMS veya sesli arama yoluyla kullanıcının cep telefonuna gönderilen iki faktörlü kimlik doğrulama kullanarak kullanıcılarınızın kimliğini doğrular.
+      Bu OpenProject eklentisi, TOTP standardı (Google Authenticator) kullanılarak tek kullanımlık parola aracılığıyla veya SMS veya sesli arama yoluyla kullanıcının cep telefonuna gönderilen iki faktörlü kimlik doğrulama kullanarak kullanıcılarınızın kimliğini doğrular.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ tr:
       only_sms_allowed: "Diğer kullanıcılar için yalnızca SMS gönderimi ayarlanabilir."
     upsell:
       title: "İki aşamalı kimlik doğrulama"
-      description: "Tüm proje üyelerine iki faktörlü kimlik doğrulama sunarak (veya zorunlu kılarak) MarvalProjects bulut sunucunuzun güvenliğini güçlendirin."
+      description: "Tüm proje üyelerine iki faktörlü kimlik doğrulama sunarak (veya zorunlu kılarak) OpenProject bulut sunucunuzun güvenliğini güçlendirin."
     backup_codes:
       none_found: Bu hesap için yedek kod yok.
       singular: Yedek kod

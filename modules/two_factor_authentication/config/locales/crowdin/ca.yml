@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 ca:
   plugin_openproject_two_factor_authentication:
-    name: "MarvalProjects Two-factor authentication"
+    name: "OpenProject Two-factor authentication"
     description: >-
-      This MarvalProjects plugin authenticates your users using two-factor authentication by means of one-time password through the TOTP standard (Google Authenticator) or sent to the user's cell phone via SMS or voice call.
+      This OpenProject plugin authenticates your users using two-factor authentication by means of one-time password through the TOTP standard (Google Authenticator) or sent to the user's cell phone via SMS or voice call.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -83,7 +83,7 @@ ca:
       only_sms_allowed: "Only SMS delivery can be set up for other users."
     upsell:
       title: "Autentificació en dos passos"
-      description: "Enforteix la seguretat de la teva instància d'MarvalProjects oferint (o forçant) l'autentificació en dos passos per a tots els membres del projecte."
+      description: "Enforteix la seguretat de la teva instància d'OpenProject oferint (o forçant) l'autentificació en dos passos per a tots els membres del projecte."
     backup_codes:
       none_found: No existeix cap codi de còpies de seguretat per aquest compte.
       singular: Codi de còpia de seguretat

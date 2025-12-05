@@ -1,6 +1,6 @@
 vi:
   plugin_openproject_xls_export:
-    name: "Xuất XLS MarvalProjects"
+    name: "Xuất XLS OpenProject"
     description: "Xuất danh sách vấn đề dưới dạng bảng tính Excel (.xls)."
   export_to_excel: "Xuất sang  XLS"
   print_with_description: "Xem trước in với mô tả"

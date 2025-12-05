@@ -1,7 +1,7 @@
 #English strings go here
 ko:
   plugin_openproject_team_planner:
-    name: "MarvalProjects 팀 플래너"
+    name: "OpenProject 팀 플래너"
     description: "팀 플래너 보기를 제공합니다."
   permission_view_team_planner: "팀 플래너 보기"
   permission_manage_team_planner: "팀 플래너 관리"

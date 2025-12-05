@@ -52,7 +52,7 @@ ro:
         O nouă copie de rezervă va înlocui orice copie de rezervă anterioară. Se poate solicita doar un număr limitat de copii de rezervă pe zi.
       last_backup: Ultima copie de rezervă
       last_backup_from: Ultima copie de rezervă
-      title: Copie de rezervă MarvalProjects
+      title: Copie de rezervă OpenProject
       options: Opțiuni
       include_attachments: Include atașamente
       download_backup: Descarcă backup
@@ -509,7 +509,7 @@ ro:
         next: "Înainte"
         got_it: "Am înțeles"
       steps:
-        help_menu: "Meniul Ajutor (?) oferă <b>resurse suplimentare de ajutor</b>. Aici puteți găsi un ghid de utilizator, un ghid util pentru videoclipuri și multe altele. <br> Bucurați-vă de munca dumneavoastră cu MarvalProjects!"
+        help_menu: "Meniul Ajutor (?) oferă <b>resurse suplimentare de ajutor</b>. Aici puteți găsi un ghid de utilizator, un ghid util pentru videoclipuri și multe altele. <br> Bucurați-vă de munca dumneavoastră cu OpenProject!"
         members: "Invitați noi <b>membri</b> să se alăture proiectului dumneavoastră."
         quick_add_button: "Dă click pe pictograma plus (+) din antetul navigării pentru a <b>crea un nou proiect</b> sau <b>invita colaboratori</b>."
         sidebar_arrow: "Folosește săgeata de întoarcere din colțul din stânga sus pentru a te întoarce în meniul <b>al proiectului</b>."

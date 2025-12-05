@@ -1,7 +1,7 @@
 pl:
   label_job_status_plural: "Statusy pracy"
   plugin_openproject_job_status:
-    name: "Status zadania MarvalProjects"
+    name: "Status zadania OpenProject"
     description: "Lista i status zadań w tle."
   job_status_dialog:
     download_starts: 'Pobieranie powinno rozpocząć się automatycznie.'

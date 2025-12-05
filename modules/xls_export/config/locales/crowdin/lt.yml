@@ -1,6 +1,6 @@
 lt:
   plugin_openproject_xls_export:
-    name: "MarvalProjects XLS eksportas"
+    name: "OpenProject XLS eksportas"
     description: "Eksportuoti problemų sąrašą kaip Excel skaičiuokles (.xls)."
   export_to_excel: "Eksportuoti į XLS"
   print_with_description: "Spausdinimo peržiūra su aprašymu"

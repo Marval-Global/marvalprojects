@@ -1,7 +1,7 @@
 #English strings go here
 ru:
   plugin_openproject_boards:
-    name: "Панели MarvalProjects"
+    name: "Панели OpenProject"
     description: "Предоставляет просмотры панели."
   permission_show_board_views: "Просмотр досок"
   permission_manage_board_views: "Управление досками"

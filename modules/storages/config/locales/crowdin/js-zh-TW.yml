@@ -73,12 +73,12 @@ zh-TW:
           403: >
             由於系統限制，您的檔案 (%{fileName}) 無法上傳。 請聯絡您的管理員以獲取更多資訊。
           413: >
-            您的檔案 (%{fileName}) 比 MarvalProjects 可以上傳到 %{storageType} 的檔案大。 您可以先將其直接上傳到%{storageType}，然後再連結該檔案。
+            您的檔案 (%{fileName}) 比 OpenProject 可以上傳到 %{storageType} 的檔案大。 您可以先將其直接上傳到%{storageType}，然後再連結該檔案。
           507: >
             您的檔案 (%{fileName}) 大於儲存配額允許的大小。 請聯絡您的管理員來修改此配額。
           detail:
             nextcloud: >
-              請檢查是否安裝了最新版本的 Nextcloud 應用程式“MarvalProjects Integration”，並聯絡您的管理員以取得更多資訊。
+              請檢查是否安裝了最新版本的 Nextcloud 應用程式“OpenProject Integration”，並聯絡您的管理員以取得更多資訊。
         link_uploaded_file_error: >
           將最近上傳的檔案「%{fileName}」連結到工作套件 %{workPackageId} 時發生錯誤。
         tooltip:

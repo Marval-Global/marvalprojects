@@ -75,12 +75,12 @@ pt-PT:
           403: >
             Não foi possível carregar o seu ficheiro (%{fileName}) devido a restrições do sistema. Contacte o seu administrador para obter mais informações.
           413: >
-            O seu ficheiro (%{fileName}) é maior do que o limite que o MarvalProjects pode enviar para %{storageType}. Pode carregar diretamente para %{storageType} primeiro e depois vincular ao ficheiro.
+            O seu ficheiro (%{fileName}) é maior do que o limite que o OpenProject pode enviar para %{storageType}. Pode carregar diretamente para %{storageType} primeiro e depois vincular ao ficheiro.
           507: >
             O seu ficheiro (%{fileName}) é maior que o permitido pela cota de armazenamento. Contacte o seu administrador para modificar esta cota.
           detail:
             nextcloud: >
-              Verifique se a versão mais recente da aplicação Nextcloud "MarvalProjects Integration" está instalada e contacte o seu administrador para obter mais informações.
+              Verifique se a versão mais recente da aplicação Nextcloud "OpenProject Integration" está instalada e contacte o seu administrador para obter mais informações.
         link_uploaded_file_error: >
           Ocorreu um erro ao vincular o ficheiro '%{fileName}', carregado recentemente, ao pacote de trabalho %{workPackageId}.
         tooltip:

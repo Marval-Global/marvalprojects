@@ -148,7 +148,7 @@ es:
                 options:
                   name: Primeros pasos
                   text: |
-                    ¡Nos alegramos de tenerle con nosotros! Le sugerimos que pruebe algunas cosas para iniciarse en MarvalProjects.
+                    ¡Nos alegramos de tenerle con nosotros! Le sugerimos que pruebe algunas cosas para iniciarse en OpenProject.
 
                     Descubra las características más importantes con nuestra [Visita guiada]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true).
 
@@ -320,7 +320,7 @@ es:
                 options:
                   name: Primeros pasos
                   text: |
-                    ¡Nos alegra que te hayas unido! Te sugerimos probar algunas cosas para empezar en MarvalProjects.
+                    ¡Nos alegra que te hayas unido! Te sugerimos probar algunas cosas para empezar en OpenProject.
 
                     _Prueba los siguientes pasos:_[Backlogs]. *Invitar nuevos miembros a tu proyecto*: &rightarrow; Ir a [Members]({{opSetting:base_url}}/projects/your-scrum-project/members) en la navegación del proyecto.
                     2. *Ver el registro de tu producto y los backlogs de Sprint*: &rightarrow; Ir a [Backlogs]({{opSetting:base_url}}/projects/your-scrum-project/backlogs) en la navegación del proyecto.
@@ -493,9 +493,9 @@ es:
         item_6:
           name: Error
       welcome:
-        title: '¡Le damos la bienvenida a MarvalProjects!'
+        title: '¡Le damos la bienvenida a OpenProject!'
         text: |
-          MarvalProjects es el programa de gestión de proyectos de código abierto líder. Puede ser usado tanto en gestion de proyectos clássica, Agile o híbrida y le proporciona un control total sobre sus datos.
+          OpenProject es el programa de gestión de proyectos de código abierto líder. Puede ser usado tanto en gestion de proyectos clássica, Agile o híbrida y le proporciona un control total sobre sus datos.
 
           Funciones base y casos de uso:
 

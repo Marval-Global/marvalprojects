@@ -21,8 +21,8 @@
 #++
 lt:
   plugin_openproject_reporting:
-    name: "MarvalProjects ataskaitos"
-    description: "Šis priedas leidžia kurti savo kaštų ataskaitas su MarvalProjects laiko ir kašto priedo sukurtu filtravimu ir grupavimu."
+    name: "OpenProject ataskaitos"
+    description: "Šis priedas leidžia kurti savo kaštų ataskaitas su OpenProject laiko ir kašto priedo sukurtu filtravimu ir grupavimu."
   button_save_report_as: "Įrašyti ataskaitą kaip..."
   comments: "Komentaras"
   cost_reports_title: "Laikas ir išlaidos"

@@ -1,7 +1,7 @@
 #English strings go here
 ms:
   plugin_openproject_team_planner:
-    name: "Pasukan Perancangan MarvalProjects"
+    name: "Pasukan Perancangan OpenProject"
     description: "Menyediakan paparan pasukan perancangan."
   permission_view_team_planner: "Lihat perancang pasukan"
   permission_manage_team_planner: "Urus perancang pasukan"

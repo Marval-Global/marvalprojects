@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 pl:
   plugin_openproject_meeting:
-    name: "Spotkania MarvalProjects"
+    name: "Spotkania OpenProject"
     description: >-
-      Moduł ten dodaje do MarvalProjects funkcje obsługi spotkań dotyczących projektów. Spotkania można zaplanować, wybierając zaproszone osoby z tego samego projektu do wzięcia udziału w spotkaniu. Można utworzyć plan spotkania i wysłać go do zaproszonych osób. Po spotkaniu można wybrać uczestników i utworzyć protokół na podstawie planu spotkania. Na koniec protokół można wysłać do wszystkich uczestników i zaproszonych osób.
+      Moduł ten dodaje do OpenProject funkcje obsługi spotkań dotyczących projektów. Spotkania można zaplanować, wybierając zaproszone osoby z tego samego projektu do wzięcia udziału w spotkaniu. Można utworzyć plan spotkania i wysłać go do zaproszonych osób. Po spotkaniu można wybrać uczestników i utworzyć protokół na podstawie planu spotkania. Na koniec protokół można wysłać do wszystkich uczestników i zaproszonych osób.
   activerecord:
     attributes:
       meeting:

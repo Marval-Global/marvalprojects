@@ -1,7 +1,7 @@
 de:
   plugin_openproject_openid_connect:
-    name: "MarvalProjects OpenID Connect"
-    description: "Fügt OmniAuth OpenID Connect Strategieanbieter zu MarvalProjects hinzu."
+    name: "OpenProject OpenID Connect"
+    description: "Fügt OmniAuth OpenID Connect Strategieanbieter zu OpenProject hinzu."
   logout_warning: >
     Sie wurden abgemeldet. Der Inhalt eines Formulars, das Sie uns übermitteln, kann verloren gehen. Bitte [einloggen].
   activerecord:
@@ -53,7 +53,7 @@ de:
     menu_title: OpenID-Anbieter
     delete_title: "OpenID Connect Anbieter löschen"
     instructions:
-      redirect_url: Dies ist die URL, die der OpenID Connect-Anbieter verwenden sollte, um nach einer erfolgreichen Anmeldung zurück zu MarvalProjects zu leiten.
+      redirect_url: Dies ist die URL, die der OpenID Connect-Anbieter verwenden sollte, um nach einer erfolgreichen Anmeldung zurück zu OpenProject zu leiten.
       endpoint_url: Die Endpunkt-URL, die Sie vom OpenID Connect-Anbieter erhalten haben
       metadata_none: Ich habe diese Informationen nicht
       metadata_url: Ich habe eine Discovery-Endpunkt-URL
@@ -93,7 +93,7 @@ de:
         name: Benutzerdefiniert
       upsell:
         title: "Single Sign-On (SSO) mit OpenID Connect"
-        description: MarvalProjects mit einem OpenID Connect SSO-Anbieter verbinden
+        description: OpenProject mit einem OpenID Connect SSO-Anbieter verbinden
       label_add_new: Neuen OpenID-Anbieter hinzufügen
       label_edit: OpenID-Provider %{name} bearbeiten
       label_empty_title: Noch keine OpenID Connect-Anbieter konfiguriert.
@@ -105,7 +105,7 @@ de:
       label_configuration_details: Metadaten
       label_client_details: Details der Anwendung
       label_attribute_mapping: Attributzuordnung
-      client_details_description: Konfigurationsdetails von MarvalProjects als OIDC-Client
+      client_details_description: Konfigurationsdetails von OpenProject als OIDC-Client
       no_results_table: Noch keine Anbieter definiert.
       plural: OpenID-Anbieter
       singular: OpenID-Anbieter
@@ -116,8 +116,8 @@ de:
         metadata_form_description: Wenn Ihr OpenID Connect-Anbieter über einen Metadaten-Endpunkt verfügt, fügen Sie ihn unten hinzu, um bekannte Konfigurationswerte daraus automatisch auszulesen.
         configuration_metadata: Diese Informationen wurden bereits mit den mitgelieferten Metadaten ausgefüllt. In den meisten Fällen müssen sie nicht bearbeitet werden.
         configuration: Konfigurationsdetails des OpenID Connect-Anbieters
-        display_name: Für alle Benutzer von MarvalProjects sichtbare Anzeigename.
-        attribute_mapping: Konfigurieren Sie die Zuweisung der Attribute zwischen MarvalProjects und dem OpenID Connect-Anbieter.
+        display_name: Für alle Benutzer von OpenProject sichtbare Anzeigename.
+        attribute_mapping: Konfigurieren Sie die Zuweisung der Attribute zwischen OpenProject und dem OpenID Connect-Anbieter.
         claims: Fordern Sie zusätzliche Ansprüche (Claims) für das ID-Token oder die Userinfo-Antwort an.
     setting_instructions:
       limit_self_registration: >

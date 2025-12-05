@@ -21,8 +21,8 @@
 #++
 ja:
   plugin_openproject_reporting:
-    name: "MarvalProjects レポート"
-    description: "このプラグインは、MarvalProjects の時間とコストプラグインによって作成されたフィルタリングとグループ化でカスタムコストレポートを作成することができます。"
+    name: "OpenProject レポート"
+    description: "このプラグインは、OpenProject の時間とコストプラグインによって作成されたフィルタリングとグループ化でカスタムコストレポートを作成することができます。"
   button_save_report_as: "名前を付けてレポートの保存"
   comments: "コメント"
   cost_reports_title: "時間とコスト"

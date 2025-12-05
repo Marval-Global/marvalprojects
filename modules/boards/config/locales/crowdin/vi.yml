@@ -1,7 +1,7 @@
 #English strings go here
 vi:
   plugin_openproject_boards:
-    name: "Bảng MarvalProjects"
+    name: "Bảng OpenProject"
     description: "Cung cấp các chế độ xem bảng."
   permission_show_board_views: "Xem bảng"
   permission_manage_board_views: "Quản lý bảng"

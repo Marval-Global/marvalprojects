@@ -495,7 +495,7 @@ ar:
         item_6:
           name: خلَل
       welcome:
-        title: مرحبًا بك في MarvalProjects!
+        title: مرحبًا بك في OpenProject!
         text: |
           MarvalProjects is the leading open source project management software. It supports classic, agile as well as hybrid project management and gives you full control over your data.
 

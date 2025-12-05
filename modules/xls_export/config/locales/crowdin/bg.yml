@@ -1,6 +1,6 @@
 bg:
   plugin_openproject_xls_export:
-    name: "Експортиране на MarvalProjects XLS"
+    name: "Експортиране на OpenProject XLS"
     description: "Експортирайте списъци с проблеми като електронни таблици на Excel (.xls)."
   export_to_excel: "Експорт XLS"
   print_with_description: "Преглед преди печат с описание"

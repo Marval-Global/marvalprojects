@@ -1,7 +1,7 @@
 nl:
   plugin_openproject_openid_connect:
-    name: "MarvalProjects OpenID Connect"
-    description: "Voegt OmniAuth OpenID Connect strategieproviders toe aan MarvalProjects."
+    name: "OpenProject OpenID Connect"
+    description: "Voegt OmniAuth OpenID Connect strategieproviders toe aan OpenProject."
   logout_warning: >
     U bent uitgelogd. De inhoud van uw formulier kan verloren gaan. Alstublieft [log in].
   activerecord:
@@ -53,7 +53,7 @@ nl:
     menu_title: OpenID aanbieders
     delete_title: "OpenID Connect provider verwijderen"
     instructions:
-      redirect_url: This is the redirect URL that the OpenID Connect provider should use to redirect back to MarvalProjects after a successful login.
+      redirect_url: This is the redirect URL that the OpenID Connect provider should use to redirect back to OpenProject after a successful login.
       endpoint_url: De endpoint URL die u van de OpenID Connect provider heeft gekregen
       metadata_none: Ik heb deze informatie niet
       metadata_url: Ik heb een URL voor een zoekeindpunt
@@ -93,7 +93,7 @@ nl:
         name: Aangepast
       upsell:
         title: "Single Sign-On (SSO) with OpenID connect"
-        description: MarvalProjects verbinden met een OpenID connect identity provider
+        description: OpenProject verbinden met een OpenID connect identity provider
       label_add_new: Voeg een nieuwe OpenID provider toe
       label_edit: OpenID provider %{name} bewerken
       label_empty_title: Er zijn nog geen OpenID providers geconfigureerd.
@@ -105,7 +105,7 @@ nl:
       label_configuration_details: Metadata
       label_client_details: Client gegevens
       label_attribute_mapping: Attribuut toewijzen
-      client_details_description: Configuratie details van MarvalProjects als een OIDC client
+      client_details_description: Configuratie details van OpenProject als een OIDC client
       no_results_table: Er zijn nog geen aanbieders gedefinieerd.
       plural: OpenID aanbieders
       singular: OpenID aanbieders
@@ -117,7 +117,7 @@ nl:
         configuration_metadata: De informatie is vooraf ingevuld met behulp van het meegeleverde discovery eindpunt. In de meeste gevallen hoeft deze niet bewerkt te worden.
         configuration: Configuratiegegevens van de OpenID Connect provider
         display_name: De weergavenaam die zichtbaar is voor gebruikers.
-        attribute_mapping: Configureer de koppeling van attributen tussen MarvalProjects en de OpenID Connect-provider.
+        attribute_mapping: Configureer de koppeling van attributen tussen OpenProject en de OpenID Connect-provider.
         claims: Vraag extra claims aan voor de ID-token of gebruikersinfo reactie.
     setting_instructions:
       limit_self_registration: >

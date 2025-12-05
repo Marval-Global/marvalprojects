@@ -1,9 +1,9 @@
 #English strings go here for Rails i18n
 ms:
   plugin_openproject_two_factor_authentication:
-    name: "Pengesahan Dua Faktor MarvalProjects"
+    name: "Pengesahan Dua Faktor OpenProject"
     description: >-
-      Plugin MarvalProjects ini mengesahkan pengguna anda menggunakan pengesahan dua faktor melalui kata laluan sekali sahaja melalui standard TOTP (Google Authenticator) atau ianya dihantar ke telefon bimbit pengguna melalui SMS atau panggilan suara.
+      Plugin OpenProject ini mengesahkan pengguna anda menggunakan pengesahan dua faktor melalui kata laluan sekali sahaja melalui standard TOTP (Google Authenticator) atau ianya dihantar ke telefon bimbit pengguna melalui SMS atau panggilan suara.
   activerecord:
     attributes:
       two_factor_authentication/device:
@@ -84,7 +84,7 @@ ms:
       only_sms_allowed: "Hanya penghantaran SMS boleh disediakan untuk pengguna-pengguna lain."
     upsell:
       title: "Pengesahan dua faktor"
-      description: "Ketatkan keselamatan contoh MarvalProjects anda dengan menawarkan (atau kuatkuasakan) pengesahan dua faktor ke semua ahli projek."
+      description: "Ketatkan keselamatan contoh OpenProject anda dengan menawarkan (atau kuatkuasakan) pengesahan dua faktor ke semua ahli projek."
     backup_codes:
       none_found: Tiada kod sandaran sedia ada bagi akaun ini.
       singular: Kod sandaran

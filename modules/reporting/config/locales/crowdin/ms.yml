@@ -21,8 +21,8 @@
 #++
 ms:
   plugin_openproject_reporting:
-    name: "Pelaporan MarvalProjects"
-    description: "Plugin ini membenarkan untuk mencipta laporan kos tersuai dengan penyaring dan pengumpulan yang dibuat oleh plugin Masa dan kos MarvalProjects."
+    name: "Pelaporan OpenProject"
+    description: "Plugin ini membenarkan untuk mencipta laporan kos tersuai dengan penyaring dan pengumpulan yang dibuat oleh plugin Masa dan kos OpenProject."
   button_save_report_as: "Simpan laporan sebagai..."
   comments: "Komen"
   cost_reports_title: "Masa dan kos"

@@ -71,7 +71,7 @@ da:
         item_7:
           name: Strukturelle teknikere
       welcome:
-        title: Velkommen til MarvalProjects BIM-udgave!
+        title: Velkommen til OpenProject BIM-udgave!
         text: |
           Tjek demoprojekterne ud for at komme i gang med nogle eksempler.
 
@@ -120,7 +120,7 @@ da:
                 options:
                   name: At komme gang
                   text: |
-                    Vi er glade for deltagelsen! Vi foreslår at prøve et par ting for at komme i gang i MarvalProjects.
+                    Vi er glade for deltagelsen! Vi foreslår at prøve et par ting for at komme i gang i OpenProject.
 
                     Før man springer ud i det, skal man vide, at dette eksemplariske projekt er opdelt i to forskellige projekter:
 
@@ -138,7 +138,7 @@ da:
                     7.  _Agilt arbejde? Tjek de nye tavler:_ → Gå til [Tavler]({{opSetting:base_url}}/projects/demo-construction-project/boards)
 
                     Her finder man vores [Brugervejledninger](https://www.openproject.org/docs/user-guide/).
-                    Lad os vide, hvis der er nogen spørgsmål eller behov for support. Kontakt os: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Lad os vide, hvis der er nogen spørgsmål eller behov for support. Kontakt os: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Medlemmer
@@ -193,7 +193,7 @@ da:
                     6.  _Working agile? Create a new board:_ → Go to [Boards]({{opSetting:base_url}}/projects/demo-planning-constructing-project/boards)
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Medlemmer
@@ -450,7 +450,7 @@ da:
                     9.  _Working agile? Create a new board:_ → Go to [Boards]({{opSetting:base_url}}/projects/demo-bim-project/boards)
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Medlemmer
@@ -725,7 +725,7 @@ da:
                     8.  _You love the agile approach? Create a board:_ → Go to [Boards]({{opSetting:base_url}}/projects/demo-bcf-management-project/boards).
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Medlemmer

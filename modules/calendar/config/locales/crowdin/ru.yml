@@ -1,7 +1,7 @@
 #English strings go here
 ru:
   plugin_openproject_calendar:
-    name: "Календарь MarvalProjects"
+    name: "Календарь OpenProject"
     description: "Предоставляет просмотры календаря."
   label_calendar: "Календарь"
   label_calendar_plural: "Календари"

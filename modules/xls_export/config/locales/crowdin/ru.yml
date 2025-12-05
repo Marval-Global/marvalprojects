@@ -1,6 +1,6 @@
 ru:
   plugin_openproject_xls_export:
-    name: "MarvalProjects XLS Экспорт"
+    name: "OpenProject XLS Экспорт"
     description: "Экспортировать списки задач как таблицы Excel (.xls)."
   export_to_excel: "Экспорт XLS"
   print_with_description: "Предпросмотр печати с описанием"

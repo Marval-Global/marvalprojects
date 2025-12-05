@@ -1,7 +1,7 @@
 #English strings go here
 ja:
   plugin_openproject_boards:
-    name: "MarvalProjectsのカンバン"
+    name: "OpenProjectのカンバン"
     description: "カンバンを提供します"
   permission_show_board_views: "ボードの表示"
   permission_manage_board_views: "ボードの管理"

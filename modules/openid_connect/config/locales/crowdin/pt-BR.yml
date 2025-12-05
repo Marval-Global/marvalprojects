@@ -1,7 +1,7 @@
 pt-BR:
   plugin_openproject_openid_connect:
-    name: "Conectar MarvalProjects OpenID"
-    description: "Adiciona provedores de estratégia OmniAuth OpenID Connect ao MarvalProjects."
+    name: "Conectar OpenProject OpenID"
+    description: "Adiciona provedores de estratégia OmniAuth OpenID Connect ao OpenProject."
   logout_warning: >
     Você foi desconectado. O conteúdo de qualquer formulário que você enviar poderá ser perdido. Por favor [faça login].
   activerecord:
@@ -53,7 +53,7 @@ pt-BR:
     menu_title: Provedores OpenID
     delete_title: "Excluir o provedor OpenID Connect"
     instructions:
-      redirect_url: Este é o URL de redirecionamento que o provedor OpenID Connect deve usar para retornar ao MarvalProjects após um login bem-sucedido.
+      redirect_url: Este é o URL de redirecionamento que o provedor OpenID Connect deve usar para retornar ao OpenProject após um login bem-sucedido.
       endpoint_url: O URL de endpoint fornecido pelo seu provedor OpenID Connect
       metadata_none: Não tenho esta informação
       metadata_url: Tenho um URL de endpoint de descoberta
@@ -93,7 +93,7 @@ pt-BR:
         name: Personalizar
       upsell:
         title: "Autenticação única (SSO) com OpenID Connect"
-        description: Conectar o MarvalProjects a um provedor de identidade do OpenID Connect
+        description: Conectar o OpenProject a um provedor de identidade do OpenID Connect
       label_add_new: Adicionar um novo provedor OpenID
       label_edit: Editar provedor OpenID %{name}
       label_empty_title: Ainda não há provedores OpenID configurados.
@@ -105,7 +105,7 @@ pt-BR:
       label_configuration_details: Metadados
       label_client_details: Detalhes do cliente
       label_attribute_mapping: Mapeamento de atributos
-      client_details_description: Detalhes de configuração do MarvalProjects como cliente OIDC
+      client_details_description: Detalhes de configuração do OpenProject como cliente OIDC
       no_results_table: Nenhum provedor foi definido.
       plural: Provedores OpenID
       singular: Provedor OpenID
@@ -117,7 +117,7 @@ pt-BR:
         configuration_metadata: As informações foram pré-preenchidas usando o endpoint de descoberta fornecido e, na maioria dos casos, não precisam ser editadas.
         configuration: Detalhes de configuração do provedor do OpenID Connect
         display_name: Nome de exibição que aparece para os usuários.
-        attribute_mapping: Configure o mapeamento de atributos entre o MarvalProjects e o provedor do OpenID Connect.
+        attribute_mapping: Configure o mapeamento de atributos entre o OpenProject e o provedor do OpenID Connect.
         claims: Solicite reivindicações adicionais para a resposta de token de ID ou userinfo.
     setting_instructions:
       limit_self_registration: >

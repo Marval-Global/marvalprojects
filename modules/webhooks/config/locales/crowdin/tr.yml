@@ -1,7 +1,7 @@
 tr:
   plugin_openproject_webhooks:
-    name: "MarvalProjects Webhookları"
-    description: "Daha iyi üçüncü parti entegrasyonu için MarvalProjects webhooklarını destekleyen bir eklenti API'si sağlar."
+    name: "OpenProject Webhookları"
+    description: "Daha iyi üçüncü parti entegrasyonu için OpenProject webhooklarını destekleyen bir eklenti API'si sağlar."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -35,7 +35,7 @@ tr:
         internal_comment: "İç yorum"
       explanation:
         text: >
-          Bir iş paketinin oluşturulması veya bir projede güncelleme gibi bir olayın meydana gelmesi üzerine, MarvalProjects yapılandırılmış web uç noktalarına bir POST isteği gönderir. Çoğu zaman olay, %{link} geçtikten sonra gönderilir.
+          Bir iş paketinin oluşturulması veya bir projede güncelleme gibi bir olayın meydana gelmesi üzerine, OpenProject yapılandırılmış web uç noktalarına bir POST isteği gönderir. Çoğu zaman olay, %{link} geçtikten sonra gönderilir.
         link: yapılandırılmış toplama dönemi
       status:
         enabled: 'Web kancası etkin'
@@ -66,4 +66,4 @@ tr:
           title: 'Seçilmiş projeler'
         secret:
           description: >
-            Ayarlanırsa, bu gizli değer MarvalProjects tarafından web kancası yükünü imzalamak için kullanılır.
+            Ayarlanırsa, bu gizli değer OpenProject tarafından web kancası yükünü imzalamak için kullanılır.

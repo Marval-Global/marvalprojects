@@ -21,8 +21,8 @@
 #++
 de:
   plugin_openproject_backlogs:
-    name: "MarvalProjects Backlogs"
-    description: "Dieses Modul fügt Funktionen hinzu, die es agilen Teams ermöglichen, mit MarvalProjects in Scrum-Projekten zu arbeiten."
+    name: "OpenProject Backlogs"
+    description: "Dieses Modul fügt Funktionen hinzu, die es agilen Teams ermöglichen, mit OpenProject in Scrum-Projekten zu arbeiten."
   activerecord:
     attributes:
       work_package:

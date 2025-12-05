@@ -56,10 +56,10 @@ pt-PT:
           attributes:
             host:
               authorization_header_missing: não está totalmente configurado. A instância Nextcloud não recebe o cabeçalho "Autorização", que é necessário para um token portador com base na autorização das solicitações de API. Verifique novamente a configuração do seu servidor HTTP.
-              cannot_be_connected_to: não foi possível aceder. Certifique-se de que o anfitrião está acessível e que a aplicação de integração do MarvalProjects está instalada.
+              cannot_be_connected_to: não foi possível aceder. Certifique-se de que o anfitrião está acessível e que a aplicação de integração do OpenProject está instalada.
               minimal_nextcloud_version_unmet: não atende aos requisitos mínimos de versão (deve ser Nextcloud 23 ou superior)
               not_nextcloud_server: não é um servidor Nextcloud
-              op_application_not_installed: parece não ter a app "MarvalProjects integration" instalada. Instale-a primeiro e tente novamente.
+              op_application_not_installed: parece não ter a app "OpenProject integration" instalada. Instale-a primeiro e tente novamente.
             password:
               invalid_password: não é válido.
               unknown_error: não foi possível validar. Verifique a sua ligação de armazenamento e tente novamente.
@@ -120,15 +120,15 @@ pt-PT:
         rename_project_folder: 'Renomear pasta do projeto gerido:'
     errors:
       messages:
-        error: Ocorreu um erro inesperado. Verifique os registos do MarvalProjects para obter mais informações ou contacte um administrador
-        unauthorized: Não foi possível autenticar o MarvalProjects com o fornecedor de armazenamento. Certifique-se de que tem acesso ao mesmo.
+        error: Ocorreu um erro inesperado. Verifique os registos do OpenProject para obter mais informações ou contacte um administrador
+        unauthorized: Não foi possível autenticar o OpenProject com o fornecedor de armazenamento. Certifique-se de que tem acesso ao mesmo.
       models:
         copy_project_folders_service:
           conflict: A pasta %{destination_path} já existe. Interrompa o processo para evitar substituições.
-          error: Ocorreu um erro inesperado. Verifique os registos do MarvalProjects para obter mais informações ou contacte um administrador
-          forbidden: O MarvalProjects não conseguiu aceder à pasta de origem. Verifique a sua configuração de permissões no fornecedor de armazenamento
+          error: Ocorreu um erro inesperado. Verifique os registos do OpenProject para obter mais informações ou contacte um administrador
+          forbidden: O OpenProject não conseguiu aceder à pasta de origem. Verifique a sua configuração de permissões no fornecedor de armazenamento
           not_found: A localização do modelo de origem %{source_path} não foi encontrada.
-          unauthorized: Não foi possível autenticar o MarvalProjects com o fornecedor de armazenamento.Verifique a sua configuração de armazenamento
+          unauthorized: Não foi possível autenticar o OpenProject com o fornecedor de armazenamento.Verifique a sua configuração de armazenamento
         nextcloud_sync_service:
           attributes:
             add_user_to_group:
@@ -149,16 +149,16 @@ pt-PT:
               conflict: 'Não foi possível remover o utilizador %{user} do grupo %{group} pelo seguinte motivo: %{reason}'
               failed_to_remove: 'Não foi possível remover o utilizador %{user} do grupo %{group} pelo seguinte motivo: %{reason}'
             rename_project_folder:
-              conflict: MarvalProjects could not rename the project folder to %{current_path} as a folder with the same name already exists
-              forbidden: "O utilizador do MarvalProjects não tem acesso à pasta %{current_path}.\n"
+              conflict: OpenProject could not rename the project folder to %{current_path} as a folder with the same name already exists
+              forbidden: "O utilizador do OpenProject não tem acesso à pasta %{current_path}.\n"
               not_found: "%{current_path} não foi encontrado."
             set_folders_permissions:
               permission_not_set: não foi possível definir permissões em %{path}.
-          error: Ocorreu um erro inesperado. Certifique-se de que a sua instância do Nextcloud está acessível e verifique os registos de trabalho do MarvalProjects para obter mais informações
+          error: Ocorreu um erro inesperado. Certifique-se de que a sua instância do Nextcloud está acessível e verifique os registos de trabalho do OpenProject para obter mais informações
           group_does_not_exist: "%{group} não existe. Verifique a configuração da sua instância do Nextcloud."
-          insufficient_privileges: O MarvalProjects não tem privilégios suficientes para adicionar %{user} a %{group}. Verifique as definições de grupo no Nextcloud.
+          insufficient_privileges: O OpenProject não tem privilégios suficientes para adicionar %{user} a %{group}. Verifique as definições de grupo no Nextcloud.
           not_allowed: O Nextcloud bloqueia o pedido.
-          unauthorized: Não foi possível sincronizar o MarvalProjects com o Nextcloud. Verifique o seu armazenamento e a configuração do Nextcloud.
+          unauthorized: Não foi possível sincronizar o OpenProject com o Nextcloud. Verifique o seu armazenamento e a configuração do Nextcloud.
           user_does_not_exist: "%{user} não existe no Nextcloud."
         one_drive_sync_service:
           attributes:
@@ -168,16 +168,16 @@ pt-PT:
             hide_inactive_folders:
               permission_not_set: não foi possível definir permissões em %{path}.
             remote_folders:
-              request_error: O MarvalProjects não conseguiu aceder à sua unidade %{drive_id}. Verifique se a sua configuração de armazenamento está correta.
+              request_error: O OpenProject não conseguiu aceder à sua unidade %{drive_id}. Verifique se a sua configuração de armazenamento está correta.
             rename_project_folder:
-              conflict: O MarvalProjects não conseguiu renomear a pasta %{current_path} para %{project_folder_name} porque já existe uma pasta com o mesmo nome
-              forbidden: "O MarvalProjects não tem acesso a %{current_path} para poder renomeá-lo.\n"
+              conflict: O OpenProject não conseguiu renomear a pasta %{current_path} para %{project_folder_name} porque já existe uma pasta com o mesmo nome
+              forbidden: "O OpenProject não tem acesso a %{current_path} para poder renomeá-lo.\n"
               not_found: "%{current_path} não foi encontrado."
             set_folders_permissions:
               permission_not_set: não foi possível definir permissões em %{path}.
-          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check MarvalProjects worker logs for more information
-          not_allowed: O MarvalProjects não tinha permissão para aceder à sua unidade do OneDrive. Verifique as permissões definidas na aplicação do Azure.
-          unauthorized: Não foi possível sincronizar o MarvalProjects com o OneDrive. Verifique o seu armazenamento e a configuração da aplicação do Azure.
+          error: An unexpected error occurred. Please ensure that OneDrive is reachable and check OpenProject worker logs for more information
+          not_allowed: O OpenProject não tinha permissão para aceder à sua unidade do OneDrive. Verifique as permissões definidas na aplicação do Azure.
+          unauthorized: Não foi possível sincronizar o OpenProject com o OneDrive. Verifique o seu armazenamento e a configuração da aplicação do Azure.
           user_does_not_exist: "%{user} não existe no Nextcloud."
         upload_link_service:
           not_found: Não foi possível encontrar a pasta de destino %{folder} em %{storage_name}.
@@ -187,17 +187,17 @@ pt-PT:
       done_complete_setup: Concluído, terminar configuração
       done_continue: Concluído, continuar
       open_storage: Abrir armazenamentos de ficheiros
-      replace_oauth_application: Substituir MarvalProjects OAuth
+      replace_oauth_application: Substituir OpenProject OAuth
       replace_oauth_client: Substituir OAuth %{provider_type}
       save_and_continue: Guardar e continuar
       select_folder: Selecionar pasta
     configuration_checks:
       oauth_client_incomplete:
-        nextcloud: Permitir que o MarvalProjects aceda os dados da Nextcloud através do OAuth.
-        one_drive: Allow MarvalProjects to access Azure data using OAuth to connect OneDrive.
+        nextcloud: Permitir que o OpenProject aceda os dados da Nextcloud através do OAuth.
+        one_drive: Allow OpenProject to access Azure data using OAuth to connect OneDrive.
       redirect_uri_incomplete:
         one_drive: Conclua a configuração com o redirecionamento correto da URI.
-    confirm_replace_oauth_application: Esta ação irá repor as credenciais OAuth atuais. Após a confirmação, terá de voltar a introduzir as credenciais no fornecedor de armazenamento e todos os utilizadores remotos terão de autorizar novamente o MarvalProjects. Tem a certeza de que pretende continuar?
+    confirm_replace_oauth_application: Esta ação irá repor as credenciais OAuth atuais. Após a confirmação, terá de voltar a introduzir as credenciais no fornecedor de armazenamento e todos os utilizadores remotos terão de autorizar novamente o OpenProject. Tem a certeza de que pretende continuar?
     confirm_replace_oauth_client: Esta ação irá repor as credenciais OAuth atuais. Depois de confirmar, terá de introduzir novas credenciais do fornecedor de armazenamento e todos os utilizadores terão de autorizar novamente em %{provider_type}. Tem a certeza de que pretende continuar?
     delete_warning:
       input_delete_confirmation: Introduza o nome do ficheiro de armazenamento %{file_storage} para confirmar a eliminação.
@@ -212,7 +212,7 @@ pt-PT:
     dependencies:
       nextcloud:
         group_folders_app: Pastas de grupo
-        integration_app: Integração do MarvalProjects
+        integration_app: Integração do OpenProject
     enabled_in_projects:
       setup_incomplete_description: Este armazenamento tem uma configuração incompleta. Conclua a configuração antes de o ativar em vários projetos.
       setup_incomplete_header: Configuração do armazenamento incompleta
@@ -220,7 +220,7 @@ pt-PT:
     file_storage_view:
       access_management:
         automatic_management: Acesso e pastas geridas automaticamente
-        automatic_management_description: Deixe o MarvalProjects criar pastas por projeto automaticamente e gerir o acesso dos utilizadores. Isto é recomendado porque garante que cada membro da equipa tem sempre as permissões de acesso corretas.
+        automatic_management_description: Deixe o OpenProject criar pastas por projeto automaticamente e gerir o acesso dos utilizadores. Isto é recomendado porque garante que cada membro da equipa tem sempre as permissões de acesso corretas.
         description: Selecione o tipo de gestão do acesso dos utilizadores e da criação de pastas. Recomendamos que utilize o acesso gerido automaticamente para ter uma estrutura mais organizada e garantir o acesso a todos os utilizadores relevantes.
         manual_management: Acesso e pastas geridas manualmente
         manual_management_description: Crie e gira manualmente as pastas por projeto por conta própria. Terá de garantir manualmente que os utilizadores relevantes têm acesso.
@@ -231,7 +231,7 @@ pt-PT:
       general_information: Informação geral
       oauth_configuration: Configuração OAuth
       one_drive_oauth: Azure OAuth
-      openproject_oauth: OAuth do MarvalProjects
+      openproject_oauth: OAuth do OpenProject
       project_folders: Pastas do projeto
       redirect_uri: Redirecionar URI
       storage_audience_blank: Não foi configurado nenhum público.
@@ -294,7 +294,7 @@ pt-PT:
         nc_host_not_found: Não foi encontrado nenhum servidor do Nextcloud no URL do anfitrião configurado. Verifique a configuração.
         nc_oauth_request_not_found: O terminal para o utilizador com sessão iniciada não foi encontrado. Consulte os registos do servidor para mais informações.
         nc_oauth_request_unauthorized: O utilizador atual não está autorizado a aceder ao armazenamento de ficheiros remoto. Verifique os registos do servidor para mais informações.
-        nc_oauth_token_missing: O MarvalProjects não pode testar a comunicação de nível de utilizador com o Nextcloud uma vez que o utilizador ainda não associou a sua conta Nextcloud.
+        nc_oauth_token_missing: O OpenProject não pode testar a comunicação de nível de utilizador com o Nextcloud uma vez que o utilizador ainda não associou a sua conta Nextcloud.
         nc_unexpected_content: Conteúdo inesperado encontrado na pasta do grupo gerido.
         nc_userless_access_denied: A palavra-passe da aplicação configurada é inválida.
         not_configured: Não foi possível validar a ligação.Termine, primeiro, a configuração.
@@ -304,7 +304,7 @@ pt-PT:
         od_drive_id_not_found: Não foi possível encontrar o Drive ID configurado. Verifique a configuração.
         od_oauth_request_not_found: O terminal para o utilizador com sessão iniciada não foi encontrado. Consulte os registos do servidor para mais informações.
         od_oauth_request_unauthorized: O utilizador atual não está autorizado a aceder ao armazenamento de ficheiros remoto. Verifique os registos do servidor para mais informações.
-        od_oauth_token_missing: MarvalProjects cannot test the user level communication with OneDrive as the user did not yet link their Microsoft account.
+        od_oauth_token_missing: OpenProject cannot test the user level communication with OneDrive as the user did not yet link their Microsoft account.
         od_tenant_id_wrong: O ID do diretório (inquilino) configurado é inválido. Verifique a configuração.
         od_test_folder_exists: A pasta %{folder_name} necessária para o teste já existe. Elimine-a e tente novamente.
         od_unexpected_content: Conteúdo inesperado encontrado na unidade.
@@ -346,7 +346,7 @@ pt-PT:
       project_folder_bulk: A pasta do projeto é a pasta predefinida para o carregamento de ficheiros para todos os projetos selecionados. Pode modificar esta opção individualmente nas definições de cada projeto. No entanto, os utilizadores podem carregar ficheiros para outras localizações.
     instructions:
       all_available_storages_already_added: Todos os armazenamentos disponíveis já foram adicionados ao projeto.
-      authentication_method: A forma como os pedidos entre o MarvalProjects e o armazenamento são autenticados.
+      authentication_method: A forma como os pedidos entre o OpenProject e o armazenamento são autenticados.
       automatic_folder: Isto irá criar automaticamente uma pasta raiz para este projeto e gerir as permissões de acesso para cada membro do projeto.
       empty_project_folder_validation: Tem de selecionar uma pasta para avançar.
       existing_manual_folder: Pode designar uma pasta existente como a pasta de raiz para este projeto. No entanto, as permissões não são geridas automaticamente, o administrador tem de garantir manualmente que os utilizadores relevantes têm acesso. A pasta selecionada pode ser utilizada por vários projetos.
@@ -355,8 +355,8 @@ pt-PT:
       name: Dê um nome ao seu armazenamento para que os utilizadores possam diferenciar vários armazenamentos.
       new_storage: Para mais informações, leia a nossa documentação sobre <a target='_blank' href='%{provider_link}'>configuração de uma integração de armazenamento de ficheiros de %{provider_name}</a>.
       nextcloud:
-        application_link_text: aplicação "Integração MarvalProjects"
-        integration: Administração do Nextcloud / MarvalProjects
+        application_link_text: aplicação "Integração OpenProject"
+        integration: Administração do Nextcloud / OpenProject
         oauth_configuration: Copie estes valores de %{application_link_text}.
         provider_configuration: 'Garanta que tem privilégios administrativos na sua instância de Nextcloud e tenha a aplicação %{application_link_text} instalada antes de fazer a configuração:'
         storage_audience: ID do cliente que a instância do Nextcloud utiliza para comunicar com o fornecedor de identidade.
@@ -366,7 +366,7 @@ pt-PT:
       no_storage_set_up: Não há armazenamento de ficheiros configurado.
       not_logged_into_storage: Para selecionar uma pasta do projeto, primeiro inicie a sessão
       oauth_application_details: O valor secreto do cliente não estará acessível novamente após fechar esta janela. Copie esses valores para %{oauth_application_details_link}.
-      oauth_application_details_link_text: Configurações de integração do Nextcloud MarvalProjects
+      oauth_application_details_link_text: Configurações de integração do Nextcloud OpenProject
       one_drive:
         application_link_text: Portal do Azure
         copy_redirect_uri: Copiar URI de redirecionamento
@@ -385,7 +385,7 @@ pt-PT:
       setting_up_storages: Para configurar armazenamentos de ficheiros, visite
       setting_up_storages_non_admin: Os administradores podem configurar o armazenamento de ficheiros em Administração / Armazenamento de ficheiros.
       type: 'Garanta que tem privilégios administrativos na sua instância de Nextcloud e tenha a seguinte aplicação instalada antes de fazer a configuração:'
-      type_link_text: "“Integração MarvalProjects”"
+      type_link_text: "“Integração OpenProject”"
     label_active: Ativo
     label_add_new_storage: Adicionar novo armazenamento
     label_automatic_folder: Nova pasta com permissões geridas automaticamente
@@ -409,8 +409,8 @@ pt-PT:
     label_no_selected_folder: Nenhuma pasta selecionada
     label_no_specific_folder: Nenhuma pasta específica
     label_oauth_client_id: ID de Cliente OAuth
-    label_openproject_oauth_application_id: ID de Cliente OAuth MarvalProjects
-    label_openproject_oauth_application_secret: Segredo de Cliente OAuth MarvalProjects
+    label_openproject_oauth_application_id: ID de Cliente OAuth OpenProject
+    label_openproject_oauth_application_secret: Segredo de Cliente OAuth OpenProject
     label_project_folder: Pasta do projeto
     label_provider: Fornecedor
     label_redirect_uri: Redirecionar URI
@@ -450,7 +450,7 @@ pt-PT:
         title: Configuração de integração concluída
       timeout:
         link_text: estado de saúde da configuração do armazenamento de ficheiros
-        subtitle: O MarvalProjects não pôde fornecer acesso à pasta do projeto dentro do período esperado de tempo, tente novamente.<br><br> Se esse problema continuar, entre em contacto com o administrador do MarvalProjects para verificar o %{storages_health_link}.
+        subtitle: O OpenProject não pôde fornecer acesso à pasta do projeto dentro do período esperado de tempo, tente novamente.<br><br> Se esse problema continuar, entre em contacto com o administrador do OpenProject para verificar o %{storages_health_link}.
       waiting:
         subtitle: Aguarde um momento, esta ação pode demorar algum tempo...
         title: Estamos a definir as suas permissões na pasta do projeto.
@@ -460,8 +460,8 @@ pt-PT:
         subtitle: Adicione um armazenamento de ficheiros externo para carregar, ligar e gerir ficheiros em pacotes de trabalho.
       managed_project_folders:
         subtitle: |-
-          Deixe o MarvalProjects criar pastas por projeto automaticamente. Isto é recomendado porque garante que cada membro da equipa tem sempre as permissões de acesso corretas.
-        subtitle_short: Deixe o MarvalProjects criar pastas por projeto automaticamente.
+          Deixe o OpenProject criar pastas por projeto automaticamente. Isto é recomendado porque garante que cada membro da equipa tem sempre as permissões de acesso corretas.
+        subtitle_short: Deixe o OpenProject criar pastas por projeto automaticamente.
         title: Pastas do projeto geridas automaticamente
       project_settings:
         delete: Eliminar armazenamento de ficheiros
@@ -495,10 +495,10 @@ pt-PT:
     storage_audience:
       documentation_intro: Leia a nossa documentação para mais informações sobre as seguintes opções, e sobre a configuração do fornecedor de identidade.
       idp:
-        helptext: O MarvalProjects utilizará o token de acesso recebido pelo fornecedor de identidade durante o início de sessão para autenticar os pedidos ao armazenamento. Não tentará obter outro token.
+        helptext: O OpenProject utilizará o token de acesso recebido pelo fornecedor de identidade durante o início de sessão para autenticar os pedidos ao armazenamento. Não tentará obter outro token.
         label: Utilizar o token de acesso obtido durante o início de sessão do utilizador
       manual:
-        helptext: O MarvalProjects trocará um token com o fornecedor de identidade para a audiência em causa.
+        helptext: O OpenProject trocará um token com o fornecedor de identidade para a audiência em causa.
         label: Especificar manualmente a audiência com que fazer intercâmbio do token de acesso
     storage_list_blank_slate:
       description: Adicione um armazenamento para vê-lo aqui.
@@ -506,6 +506,6 @@ pt-PT:
     successful_storage_connection: Armazenamento ligado com sucesso! Lembre-se de ativar o armazenamento no separador Projetos de cada projeto pretendido para o utilizar.
     upsell:
       description: |-
-        Integrate your OneDrive as a file storage with MarvalProjects. Upload files and link them directly to
+        Integrate your OneDrive as a file storage with OpenProject. Upload files and link them directly to
         work packages in a project.
       title: OneDrive integration

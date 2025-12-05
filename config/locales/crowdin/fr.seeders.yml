@@ -148,7 +148,7 @@ fr:
                 options:
                   name: Pour commencer
                   text: |
-                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec MarvalProjects.
+                    Nous sommes heureux que vous nous ayez rejoints ! Nous vous suggérons d'effectuer quelques essais pour vous familiariser avec OpenProject.
 
                     Découvrez les fonctionnalités les plus importantes grâce à notre [Visite guidée]({{opSetting:base_url}}/projects/demo-project/work_packages/?start_onboarding_tour=true).
 
@@ -319,7 +319,7 @@ fr:
                 options:
                   name: Pour commencer
                   text: |
-                    Nous sommes ravis que vous nous ayez rejoints ! Nous vous suggérons de faire quelques essais pour commencer à utiliser MarvalProjects.
+                    Nous sommes ravis que vous nous ayez rejoints ! Nous vous suggérons de faire quelques essais pour commencer à utiliser OpenProject.
 
                     _Essayez les étapes suivantes:_
 
@@ -332,7 +332,7 @@ fr:
                     7. *Activer d'autres modules* : &rightarrow ; Allez dans les [Paramètres du projet &rightarrow ; Modules]({{opSetting:base_url}}/projet/votre-scrum-projet/paramètres/modules).
 
                     Vous y trouverez nos [guides de l'utilisateur](https://www.openproject.org/docs/user-guide/).
-                    N'hésitez pas à nous contacter si vous avez des questions ou si vous avez besoin d'aide. N'hésitez pas à nous contacter : [support[at]MarvalProjects.com(mailto:support@marvalglobal.com).
+                    N'hésitez pas à nous contacter si vous avez des questions ou si vous avez besoin d'aide. N'hésitez pas à nous contacter : [support[at]openproject.com(mailto:support@marvalglobal.com).
               item_5:
                 options:
                   name: Lots de travaux
@@ -493,9 +493,9 @@ fr:
         item_6:
           name: Bug
       welcome:
-        title: Bienvenue sur MarvalProjects !
+        title: Bienvenue sur OpenProject !
         text: |
-          MarvalProjects est le principal logiciel de gestion de projet open source. Il prend en charge la gestion de projets classiques, agiles et hybrides et vous donne un contrôle total sur vos données.
+          OpenProject est le principal logiciel de gestion de projet open source. Il prend en charge la gestion de projets classiques, agiles et hybrides et vous donne un contrôle total sur vos données.
 
           Fonctionnalités principales et cas d'utilisation :
 

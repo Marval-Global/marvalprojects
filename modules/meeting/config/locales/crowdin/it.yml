@@ -22,9 +22,9 @@
 #English strings go here for Rails i18n
 it:
   plugin_openproject_meeting:
-    name: "Riunione MarvalProjects"
+    name: "Riunione OpenProject"
     description: >-
-      Questo modulo aggiunge funzioni per supportare le riunioni del progetto a MarvalProjects. Gli incontri possono essere programmati selezionando gli invitati dello stesso progetto per partecipare alla riunione. Si può creare un ordine del giorno e inviarlo agli invitati. Dopo la riunione, i partecipanti possono essere selezionati e i verbali possono essere creati in base all'ordine del giorno. Infine, i verbali possono essere inviati a tutti i partecipanti e agli invitati.
+      Questo modulo aggiunge funzioni per supportare le riunioni del progetto a OpenProject. Gli incontri possono essere programmati selezionando gli invitati dello stesso progetto per partecipare alla riunione. Si può creare un ordine del giorno e inviarlo agli invitati. Dopo la riunione, i partecipanti possono essere selezionati e i verbali possono essere creati in base all'ordine del giorno. Infine, i verbali possono essere inviati a tutti i partecipanti e agli invitati.
   activerecord:
     attributes:
       meeting:

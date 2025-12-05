@@ -1,7 +1,7 @@
 sv:
   plugin_openproject_webhooks:
-    name: "MarvalProjects Webhooks"
-    description: "Provides a plug-in API to support MarvalProjects webhooks for better 3rd party integration."
+    name: "OpenProject Webhooks"
+    description: "Provides a plug-in API to support OpenProject webhooks for better 3rd party integration."
   activerecord:
     attributes:
       webhooks/webhook:
@@ -66,4 +66,4 @@ sv:
           title: 'Valda projekt'
         secret:
           description: >
-            Om angiven används detta hemliga värde av MarvalProjects för att signera webhook-nyttolasten.
+            Om angiven används detta hemliga värde av OpenProject för att signera webhook-nyttolasten.

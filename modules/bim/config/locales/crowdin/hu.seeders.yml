@@ -71,7 +71,7 @@ hu:
         item_7:
           name: Szerkezeti Mérnökök
       welcome:
-        title: Üdvözöljük az MarvalProjects BIM kiadásában!
+        title: Üdvözöljük az OpenProject BIM kiadásában!
         text: |
           Nézze meg a demo projekteket, hogy néhány példával kezdhessen.
 
@@ -120,7 +120,7 @@ hu:
                 options:
                   name: Kezdés
                   text: |
-                    Örülünk, hogy csatlakoztál! Javasoljuk, hogy próbáljon ki néhány dolgot az MarvalProjects használatának megkezdéséhez.
+                    Örülünk, hogy csatlakoztál! Javasoljuk, hogy próbáljon ki néhány dolgot az OpenProject használatának megkezdéséhez.
 
                     Mielőtt azonban belevágna, tudnia kell, hogy ez a példaértékű projekt két különböző projektre oszlik:
 
@@ -138,7 +138,7 @@ hu:
                     7.  _Agilis munkavégzés? Tekintse meg vadonatúj tábláinkat:_ → Ugrás ide [Táblák]({{opSetting:base_url}}/projects/demo-építési-projekt/táblák)
 
                     Itt találja [Felhasználói útmutatónkat](https://www.openproject.org/docs/user-guide/).
-                    Kérjük, tudassa velünk, ha bármilyen kérdése van, vagy támogatásra van szüksége. Lépjen kapcsolatba velünk: [support\[at\\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Kérjük, tudassa velünk, ha bármilyen kérdése van, vagy támogatásra van szüksége. Lépjen kapcsolatba velünk: [support\[at\\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Tagok
@@ -179,7 +179,7 @@ hu:
                 options:
                   name: Kezdés
                   text: |
-                    Örülünk, hogy csatlakoztál! Javasoljuk, hogy próbáljon ki néhány dolgot az MarvalProjects használatának megkezdéséhez.
+                    Örülünk, hogy csatlakoztál! Javasoljuk, hogy próbáljon ki néhány dolgot az OpenProject használatának megkezdéséhez.
 
                     Itt megtalálja a klasszikus szerepköröket, néhány munkafolyamatot és munkacsomagot az építési projektjéhez.
 
@@ -193,7 +193,7 @@ hu:
                     6.  _Agilis munkavégzés? Hozzon létre egy új táblát:_ → Menjen a [Táblák]({{opSetting:base_url}}/projects/demo-tervező-építő-projekt/táblák)
 
                     Itt találja [Felhasználói útmutatónkat](https://www.openproject.org/docs/user-guide/).
-                    Kérjük, tudassa velünk, ha bármilyen kérdése van, vagy támogatásra van szüksége. Lépjen kapcsolatba velünk: [support\[at\\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Kérjük, tudassa velünk, ha bármilyen kérdése van, vagy támogatásra van szüksége. Lépjen kapcsolatba velünk: [support\[at\\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Tagok
@@ -448,7 +448,7 @@ hu:
                     9.  _Working agile? Create a new board:_ → Go to [Boards]({{opSetting:base_url}}/projects/demo-bim-project/boards)
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Tagok
@@ -723,7 +723,7 @@ hu:
                     8.  _You love the agile approach? Create a board:_ → Go to [Boards]({{opSetting:base_url}}/projects/demo-bcf-management-project/boards).
 
                     Here you will find our [User Guides](https://www.openproject.org/docs/user-guide/).
-                    Please let us know if you have any questions or need support. Contact us: [support\[at\]MarvalProjects.com](mailto:support@marvalglobal.com).
+                    Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@marvalglobal.com).
               item_4:
                 options:
                   name: Tagok

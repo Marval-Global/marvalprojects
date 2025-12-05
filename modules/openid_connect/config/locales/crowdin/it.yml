@@ -1,7 +1,7 @@
 it:
   plugin_openproject_openid_connect:
-    name: "OpenID Connect MarvalProjects"
-    description: "Aggiunge i provider di strategia OmniAuth OpenID Connect a MarvalProjects."
+    name: "OpenID Connect OpenProject"
+    description: "Aggiunge i provider di strategia OmniAuth OpenID Connect a OpenProject."
   logout_warning: >
     Sei stato disconnesso. Il contenuto di qualsiasi modulo che invii potrebbe essere perso. Per favore [accedi].
   activerecord:
@@ -53,7 +53,7 @@ it:
     menu_title: OpenID provider
     delete_title: "Elimina fornitore OpenID Connect"
     instructions:
-      redirect_url: Questo è l'URL di reindirizzamento che il fornitore OpenID Connect deve utilizzare per reindirizzare a MarvalProjects dopo un accesso riuscito.
+      redirect_url: Questo è l'URL di reindirizzamento che il fornitore OpenID Connect deve utilizzare per reindirizzare a OpenProject dopo un accesso riuscito.
       endpoint_url: L'URL dell'endpoint fornito dal fornitore OpenID Connect
       metadata_none: Non ho queste informazioni
       metadata_url: Ho un URL endpoint di ricerca
@@ -93,7 +93,7 @@ it:
         name: Personalizzato
       upsell:
         title: "Single Sign-On (SSO) con connessione OpenID"
-        description: Connetti MarvalProjects a un fornitore di identità OpenID connect
+        description: Connetti OpenProject a un fornitore di identità OpenID connect
       label_add_new: Aggiungi un nuovo provider OpenID
       label_edit: Modifica provider OpenID %{name}
       label_empty_title: Nessun fornitore OpenID configurato.
@@ -105,7 +105,7 @@ it:
       label_configuration_details: Metadati
       label_client_details: Dettagli client
       label_attribute_mapping: Mappatura attributi
-      client_details_description: Dettagli di configurazione di MarvalProjects come client OIDC
+      client_details_description: Dettagli di configurazione di OpenProject come client OIDC
       no_results_table: Non è stato definito alcun provider.
       plural: OpenID provider
       singular: Provider OpenID
@@ -117,7 +117,7 @@ it:
         configuration_metadata: Queste informazioni sono state precompilate utilizzando gli endpount di ricerca forniti. Nella maggior parte dei casi, non è necessario modificarle.
         configuration: Dettagli di configurazione del fornitore OpenID Connect
         display_name: Il nome visualizzato visibile agli utenti.
-        attribute_mapping: Configura la mappatura degli attributi tra MarvalProjects e il fornitore OpenID Connect.
+        attribute_mapping: Configura la mappatura degli attributi tra OpenProject e il fornitore OpenID Connect.
         claims: Effettua ulteriori richieste per l'ID token o la risposta userinfo.
     setting_instructions:
       limit_self_registration: >

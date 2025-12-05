@@ -21,8 +21,8 @@
 #++
 uk:
   plugin_openproject_backlogs:
-    name: "Невиконані завдання в MarvalProjects"
-    description: "Цей модуль додає функції, завдяки яким agile-команди можуть працювати над проєктами Scrum в MarvalProjects."
+    name: "Невиконані завдання в OpenProject"
+    description: "Цей модуль додає функції, завдяки яким agile-команди можуть працювати над проєктами Scrum в OpenProject."
   activerecord:
     attributes:
       work_package:

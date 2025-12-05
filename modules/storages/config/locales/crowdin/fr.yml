@@ -56,10 +56,10 @@ fr:
           attributes:
             host:
               authorization_header_missing: n'est pas entièrement configuré. L'instance Nextcloud ne reçoit pas l'en-tête "Authorization", ce qui est nécessaire pour une autorisation basée sur un jeton Bearer des requêtes API. Veuillez vérifier la configuration de votre serveur HTTP.
-              cannot_be_connected_to: n'a pas pu être atteint. Veuillez vous assurer que l'hôte est joignable et que l'application d'intégration MarvalProjects est installée.
+              cannot_be_connected_to: n'a pas pu être atteint. Veuillez vous assurer que l'hôte est joignable et que l'application d'intégration OpenProject est installée.
               minimal_nextcloud_version_unmet: ne répond pas aux exigences minimales de version (doit être Nextcloud 23 ou supérieur)
               not_nextcloud_server: n'est pas un serveur Nextcloud
-              op_application_not_installed: semble ne pas avoir installé l'application "Intégration MarvalProjects" . Veuillez d'abord l'installer puis réessayer.
+              op_application_not_installed: semble ne pas avoir installé l'application "Intégration OpenProject" . Veuillez d'abord l'installer puis réessayer.
             password:
               invalid_password: n'est pas valide.
               unknown_error: n'a pas pu être validé. Veuillez vérifier votre connexion à l'espace de stockage et réessayez.
@@ -120,15 +120,15 @@ fr:
         rename_project_folder: 'Renommer le dossier du projet géré :'
     errors:
       messages:
-        error: Une erreur inattendue s'est produite. Veuillez consulter les journaux d'MarvalProjects pour obtenir plus d'informations ou contactez un administrateur
-        unauthorized: MarvalProjects n'a pas pu s'authentifier auprès du fournisseur de stockage. Veuillez vous assurer que vous y avez accès.
+        error: Une erreur inattendue s'est produite. Veuillez consulter les journaux d'OpenProject pour obtenir plus d'informations ou contactez un administrateur
+        unauthorized: OpenProject n'a pas pu s'authentifier auprès du fournisseur de stockage. Veuillez vous assurer que vous y avez accès.
       models:
         copy_project_folders_service:
           conflict: Le dossier %{destination_path} existe déjà. Interruption du processus pour éviter les écrasements.
-          error: Une erreur inattendue s'est produite. Veuillez vérifier les logs MarvalProjects pour plus d'informations ou contacter un administrateur
-          forbidden: MarvalProjects n'a pas pu accéder au dossier source. Veuillez vérifier la configuration de vos permissions sur le fournisseur de stockage
+          error: Une erreur inattendue s'est produite. Veuillez vérifier les logs OpenProject pour plus d'informations ou contacter un administrateur
+          forbidden: OpenProject n'a pas pu accéder au dossier source. Veuillez vérifier la configuration de vos permissions sur le fournisseur de stockage
           not_found: L'emplacement du modèle source %{source_path} n'a pas été trouvé.
-          unauthorized: MarvalProjects n'a pas pu s'authentifier avec le fournisseur de stockage. Veuillez vérifier votre configuration de stockage
+          unauthorized: OpenProject n'a pas pu s'authentifier avec le fournisseur de stockage. Veuillez vérifier votre configuration de stockage
         nextcloud_sync_service:
           attributes:
             add_user_to_group:
@@ -149,16 +149,16 @@ fr:
               conflict: 'L''utilisateur %{user} n''a pas pu être retiré du groupe %{group} pour la raison suivante : %{reason}'
               failed_to_remove: 'L''utilisateur %{user} n''a pas pu être retiré du groupe %{group} pour la raison suivante : %{reason}'
             rename_project_folder:
-              conflict: MarvalProjects n'a pas pu renommer le dossier du projet en %{current_path} car un dossier portant le même nom existe déjà.
-              forbidden: L'utilisateur d'MarvalProjects n'a pas accès au dossier %{current_path}.
+              conflict: OpenProject n'a pas pu renommer le dossier du projet en %{current_path} car un dossier portant le même nom existe déjà.
+              forbidden: L'utilisateur d'OpenProject n'a pas accès au dossier %{current_path}.
               not_found: "%{current_path} n'a pas été trouvé."
             set_folders_permissions:
               permission_not_set: n'a pas pu définir les autorisations sur %{path}.
-          error: Une erreur inattendue s'est produite. Veuillez vous assurer que votre instance Nextcloud est joignable et vérifiez les journaux des processus MarvalProjects pour obtenir plus d'informations
+          error: Une erreur inattendue s'est produite. Veuillez vous assurer que votre instance Nextcloud est joignable et vérifiez les journaux des processus OpenProject pour obtenir plus d'informations
           group_does_not_exist: "%{group} n'existe pas. Vérifiez la configuration de votre instance Nextcloud."
-          insufficient_privileges: MarvalProjects n'a pas assez de privilèges pour ajouter %{user} au groupe %{group}. Vérifiez les paramètres de votre groupe dans Nextcloud.
+          insufficient_privileges: OpenProject n'a pas assez de privilèges pour ajouter %{user} au groupe %{group}. Vérifiez les paramètres de votre groupe dans Nextcloud.
           not_allowed: Nextcloud bloque la demande.
-          unauthorized: MarvalProjects n'a pas pu se synchroniser avec Nextcloud. Veuillez vérifier votre espace de stockage et la configuration de Nextcloud.
+          unauthorized: OpenProject n'a pas pu se synchroniser avec Nextcloud. Veuillez vérifier votre espace de stockage et la configuration de Nextcloud.
           user_does_not_exist: "%{user} n'existe pas dans Nextcloud."
         one_drive_sync_service:
           attributes:
@@ -168,16 +168,16 @@ fr:
             hide_inactive_folders:
               permission_not_set: n'a pas pu définir les autorisations sur %{path}.
             remote_folders:
-              request_error: MarvalProjects n'a pas pu accéder à votre lecteur %{drive_id}. Veuillez vérifier si votre configuration de stockage est correcte.
+              request_error: OpenProject n'a pas pu accéder à votre lecteur %{drive_id}. Veuillez vérifier si votre configuration de stockage est correcte.
             rename_project_folder:
-              conflict: MarvalProjects n'a pas pu renommer le dossier %{current_path} en %{project_folder_name}, car un dossier portant le même nom existe déjà.
-              forbidden: MarvalProjects n'a pas accès à %{current_path} pour le renommer.
+              conflict: OpenProject n'a pas pu renommer le dossier %{current_path} en %{project_folder_name}, car un dossier portant le même nom existe déjà.
+              forbidden: OpenProject n'a pas accès à %{current_path} pour le renommer.
               not_found: "%{current_path} n'a pas été trouvé."
             set_folders_permissions:
               permission_not_set: n'a pas pu définir les autorisations sur %{path}.
-          error: Une erreur inattendue s'est produite. Veuillez vous assurer que OneDrive/SharePoint est joignable et vérifiez les journaux des processus MarvalProjects pour obtenir plus d'informations
-          not_allowed: L'application MarvalProjects n'a pas été autorisée à accéder à votre lecteur OneDrive. Veuillez vérifier les autorisations définies dans l'application Azure.
-          unauthorized: MarvalProjects n'a pas pu se synchroniser avec OneDrive. Veuillez vérifier votre espace de stockage et la configuration de l'application Azure.
+          error: Une erreur inattendue s'est produite. Veuillez vous assurer que OneDrive/SharePoint est joignable et vérifiez les journaux des processus OpenProject pour obtenir plus d'informations
+          not_allowed: L'application OpenProject n'a pas été autorisée à accéder à votre lecteur OneDrive. Veuillez vérifier les autorisations définies dans l'application Azure.
+          unauthorized: OpenProject n'a pas pu se synchroniser avec OneDrive. Veuillez vérifier votre espace de stockage et la configuration de l'application Azure.
           user_does_not_exist: "%{user} n'existe pas dans Nextcloud."
         upload_link_service:
           not_found: Le dossier de destination %{folder} n'a pas été trouvé sur %{storage_name}.
@@ -187,17 +187,17 @@ fr:
       done_complete_setup: Configuration terminée.
       done_continue: Terminé, continuer
       open_storage: Ouvrir le stockage de fichiers
-      replace_oauth_application: Remplacer OAuth MarvalProjects
+      replace_oauth_application: Remplacer OAuth OpenProject
       replace_oauth_client: Remplacer OAuth %{provider_type}
       save_and_continue: Sauvegarder et poursuivre
       select_folder: Sélectionner un dossier
     configuration_checks:
       oauth_client_incomplete:
-        nextcloud: Autoriser MarvalProjects à accéder aux données Nextcloud en utilisant OAuth.
-        one_drive: Autoriser MarvalProjects à accéder aux données Azure en utilisant OAuth pour connecter OneDrive/Sharepoint.
+        nextcloud: Autoriser OpenProject à accéder aux données Nextcloud en utilisant OAuth.
+        one_drive: Autoriser OpenProject à accéder aux données Azure en utilisant OAuth pour connecter OneDrive/Sharepoint.
       redirect_uri_incomplete:
         one_drive: Complétez la configuration avec la redirection de l'URI correcte.
-    confirm_replace_oauth_application: Cette action réinitialisera les informations d'identification OAuth actuelles. Après confirmation, vous devrez saisir de nouvelles informations d'identification auprès du fournisseur de stockage et tous les utilisateurs devront à nouveau s'authentifier sur MarvalProjects. Êtes-vous sûr de vouloir continuer ?
+    confirm_replace_oauth_application: Cette action réinitialisera les informations d'identification OAuth actuelles. Après confirmation, vous devrez saisir de nouvelles informations d'identification auprès du fournisseur de stockage et tous les utilisateurs devront à nouveau s'authentifier sur OpenProject. Êtes-vous sûr de vouloir continuer ?
     confirm_replace_oauth_client: Cette action réinitialisera les informations d'identification OAuth actuelles. Après confirmation, vous devrez saisir de nouvelles informations d'identification auprès du fournisseur de stockage et tous les utilisateurs devront à nouveau s'authentifier auprès de %{provider_type} . Êtes-vous sûr de vouloir continuer ?
     delete_warning:
       input_delete_confirmation: Saisissez le nom de l'espace de stockage des fichiers %{file_storage} pour confirmer la suppression.
@@ -212,7 +212,7 @@ fr:
     dependencies:
       nextcloud:
         group_folders_app: Dossiers de groupe
-        integration_app: Intégration MarvalProjects
+        integration_app: Intégration OpenProject
     enabled_in_projects:
       setup_incomplete_description: La configuration de cet espace de stockage est incomplète. Veuillez compléter la configuration avant de l'activer dans plusieurs projets.
       setup_incomplete_header: La configuration du stockage est incomplète
@@ -220,7 +220,7 @@ fr:
     file_storage_view:
       access_management:
         automatic_management: Gestion automatique des accès et des dossiers
-        automatic_management_description: Laissez MarvalProjects créer automatiquement des dossiers par projet et gérer l'accès des utilisateurs. Cette méthode est recommandée pour s'assurer que chaque membre de l'équipe dispose toujours des autorisations d'accès correctes.
+        automatic_management_description: Laissez OpenProject créer automatiquement des dossiers par projet et gérer l'accès des utilisateurs. Cette méthode est recommandée pour s'assurer que chaque membre de l'équipe dispose toujours des autorisations d'accès correctes.
         description: Sélectionnez le type de gestion de l'accès des utilisateurs et de la création des dossiers. Nous vous recommandons d'utiliser l'option Gestion automatique des accès pour disposer d'une structure plus organisée et garantir l'accès à tous les utilisateurs concernés.
         manual_management: Gestion manuelle des accès et des dossiers
         manual_management_description: Créez et gérez manuellement des dossiers par projet. Vous devez vous assurer manuellement que les utilisateurs concernés y ont accès.
@@ -231,7 +231,7 @@ fr:
       general_information: Informations générales
       oauth_configuration: Configuration OAuth
       one_drive_oauth: OAuth Azure
-      openproject_oauth: OAuth MarvalProjects
+      openproject_oauth: OAuth OpenProject
       project_folders: Dossiers du projet
       redirect_uri: URI de redirection
       storage_audience_blank: Aucune audience n'a été configurée.
@@ -294,7 +294,7 @@ fr:
         nc_host_not_found: Aucun serveur Nextcloud n'a été trouvé à l'adresse configurée. Veuillez vérifier la configuration.
         nc_oauth_request_not_found: Le point de terminaison pour récupérer l'utilisateur actuellement connecté n'a pas été trouvé. Veuillez vérifier les journaux du serveur pour obtenir plus d'informations.
         nc_oauth_request_unauthorized: L'utilisateur actuel n'est pas autorisé à accéder à l'espace de stockage de fichiers distant. Veuillez consulter les journaux du serveur pour obtenir plus d'informations.
-        nc_oauth_token_missing: MarvalProjects ne peut pas tester la communication au niveau utilisateur avec Nextcloud, car l'utilisateur n'a pas encore lié son compte Nextcloud.
+        nc_oauth_token_missing: OpenProject ne peut pas tester la communication au niveau utilisateur avec Nextcloud, car l'utilisateur n'a pas encore lié son compte Nextcloud.
         nc_unexpected_content: Contenu inattendu trouvé dans le dossier du groupe géré.
         nc_userless_access_denied: Le mot de passe de l'application configurée n'est pas valide.
         not_configured: La connexion n'a pas pu être validée. Veuillez d'abord terminer la configuration.
@@ -304,7 +304,7 @@ fr:
         od_drive_id_not_found: L'identifiant du lecteur configuré est introuvable. Veuillez vérifier la configuration.
         od_oauth_request_not_found: Le point de terminaison pour récupérer l'utilisateur actuellement connecté n'a pas été trouvé. Veuillez vérifier les journaux du serveur pour obtenir plus d'informations.
         od_oauth_request_unauthorized: L'utilisateur actuel n'est pas autorisé à accéder à l'espace de stockage de fichiers distant. Veuillez consulter les journaux du serveur pour obtenir plus d'informations.
-        od_oauth_token_missing: MarvalProjects ne peut pas tester la communication au niveau utilisateur avec OneDrive/SharePoint, car l'utilisateur n'a pas encore lié son compte Microsoft.
+        od_oauth_token_missing: OpenProject ne peut pas tester la communication au niveau utilisateur avec OneDrive/SharePoint, car l'utilisateur n'a pas encore lié son compte Microsoft.
         od_tenant_id_wrong: L'identifiant du répertoire (locataire) configuré n'est pas valide. Veuillez vérifier la configuration.
         od_test_folder_exists: Le dossier %{folder_name} requis pour le test existe déjà. Veuillez le supprimer et réessayer.
         od_unexpected_content: Contenu inattendu trouvé dans le lecteur.
@@ -346,7 +346,7 @@ fr:
       project_folder_bulk: Le dossier du projet est le dossier par défaut pour les téléchargements de fichiers pour tous les projets sélectionnés. Vous pouvez le modifier individuellement dans les paramètres de chaque projet. Les utilisateurs peuvent néanmoins télécharger des fichiers vers d'autres emplacements.
     instructions:
       all_available_storages_already_added: Tous les espaces de stockage disponibles sont déjà ajoutés au projet.
-      authentication_method: La façon dont les requêtes entre MarvalProjects et le stockage sont authentifiées.
+      authentication_method: La façon dont les requêtes entre OpenProject et le stockage sont authentifiées.
       automatic_folder: Cela créera automatiquement un dossier racine pour ce projet et gérera les autorisations d'accès pour chaque membre du projet.
       empty_project_folder_validation: La sélection d'un dossier est nécessaire pour continuer.
       existing_manual_folder: Vous pouvez désigner un dossier existant comme dossier racine pour ce projet. Les permissions ne sont cependant pas gérées automatiquement, l'administrateur doit s'assurer manuellement que les utilisateurs pertinents y ont accès. Le dossier sélectionné peut être utilisé par plusieurs projets.
@@ -355,8 +355,8 @@ fr:
       name: Donnez à votre espace de stockage un nom pour permettre aux utilisateurs de le différencier des autres espaces de stockage.
       new_storage: Lisez notre documentation sur <a target='_blank' href='%{provider_link}'>la configuration d'une intégration avec %{provider_name} pour le stockage de fichiers </a> pour plus d'informations.
       nextcloud:
-        application_link_text: application « Intégration MarvalProjects»
-        integration: Administration Nextcloud / MarvalProjects
+        application_link_text: application « Intégration OpenProject»
+        integration: Administration Nextcloud / OpenProject
         oauth_configuration: Copiez ces valeurs depuis %{application_link_text}.
         provider_configuration: Veuillez vous assurer que vous avez les droits d'administration dans votre instance Nextcloud et que le %{application_link_text} est installé avant de procéder.
         storage_audience: L'identifiant du client que l'instance Nextcloud utilise pour communiquer avec le fournisseur d'identification.
@@ -385,7 +385,7 @@ fr:
       setting_up_storages: Pour configurer des espaces de stockage de fichiers, veuillez visiter
       setting_up_storages_non_admin: Les administrateurs peuvent configurer des espaces de stockage de fichiers dans Administration - Espaces de stockage de fichiers.
       type: 'Veuillez vous assurer que vous avez les privilèges d''administration dans votre instance Nextcloud et que l''application suivante est installée avant de procéder à l''installation :'
-      type_link_text: "« Intégration MarvalProjects »"
+      type_link_text: "« Intégration OpenProject »"
     label_active: Actif
     label_add_new_storage: Ajouter un nouveau stockage
     label_automatic_folder: Nouveau dossier avec permissions gérées automatiquement
@@ -409,8 +409,8 @@ fr:
     label_no_selected_folder: Aucun dossier sélectionné
     label_no_specific_folder: Aucun dossier spécifique
     label_oauth_client_id: ID client OAuth
-    label_openproject_oauth_application_id: ID client OAuth MarvalProjects
-    label_openproject_oauth_application_secret: Clé secrète du client OAuth d'MarvalProjects
+    label_openproject_oauth_application_id: ID client OAuth OpenProject
+    label_openproject_oauth_application_secret: Clé secrète du client OAuth d'OpenProject
     label_project_folder: Dossier du projet
     label_provider: Fournisseur
     label_redirect_uri: URI de redirection
@@ -450,7 +450,7 @@ fr:
         title: Configuration de l'intégration terminée
       timeout:
         link_text: état de santé de la configuration de stockage de fichiers
-        subtitle: MarvalProjects n'a pas pu vous donner accès au dossier du projet dans le délai imparti. Veuillez réessayer.<br><br> Si ce problème persiste, veuillez contacter votre administrateur MarvalProjects pour vérifier %{storages_health_link}.
+        subtitle: OpenProject n'a pas pu vous donner accès au dossier du projet dans le délai imparti. Veuillez réessayer.<br><br> Si ce problème persiste, veuillez contacter votre administrateur OpenProject pour vérifier %{storages_health_link}.
       waiting:
         subtitle: Un instant, s'il vous plaît, cela peut prendre un peu de temps...
         title: Nous configurons vos permissions sur le dossier du projet.
@@ -460,8 +460,8 @@ fr:
         subtitle: Ajouter un stockage de fichiers externe pour télécharger, lier et gérer les fichiers dans les lots de travaux.
       managed_project_folders:
         subtitle: |-
-          Laisser MarvalProjects créer automatiquement des dossiers par projet. Cette option est recommandée, car elle garantit que chaque membre de l'équipe dispose toujours des autorisations d'accès correctes.
-        subtitle_short: Laisser MarvalProjects créer automatiquement des dossiers par projet.
+          Laisser OpenProject créer automatiquement des dossiers par projet. Cette option est recommandée, car elle garantit que chaque membre de l'équipe dispose toujours des autorisations d'accès correctes.
+        subtitle_short: Laisser OpenProject créer automatiquement des dossiers par projet.
         title: Répertoires de projet gérés automatiquement
       project_settings:
         delete: Supprimer l'espace de stockage de fichiers
@@ -495,10 +495,10 @@ fr:
     storage_audience:
       documentation_intro: Veuillez lire notre documentation pour en savoir plus sur les options suivantes et la configuration du fournisseur d'identité.
       idp:
-        helptext: MarvalProjects utilisera le jeton d'accès reçu par le fournisseur d'identité lors de la connexion pour authentifier les requêtes d'accès à l'espace de stockage. MarvalProjects n'essaiera pas d'obtenir un autre jeton.
+        helptext: OpenProject utilisera le jeton d'accès reçu par le fournisseur d'identité lors de la connexion pour authentifier les requêtes d'accès à l'espace de stockage. OpenProject n'essaiera pas d'obtenir un autre jeton.
         label: Utiliser le jeton d'accès obtenu lors de la connexion de l'utilisateur
       manual:
-        helptext: MarvalProjects échangera un jeton avec le fournisseur d'identité pour l'audience donnée.
+        helptext: OpenProject échangera un jeton avec le fournisseur d'identité pour l'audience donnée.
         label: Spécifiez manuellement l'audience pour laquelle échanger le jeton d'accès
     storage_list_blank_slate:
       description: Ajoutez un stockage pour les voir ici.
@@ -506,5 +506,5 @@ fr:
     successful_storage_connection: Espace de stockage connecté avec succès ! N'oubliez pas d'activer le stockage dans l'onglet Projets des projets dans lesquels vous souhaitez l'utiliser.
     upsell:
       description: |-
-        Intégrez votre OneDrive/SharePoint en tant que espace de stockage de fichiers avec MarvalProjects. Téléchargez des fichiers et liez-les directement aux lots de travaux d'un projet.
+        Intégrez votre OneDrive/SharePoint en tant que espace de stockage de fichiers avec OpenProject. Téléchargez des fichiers et liez-les directement aux lots de travaux d'un projet.
       title: Intégration de OneDrive

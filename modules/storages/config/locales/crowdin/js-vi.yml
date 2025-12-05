@@ -73,12 +73,12 @@ vi:
           403: >
             Tệp của bạn (%{fileName}) không thể được tải lên do hạn chế của hệ thống. Vui lòng liên hệ với quản trị viên của bạn để biết thêm thông tin.
           413: >
-            Tệp của bạn (%{fileName}) lớn hơn mức tối đa mà MarvalProjects có thể tải lên đến %{storageType}. Bạn có thể tải lên trực tiếp vào %{storageType} trước và sau đó liên kết tệp.
+            Tệp của bạn (%{fileName}) lớn hơn mức tối đa mà OpenProject có thể tải lên đến %{storageType}. Bạn có thể tải lên trực tiếp vào %{storageType} trước và sau đó liên kết tệp.
           507: >
             Tệp của bạn (%{fileName}) lớn hơn hạn ngạch lưu trữ cho phép. Liên hệ với quản trị viên của bạn để thay đổi hạn ngạch này.
           detail:
             nextcloud: >
-              Vui lòng kiểm tra rằng phiên bản mới nhất của ứng dụng Nextcloud "Tích hợp MarvalProjects" đã được cài đặt và liên hệ với quản trị viên của bạn để biết thêm thông tin.
+              Vui lòng kiểm tra rằng phiên bản mới nhất của ứng dụng Nextcloud "Tích hợp OpenProject" đã được cài đặt và liên hệ với quản trị viên của bạn để biết thêm thông tin.
         link_uploaded_file_error: >
           Đã xảy ra lỗi khi liên kết tệp vừa tải lên '%{fileName}' với gói công việc %{workPackageId}.
         tooltip:

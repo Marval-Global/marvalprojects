@@ -52,7 +52,7 @@ nl:
         Een nieuwe back-up zal elke vorige overschrijven. Alleen een beperkt aantal back-ups per dag kunnen worden aangevraagd.
       last_backup: Laatste back-up
       last_backup_from: Laatste back-up van
-      title: MarvalProjects back-uppen
+      title: OpenProject back-uppen
       options: Opties
       include_attachments: Inclusief bijlagen
       download_backup: Back-up downloaden
@@ -510,7 +510,7 @@ nl:
         next: "Volgende"
         got_it: "Begrepen"
       steps:
-        help_menu: "Het Help (?) menu biedt <b>extra hulpbronnen</b>. Hier vindt u een gebruikershandleiding, handige how-to videos en meer. <br> Veel plezier met uw werk met MarvalProjects!"
+        help_menu: "Het Help (?) menu biedt <b>extra hulpbronnen</b>. Hier vindt u een gebruikershandleiding, handige how-to videos en meer. <br> Veel plezier met uw werk met OpenProject!"
         members: "Nodig nieuwe <b>leden</b> uit om deel te nemen aan uw project."
         quick_add_button: "Klik op het plus (+) pictogram in de koptekst navigatie om <b>een nieuw project te maken</b> of <b>collega's uit te nodigen</b>."
         sidebar_arrow: "Gebruik de terug pijl in de linkerbovenhoek om terug te keren naar het project <b>hoofdmenu</b>."

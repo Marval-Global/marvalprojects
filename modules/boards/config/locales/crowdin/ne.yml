@@ -1,7 +1,7 @@
 #English strings go here
 ne:
   plugin_openproject_boards:
-    name: "MarvalProjects Boards"
+    name: "OpenProject Boards"
     description: "Provides board views."
   permission_show_board_views: "View boards"
   permission_manage_board_views: "Manage boards"
