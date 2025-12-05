@@ -77,6 +77,19 @@ module EnvData
           design_color.save!
         end
       end
+
+      # Seed font variables
+      font_variables = ["body-font-family", "title-font-family", "subtitle-font-family", "section-header-font-family"]
+      font_variables.each do |variable|
+        key = variable
+        value = Setting.seed_design[key]
+
+        if value.present?
+          design_color = DesignColor.find_or_initialize_by(variable:)
+          design_color.hexcode = value
+          design_color.save!
+        end
+      end
     end
 
     def seed_export_color(custom_style)

@@ -30,6 +30,9 @@ See COPYRIGHT and LICENSE files for more details.
 <style type="text/css">
     :root {
     <% DesignColor.overwritten.each do |design_color| %>
+        <% if design_color.variable.end_with?('-font-family') %>
+        --<%= design_color.variable %>: '<%= design_color.hexcode %>', sans-serif;
+        <% end %>
         --<%= design_color.variable %>: <%= design_color.hexcode %>;
     <% if design_color.variable == "header-bg-color" %>
       --header-item-font-color: <%= design_color.contrasting_font_color %>;
