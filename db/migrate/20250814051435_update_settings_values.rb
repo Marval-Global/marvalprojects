@@ -2,11 +2,11 @@
 
 class UpdateSettingsValues < ActiveRecord::Migration[8.0]
   def up
-    update_setting('app_title', 'MarvalProjects')
-    update_setting('mail_from', 'MarvalProjects@example.net')
-    update_setting('software_name', 'MarvalProjects')
-    update_setting('welcome_title', 'Welcome to MarvalProjects!')
-    update_setting('welcome_text', <<~TEXT)
+    update_setting("app_title", "MarvalProjects")
+    update_setting("mail_from", "MarvalProjects@example.net")
+    update_setting("software_name", "MarvalProjects")
+    update_setting("welcome_title", "Welcome to MarvalProjects!")
+    update_setting("welcome_text", <<~TEXT)
       <p>MarvalProjects is the leading open source project management software. It supports classic, agile, and hybrid project management and gives you full control over your data.</p>
 
       <p><strong>Welcome to the future of project management.</strong></p>
@@ -14,7 +14,7 @@ class UpdateSettingsValues < ActiveRecord::Migration[8.0]
       <p>For Admins: You can change this welcome text <a href="{{opSetting:base_url}}/admin/settings/general">here</a>.</p>
     TEXT
 
-    update_user_firstname('admin', 'MarvalProjects')
+    update_user_firstname("admin", "MarvalProjects")
 
     new_value = <<~YAML
       ---
@@ -29,15 +29,14 @@ class UpdateSettingsValues < ActiveRecord::Migration[8.0]
       SET value = '#{new_value.gsub("'", "''")}'
       WHERE name = 'consent_info';
     SQL
-    
   end
 
   def down
-    update_setting('app_title', 'MarvalProjects')
-    update_setting('mail_from', 'MarvalProjects@example.net')
-    update_setting('software_name', 'MarvalProjects')
-    update_setting('welcome_title', 'Welcome to MarvalProjects!')
-    update_setting('welcome_text', <<~TEXT)
+    update_setting("app_title", "MarvalProjects")
+    update_setting("mail_from", "MarvalProjects@example.net")
+    update_setting("software_name", "MarvalProjects")
+    update_setting("welcome_title", "Welcome to MarvalProjects!")
+    update_setting("welcome_text", <<~TEXT)
       <p>MarvalProjects is the leading open source project management software. It supports classic, agile, and hybrid project management and gives you full control over your data.</p>
 
       <p><strong>Welcome to the future of project management.</strong></p>
@@ -59,9 +58,7 @@ class UpdateSettingsValues < ActiveRecord::Migration[8.0]
       WHERE name = 'consent_info';
     SQL
 
-    update_user_firstname('admin', 'MarvalProjects')
-    
-    
+    update_user_firstname("admin", "MarvalProjects")
   end
 
   def update_setting(name, new_value)
@@ -80,11 +77,7 @@ class UpdateSettingsValues < ActiveRecord::Migration[8.0]
     SQL
   end
 
-
   def sanitize_sql(value)
     value.gsub("'", "''") # escape single quotes for SQL safety
   end
-
- 
 end
-
