@@ -2,7 +2,7 @@
 Returns the OpenProject image to be used including the respective registry and image tag.
 */}}
 {{- define "openproject.image" -}}
-{{ .Values.image.registry }}/{{ .Values.image.repository }}{{ if .Values.image.sha256 }}@sha256:{{ .Values.image.sha256 }}{{ else }}:{{ .Values.image.tag }}{{ end }}
+{{ .Values.image.registry }}/{{ .Values.image.repository }}{{ if .Values.image.sha256 }}@sha256:{{ .Values.image.sha256 }}{{ else }}:{{ .Values.image.tag | default .Chart.AppVersion }}{{ end }}
 {{- end -}}
 
 {{/*
