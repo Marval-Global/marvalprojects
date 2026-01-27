@@ -17,3 +17,7 @@ rm -rf "$tmp_path"
 mkdir -p "$tmp_path"
 chown -R $APP_USER:$APP_USER "$tmp_path"
 chmod g+rw "$tmp_path"
+
+# Set custom Marval logo for PDF exports
+echo "Setting Marval logo as PDF export logo..."
+bundle exec rake marval:set_export_logo
