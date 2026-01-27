@@ -50,7 +50,9 @@ cleanup:
 ## environment:
 ##   OPENPROJECT_ATTACHMENT__MAX__SIZE: 5120
 #
-environment: {}
+environment:
+  ## Hide enterprise banners and advertisements
+  OPENPROJECT_EE__HIDE__BANNERS: "true"
 
 # Optionally specify an extra list of additional volumes.
 extraVolumes: []
