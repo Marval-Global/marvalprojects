@@ -10,6 +10,7 @@ persistence:
   enabled: false
 
 environment:
+  environment:
   OPENPROJECT_APP_TITLE: MarvalProjects
   OPENPROJECT_SEED_DESIGN_PRIMARY__BUTTON__COLOR: #7968ae
   OPENPROJECT_SEED_DESIGN_ACCENT__COLOR: #f15d5e
@@ -21,8 +22,12 @@ environment:
   OPENPROJECT_SEED_DESIGN_BODY__FONT__FAMILY: Montserrat
   OPENPROJECT_SEED_DESIGN_TITLE__FONT__FAMILY: Montserrat
   OPENPROJECT_SEED_DESIGN_SUBTITLE__FONT__FAMILY: Montserrat
-  OPENPROJECT_SEED_DESIGN_SECTION__HEADER__FONT__FAMILY: Montserrat     
+  OPENPROJECT_SEED_DESIGN_SECTION__HEADER__FONT__FAMILY: Montserrat 
+  OPENPROJECT_EE__HIDE__BANNERS: "true"
+  OPENPROJECT_SECURITY_BADGE_DISPLAYED: "false"
+  OPENPROJECT_SOFTWARE_NAME: "MarvalProjects"
 
+  
 ingress:
   enabled: true
   letsEncryptUrl: https://acme-v02.api.letsencrypt.org/directory
@@ -62,7 +67,7 @@ image:
   registry: "ukcomarvalnextgen.azurecr.io"
   repository: "marvalproject"
   imagePullPolicy: "Always"
-  tag: "1.0.0.32215"
+  tag: ""
 
 memcached: 
   bundled: true
