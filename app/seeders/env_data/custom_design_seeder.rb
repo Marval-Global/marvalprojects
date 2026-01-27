@@ -57,6 +57,8 @@ module EnvData
           custom_style.public_send(:"remove_#{key}")
         elsif data.match?(/^https?:\/\//)
           seed_remote_url(custom_style, key, data)
+        elsif data.match?(%r{^/|\./|~/})  # Local file path
+          seed_local_file(custom_style, key, data)
         else
           io = Base64StringIO.new(data, key.to_s)
           custom_style.public_send(:"#{key}=", io)
@@ -102,6 +104,21 @@ module EnvData
       raise "Failed to set #{key} from #{url}: #{response}" unless response.status == 200
 
       build_attachable_file(key.to_s, response.body.to_s) do |file|
+        custom_style.public_send(:"#{key}=", file)
+        custom_style.save!
+      end
+    end
+
+    def seed_local_file(custom_style, key, file_path)
+      # Expand ~ to home directory if needed
+      expanded_path = File.expand_path(file_path)
+
+      unless File.exist?(expanded_path)
+        raise "Local file not found: #{expanded_path}"
+      end
+
+      file_content = File.read(expanded_path)
+      build_attachable_file(File.basename(expanded_path), file_content) do |file|
         custom_style.public_send(:"#{key}=", file)
         custom_style.save!
       end

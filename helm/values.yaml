@@ -57,6 +57,8 @@ environment:
   OPENPROJECT_SECURITY_BADGE_DISPLAYED: "false"
   ## Override software application name
   OPENPROJECT_SOFTWARE_NAME: "MarvalProjects"
+  ## Set custom export logo for PDF exports
+  OPENPROJECT_SEED_DESIGN_EXPORT__LOGO: "/app/app/assets/images/Marval_logo_colour.svg"
 
 # Optionally specify an extra list of additional volumes.
 extraVolumes: []
