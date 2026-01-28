@@ -127,19 +127,8 @@ export class ProjectSelectionComponent implements OnInit {
         description: this.I18n.t('js.invite_user_modal.type.placeholder.description'),
         disabled: false,
       });
-    } else {
-      this.typeOptions.push({
-        value: PrincipalType.Placeholder,
-        title: this.I18n.t('js.invite_user_modal.type.placeholder.title_no_ee'),
-        description: this.I18n.t('js.invite_user_modal.type.placeholder.description_no_ee', {
-          eeHref: this.bannersService.getEnterPriseEditionUrl({
-            referrer: 'placeholder-users',
-            hash: 'placeholder-users',
-          }),
-        }),
-        disabled: true,
-      });
     }
+    // Don't add the placeholder option at all when enterprise feature is not available
   }
 
   async onSubmit($e:Event):Promise<void> {
