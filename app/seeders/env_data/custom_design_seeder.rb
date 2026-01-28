@@ -137,7 +137,7 @@ module EnvData
 
         file = OpenProject::Files.build_uploaded_file(tempfile,
                                                       content_type,
-                                                      file_name: "#{file_name}.#{mime_type.preferred_extension}")
+                                                      file_name: "#{file_name}")
 
         yield(file)
       end
