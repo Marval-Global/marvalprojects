@@ -56,7 +56,6 @@ import { addFiltersToPath } from 'core-app/core/apiv3/helpers/add-filters-to-pat
 import { UserAutocompleterTemplateComponent } from 'core-app/shared/components/autocompleter/user-autocompleter/user-autocompleter-template.component';
 import { IUser } from 'core-app/core/state/principals/user.model';
 import { compareByAttribute } from 'core-app/shared/helpers/angular/tracking-functions';
-import { BannersService } from 'core-app/core/enterprise/banners.service';
 
 export const usersAutocompleterSelector = 'op-user-autocompleter';
 
@@ -100,8 +99,6 @@ export class UserAutocompleterComponent extends OpAutocompleterComponent<IUserAu
 
   @InjectField(OpInviteUserModalService) opInviteUserModalService:OpInviteUserModalService;
 
-  @InjectField(BannersService) bannersService:BannersService;
-
   getOptionsFn = this.getAvailableUsers.bind(this);
 
   ngOnInit():void {
@@ -137,12 +134,7 @@ export class UserAutocompleterComponent extends OpAutocompleterComponent<IUserAu
       .pipe(
         map((res) => _.uniqBy(res._embedded.elements, (el) => el._links.self?.href || el.id)),
         map((users) => {
-          // Filter out placeholder users if enterprise feature is not available
-          const filteredUsers = this.bannersService.allowsTo('placeholder_users')
-            ? users
-            : users.filter((user) => user._type !== 'PlaceholderUser');
-
-          const mapped:IUserAutocompleteItem[] = filteredUsers.map((user) => {
+          const mapped:IUserAutocompleteItem[] = users.map((user) => {
               return { id: user.id, name: user.name, href: user._links.self?.href, email: user.email };
           });
 
