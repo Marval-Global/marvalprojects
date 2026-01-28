@@ -112,8 +112,9 @@ module EnvData
     def seed_local_file(custom_style, key, file_path)
       # Expand ~ to home directory if needed
       expanded_path = File.expand_path(file_path)
-
+      print_status "    ↳ Expanding path: #{expanded_path}"
       unless File.exist?(expanded_path)
+        print_status "    ↳ File not found: #{expanded_path}"
         raise "Local file not found: #{expanded_path}"
       end
 
