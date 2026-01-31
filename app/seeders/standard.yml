@@ -74,6 +74,15 @@ projects:
     status_code: on_track
     t_status_explanation: All tasks are on schedule. The people involved know their tasks. The system is completely set up.
     t_description: This is a short summary of the goals of this demo project.
+    project_phases:
+      - definition: :default_project_phase_initiating
+        duration: 20
+      - definition: :default_project_phase_planning
+        duration: 30
+      - definition: :default_project_phase_executing
+        duration: 40
+      - definition: :default_project_phase_closing
+        duration: 10
     modules:
       - work_package_tracking
       - news
@@ -82,6 +91,7 @@ projects:
       - board_view
       - team_planner_view
       - meetings
+      - documents
     news:
       - t_title: Welcome to your demo project
         t_summary: |
@@ -380,6 +390,7 @@ projects:
       - work_package_tracking
       - gantt
       - board_view
+      - documents
     news:
       - t_title: Welcome to your Scrum demo project
         t_summary: |

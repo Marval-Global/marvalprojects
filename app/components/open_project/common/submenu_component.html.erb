@@ -5,6 +5,7 @@
             name: "search",
             label: I18n.t("label_search"),
             placeholder: I18n.t("label_search_by_name"),
+            "aria-label": I18n.t("label_search"),
             leading_visual: { icon: :search },
             visually_hide_label: true,
             classes: "op-submenu--search-input",
@@ -69,37 +70,31 @@
 
         <ul class="op-submenu--items"
             data-menus--submenu-target="container">
-        <% excluded_titles = ["Date alert", "Shared"] %>
+          <% menu_item.children.each do |child_item| %>
+            <li class="op-submenu--item" data-filter--filter-list-target="searchItem">
+              <% selected = child_item.selected ? "selected" : "" %>
+              <a class="op-submenu--item-action <%= selected %>" href="<%= child_item.href %>" data-test-selector="op-submenu--item-action">
+                <% if child_item.icon %>
+                  <%= render Primer::Beta::Octicon.new(icon: child_item.icon, classes: "op-submenu--item-icon") %>
+                <% end %>
+                <span class="op-submenu--item-title">
+                  <%= child_item.title %>
 
-        <% menu_item.children.each do |child_item| %>
-         <% unless excluded_titles.include?(child_item.title.to_s.strip) %>
-           <li class="op-submenu--item" data-filter--filter-list-target="searchItem">
-          <% selected = child_item.selected ? "selected" : "" %>
-          <a class="op-submenu--item-action <%= selected %>" href="<%= child_item.href %>" data-test-selector="op-submenu--item-action">
-            <% if child_item.icon %>
-              <%= render Primer::Beta::Octicon.new(icon: child_item.icon, classes: "op-submenu--item-icon") %>
-            <% end %>
+                  <% if child_item.show_enterprise_icon %>
+                    <%= render Primer::Beta::Octicon.new(icon: "op-enterprise-addons", "aria-label": I18n.t(:label_enterprise_edition), classes: "upsell-colored", ml: 2) %>
+                  <% end %>
 
-        <span class="op-submenu--item-title">
-          <%= child_item.title %>
+                  <% if child_item.favorited %>
+                    <%= render Primer::Beta::Octicon.new(icon: "star-fill", "aria-label": I18n.t(:label_favorite), classes: %w[op-submenu--item-mark op-primer--star-icon], ml: 2) %>
+                  <% end %>
+                </span>
 
-          <% if child_item.show_enterprise_icon %>
-            <%= render Primer::Beta::Octicon.new(icon: "op-enterprise-addons", "aria-label": I18n.t(:label_enterprise_edition), classes: "upsell-colored", ml: 2) %>
+                <% if child_item.count %>
+                  <span class="op-bubble op-bubble_alt_highlighting" data-test-selector="op-submenu--item-count"><%= child_item.count %></span>
+                <% end %>
+              </a>
+            </li>
           <% end %>
-
-          <% if child_item.favored %>
-            <%= render Primer::Beta::Octicon.new(icon: "star-fill", "aria-label": I18n.t(:label_favorite), classes: %w[op-submenu--item-mark op-primer--star-icon], ml: 2) %>
-          <% end %>
-        </span>
-
-        <% if child_item.count %>
-          <span class="op-bubble op-bubble_alt_highlighting" data-test-selector="op-submenu--item-count"><%= child_item.count %></span>
-        <% end %>
-      </a>
-    </li>
-  <% end %>
-<% end %>
-
         </ul>
       </div>
     <% end %>

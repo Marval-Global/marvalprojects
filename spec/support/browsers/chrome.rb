@@ -26,9 +26,13 @@ def register_chrome(language, name: :"chrome_#{language}", headless: "new", over
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-smooth-scrolling")
     # Software GPU to avoid the dreaded "[ERROR] [Canvas '__0']: Failed to get a
-    # WebGL context" error for tests using xeokit, adapted from answers of
-    # https://stackoverflow.com/q/70948512/177665 and
+    # WebGL context" error for tests using xeokit. The automatic fallback to SwiftShader
+    # was disabled in January 2026, so that we now have to enable the fallback manually in
+    # the test environment.
+    # See https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/gpu/swiftshader.md
     options.add_argument("--use-gl=angle")
+    options.add_argument("--use-angle=swiftshader-webgl")
+    options.add_argument("--enable-unsafe-swiftshader")
     # Disable "Select your search engine screen"
     options.add_argument("--disable-search-engine-choice-screen")
 
@@ -130,3 +134,7 @@ register_chrome "en", name: :chrome_revit_add_in do |options|
 end
 
 register_chrome "en", name: :chrome_new_york_time_zone, override_time_zone: "America/New_York"
+
+register_chrome "en", name: :chrome_dark_mode do |options|
+  options.add_argument("--force-dark-mode")
+end

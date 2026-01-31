@@ -35,7 +35,8 @@ module RecurringMeetings
     protected
 
     def validate_params
-      @old_schedule = model.full_schedule_in_words
+      @old_schedule_model = model.dup
+      @old_location = model.template.location
       super
     end
 
@@ -47,7 +48,7 @@ module RecurringMeetings
       if should_reschedule?(recurring_meeting)
         reschedule_future_occurrences(recurring_meeting)
         reschedule_init_job(recurring_meeting)
-        send_rescheduled_mail(recurring_meeting)
+        send_updated_mail(recurring_meeting)
       end
 
       cleanup_cancelled_schedules(recurring_meeting)
@@ -104,7 +105,10 @@ module RecurringMeetings
 
         Meeting.transaction do
           scheduled.update_column(:start_time, new_time)
-          scheduled.meeting.update_column(:start_time, new_time) if scheduled.meeting_id.present?
+          if scheduled.meeting_id.present? && scheduled.meeting.start_time.future?
+            # for past meetings we do not change the time
+            scheduled.meeting.update_column(:start_time, new_time)
+          end
         end
       end
     end
@@ -119,7 +123,7 @@ module RecurringMeetings
     def reschedule_all_occurrences(recurring_meeting)
       # Get all future scheduled meetings that have been instantiated, ordered by start time
       future_meetings = recurring_meeting
-        .scheduled_instances
+        .scheduled_instances(upcoming: true)
         .instantiated
         .not_cancelled
 
@@ -145,23 +149,30 @@ module RecurringMeetings
         .where(recurring_meeting:)
         .cancelled
         .find_each do |scheduled|
-        occurring = recurring_meeting.schedule.occurs_at?(scheduled.start_time)
-        scheduled.delete unless occurring
+          occurring = recurring_meeting.schedule.occurs_at?(scheduled.start_time)
+          scheduled.delete unless occurring
       end
     end
 
-    def send_rescheduled_mail(recurring_meeting)
+    def send_updated_mail(recurring_meeting)
+      return unless recurring_meeting.notify?
+
       recurring_meeting
         .template
         .participants
         .invited
         .find_each do |participant|
-        MeetingSeriesMailer.rescheduled(
-          recurring_meeting,
-          participant.user,
-          User.current,
-          changes: { old_schedule: @old_schedule }
-        ).deliver_later
+          # Generate old schedule in each participant's locale
+          old_schedule = User.execute_as(participant.user) do
+            @old_schedule_model.full_schedule_in_words
+          end
+
+          MeetingSeriesMailer.updated(
+            recurring_meeting,
+            participant.user,
+            User.current,
+            changes: { old_schedule:, old_location: @old_location }
+          ).deliver_now
       end
     end
 
@@ -170,6 +181,9 @@ module RecurringMeetings
 
       # Delete all scheduled jobs for this meeting
       GoodJob::Job.where(finished_at: nil, concurrency_key:).delete_all
+
+      # Don't init the next meeting in draft mode
+      return if recurring_meeting.template.draft?
 
       # Ensure we init the next meeting directly
       InitNextOccurrenceJob.perform_now(recurring_meeting, recurring_meeting.next_occurrence)

@@ -97,6 +97,7 @@ module Pages
     end
 
     def wait_for_activity_tab
+      wait_for_network_idle
       wait_for { page }.to have_test_selector("op-wp-activity-tab")
       # ensure stimulus controller is mounted
       expect(page).to have_css('[data-stimulus-controller-connected="true"]')
@@ -128,6 +129,13 @@ module Pages
 
     def ensure_page_loaded
       expect_angular_frontend_initialized
+
+      # wait for work packages page to be visible and have content in it
+      has_selector?(".work-packages-page--ui-view div")
+      # wait for content loader to disappear (in the activity tab)
+      has_no_selector?("content-loader", wait: 10)
+
+      nil
     end
 
     def disable_ajax_requests
@@ -205,9 +213,10 @@ module Pages
       end
     end
 
-    def update_attributes(save: !create_page?, **key_value_map)
+    def fill_in_attributes(save: !create_page?, **key_value_map)
       set_attributes(key_value_map, save:)
     end
+    alias :update_attributes :fill_in_attributes
 
     def set_attributes(key_value_map, save: !create_page?)
       key_value_map.each_with_index.map do |(key, value), index|
@@ -311,8 +320,13 @@ module Pages
       find(".inline-edit--container.subject input")
     end
 
-    def go_back
-      find(".work-packages-back-button").click
+    def go_back(wait: true)
+      page.go_back
+
+      if wait
+        wait_for_network_idle
+        ensure_page_loaded
+      end
     end
 
     def mark_notifications_as_read

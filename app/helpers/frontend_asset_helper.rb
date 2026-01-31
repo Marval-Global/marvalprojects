@@ -49,6 +49,8 @@ module FrontendAssetHelper
   # or referencing the running CLI proxy that hosts the assets in memory.
   def include_frontend_assets
     capture do
+      concat nonced_javascript_include_tag variable_asset_path("jquery.js"), skip_pipeline: true
+
       %w(polyfills.js main.js).each do |file|
         concat nonced_javascript_include_tag variable_asset_path(file), skip_pipeline: true, type: "module"
       end
@@ -71,17 +73,6 @@ module FrontendAssetHelper
     javascript_include_tag(path, nonce: content_security_policy_nonce, **)
   end
 
-  private
-
-  def lookup_frontend_asset(unhashed_file_name)
-    hashed_file_name = ::OpenProject::Assets.lookup_asset(unhashed_file_name)
-    frontend_asset_path(hashed_file_name)
-  end
-
-  def frontend_asset_path(file_name)
-    "/assets/frontend/#{file_name}"
-  end
-
   def variable_asset_path(path)
     if FrontendAssetHelper.assets_proxied?
       File.join(
@@ -94,5 +85,16 @@ module FrontendAssetHelper
       # because in this case javascript|stylesheet_include_tag will add it automatically.
       lookup_frontend_asset(path)
     end
+  end
+
+  private
+
+  def lookup_frontend_asset(unhashed_file_name)
+    hashed_file_name = ::OpenProject::Assets.lookup_asset(unhashed_file_name)
+    frontend_asset_path(hashed_file_name)
+  end
+
+  def frontend_asset_path(file_name)
+    "/assets/frontend/#{file_name}"
   end
 end

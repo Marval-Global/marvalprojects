@@ -42,14 +42,30 @@ require_relative "../../lib_static/open_project/feature_decisions"
 #   end
 
 OpenProject::FeatureDecisions.add :built_in_oauth_applications,
-                                  description: "Allows the display and use of built-in OAuth applications."
-
-OpenProject::FeatureDecisions.add :calculated_value_project_attribute,
-                                  description: "Allows the use of calculated values as a project attribute."
-
-OpenProject::FeatureDecisions.add :scim_api,
-                                  description: "Enables SCIM API.",
+                                  description: "Allows the display and use of built-in OAuth applications.",
                                   force_active: true
 
-OpenProject::FeatureDecisions.add :block_note_editor,
-                                  description: "Enables the block note editor for rich text fields where available."
+OpenProject::FeatureDecisions.add :calculated_value_project_attribute,
+                                  description: "Allows the use of calculated values as a project attribute.",
+                                  force_active: true
+
+OpenProject::FeatureDecisions.add :beta_widgets,
+                                  description: "Enables BETA versions of widgets."
+
+OpenProject::FeatureDecisions.add :mcp_server,
+                                  description: "Enables the experimental MCP API."
+
+OpenProject::FeatureDecisions.add :minutes_styling_meeting_pdf,
+                                  description: "Allow exporting a meeting with FITKO styling. " \
+                                               "See #65124 for details."
+
+OpenProject::FeatureDecisions.add :portfolio_models,
+                                  description: "Enables the creation and management of portfolio and program work spaces.",
+                                  force_active: true
+
+OpenProject::FeatureDecisions.add :new_project_overview,
+                                  description: "Enables the new project overview experience.",
+                                  force_active: true
+
+OpenProject::FeatureDecisions.add :project_initiation,
+                                  description: "Activate the project creation and initiation wizard"

@@ -33,7 +33,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { PortalModule } from '@angular/cdk/portal';
 import { CommonModule } from '@angular/common';
-import { NgOptionHighlightModule } from '@ng-select/ng-option-highlight';
+import { NgOptionHighlightDirective } from '@ng-select/ng-option-highlight';
 import { DragulaModule } from 'ng2-dragula';
 import { DynamicModule } from 'ng-dynamic-component';
 import { UIRouterModule } from '@uirouter/angular';
@@ -57,7 +57,6 @@ import {
 import { OPContextMenuComponent } from 'core-app/shared/components/op-context-menu/op-context-menu.component';
 import { OpenprojectPrincipalRenderingModule } from 'core-app/shared/components/principal/principal-rendering.module';
 import { FocusModule } from 'core-app/shared/directives/focus/focus.module';
-import { HomescreenNewFeaturesBlockComponent } from 'core-app/features/homescreen/blocks/new-features.component';
 import { TablePaginationComponent } from 'core-app/shared/components/table-pagination/table-pagination.component';
 import { StaticQueriesService } from 'core-app/shared/components/op-view-select/op-static-queries.service';
 import { CopyToClipboardService } from './components/copy-to-clipboard/copy-to-clipboard.service';
@@ -85,6 +84,7 @@ import { OpenprojectModalModule } from 'core-app/shared/components/modal/modal.m
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { OpDatePickerModule } from 'core-app/shared/components/datepicker/datepicker.module';
 import { OpBreadcrumbsComponent } from './components/breadcrumbs/op-breadcrumbs.component';
+import { PrimerIconButtonComponent } from './components/primer/icon-button.component';
 
 export function bootstrapModule(injector:Injector):void {
   // Ensure error reporter is run
@@ -114,7 +114,7 @@ export function bootstrapModule(injector:Injector):void {
     CurrentUserModule,
     FormsModule,
     NgSelectModule,
-    NgOptionHighlightModule,
+    NgOptionHighlightDirective,
 
     OpenprojectPrincipalRenderingModule,
     OpenprojectContentLoaderModule,
@@ -126,6 +126,8 @@ export function bootstrapModule(injector:Injector):void {
     AttributeHelpTextModule,
     FullCalendarModule,
     OpDatePickerModule,
+
+    PrimerIconButtonComponent
   ],
   exports: [
     // Re-export all commonly used
@@ -139,7 +141,7 @@ export function bootstrapModule(injector:Injector):void {
     IconModule,
     AttributeHelpTextModule,
     FormsModule,
-    NgOptionHighlightModule,
+    NgOptionHighlightDirective,
     OpenprojectPrincipalRenderingModule,
     OpenprojectAutocompleterModule,
     OpenprojectContentLoaderModule,
@@ -178,6 +180,8 @@ export function bootstrapModule(injector:Injector):void {
     OpLoadingProjectListComponent,
 
     OpNonWorkingDaysListComponent,
+
+    PrimerIconButtonComponent
   ],
   providers: [
     CopyToClipboardService,
@@ -208,8 +212,6 @@ export function bootstrapModule(injector:Injector):void {
 
     PersistentToggleComponent,
     RemoteFieldUpdaterComponent,
-
-    HomescreenNewFeaturesBlockComponent,
 
     OpOptionListComponent,
     OpProjectIncludeComponent,

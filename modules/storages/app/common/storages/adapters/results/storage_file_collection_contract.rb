@@ -31,11 +31,11 @@
 module Storages
   module Adapters
     module Results
-      class StorageFileCollectionContract < Dry::Validation::Contract
+      class StorageFileCollectionContract < DryApplicationContract
         params do
           required(:files).array(AdapterTypes::StorageFileInstance)
           required(:parent).filled(AdapterTypes::StorageFileInstance)
-          required(:ancestors).array(AdapterTypes::StorageFileInstance)
+          required(:ancestors).array(AdapterTypes::FileAncestorInstance)
         end
       end
     end

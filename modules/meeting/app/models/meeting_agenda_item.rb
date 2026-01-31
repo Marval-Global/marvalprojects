@@ -44,7 +44,11 @@ class MeetingAgendaItem < ApplicationRecord
   belongs_to :author, class_name: "User", optional: false
   belongs_to :presenter, class_name: "User", optional: true
 
-  has_many :outcomes, class_name: "MeetingOutcome", dependent: :destroy
+  has_many :outcomes,
+           -> { order(id: :asc) },
+           class_name: "MeetingOutcome",
+           dependent: :destroy,
+           inverse_of: :meeting_agenda_item
 
   acts_as_list scope: :meeting_section
   default_scope { order(:position) }
@@ -67,13 +71,8 @@ class MeetingAgendaItem < ApplicationRecord
             allow_nil: true
 
   before_validation :add_to_latest_meeting_section
-  after_create :trigger_meeting_agenda_item_time_slots_calculation
-  after_save :trigger_meeting_agenda_item_time_slots_calculation, if: Proc.new { |item|
-    item.duration_in_minutes_previously_changed? || item.position_previously_changed?
-  }
   before_save :update_meeting_to_match_section
   after_update :delete_default_section_if_last_item_moved, if: :saved_change_to_meeting_section_id?
-  after_destroy :trigger_meeting_agenda_item_time_slots_calculation
   after_destroy :delete_default_section_if_last_item_deleted
 
   def add_to_latest_meeting_section
@@ -87,6 +86,18 @@ class MeetingAgendaItem < ApplicationRecord
       end
 
       self.meeting_section = meeting_section
+    end
+  end
+
+  def display_title
+    if visible_work_package?
+      work_package.to_s
+    elsif linked_work_package?
+      I18n.t(:label_agenda_item_undisclosed_wp, id: work_package_id)
+    elsif deleted_work_package?
+      I18n.t(:label_agenda_item_deleted_wp)
+    else
+      title
     end
   end
 
@@ -116,10 +127,6 @@ class MeetingAgendaItem < ApplicationRecord
     self.meeting = meeting_section.meeting
   end
 
-  def trigger_meeting_agenda_item_time_slots_calculation
-    meeting.calculate_agenda_item_time_slots
-  end
-
   def linked_work_package?
     item_type == "work_package" && work_package.present?
   end
@@ -133,11 +140,7 @@ class MeetingAgendaItem < ApplicationRecord
   end
 
   def editable?
-    !(meeting&.closed? || deleted_work_package?)
-  end
-
-  def modifiable?
-    !(meeting&.closed? || (deleted_work_package? && work_package_id.present?))
+    !meeting&.closed?
   end
 
   def copy_attributes

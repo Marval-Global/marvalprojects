@@ -109,6 +109,11 @@ module OpenIDConnect
       end
     end
 
+    def group_regexes
+      # handle legacy data, where group regexes where `nil`.
+      super || []
+    end
+
     def google?
       oidc_provider == "google"
     end
@@ -142,6 +147,10 @@ module OpenIDConnect
       (scope || "").split
     end
 
+    def backchannel_logout_url
+      URI.join(auth_url, "backchannel-logout").to_s
+    end
+
     def group_matchers
       if group_prefixes.present?
         group_prefixes.map { |p| Regexp.new("^#{Regexp.escape(p)}(.+)$") }
@@ -150,6 +159,18 @@ module OpenIDConnect
       else
         [/(.+)/]
       end
+    end
+
+    def to_h
+      claims = self.claims.presence || "{}"
+      claims = add_groups_claim(JSON.parse(claims)).to_json
+      super.merge(claims:, acr_values:)
+    end
+
+    def add_groups_claim(claims)
+      claims = { "id_token" => { groups_claim => nil } }.deep_merge(claims) if sync_groups
+
+      claims
     end
   end
 end

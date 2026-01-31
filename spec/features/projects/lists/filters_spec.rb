@@ -37,11 +37,18 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
 
   shared_let(:custom_field) { create(:text_project_custom_field) }
   shared_let(:invisible_custom_field) { create(:project_custom_field, admin_only: true) }
+  shared_let(:integer_custom_field) { create(:integer_project_custom_field) }
 
-  shared_let(:project) { create(:project, name: "Plain project", identifier: "plain-project") }
+  shared_let(:project) do
+    create(:project, name: "Plain project", identifier: "plain-project") do |project|
+      project.custom_field_values = { integer_custom_field.id => 41 }
+      project.save!
+    end
+  end
   shared_let(:public_project) do
     create(:project, name: "Public Pr", identifier: "public-pr", public: true) do |project|
-      project.custom_field_values = { invisible_custom_field.id => "Secret CF" }
+      project.custom_field_values = { invisible_custom_field.id => "Secret CF", integer_custom_field.id => 42 }
+      project.save!
     end
   end
   shared_let(:development_project) { create(:project, name: "Development project", identifier: "development-project") }
@@ -168,9 +175,9 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
 
       # Test visibility of 'more' menu list items
       projects_page.activate_menu_of(parent_project) do |menu|
-        expect(menu).to have_text("Add to favorites")
         expect(menu).to have_text("Unarchive")
         expect(menu).to have_text("Delete")
+        expect(menu).to have_no_text("Add to favorites")
         expect(menu).to have_no_text("Archive")
         expect(menu).to have_no_text("Copy")
         expect(menu).to have_no_text("Settings")
@@ -254,7 +261,7 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
       projects_page.open_filters
 
       projects_page.set_filter("project_status_code",
-                               "Project status",
+                               "Status",
                                "is (OR)",
                                ["On track"])
       wait_for_reload
@@ -263,7 +270,7 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
       expect(page).to have_no_text(no_status_project.name)
 
       projects_page.set_filter("project_status_code",
-                               "Project status",
+                               "Status",
                                "is not empty",
                                [])
       wait_for_reload
@@ -272,7 +279,7 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
       expect(page).to have_no_text(no_status_project.name)
 
       projects_page.set_filter("project_status_code",
-                               "Project status",
+                               "Status",
                                "is empty",
                                [])
       wait_for_reload
@@ -281,7 +288,7 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
       expect(page).to have_text(no_status_project.name)
 
       projects_page.set_filter("project_status_code",
-                               "Project status",
+                               "Status",
                                "is not",
                                ["On track"])
       wait_for_reload
@@ -490,6 +497,10 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
 
   describe "user cf filter" do
     let(:some_user) { create(:user, member_with_roles: { project => [project_role] }) }
+    let!(:some_placeholder) { create(:placeholder_user, member_with_roles: { project => [project_role] }) }
+    let!(:some_group) { create(:group, members: [some_user], member_with_roles: { project => [project_role] }) }
+    let!(:empty_group) { create(:group, member_with_roles: { project => [project_role] }) }
+
     let!(:user_cf) do
       create(:user_project_custom_field,
              name: "A user CF",
@@ -498,7 +509,7 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
       end
     end
 
-    it "filters for the project that has the corresponding value" do
+    it "filters for the project that has the correct user" do
       load_and_open_filters manager
 
       projects_page.set_filter(user_cf.column_name, user_cf.name, "is (OR)", [some_user.name])
@@ -506,15 +517,71 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
       projects_page.expect_projects_listed(project)
     end
 
-    it "displays the visible project members as available options" do
+    it "filters for any group where the user is a member" do
+      load_and_open_filters manager
+
+      # Since the user is member of this group, this project will match the filter
+      projects_page.set_filter(user_cf.column_name, user_cf.name, "is (OR)", [some_group.name])
+
+      projects_page.expect_projects_listed(project)
+    end
+
+    it "displays the visible project members, groups and placeholders as available options" do
       load_and_open_filters manager
 
       expected_options = [
+        { name: empty_group.name },
+        { name: some_group.name },
         { name: some_user.name, email: some_user.mail },
+        { name: some_placeholder.name },
         { name: manager.name, email: manager.mail }
       ]
 
       projects_page.expect_user_autocomplete_options_for(user_cf, expected_options)
+    end
+
+    context "with the cf field set to a group" do
+      before do
+        project.update(custom_field_values: { user_cf.id => [some_group.id] })
+      end
+
+      it "filters for the group" do
+        load_and_open_filters manager
+
+        projects_page.set_filter(user_cf.column_name, user_cf.name, "is (OR)", [some_group.name])
+
+        projects_page.expect_projects_listed(project)
+      end
+
+      it "filters for users that are members of the group" do
+        load_and_open_filters manager
+
+        projects_page.set_filter(user_cf.column_name, user_cf.name, "is (OR)", [some_user.name])
+
+        projects_page.expect_projects_listed(project)
+      end
+
+      it "does not match if you filter for another group" do
+        load_and_open_filters manager
+
+        projects_page.set_filter(user_cf.column_name, user_cf.name, "is (OR)", [empty_group.name])
+
+        projects_page.expect_projects_not_listed(project)
+      end
+    end
+
+    context "with the cf field set to a placeholder user" do
+      before do
+        project.update(custom_field_values: { user_cf.id => [some_placeholder.id] })
+      end
+
+      it "filters for the placeholder user" do
+        load_and_open_filters manager
+
+        projects_page.set_filter(user_cf.column_name, user_cf.name, "is (OR)", [some_placeholder.name])
+
+        projects_page.expect_projects_listed(project)
+      end
     end
   end
 
@@ -663,12 +730,50 @@ RSpec.describe "Projects list filters", :js, with_settings: { login_required?: f
       projects_page.expect_projects_not_listed(public_project)
 
       # Applies the filters to the filters section
-      projects_page.toggle_filters_section
       projects_page.expect_filter_set "active"
       projects_page.expect_filter_set "name_and_identifier"
 
       # Columns are taken from the default set as defined by the setting
       projects_page.expect_columns("Name", "Created on", "Status")
+    end
+  end
+
+  context "when filtering via calculated values",
+          with_ee: %i[calculated_values],
+          with_flag: { calculated_value_project_attribute: true } do
+    let(:projects_with_calculated_value) do
+      [project, public_project]
+    end
+
+    let!(:calculated_value) do
+      create(:calculated_value_project_custom_field,
+             :skip_validations,
+             name: "Calculated value",
+             formula: "1.5 * {{cf_#{integer_custom_field.id}}}",
+             projects: projects_with_calculated_value)
+    end
+
+    let(:filters) do
+      JSON.dump([{ active: { operator: "=", values: ["t"] } },
+                 { "cf_#{calculated_value.id}": { operator: ">=", values: ["63"] } }])
+    end
+
+    before do
+      login_as(admin) # permitted user necessary to perform the calculations
+
+      projects_with_calculated_value.each do |proj|
+        proj.calculate_custom_fields([calculated_value])
+        proj.save!
+      end
+
+      Setting.enabled_projects_columns += [calculated_value.column_name]
+    end
+
+    it "allows filtering by the calculated value" do
+      visit "#{projects_page.path}?filters=#{filters}"
+
+      projects_page.expect_projects_not_listed(project, development_project)
+      projects_page.expect_projects_listed(public_project)
     end
   end
 

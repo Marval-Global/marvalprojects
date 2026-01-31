@@ -14,7 +14,7 @@
   width: 100vw
 
   @media screen and (max-width: $breakpoint-md)
-    grid-template-columns: minmax(0, auto) auto 1fr
+    grid-template-columns: minmax(0, auto) 1fr auto
 
   @media screen and (max-width: $breakpoint-sm)
     position: fixed
@@ -45,13 +45,25 @@
     grid-area: center
     justify-content: center
 
+    @media screen and (max-width: $breakpoint-md)
+      justify-content: flex-end
+
   &--end
     grid-area: end
     justify-content: flex-end
+    padding-right: 14px
+
+    .op-app-menu--item
+      padding: 0 var(--controlStack-large-gap-spacious)
 
   &--avatar
     border: 1px solid var(--header-item-font-color)
 
+  &--modules-menu-header
+    .op-logo
+      display: block
+      height: 32px
+      width: 32px
 
   ._header-scrolled &
     @media screen and (max-width: $breakpoint-sm)

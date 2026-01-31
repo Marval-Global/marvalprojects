@@ -42,7 +42,7 @@ module Storages
             let(:auth_strategy) { Registry["one_drive.authentication.user_bound"].call(user, storage) }
             let(:input_data) { Input::Files.build(folder:).value! }
 
-            it_behaves_like "adapter files_query: basic query setup"
+            it_behaves_like "storage adapter: query call signature", "files"
 
             context "with parent folder being root", vcr: "one_drive/files_query_root" do
               let(:folder) { "/" }
@@ -122,13 +122,8 @@ module Storages
                                                    location: "/Folder/Subfolder",
                                                    permissions: %i[readable writeable]),
                   ancestors: [
-                    Results::StorageFile.new(id: "a1d45ff742d2175c095f0a7173f93fc3fc23664a953ceae6778fe15398818c2d",
-                                             name: "Root",
-                                             location: "/",
-                                             permissions: %i[readable writeable]),
-                    Results::StorageFile.new(id: "74ccd43303847f2655300641a934959cdb11689ce171aa0f00faa92917fbd340",
-                                             name: "Folder",
-                                             location: "/Folder")
+                    Results::StorageFileAncestor.new(name: "Root", location: "/"),
+                    Results::StorageFileAncestor.new(name: "Folder", location: "/Folder")
                   ]
                 ).value!
               end
@@ -146,13 +141,8 @@ module Storages
                                                    location: "/Folder%20with%20spaces/very%20empty%20folder",
                                                    permissions: %i[readable writeable]),
                   ancestors: [
-                    Results::StorageFile.new(id: "a1d45ff742d2175c095f0a7173f93fc3fc23664a953ceae6778fe15398818c2d",
-                                             name: "Root",
-                                             location: "/",
-                                             permissions: %i[readable writeable]),
-                    Results::StorageFile.new(id: "58bde0c7931c8f95bb1bf525471146090630cb72827cb1e63dcaab3a9adce763",
-                                             name: "Folder with spaces",
-                                             location: "/Folder%20with%20spaces")
+                    Results::StorageFileAncestor.new(name: "Root", location: "/"),
+                    Results::StorageFileAncestor.new(name: "Folder with spaces", location: "/Folder with spaces")
                   ]
                 ).value!
               end
@@ -183,13 +173,8 @@ module Storages
                                                    location: "/Folder/%C3%9Cml%C3%A6%C3%BBts",
                                                    permissions: %i[readable writeable]),
                   ancestors: [
-                    Results::StorageFile.new(id: "a1d45ff742d2175c095f0a7173f93fc3fc23664a953ceae6778fe15398818c2d",
-                                             name: "Root",
-                                             location: "/",
-                                             permissions: %i[readable writeable]),
-                    Results::StorageFile.new(id: "74ccd43303847f2655300641a934959cdb11689ce171aa0f00faa92917fbd340",
-                                             name: "Folder",
-                                             location: "/Folder")
+                    Results::StorageFileAncestor.new(name: "Root", location: "/"),
+                    Results::StorageFileAncestor.new(name: "Folder", location: "/Folder")
                   ]
                 ).value!
               end
@@ -201,7 +186,7 @@ module Storages
               let(:folder) { "/I/just/made/that/up" }
               let(:error_source) { described_class }
 
-              it_behaves_like "adapter files_query: not found"
+              it_behaves_like "storage adapter: error response", :not_found
             end
           end
         end

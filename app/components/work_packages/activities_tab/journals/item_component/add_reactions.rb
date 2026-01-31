@@ -35,12 +35,21 @@ module WorkPackages
         include ApplicationHelper
         include OpPrimer::ComponentHelpers
         include OpTurbo::Streamable
+        include WorkPackages::ActivitiesTab::StimulusControllers
 
         def initialize(journal:, grouped_emoji_reactions:)
           super
 
           @journal = journal
           @grouped_emoji_reactions = grouped_emoji_reactions || {}
+        end
+
+        def self.menu_id(journal)
+          "reactions-menu-#{journal.id}"
+        end
+
+        def menu_id
+          self.class.menu_id(journal)
         end
 
         def render?

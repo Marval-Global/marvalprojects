@@ -48,7 +48,10 @@ See COPYRIGHT and LICENSE files for more details.
 
   <section class="form--section">
     <div class="form--field">
-      <%= setting_check_box :ical_enabled, size: 6 %>             
+      <%= setting_check_box :ical_enabled, size: 6 %>
+      <div class="form--field-instructions">
+        <p><%= t("settings.icalendar.enable_subscriptions_text_html", link: OpenProject::Static::Links.url_for(:ical_docs)) %></p>
+      </div>
     </div>
   </section>
 

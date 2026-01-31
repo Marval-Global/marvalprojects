@@ -118,8 +118,6 @@ module Exports::PDF::Components::WpTable
     list = key.map { |v| v&.value }
     if list.empty?
       nil
-    elsif list.length == 1
-      list.first
     else
       list
     end
@@ -147,7 +145,8 @@ module Exports::PDF::Components::WpTable
     write_optional_page_break
     with_margin(styles.wp_table_margins) do
       with_margin(styles.wp_table_group_header_margins) do
-        pdf.formatted_text([styles.wp_table_group_header.merge({ text: make_group_label(group) })])
+        style = styles.wp_table_group_header
+        pdf.formatted_text([style.merge({ text: make_group_label(group) })], style)
       end
       write_table!(work_packages, query, columns, sums)
     end

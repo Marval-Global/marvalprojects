@@ -234,6 +234,9 @@ module Components
       end
 
       def type_comment(text)
+        # Wait for any pending Turbo Stream updates to complete
+        wait_for_network_idle
+
         begin
           open_new_comment_editor if page.find_test_selector("op-open-work-package-journal-form-trigger")
         rescue Capybara::ElementNotFound
@@ -281,13 +284,16 @@ module Components
 
           check_internal_comment_checkbox if internal
 
-          page.find_test_selector("op-submit-work-package-journal-form").click if save
+          if save
+            page.find_test_selector("op-submit-work-package-journal-form").click
+            wait_for_network_idle
+          end
         end
 
         if save
           page.within_test_selector("op-wp-journals-container") do
             # wait for the comment to be loaded
-            wait_for { page }.to have_test_selector("op-journal-notes-body", text:)
+            expect(page).to have_test_selector("op-journal-notes-body", text:, wait: 10)
           end
         end
 
@@ -386,22 +392,17 @@ module Components
       end
 
       def set_journal_sorting(sorting, default_filter: :all)
-        page.find_test_selector("op-wp-journals-sorting-menu").click
-
-        case sorting
-        when :asc
-          page.find_test_selector("op-wp-journals-sorting-asc").click
-        when :desc
-          page.find_test_selector("op-wp-journals-sorting-desc").click
+        retry_block do
+          page.find_test_selector("op-wp-journals-sorting-menu").click
+          page.find_test_selector("op-wp-journals-sorting-#{sorting}").click
+          expect(page).to have_test_selector("op-wp-journals-#{default_filter}-#{sorting}")
         end
-
-        wait_for { page }.to have_test_selector("op-wp-journals-#{default_filter}-#{sorting}")
       end
 
       def trigger_update_streams_poll
         page.execute_script(<<~JS)
-          var target = document.querySelector('[data-controller*="work-packages--activities-tab--index"]')
-          var controller = window.Stimulus.getControllerForElementAndIdentifier(target, 'work-packages--activities-tab--index')
+          var target = document.querySelector('[data-controller*="work-packages--activities-tab--polling"]')
+          var controller = window.Stimulus.getControllerForElementAndIdentifier(target, 'work-packages--activities-tab--polling')
           controller.updateActivitiesList();
         JS
 

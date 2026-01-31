@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #-- copyright
 # OpenProject is an open source project management software.
 # Copyright (C) the OpenProject GmbH
@@ -38,6 +40,7 @@ module WorkPackages::ActivitiesTab::Journals
         rich_text_options: {
           showAttachments: false,
           resource:,
+          storageKey: "work_package-#{object.journable.id}-notes-#{object.id || 'new'}",
           editor_type: "constrained"
         }
       )
