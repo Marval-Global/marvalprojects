@@ -18,6 +18,8 @@ environment:
   OPENPROJECT_SEED_DESIGN_MAIN__MENU__BG__COLOR: #000000
   OPENPROJECT_SEED_DESIGN_MAIN__MENU__BG__SELECTED__BACKGROUND: #7968ae
   OPENPROJECT_SEED_DESIGN_EXPORT__COVER__TEXT__COLOR: #38bfef
+  OPENPROJECT_SEED_DESIGN_LOGO: "/app/app/assets/images/Marval_logo_colour.svg"
+  OPENPROJECT_SEED_DESIGN_LOGO__MOBILE: "/app/app/assets/images/Marval_logo_colour_no_text.svg"
   OPENPROJECT_SEED_DESIGN_EXPORT__LOGO: "/app/app/assets/images/Marval_logo_colour.png"
   OPENPROJECT_SEED_DESIGN_BODY__FONT__FAMILY: Montserrat
   OPENPROJECT_SEED_DESIGN_TITLE__FONT__FAMILY: Montserrat
@@ -95,6 +97,17 @@ worker:
 seeder:
   nodeSelector:
     applications: "linuxapps"
+
+# Options for the seeder job
+seederJob:
+  ## Define custom seeder job annotations.
+  #
+  annotations: {}
+  resources:
+    limits:
+      memory: "1Gi"
+    requests:
+      memory: "1Gi"
 
 strategy:  
   type: "Recreate"
