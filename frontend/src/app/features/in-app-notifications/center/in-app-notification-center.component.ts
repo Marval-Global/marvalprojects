@@ -44,6 +44,7 @@ import idFromLink from 'core-app/features/hal/helpers/id-from-link';
 import {
   ColorsService,
 } from 'core-app/shared/components/colors/colors.service';
+import { BannersService } from 'core-app/core/enterprise/banners.service';
 
 @Component({
   templateUrl: './in-app-notification-center.component.html',
@@ -77,38 +78,9 @@ export class InAppNotificationCenterComponent implements OnInit {
 
   selectedWorkPackage$ = this.storeService.selectedWorkPackage$;
 
-  reasonMenuItems = [
-    {
-      key: 'mentioned',
-      title: this.I18n.t('js.notifications.reasons.mentioned'),
-    },
-    {
-      key: 'assigned',
-      title: this.I18n.t('js.label_assignee'),
-    },
-    {
-      key: 'responsible',
-      title: this.I18n.t('js.notifications.reasons.accountable'),
-    },
-    {
-      key: 'watched',
-      title: this.I18n.t('js.notifications.reasons.watched'),
-    },
-    {
-      key: 'dateAlert',
-      title: this.I18n.t('js.notifications.reasons.dateAlert'),
-    },
-    {
-      key: 'shared',
-      title: this.I18n.t('js.notifications.reasons.shared'),
-    },
-    {
-      key: 'reminder',
-      title: this.I18n.t('js.notifications.reasons.reminder'),
-    },
-  ];
+  reasonMenuItems:{ key:string, title:string }[] = [];
 
-  selectedFilter = this.reasonMenuItems.find((item) => item.key === this.urlParams.get('name'))?.title;
+  selectedFilter?:string;
 
   image = {
     no_notification: imagePath(`notification-center/empty-state-no-notification_${this.colorsService.colorMode()}.svg`),
@@ -152,6 +124,7 @@ export class InAppNotificationCenterComponent implements OnInit {
     readonly apiV3:ApiV3Service,
     readonly pathService:PathHelperService,
     readonly colorsService:ColorsService,
+    readonly bannersService:BannersService,
   ) {
   }
 
@@ -162,6 +135,9 @@ export class InAppNotificationCenterComponent implements OnInit {
       filter: this.urlParams.get('filter'),
       name: this.urlParams.get('name'),
     });
+
+    this.reasonMenuItems = this.buildReasonMenuItems();
+    this.selectedFilter = this.reasonMenuItems.find((item) => item.key === this.urlParams.get('name'))?.title;
   }
 
   noNotificationText(hasNotifications:boolean):string {
@@ -174,5 +150,49 @@ export class InAppNotificationCenterComponent implements OnInit {
     }
 
     return this.text.no_notification_for_filter;
+  }
+
+  private buildReasonMenuItems():{ key:string, title:string }[] {
+    const items = [
+      {
+        key: 'mentioned',
+        title: this.I18n.t('js.notifications.reasons.mentioned'),
+      },
+      {
+        key: 'assigned',
+        title: this.I18n.t('js.label_assignee'),
+      },
+      {
+        key: 'responsible',
+        title: this.I18n.t('js.notifications.reasons.accountable'),
+      },
+      {
+        key: 'watched',
+        title: this.I18n.t('js.notifications.reasons.watched'),
+      },
+      {
+        key: 'dateAlert',
+        title: this.I18n.t('js.notifications.reasons.dateAlert'),
+        feature: 'date_alerts',
+      },
+      {
+        key: 'shared',
+        title: this.I18n.t('js.notifications.reasons.shared'),
+        feature: 'work_package_sharing',
+      },
+      {
+        key: 'reminder',
+        title: this.I18n.t('js.notifications.reasons.reminder'),
+      },
+    ] as const;
+
+    return items.filter((item) => {
+      if (!('feature' in item)) {
+        return true;
+      }
+
+      return this.bannersService.allowsTo(item.feature)
+        || this.bannersService.showBannerFor(item.feature);
+    });
   }
 }

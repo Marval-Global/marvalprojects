@@ -40,6 +40,10 @@ module WorkPackages
           EnterpriseToken.allows_to?(:gantt_pdf_export)
         end
 
+        def gantt_chart_visible?
+          gantt_chart_allowed? || !EnterpriseToken.hide_banners?
+        end
+
         def enterprise_icon
           render(Primer::Beta::Octicon.new(
                    icon: "op-enterprise-addons",
@@ -54,7 +58,7 @@ module WorkPackages
         end
 
         def pdf_export_types
-          [
+          types = [
             { value: "table",
               label: I18n.t("export.dialog.pdf.export_type.options.table.label"),
               caption: I18n.t("export.dialog.pdf.export_type.options.table.caption"),
@@ -69,6 +73,8 @@ module WorkPackages
               disabled: !gantt_chart_allowed?,
               component: WorkPackages::Exports::PDF::Gantt::ExportSettingsComponent }
           ]
+
+          gantt_chart_visible? ? types : types.reject { |type| type[:value] == "gantt" }
         end
       end
     end

@@ -65,7 +65,9 @@ module Notifications
     end
 
     def reason_filters
-      %w[mentioned assigned responsible watched dateAlert reminder shared].map do |reason|
+      %w[mentioned assigned responsible watched dateAlert reminder shared].filter_map do |reason|
+        next if enterprise_reason_hidden?(reason)
+
         count = unread_by_reason[reason]
         menu_item(title: I18n.t("notifications.reasons.#{reason}"),
                   icon_key: reason,
@@ -136,9 +138,24 @@ module Notifications
     end
 
     def show_enterprise_icon?(reason)
+      return false if EnterpriseToken.hide_banners?
+
       if reason == "shared"
         !EnterpriseToken.allows_to?(:work_package_sharing)
       elsif reason == "dateAlert"
+        !EnterpriseToken.allows_to?(:date_alerts)
+      else
+        false
+      end
+    end
+
+    def enterprise_reason_hidden?(reason)
+      return false unless EnterpriseToken.hide_banners?
+
+      case reason
+      when "shared"
+        !EnterpriseToken.allows_to?(:work_package_sharing)
+      when "dateAlert"
         !EnterpriseToken.allows_to?(:date_alerts)
       else
         false
