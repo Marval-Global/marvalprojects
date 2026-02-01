@@ -51,7 +51,7 @@ export class BannersService {
 
   public allowsTo(feature:string):boolean {
     if (this._bannersHidden) {
-      return true;
+      return false;
     }
     return this.configuration.availableFeatures.includes(feature);
   }

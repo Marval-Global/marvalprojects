@@ -40,12 +40,17 @@ module OpenProject::Boards
                    contract_actions: { boards: %i[create update destroy] }
       end
 
+      should_render_project_menu_item = Proc.new do
+        !EnterpriseToken.hide_banners?
+      end
+
       menu :project_menu,
            :boards,
            { controller: "/boards/boards", action: :index },
            caption: :"boards.label_boards",
            after: :work_packages,
-           icon: "op-boards"
+           icon: "op-boards",
+           if: should_render_project_menu_item
 
       menu :project_menu,
            :board_menu,
@@ -53,9 +58,11 @@ module OpenProject::Boards
            parent: :boards,
            partial: "boards/menus/menu",
            last: true,
-           caption: :"boards.label_boards"
+           caption: :"boards.label_boards",
+           if: should_render_project_menu_item
 
       should_render_global_menu_item = Proc.new do
+        !EnterpriseToken.hide_banners? &&
         (User.current.logged? || !Setting.login_required?) &&
         User.current.allowed_in_any_project?(:show_board_views)
       end

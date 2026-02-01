@@ -62,6 +62,10 @@ module OpenProject::TeamPlanner
         User.current.allowed_in_any_project?(:view_team_planner)
       end
 
+      should_render_project_menu_item = Proc.new do
+        !EnterpriseToken.hide_banners?
+      end
+
       menu :global_menu,
            :team_planners,
            { controller: "/team_planner/team_planner", action: :overview },
@@ -78,6 +82,7 @@ module OpenProject::TeamPlanner
            caption: :"team_planner.label_team_planner_plural",
            after: :work_packages,
            icon: "op-team-planner",
+           if: should_render_project_menu_item,
            enterprise_feature: "team_planner_view"
 
       menu :project_menu,
@@ -86,7 +91,8 @@ module OpenProject::TeamPlanner
            parent: :team_planner_view,
            partial: "team_planner/menus/menu",
            last: true,
-           caption: :"team_planner.label_team_planner_plural"
+           caption: :"team_planner.label_team_planner_plural",
+           if: should_render_project_menu_item
 
       menu :top_menu,
            :team_planners, { controller: "/team_planner/team_planner", action: :overview },
