@@ -55,6 +55,7 @@
   </spot-selector-field>
 
   <spot-selector-field
+    *ngIf="sharedNotificationsAvailable"
     [label]="text.shared"
     [control]="form.get('shared')"
     >

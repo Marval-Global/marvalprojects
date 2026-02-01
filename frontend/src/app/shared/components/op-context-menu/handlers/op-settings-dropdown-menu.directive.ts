@@ -29,6 +29,7 @@
 import { Directive, ElementRef, Injector, Input, AfterViewInit } from '@angular/core';
 import { I18nService } from 'core-app/core/i18n/i18n.service';
 import { AuthorisationService } from 'core-app/core/model-auth/model-auth.service';
+import { BannersService } from 'core-app/core/enterprise/banners.service';
 import {
   OpContextMenuTrigger,
 } from 'core-app/shared/components/op-context-menu/handlers/op-context-menu-trigger.directive';
@@ -93,6 +94,7 @@ export class OpSettingsMenuDirective extends OpContextMenuTrigger implements Aft
     readonly opStaticQueries:StaticQueriesService,
     readonly turboRequests:TurboRequestsService,
     readonly I18n:I18nService,
+    readonly bannersService:BannersService,
   ) {
     super(elementRef, opContextMenu);
   }
@@ -338,7 +340,7 @@ export class OpSettingsMenuDirective extends OpContextMenuTrigger implements Aft
       },
       {
         // Sharing modal
-        disabled: this.authorisationService.cannot('query', 'unstar') && this.authorisationService.cannot('query', 'star'),
+        disabled: (this.authorisationService.cannot('query', 'unstar') && this.authorisationService.cannot('query', 'star')) || !this.bannersService.allowsTo('work_package_sharing'),
         linkText: this.I18n.t('js.toolbar.settings.visibility_settings'),
         icon: 'icon-watched',
         onClick: (event) => {

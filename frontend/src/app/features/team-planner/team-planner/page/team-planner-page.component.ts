@@ -29,9 +29,10 @@ import { InjectField } from 'core-app/shared/helpers/angular/inject-field.decora
 import { ActionsService } from 'core-app/core/state/actions/actions.service';
 import { OpWorkPackagesCalendarService } from 'core-app/features/calendar/op-work-packages-calendar.service';
 import { OpCalendarService } from 'core-app/features/calendar/op-calendar.service';
+import { BannersService } from 'core-app/core/enterprise/banners.service';
 
 @Component({
-  templateUrl: '../../../work-packages/routing/partitioned-query-space-page/partitioned-query-space-page.component.html',
+  templateUrl: './team-planner-page.component.html',
   styleUrls: [
     '../../../work-packages/routing/partitioned-query-space-page/partitioned-query-space-page.component.sass',
   ],
@@ -46,6 +47,9 @@ import { OpCalendarService } from 'core-app/features/calendar/op-calendar.servic
 })
 export class TeamPlannerPageComponent extends PartitionedQuerySpacePageComponent implements OnInit {
   @InjectField() actions$:ActionsService;
+  @InjectField() bannersService:BannersService;
+
+  public teamPlannerAvailable = false;
 
   text = {
     title: this.I18n.t('js.team_planner.title'),
@@ -97,6 +101,8 @@ export class TeamPlannerPageComponent extends PartitionedQuerySpacePageComponent
 
   public ngOnInit():void {
     super.ngOnInit();
+
+    this.teamPlannerAvailable = this.bannersService.allowsTo('team_planner_view');
 
     registerEffectCallbacks(this, this.untilDestroyed());
 
