@@ -22,6 +22,8 @@ export class NotificationSettingsTableComponent implements OnInit {
 
   public eeAvailable = false;
 
+  public sharedNotificationsVisible = false;
+
   public availableTimes = [
     {
       value: null,
@@ -81,6 +83,8 @@ export class NotificationSettingsTableComponent implements OnInit {
 
   ngOnInit():void {
     this.eeAvailable = this.bannersService.allowsTo('date_alerts');
+    const sharedAllowed = this.bannersService.allowsTo('work_package_sharing');
+    this.sharedNotificationsVisible = sharedAllowed || this.bannersService.showBannerFor('work_package_sharing');
   }
 
   projectLink(href:string) {

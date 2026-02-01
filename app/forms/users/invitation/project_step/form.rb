@@ -70,16 +70,18 @@ module Users::Invitation::ProjectStep
           caption: I18n.t("users.invite_user_modal.type.group.description")
         )
 
-        radio_group.radio_button(
-          value: "PlaceholderUser",
-          disabled: !EnterpriseToken.allows_to?(:placeholder_users),
-          checked: model.principal_type == "PlaceholderUser",
-          label: PlaceholderUser.model_name.human,
-          caption: I18n.t("users.invite_user_modal.type.placeholder_user.description")
-        )
+        unless EnterpriseToken.hide_banners?
+          radio_group.radio_button(
+            value: "PlaceholderUser",
+            disabled: !EnterpriseToken.allows_to?(:placeholder_users),
+            checked: model.principal_type == "PlaceholderUser",
+            label: PlaceholderUser.model_name.human,
+            caption: I18n.t("users.invite_user_modal.type.placeholder_user.description")
+          )
+        end
       end
 
-      unless EnterpriseToken.allows_to?(:placeholder_users)
+      if !EnterpriseToken.hide_banners? && !EnterpriseToken.allows_to?(:placeholder_users)
         f.html_content do
           render(EnterpriseEdition::BannerComponent.new(:placeholder_users,
                                                         dismissable: true,

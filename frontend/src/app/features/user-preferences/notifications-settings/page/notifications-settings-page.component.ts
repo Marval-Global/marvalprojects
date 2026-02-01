@@ -59,6 +59,10 @@ export class NotificationsSettingsPageComponent extends UntilDestroyedMixin impl
 
   public sharedNotificationsAvailable = false;
 
+  public sharedNotificationsVisible = false;
+
+  public dateAlertsVisible = false;
+
   public form = new UntypedFormGroup({
     assignee: new UntypedFormControl(false),
     responsible: new UntypedFormControl(false),
@@ -140,8 +144,13 @@ export class NotificationsSettingsPageComponent extends UntilDestroyedMixin impl
 
   ngOnInit():void {
     this.form.disable();
-    this.eeAvailable = this.bannersService.allowsTo('date_alerts');
-    this.sharedNotificationsAvailable = this.bannersService.allowsTo('work_package_sharing');
+    const dateAlertsAllowed = this.bannersService.allowsTo('date_alerts');
+    this.eeAvailable = dateAlertsAllowed;
+    this.dateAlertsVisible = dateAlertsAllowed || this.bannersService.showBannerFor('date_alerts');
+
+    const sharedAllowed = this.bannersService.allowsTo('work_package_sharing');
+    this.sharedNotificationsAvailable = sharedAllowed;
+    this.sharedNotificationsVisible = sharedAllowed || this.bannersService.showBannerFor('work_package_sharing');
 
     this
       .currentUserService

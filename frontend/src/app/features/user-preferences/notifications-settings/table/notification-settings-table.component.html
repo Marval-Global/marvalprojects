@@ -72,21 +72,23 @@
             </td>
           }
         </tr>
-        <tr>
-          <th class="op-table--cell op-table--cell_soft-heading">
-            {{ text.shared }}
-          </th>
-          @for (item of settings.controls; track item) {
-            <td class="op-table--cell" [formGroup]="item">
-              <input
-                type="checkbox"
-                formControlName="shared"
-                data-qa-project-notification-type="shared"
-                [attr.data-qa-project]="item.controls.project.value.title"
-                />
-            </td>
-          }
-        </tr>
+        @if (sharedNotificationsVisible) {
+          <tr>
+            <th class="op-table--cell op-table--cell_soft-heading">
+              {{ text.shared }}
+            </th>
+            @for (item of settings.controls; track item) {
+              <td class="op-table--cell" [formGroup]="item">
+                <input
+                  type="checkbox"
+                  formControlName="shared"
+                  data-qa-project-notification-type="shared"
+                  [attr.data-qa-project]="item.controls.project.value.title"
+                  />
+              </td>
+            }
+          </tr>
+        }
         @if (eeAvailable) {
           <tr>
             <th class="op-table--cell op-table--cell_soft-heading">
