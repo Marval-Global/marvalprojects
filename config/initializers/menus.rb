@@ -37,7 +37,8 @@ Redmine::MenuManager.map :top_menu do |menu|
             caption: I18n.t("label_portfolio_plural"),
             icon: "briefcase",
             if: ->(_) {
-              OpenProject::FeatureDecisions.portfolio_models_active? &&
+              !EnterpriseToken.hide_banners? &&
+                OpenProject::FeatureDecisions.portfolio_models_active? &&
                 (User.current.logged? || !Setting.login_required?) &&
                 (User.current.allowed_globally?(:add_portfolios) ||
                   Project.portfolio.allowed_to(User.current, :view_project).any?)
@@ -197,7 +198,8 @@ Redmine::MenuManager.map :global_menu do |menu|
             icon: "briefcase",
             after: :my_page,
             if: ->(_) {
-              OpenProject::FeatureDecisions.portfolio_models_active? &&
+              !EnterpriseToken.hide_banners? &&
+                OpenProject::FeatureDecisions.portfolio_models_active? &&
                 (User.current.logged? || !Setting.login_required?) &&
                 (User.current.allowed_globally?(:add_portfolios) ||
                   Project.portfolio.allowed_to(User.current, :view_project).any?)
@@ -349,7 +351,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
 
   menu.push :placeholder_users,
             { controller: "/placeholder_users" },
-            if: ->(_) { User.current.admin? },
+            if: ->(_) { !EnterpriseToken.hide_banners? && User.current.admin? },
             caption: :label_placeholder_user_plural,
             parent: :users_and_permissions,
             enterprise_feature: "placeholder_users"
@@ -459,7 +461,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
 
   menu.push :custom_actions,
             { controller: "/custom_actions" },
-            if: ->(_) { User.current.admin? },
+            if: ->(_) { !EnterpriseToken.hide_banners? && User.current.admin? },
             caption: :"custom_actions.plural",
             parent: :admin_work_packages,
             enterprise_feature: "custom_actions"
@@ -484,7 +486,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
 
   menu.push :mcp_configurations,
             { controller: "/admin/mcp_configurations", action: :index },
-            if: ->(_) { User.current.admin? && OpenProject::FeatureDecisions.mcp_server_active? },
+            if: ->(_) { !EnterpriseToken.hide_banners? && User.current.admin? && OpenProject::FeatureDecisions.mcp_server_active? },
             caption: I18n.t("menus.admin.mcp_configurations"),
             enterprise_feature: "mcp_server",
             parent: :ai
@@ -607,7 +609,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
 
   menu.push :scim_clients,
             { controller: "/admin/scim_clients", action: "index" },
-            if: ->(_) { User.current.admin? },
+            if: ->(_) { !EnterpriseToken.hide_banners? && User.current.admin? },
             parent: :authentication,
             caption: ScimClient.model_name.human(count: 2),
             enterprise_feature: "scim_api"
@@ -640,7 +642,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
 
   menu.push :custom_style,
             { controller: "/custom_styles", action: :show },
-            if: ->(_) { User.current.admin? },
+            if: ->(_) { !EnterpriseToken.hide_banners? && User.current.admin? },
             caption: :label_custom_style,
             icon: "paintbrush",
             enterprise_feature: "define_custom_style"

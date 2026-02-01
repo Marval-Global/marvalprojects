@@ -57,6 +57,7 @@ module OpenProject::TeamPlanner
       end
 
       should_render_global_menu_item = Proc.new do
+        !EnterpriseToken.hide_banners? &&
         (User.current.logged? || !Setting.login_required?) &&
         User.current.allowed_in_any_project?(:view_team_planner)
       end
