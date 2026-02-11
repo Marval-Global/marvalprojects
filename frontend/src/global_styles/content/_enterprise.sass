@@ -82,74 +82,25 @@
 .widget-box--blocks--upsell-description
   flex-grow: 1
 
-// ============================================================
-// Hide all upsell features by targeting parent containers
-// that contain upsell indicators (icons)
-// ============================================================
-
-// Hide buttons/toolbars with upsell icons
-button:has(> svg.upsell-colored)
-  display: none !important
-
-button:has(svg[op-enterprise-addons-icon])
-  display: none !important
-
-// Hide list items with upsell icons
-li:has(svg.upsell-colored)
-  display: none !important
-
-li:has(svg[op-enterprise-addons-icon])
-  display: none !important
-
-// Hide specific Angular components with upsell
-wp-share-button:has(svg[op-enterprise-addons-icon])
-  display: none !important
-
-// Hide form fields that contain upsell icons
-.form--field:has(svg[op-enterprise-addons-icon])
-  display: none !important
-
-.form--field:has(.icon-enterprise-addons)
-  display: none !important
-
-.form--label:has(svg[op-enterprise-addons-icon])
-  display: none !important
-
-// Hide enterprise banner frames and containers
-op-enterprise-banner-frame
-  display: none !important
-
-.boards-list--enterprise-banner
-  display: none !important
-
-.op-enterprise-banner-container
-  display: none !important
-
-// Hide all upsell widgets and blocks
-.widget-box--upsell-block
-  display: none !important
-
-.widget-box.upsell
-  display: none !important
-
-.widget-box--blocks--upsell-container
-  display: none !important
-
-.upsell-actions
-  display: none !important
-
-.upsell--information-container
-  display: none !important
-
-.upsell-benefits
-  display: none !important
-
-.ee-attribute-highlighting-upsell
-  display: none !important
-
-// Hide specific upsell sections
+// Hide all upsell features
+svg[op-enterprise-addons-icon],
+svg[op-enterprise-addons-icon=""],
+op-enterprise-addons-icon,
+.icon-enterprise-addons,
+.upsell-colored,
+.upsell-colored-text,
+.upsell-colored-background,
+op-enterprise-banner-frame,
+.boards-list--enterprise-banner,
+.op-enterprise-banner-container,
+.widget-box--upsell-block,
+.widget-box--blocks--upsell-container,
 .widget-box--blocks--upsell-title,
 .widget-box--blocks--upsell-text,
 .widget-box--blocks--upsell-image,
-.widget-box--blocks--upsell-description
+.widget-box--blocks--upsell-description,
+.upsell-actions,
+.upsell--information-container,
+.upsell-benefits,
+.ee-attribute-highlighting-upsell
   display: none !important
