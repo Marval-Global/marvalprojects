@@ -83,39 +83,51 @@
   flex-grow: 1
 
 // ============================================================
-// Hide all upsell features by targeting parent containers
-// that contain upsell indicators (icons)
+// Hide all upsell features by targeting ONLY the direct
+// elements with upsell indicators, not their parent containers
 // ============================================================
 
-// Hide buttons/toolbars with upsell icons
-button:has(> svg.upsell-colored)
+// 1. Hide SVG icons with upsell-colored class
+svg.upsell-colored
   display: none !important
 
-button:has(svg[op-enterprise-addons-icon])
+// 2. Hide SVG with op-enterprise-addons icon attribute
+svg[op-enterprise-addons-icon]
   display: none !important
 
-// Hide list items with upsell icons
-li:has(svg.upsell-colored)
+// 3. Hide icon font class
+.icon-enterprise-addons
   display: none !important
 
-li:has(svg[op-enterprise-addons-icon])
+// 4. Hide Primer components with trailing visual icon (list items with upsell)
+// These are rendered by with_trailing_visual_icon in menu items, list items
+.ActionList-item__trailingVisual.upsell-colored,
+.ActionList-item__trailingVisual > svg.upsell-colored
   display: none !important
 
-// Hide specific Angular components with upsell
-wp-share-button:has(svg[op-enterprise-addons-icon])
+// 5. Hide tab navigation items with upsell icons (Primer tabs)
+// The icon is added with t.with_icon() inside the tab
+.Primer-TabNav__Tab:has(> svg.upsell-colored),
+.Primer-TabNav__Tab > svg.upsell-colored
   display: none !important
 
-// Hide form fields that contain upsell icons
-.form--field:has(svg[op-enterprise-addons-icon])
+// 6. Hide menu link items with upsell icons
+.op-submenu--item:has(svg.upsell-colored),
+.op-submenu--item-title:has(svg.upsell-colored)
   display: none !important
 
-.form--field:has(.icon-enterprise-addons)
+// 7. Hide the work package share button when marked as upsell
+wp-share-button:has(> svg[op-enterprise-addons-icon]),
+wp-share-button > svg[op-enterprise-addons-icon]
   display: none !important
 
-.form--label:has(svg[op-enterprise-addons-icon])
+// 8. Hide form label icons only (not entire labels)
+.form--label > svg.upsell-colored,
+.form--label > svg[op-enterprise-addons-icon],
+.form--label > .icon-enterprise-addons
   display: none !important
 
-// Hide enterprise banner frames and containers
+// 9. Hide enterprise banner frames and containers
 op-enterprise-banner-frame
   display: none !important
 
@@ -125,11 +137,18 @@ op-enterprise-banner-frame
 .op-enterprise-banner-container
   display: none !important
 
-// Hide all upsell widgets and blocks
+// 10. Hide all upsell widgets and blocks
 .widget-box--upsell-block
   display: none !important
 
 .widget-box.upsell
+  padding: 0
+  flex-basis: 100%
+  border: var(--borderWidth-thin) solid var(--enterprise-upsell-color)
+  border-radius: var(--borderRadius-medium)
+  background: var(--body-background)
+  container-name: upsellContainer
+  container-type: inline-size
   display: none !important
 
 .widget-box--blocks--upsell-container
