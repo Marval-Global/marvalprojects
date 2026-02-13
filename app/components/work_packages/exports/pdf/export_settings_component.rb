@@ -49,7 +49,7 @@ module WorkPackages
                    icon: "op-enterprise-addons",
                    "aria-label": I18n.t(:label_enterprise_edition),
                    classes: "upsell-colored", ml: 2
-                 ))
+                 )) unless EnterpriseToken.hide_banners?
         end
 
         def gantt_chart_label

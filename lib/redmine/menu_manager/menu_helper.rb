@@ -196,7 +196,7 @@ module Redmine::MenuManager::MenuHelper
                              class: "#{menu_class}--item-title#{badge_class}",
                              lang: menu_item_locale(item)) do
       title_text = content_tag(:span, caption, class: "ellipsis") + badge_for(item)
-      if item.enterprise_feature_missing?
+      if item.enterprise_feature_missing? && !EnterpriseToken.hide_banners?
         title_text += render(Primer::Beta::Octicon.new(icon: "op-enterprise-addons",
                                                        classes: "upsell-colored",
                                                        ml: 2))

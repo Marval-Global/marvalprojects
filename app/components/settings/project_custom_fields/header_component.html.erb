@@ -43,7 +43,7 @@
                 content_arguments: { data: { turbo: "false",
                                              test_selector: "new-project-custom-field-button" } }
               ) do |item|
-                unless format.enterprise_feature_allowed?
+                unless format.enterprise_feature_allowed? || EnterpriseToken.hide_banners?
                   item.with_trailing_visual_icon(icon: :"op-enterprise-addons", classes: "upsell-colored")
                 end
               end

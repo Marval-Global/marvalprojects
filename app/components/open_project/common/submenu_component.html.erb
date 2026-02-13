@@ -42,7 +42,7 @@
               <span class="op-submenu--item-title">
                 <%= menu_item.title %>
 
-                <% if menu_item.show_enterprise_icon %>
+                <% if menu_item.show_enterprise_icon && !EnterpriseToken.hide_banners? %>
                   <%= render Primer::Beta::Octicon.new(icon: "op-enterprise-addons", "aria-label": I18n.t(:label_enterprise_edition), classes: "upsell-colored", ml: 2) %>
                 <% end %>
               </span>
@@ -80,7 +80,7 @@
                 <span class="op-submenu--item-title">
                   <%= child_item.title %>
 
-                  <% if child_item.show_enterprise_icon %>
+                  <% if child_item.show_enterprise_icon && !EnterpriseToken.hide_banners? %>
                     <%= render Primer::Beta::Octicon.new(icon: "op-enterprise-addons", "aria-label": I18n.t(:label_enterprise_edition), classes: "upsell-colored", ml: 2) %>
                   <% end %>
 

@@ -55,7 +55,7 @@ module Settings
       end
 
       def internal_comments_title
-        unless EnterpriseToken.allows_to?(:internal_comments)
+        unless EnterpriseToken.allows_to?(:internal_comments) || EnterpriseToken.hide_banners?
           return render(Primer::Beta::Octicon.new(
                           icon: "op-enterprise-addons",
                           classes: "upsell-colored",

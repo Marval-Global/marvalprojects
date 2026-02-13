@@ -76,7 +76,7 @@ module Redmine::MenuManager::TopMenu::ModuleMenu
 
   def render_action_list_items(list, items)
     items.each do |item|
-      label = if item.enterprise_feature_missing?
+      label = if item.enterprise_feature_missing? && !EnterpriseToken.hide_banners?
                 h(item.caption) + upsell_icon
               else
                 item.caption

@@ -47,7 +47,7 @@ module TabsHelper
         tab_nav.with_tab(selected: selected_tab(tabs) == tab, href: tab[:path]) do |t|
           feature = tab[:enterprise_feature]
 
-          if feature && !EnterpriseToken.allows_to?(feature)
+          if feature && !EnterpriseToken.allows_to?(feature) && !EnterpriseToken.hide_banners?
             t.with_icon(icon: :"op-enterprise-addons", classes: "upsell-colored")
           end
           t.with_text { tab_label(tab) }

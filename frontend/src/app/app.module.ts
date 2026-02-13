@@ -26,7 +26,7 @@
 // See COPYRIGHT and LICENSE files for more details.
 //++
 
-import { ApplicationRef, DoBootstrap, inject, Injector, NgModule, provideAppInitializer } from '@angular/core';
+import { ApplicationRef, DoBootstrap, inject, Injector, NgModule, CUSTOM_ELEMENTS_SCHEMA, provideAppInitializer } from '@angular/core';
 import { A11yModule } from '@angular/cdk/a11y';
 import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -337,6 +337,7 @@ export function runBootstrap(appRef:ApplicationRef) {
     // My account
     OpenProjectMyAccountModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     { provide: States, useValue: new States() },
     { provide: HTTP_INTERCEPTORS, useClass: OpenProjectHeaderInterceptor, multi: true },

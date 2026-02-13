@@ -26,7 +26,7 @@
 // See COPYRIGHT and LICENSE files for more details.
 //++
 
-import { ChangeDetectionStrategy, Component, computed, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { I18nService } from 'core-app/core/i18n/i18n.service';
 import { MainMenuToggleService } from 'core-app/core/main-menu/main-menu-toggle.service';
@@ -39,7 +39,6 @@ const RESIZE_EVENT = 'main-menu-resize';
 @Component({
   selector: 'opce-main-menu-resizer',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `
     <op-resizer class="main-menu--resizer"
                 [customHandler]="true"
