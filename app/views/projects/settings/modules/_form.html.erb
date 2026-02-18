@@ -30,11 +30,12 @@ See COPYRIGHT and LICENSE files for more details.
 <% sorted_modules = OpenProject::AccessControl.available_project_modules(sorted: true) %>
 <% sorted_modules.each do |name| %>
   <% next if name.to_s == "team_planner_view" %>
+  <% feature = OpenProject::AccessControl.module_enterprise_feature?(name) %>
+  <% next if feature && !EnterpriseToken.allows_to?(feature) && EnterpriseToken.hide_banners? %>
 
   <div class="form--field">
     <label class="form--label" for="project_enabled_module_names_<%= name %>">
       <%= l_or_humanize(name, prefix: "project_module_") %>
-      <% feature = OpenProject::AccessControl.module_enterprise_feature?(name) %>
       <% if feature && !EnterpriseToken.allows_to?(feature) && !EnterpriseToken.hide_banners? %>
         <%= render Primer::Beta::Octicon.new(
               icon: :"op-enterprise-addons",

@@ -44,13 +44,15 @@ module OpenProject
       end
 
       # Filters out "Shared with me" and "Shared with users" from all menu group children first
+      # Also filters out enterprise features when hide_banners is enabled
       def filtered_sidebar_menu_items
         excluded_titles = ["Shared with me", "Shared with users"]
 
         @sidebar_menu_items.map do |group|
           if group.respond_to?(:children)
             filtered_children = group.children.reject do |item|
-              item.respond_to?(:title) && excluded_titles.include?(item.title)
+              (item.respond_to?(:title) && excluded_titles.include?(item.title)) ||
+              (item.respond_to?(:show_enterprise_icon) && item.show_enterprise_icon && EnterpriseToken.hide_banners?)
             end
 
             OpenProject::Menu::MenuGroup.new(group.header, filtered_children)

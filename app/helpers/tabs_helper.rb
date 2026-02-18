@@ -42,9 +42,15 @@ module TabsHelper
   def render_tab_header_nav(header, tabs, test_selector: nil)
     return if tabs.blank?
 
+    # Filter out enterprise feature tabs when hide_banners is enabled
+    filtered_tabs = tabs.reject do |tab|
+      feature = tab[:enterprise_feature]
+      feature && !EnterpriseToken.allows_to?(feature) && EnterpriseToken.hide_banners?
+    end
+
     header.with_tab_nav(label: nil, test_selector:) do |tab_nav|
-      tabs.each do |tab|
-        tab_nav.with_tab(selected: selected_tab(tabs) == tab, href: tab[:path]) do |t|
+      filtered_tabs.each do |tab|
+        tab_nav.with_tab(selected: selected_tab(filtered_tabs) == tab, href: tab[:path]) do |t|
           feature = tab[:enterprise_feature]
 
           if feature && !EnterpriseToken.allows_to?(feature) && !EnterpriseToken.hide_banners?

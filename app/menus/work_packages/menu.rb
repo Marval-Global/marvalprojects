@@ -43,6 +43,9 @@ module WorkPackages
         params = query_generator.call(query_key:)
         next if params.nil?
 
+        # Skip enterprise queries when hide_banners is enabled
+        next if params[:show_enterprise_icon].present? && EnterpriseToken.hide_banners?
+
         menu_item(
           title: I18n.t("js.work_packages.default_queries.#{query_key}"),
           query_params: params,

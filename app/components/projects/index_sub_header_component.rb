@@ -85,8 +85,14 @@ module Projects
     def allowed_new_workspace_types
       @allowed_new_workspace_types ||= [].tap do |types|
         if OpenProject::FeatureDecisions.portfolio_models_active?
-          types << "portfolio" if @current_user.allowed_globally?(:add_portfolios)
-          types << "program" if @current_user.allowed_globally?(:add_programs)
+          if @current_user.allowed_globally?(:add_portfolios) &&
+             (EnterpriseToken.allows_to?(:portfolio_management) || !EnterpriseToken.hide_banners?)
+            types << "portfolio"
+          end
+          if @current_user.allowed_globally?(:add_programs) &&
+             (EnterpriseToken.allows_to?(:portfolio_management) || !EnterpriseToken.hide_banners?)
+            types << "program"
+          end
         end
         types << "project" if @current_user.allowed_globally?(:add_project)
       end
