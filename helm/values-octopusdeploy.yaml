@@ -5,6 +5,7 @@ global:
 
 nodeSelector:
   applications: "linuxapps"
+  environment: "#{Octopus.Environment.Name | ToLower}"
 
 persistence:
   enabled: false
@@ -57,10 +58,12 @@ memcached:
     tag: 1.6.24-debian-12-r0
   nodeSelector:
     applications: "linuxapps"
+    environment: "#{Octopus.Environment.Name | ToLower}"
 
 web:
   nodeSelector:
     applications: "linuxapps"
+    environment: "#{Octopus.Environment.Name | ToLower}"
 
 appInit:
   resources:
@@ -72,10 +75,12 @@ appInit:
 worker:
   nodeSelector:
     applications: "linuxapps"
+    environment: "#{Octopus.Environment.Name | ToLower}"
  
 seeder:
   nodeSelector:
     applications: "linuxapps"
+    environment: "#{Octopus.Environment.Name | ToLower}"
 
 # Options for the seeder job
 seederJob:
