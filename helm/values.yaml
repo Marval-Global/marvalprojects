@@ -135,7 +135,7 @@ ingress:
   ## Set this if you need a specific class, for instance `nginx`.
   #
   ingressClassName:
-
+  certManagerSolverClass:
   ## Define custom ingress annotations:
   ##
   ## Example:
